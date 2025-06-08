@@ -1,0 +1,13 @@
+C:\Users\Administrator\source\repos\InventoryManagementSystem\Dashboard\bin\Debug\Dashboard.exe.config
+C:\Users\Administrator\source\repos\InventoryManagementSystem\Dashboard\bin\Debug\Dashboard.exe
+C:\Users\Administrator\source\repos\InventoryManagementSystem\Dashboard\bin\Debug\Dashboard.pdb
+C:\Users\Administrator\source\repos\InventoryManagementSystem\Dashboard\bin\Debug\CuoreUI.dll
+C:\Users\Administrator\source\repos\InventoryManagementSystem\Dashboard\obj\Debug\Dashboard.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\InventoryManagementSystem\Dashboard\obj\Debug\Dashboard.Form1.resources
+C:\Users\Administrator\source\repos\InventoryManagementSystem\Dashboard\obj\Debug\Dashboard.Properties.Resources.resources
+C:\Users\Administrator\source\repos\InventoryManagementSystem\Dashboard\obj\Debug\Dashboard.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\InventoryManagementSystem\Dashboard\obj\Debug\Dashboard.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\InventoryManagementSystem\Dashboard\obj\Debug\Dashboard.csproj.Up2Date
+C:\Users\Administrator\source\repos\InventoryManagementSystem\Dashboard\obj\Debug\Dashboard.exe
+C:\Users\Administrator\source\repos\InventoryManagementSystem\Dashboard\obj\Debug\Dashboard.pdb
+C:\Users\Administrator\source\repos\InventoryManagementSystem\Dashboard\obj\Debug\Dashboard.exe.config

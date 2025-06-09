@@ -1,0 +1,83 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|c:\\users\\steven\\source\\repos\\inventorymanagementsystem\\login_version1.0\\login_version1.0\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|solutionrelative:login_version1.0\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|c:\\users\\steven\\source\\repos\\inventorymanagementsystem\\login_version1.0\\login_version1.0\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|solutionrelative:login_version1.0\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|c:\\users\\steven\\source\\repos\\inventorymanagementsystem\\login_version1.0\\login_version1.0\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|solutionrelative:login_version1.0\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login.cs",
+              "RelativeDocumentMoniker": "Login_Version1.0\\Login.cs",
+              "ToolTip": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login.cs [Design]",
+              "RelativeToolTip": "Login_Version1.0\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T17:05:49.463Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login.cs",
+              "RelativeDocumentMoniker": "Login_Version1.0\\Login.cs",
+              "ToolTip": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login.cs",
+              "RelativeToolTip": "Login_Version1.0\\Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T17:57:00.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login.Designer.cs",
+              "RelativeDocumentMoniker": "Login_Version1.0\\Login.Designer.cs",
+              "ToolTip": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login.Designer.cs",
+              "RelativeToolTip": "Login_Version1.0\\Login.Designer.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAowHcAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T17:08:10.011Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

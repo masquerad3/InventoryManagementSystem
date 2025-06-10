@@ -1,6 +1,6 @@
 ﻿namespace Login_Version1._0
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         ///  Required designer variable.
@@ -35,7 +35,7 @@
             cuiLabel3 = new CuoreUI.Controls.cuiLabel();
             cuiButton1 = new CuoreUI.Controls.cuiButton();
             cuiTextBox2 = new CuoreUI.Controls.cuiTextBox();
-            cuiTextBox1 = new CuoreUI.Controls.cuiTextBox();
+            EmailLabel = new CuoreUI.Controls.cuiTextBox();
             cuiLabel1 = new CuoreUI.Controls.cuiLabel();
             cuiLabel2 = new CuoreUI.Controls.cuiLabel();
             cuiPanel1.SuspendLayout();
@@ -49,7 +49,7 @@
             cuiPanel1.Controls.Add(cuiLabel3);
             cuiPanel1.Controls.Add(cuiButton1);
             cuiPanel1.Controls.Add(cuiTextBox2);
-            cuiPanel1.Controls.Add(cuiTextBox1);
+            cuiPanel1.Controls.Add(EmailLabel);
             cuiPanel1.Location = new Point(691, 41);
             cuiPanel1.Name = "cuiPanel1";
             cuiPanel1.OutlineThickness = 1F;
@@ -61,11 +61,12 @@
             // 
             // cuiLabel6
             // 
-            cuiLabel6.Content = "Sign\\ up\\ here";
             cuiLabel6.BackColor = Color.Transparent;
+            cuiLabel6.Content = "Sign\\ up\\ here";
             cuiLabel6.Font = new Font("Arial", 9.75F, FontStyle.Bold | FontStyle.Underline);
             cuiLabel6.HorizontalAlignment = StringAlignment.Center;
             cuiLabel6.Location = new Point(180, 430);
+            cuiLabel6.Margin = new Padding(4, 3, 4, 3);
             cuiLabel6.Name = "cuiLabel6";
             cuiLabel6.Size = new Size(200, 20);
             cuiLabel6.TabIndex = 4;
@@ -73,10 +74,11 @@
             // 
             // cuiLabel5
             // 
-            cuiLabel5.Content = "Don't\\ have\\ an\\ account\\ yet\\?";
             cuiLabel5.BackColor = Color.Transparent;
+            cuiLabel5.Content = "Don't\\ have\\ an\\ account\\ yet\\?";
             cuiLabel5.HorizontalAlignment = StringAlignment.Center;
             cuiLabel5.Location = new Point(180, 400);
+            cuiLabel5.Margin = new Padding(4, 3, 4, 3);
             cuiLabel5.Name = "cuiLabel5";
             cuiLabel5.Size = new Size(200, 30);
             cuiLabel5.TabIndex = 3;
@@ -110,6 +112,7 @@
             // 
             // cuiButton1
             // 
+            cuiButton1.BackColor = Color.Transparent;
             cuiButton1.CheckButton = false;
             cuiButton1.Checked = false;
             cuiButton1.CheckedBackground = Color.FromArgb(255, 106, 0);
@@ -117,7 +120,6 @@
             cuiButton1.CheckedImageTint = Color.White;
             cuiButton1.CheckedOutline = Color.FromArgb(255, 106, 0);
             cuiButton1.Content = "Login";
-            cuiButton1.BackColor = Color.Transparent;
             cuiButton1.DialogResult = DialogResult.None;
             cuiButton1.Font = new Font("Arial", 9.75F, FontStyle.Bold);
             cuiButton1.ForeColor = Color.White;
@@ -153,9 +155,9 @@
             cuiTextBox2.BorderColor = Color.FromArgb(128, 128, 128, 128);
             cuiTextBox2.Content = "";
             cuiTextBox2.FocusBackgroundColor = Color.White;
-            cuiTextBox2.FocusBorderColor = Color.FromArgb(255, 106, 0);
+            cuiTextBox2.FocusBorderColor = Color.DimGray;
             cuiTextBox2.FocusImageTint = Color.White;
-            cuiTextBox2.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiTextBox2.Font = new Font("Arial", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiTextBox2.ForeColor = Color.Gray;
             cuiTextBox2.Image = null;
             cuiTextBox2.ImageExpand = new Point(0, 0);
@@ -175,34 +177,34 @@
             cuiTextBox2.TextOffset = new Size(0, 0);
             cuiTextBox2.UnderlinedStyle = true;
             // 
-            // cuiTextBox1
+            // EmailLabel
             // 
-            cuiTextBox1.BackColor = Color.Transparent;
-            cuiTextBox1.BackgroundColor = Color.White;
-            cuiTextBox1.BorderColor = Color.DarkGray;
-            cuiTextBox1.Content = "";
-            cuiTextBox1.FocusBackgroundColor = Color.White;
-            cuiTextBox1.FocusBorderColor = Color.FromArgb(255, 106, 0);
-            cuiTextBox1.FocusImageTint = Color.White;
-            cuiTextBox1.Font = new Font("Microsoft Sans Serif", 9.5F);
-            cuiTextBox1.ForeColor = Color.Gray;
-            cuiTextBox1.Image = null;
-            cuiTextBox1.ImageExpand = new Point(0, 0);
-            cuiTextBox1.ImageOffset = new Point(0, 0);
-            cuiTextBox1.Location = new Point(48, 239);
-            cuiTextBox1.Margin = new Padding(4);
-            cuiTextBox1.Multiline = false;
-            cuiTextBox1.Name = "cuiTextBox1";
-            cuiTextBox1.NormalImageTint = Color.White;
-            cuiTextBox1.Padding = new Padding(15, 15, 15, 0);
-            cuiTextBox1.PasswordChar = false;
-            cuiTextBox1.PlaceholderColor = Color.Gray;
-            cuiTextBox1.PlaceholderText = "Email";
-            cuiTextBox1.Rounding = new Padding(8);
-            cuiTextBox1.Size = new Size(466, 45);
-            cuiTextBox1.TabIndex = 0;
-            cuiTextBox1.TextOffset = new Size(0, 0);
-            cuiTextBox1.UnderlinedStyle = true;
+            EmailLabel.BackColor = Color.Transparent;
+            EmailLabel.BackgroundColor = Color.White;
+            EmailLabel.BorderColor = Color.DarkGray;
+            EmailLabel.Content = "";
+            EmailLabel.FocusBackgroundColor = Color.White;
+            EmailLabel.FocusBorderColor = Color.DimGray;
+            EmailLabel.FocusImageTint = Color.White;
+            EmailLabel.Font = new Font("Arial", 9.5F);
+            EmailLabel.ForeColor = Color.Gray;
+            EmailLabel.Image = null;
+            EmailLabel.ImageExpand = new Point(0, 0);
+            EmailLabel.ImageOffset = new Point(0, 0);
+            EmailLabel.Location = new Point(48, 239);
+            EmailLabel.Margin = new Padding(4);
+            EmailLabel.Multiline = false;
+            EmailLabel.Name = "EmailLabel";
+            EmailLabel.NormalImageTint = Color.White;
+            EmailLabel.Padding = new Padding(15, 15, 15, 0);
+            EmailLabel.PasswordChar = false;
+            EmailLabel.PlaceholderColor = Color.Gray;
+            EmailLabel.PlaceholderText = "Email";
+            EmailLabel.Rounding = new Padding(8);
+            EmailLabel.Size = new Size(466, 45);
+            EmailLabel.TabIndex = 0;
+            EmailLabel.TextOffset = new Size(0, 0);
+            EmailLabel.UnderlinedStyle = true;
             // 
             // cuiLabel1
             // 
@@ -228,7 +230,7 @@
             cuiLabel2.TabIndex = 2;
             cuiLabel2.VerticalAlignment = StringAlignment.Near;
             // 
-            // Form1
+            // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -237,8 +239,8 @@
             Controls.Add(cuiLabel2);
             Controls.Add(cuiLabel1);
             Controls.Add(cuiPanel1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "Login";
+            Text = "Login";
             Load += Form1_Load;
             cuiPanel1.ResumeLayout(false);
             ResumeLayout(false);
@@ -253,7 +255,6 @@
 
         private CuoreUI.Controls.cuiPanel cuiPanel1;
         private CuoreUI.Controls.cuiLabel cuiLabel1;
-        private CuoreUI.Controls.cuiTextBox cuiTextBox1;
         private CuoreUI.Controls.cuiLabel cuiLabel2;
         private CuoreUI.Controls.cuiTextBox cuiTextBox2;
         private CuoreUI.Controls.cuiButton cuiButton1;
@@ -261,5 +262,6 @@
         private CuoreUI.Controls.cuiLabel cuiLabel3;
         private CuoreUI.Controls.cuiLabel cuiLabel5;
         private CuoreUI.Controls.cuiLabel cuiLabel6;
+        public CuoreUI.Controls.cuiTextBox EmailLabel;
     }
 }

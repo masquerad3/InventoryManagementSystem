@@ -1,5 +1,4 @@
 C:\Users\Steven\source\repos\InventoryManagementSystem\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\Login_Version1.0.csproj.AssemblyReference.cache
-C:\Users\Steven\source\repos\InventoryManagementSystem\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\Login_Version1._0.Form1.resources
 C:\Users\Steven\source\repos\InventoryManagementSystem\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\Login_Version1.0.csproj.GenerateResource.cache
 C:\Users\Steven\source\repos\InventoryManagementSystem\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\Login_Version1.0.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Steven\source\repos\InventoryManagementSystem\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\Login_Version1.0.AssemblyInfoInputs.cache
@@ -18,3 +17,5 @@ C:\Users\Steven\source\repos\InventoryManagementSystem\Login_Version1.0\Login_Ve
 C:\Users\Steven\source\repos\InventoryManagementSystem\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\Login_Version1.0.pdb
 C:\Users\Steven\source\repos\InventoryManagementSystem\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\Login_Version1.0.genruntimeconfig.cache
 C:\Users\Steven\source\repos\InventoryManagementSystem\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\ref\Login_Version1.0.dll
+C:\Users\Steven\source\repos\InventoryManagementSystem\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\Login_Version1._0.Login.resources
+C:\Users\Steven\source\repos\InventoryManagementSystem\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\Login_Version1._0.Signup.resources

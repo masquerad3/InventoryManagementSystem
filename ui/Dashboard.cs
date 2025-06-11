@@ -8,26 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Inventory_System
+namespace New_Inventory_System
 {
-    public partial class Form2 : Form
+    public partial class Dashboard : Form
     {
-        public Form2()
+        public Dashboard()
         {
             InitializeComponent();
         }
 
+        private void cuiTextBox1_ContentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cuiPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cuiPictureBox1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
         {
 
         }

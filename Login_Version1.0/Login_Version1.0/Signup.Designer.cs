@@ -330,7 +330,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightBlue;
+            BackColor = Color.FromArgb(174, 198, 207);
             ClientSize = new Size(1280, 720);
             Controls.Add(cuiLabel2);
             Controls.Add(SingupHeader);

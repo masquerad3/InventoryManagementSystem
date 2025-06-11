@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login_Version1.0.csproj": {}
+    "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login_Version1.0.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login_Version1.0.csproj": {
+    "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login_Version1.0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login_Version1.0.csproj",
+        "projectUniqueName": "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login_Version1.0.csproj",
         "projectName": "Login_Version1.0",
-        "projectPath": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login_Version1.0.csproj",
+        "projectPath": "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login_Version1.0.csproj",
         "packagesPath": "C:\\Users\\Steven\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\obj\\",
         "projectStyle": "PackageReference",

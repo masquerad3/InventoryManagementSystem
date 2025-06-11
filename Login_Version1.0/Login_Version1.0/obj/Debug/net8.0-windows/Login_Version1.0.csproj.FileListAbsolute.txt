@@ -19,3 +19,4 @@ C:\Users\Steven\source\repos\InventoryManagementSystem\Login_Version1.0\Login_Ve
 C:\Users\Steven\source\repos\InventoryManagementSystem\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\ref\Login_Version1.0.dll
 C:\Users\Steven\source\repos\InventoryManagementSystem\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\Login_Version1._0.Login.resources
 C:\Users\Steven\source\repos\InventoryManagementSystem\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\Login_Version1._0.Signup.resources
+C:\Users\Steven\Source\Repos\InventoryManagementSystem\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\Login_Version1._0.Verify.resources

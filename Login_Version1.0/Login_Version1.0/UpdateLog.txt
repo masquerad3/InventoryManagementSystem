@@ -1,0 +1,10 @@
+# Update Log
+
+## Version 1.0
+- Initial release of the Inventory Management System.
+- Features:
+  - User login and signup forms.
+  - Basic UI using CuoreUI.Winforms.
+  - Placeholder for inventory management functionality.
+
+---

@@ -1,0 +1,13 @@
+C:\Users\Administrator\source\repos\InventoryManagementSystem\ProductAlert\bin\Debug\ProductAlert.exe.config
+C:\Users\Administrator\source\repos\InventoryManagementSystem\ProductAlert\bin\Debug\ProductAlert.exe
+C:\Users\Administrator\source\repos\InventoryManagementSystem\ProductAlert\bin\Debug\ProductAlert.pdb
+C:\Users\Administrator\source\repos\InventoryManagementSystem\ProductAlert\bin\Debug\CuoreUI.dll
+C:\Users\Administrator\source\repos\InventoryManagementSystem\ProductAlert\obj\Debug\ProductAlert.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\InventoryManagementSystem\ProductAlert\obj\Debug\ProductAlert.Properties.Resources.resources
+C:\Users\Administrator\source\repos\InventoryManagementSystem\ProductAlert\obj\Debug\ProductAlert.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\InventoryManagementSystem\ProductAlert\obj\Debug\ProductAlert.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\InventoryManagementSystem\ProductAlert\obj\Debug\ProductA.02248B86.Up2Date
+C:\Users\Administrator\source\repos\InventoryManagementSystem\ProductAlert\obj\Debug\ProductAlert.exe
+C:\Users\Administrator\source\repos\InventoryManagementSystem\ProductAlert\obj\Debug\ProductAlert.pdb
+C:\Users\Administrator\source\repos\InventoryManagementSystem\ProductAlert\obj\Debug\ProductAlert.exe.config
+C:\Users\Administrator\source\repos\InventoryManagementSystem\ProductAlert\obj\Debug\ProductAlert.PRODALERT.resources

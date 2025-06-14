@@ -8,3 +8,8 @@
   - Placeholder for inventory management functionality.
 
 ---
+
+## Version 1.0.1
+- Fixed a bug in the signup form where email validation could throw an exception if the email field was empty.
+- Updated input validation to consistently use `EmailTextBox1.Text` instead of `EmailTextBox1.Content`.
+- Improved robustness of user input checks during registration.

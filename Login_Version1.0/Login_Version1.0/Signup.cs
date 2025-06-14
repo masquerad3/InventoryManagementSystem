@@ -74,13 +74,13 @@ namespace Login_Version1._0
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com")
                 {
                     Port = 587,
-                    Credentials = new NetworkCredential("masangcay.steven@gmail.com", "qaml blvw xzwl cyng"), // Your credentials
+                    Credentials = new NetworkCredential("masangcay.steven@gmail.com", "qaml blvw xzwl cyng"),
                     EnableSsl = true,
                     Timeout = 10000 // 10-second timeout
                 };
 
                 mail.From = new MailAddress("masangcay.steven@gmail.com"); // Your email
-                mail.To.Add(email); // User's email from EmailTextBox1
+                mail.To.Add(email);
                 mail.Subject = "Verification Code for Inventory Management System";
                 mail.Body = $"Your verification code is: {verificationCode}";
 

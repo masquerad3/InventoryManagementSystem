@@ -41,11 +41,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login_Version1.0.csproj",
+      "projectUniqueName": "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login_Version1.0.csproj",
       "projectName": "Login_Version1.0",
-      "projectPath": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login_Version1.0.csproj",
+      "projectPath": "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login_Version1.0.csproj",
       "packagesPath": "C:\\Users\\Steven\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\obj\\",
+      "outputPath": "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -108,7 +108,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             cuiPanel1 = new CuoreUI.Controls.cuiPanel();
-            cuiLabel6 = new CuoreUI.Controls.cuiLabel();
+            SignInButton = new CuoreUI.Controls.cuiLabel();
             cuiLabel5 = new CuoreUI.Controls.cuiLabel();
             cuiLabel4 = new CuoreUI.Controls.cuiLabel();
             cuiLabel3 = new CuoreUI.Controls.cuiLabel();
@@ -43,7 +43,7 @@
             // 
             // cuiPanel1
             // 
-            cuiPanel1.Controls.Add(cuiLabel6);
+            cuiPanel1.Controls.Add(SignInButton);
             cuiPanel1.Controls.Add(cuiLabel5);
             cuiPanel1.Controls.Add(cuiLabel4);
             cuiPanel1.Controls.Add(cuiLabel3);
@@ -59,18 +59,20 @@
             cuiPanel1.Size = new Size(550, 630);
             cuiPanel1.TabIndex = 0;
             // 
-            // cuiLabel6
+            // SignInButton
             // 
-            cuiLabel6.BackColor = Color.Transparent;
-            cuiLabel6.Content = "Sign\\ up\\ here";
-            cuiLabel6.Font = new Font("Arial", 9.75F, FontStyle.Bold | FontStyle.Underline);
-            cuiLabel6.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel6.Location = new Point(180, 430);
-            cuiLabel6.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel6.Name = "cuiLabel6";
-            cuiLabel6.Size = new Size(200, 20);
-            cuiLabel6.TabIndex = 4;
-            cuiLabel6.VerticalAlignment = StringAlignment.Near;
+            SignInButton.BackColor = Color.Transparent;
+            SignInButton.Content = "Sign\\ up\\ here";
+            SignInButton.Cursor = Cursors.Hand;
+            SignInButton.Font = new Font("Arial", 9.75F, FontStyle.Bold | FontStyle.Underline);
+            SignInButton.HorizontalAlignment = StringAlignment.Center;
+            SignInButton.Location = new Point(180, 430);
+            SignInButton.Margin = new Padding(4, 3, 4, 3);
+            SignInButton.Name = "SignInButton";
+            SignInButton.Size = new Size(200, 20);
+            SignInButton.TabIndex = 4;
+            SignInButton.VerticalAlignment = StringAlignment.Near;
+            SignInButton.MouseClick += SignInButton_MouseClick;
             // 
             // cuiLabel5
             // 
@@ -261,7 +263,7 @@
         private CuoreUI.Controls.cuiLabel cuiLabel4;
         private CuoreUI.Controls.cuiLabel cuiLabel3;
         private CuoreUI.Controls.cuiLabel cuiLabel5;
-        private CuoreUI.Controls.cuiLabel cuiLabel6;
+        private CuoreUI.Controls.cuiLabel SignInButton;
         public CuoreUI.Controls.cuiTextBox EmailLabel;
     }
 }

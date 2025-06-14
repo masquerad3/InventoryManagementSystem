@@ -81,6 +81,7 @@
             VerificationBox.UnfocusedBorderColor = Color.DimGray;
             VerificationBox.UnfocusedColor = Color.White;
             VerificationBox.UnfocusedTextColor = Color.Black;
+            VerificationBox.FinishedTypingContent += VerificationBox_FinishedTypingContent;
             // 
             // cuiLabel3
             // 

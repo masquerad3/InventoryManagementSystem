@@ -6,5 +6,12 @@ namespace Login_Version1._0
         {
             InitializeComponent();
         }
+
+        private void SignInButton_MouseClick(object sender, MouseEventArgs e)
+        {
+            Signup signupForm = new Signup();
+            signupForm.Show();
+            this.Hide(); //Optionally hide the login form 
+        }
     }
 }

@@ -341,7 +341,7 @@
             cuiPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
-
+        
         #endregion
 
         private CuoreUI.Controls.cuiPanel cuiPanel1;

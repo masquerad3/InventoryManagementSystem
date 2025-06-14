@@ -40,7 +40,7 @@ namespace Login_Version1._0
             // Validate input using Content for custom controls
             if (string.IsNullOrWhiteSpace(NameTextBox1.Content) ||
                 string.IsNullOrWhiteSpace(NameTextBox2.Content) ||
-                string.IsNullOrWhiteSpace(EmailTextBox1.Content) || // Use Content
+                string.IsNullOrWhiteSpace(EmailTextBox1.Content) || 
                 string.IsNullOrWhiteSpace(PasswordTextBox1.Content) ||
                 string.IsNullOrWhiteSpace(PasswordTextBox2.Content) ||
                 !TaCCheckBox.Checked)
@@ -56,7 +56,7 @@ namespace Login_Version1._0
             }
 
             // Validate email format
-            string email = EmailTextBox1.Content.Trim(); // Use Content
+            string email = EmailTextBox1.Content.Trim();
             if (!IsValidEmail(email))
             {
                 MessageBox.Show("Please enter a valid email address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

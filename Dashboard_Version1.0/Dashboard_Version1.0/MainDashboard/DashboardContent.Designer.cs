@@ -29,106 +29,112 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardContent));
-            ItemSummary = new CuoreUI.Controls.cuiPanel();
+            ItemSummaryPanel = new CuoreUI.Controls.cuiPanel();
             ISGB2 = new CuoreUI.Controls.cuiGroupBox();
-            cuiLabel8 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel9 = new CuoreUI.Controls.cuiLabel();
             ISIcon2 = new CuoreUI.Controls.cuiPictureBox();
+            ISLabel2 = new CuoreUI.Controls.cuiLabel();
+            ISNumber2 = new CuoreUI.Controls.cuiLabel();
             ISGB1 = new CuoreUI.Controls.cuiGroupBox();
-            cuiLabel7 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel6 = new CuoreUI.Controls.cuiLabel();
+            ISLabel1 = new CuoreUI.Controls.cuiLabel();
+            ISNumber = new CuoreUI.Controls.cuiLabel();
             ISIcon1 = new CuoreUI.Controls.cuiPictureBox();
             cuiLabel2 = new CuoreUI.Controls.cuiLabel();
             cuiLabel1 = new CuoreUI.Controls.cuiLabel();
-            cuiPanel1 = new CuoreUI.Controls.cuiPanel();
-            cuiGroupBox1 = new CuoreUI.Controls.cuiGroupBox();
-            cuiLabel3 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel4 = new CuoreUI.Controls.cuiLabel();
+            ProductSummaryPanel = new CuoreUI.Controls.cuiPanel();
+            PSG2 = new CuoreUI.Controls.cuiGroupBox();
+            PSLabel2 = new CuoreUI.Controls.cuiLabel();
+            PSNumber2 = new CuoreUI.Controls.cuiLabel();
             cuiPictureBox1 = new CuoreUI.Controls.cuiPictureBox();
-            cuiGroupBox2 = new CuoreUI.Controls.cuiGroupBox();
-            cuiLabel5 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel10 = new CuoreUI.Controls.cuiLabel();
+            PSGB1 = new CuoreUI.Controls.cuiGroupBox();
+            PSLabel1 = new CuoreUI.Controls.cuiLabel();
+            PSNumber1 = new CuoreUI.Controls.cuiLabel();
             cuiPictureBox2 = new CuoreUI.Controls.cuiPictureBox();
             cuiLabel11 = new CuoreUI.Controls.cuiLabel();
-            cuiPanel2 = new CuoreUI.Controls.cuiPanel();
-            cuiGroupBox3 = new CuoreUI.Controls.cuiGroupBox();
-            cuiLabel12 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel13 = new CuoreUI.Controls.cuiLabel();
-            cuiPictureBox3 = new CuoreUI.Controls.cuiPictureBox();
-            cuiGroupBox4 = new CuoreUI.Controls.cuiGroupBox();
-            cuiLabel14 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel15 = new CuoreUI.Controls.cuiLabel();
-            cuiPictureBox4 = new CuoreUI.Controls.cuiPictureBox();
+            TotalItemsPanel = new CuoreUI.Controls.cuiPanel();
+            TIGB2 = new CuoreUI.Controls.cuiGroupBox();
+            TILabel2 = new CuoreUI.Controls.cuiLabel();
+            TINumber2 = new CuoreUI.Controls.cuiLabel();
+            TIIcon2 = new CuoreUI.Controls.cuiPictureBox();
+            TIGB1 = new CuoreUI.Controls.cuiGroupBox();
+            TIGLabel1 = new CuoreUI.Controls.cuiLabel();
+            TInumber1 = new CuoreUI.Controls.cuiLabel();
+            TIIcon1 = new CuoreUI.Controls.cuiPictureBox();
             cuiLabel16 = new CuoreUI.Controls.cuiLabel();
-            cuiPanel3 = new CuoreUI.Controls.cuiPanel();
-            cuiGroupBox5 = new CuoreUI.Controls.cuiGroupBox();
-            cuiLabel17 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel18 = new CuoreUI.Controls.cuiLabel();
-            cuiPictureBox5 = new CuoreUI.Controls.cuiPictureBox();
-            cuiGroupBox6 = new CuoreUI.Controls.cuiGroupBox();
-            cuiLabel19 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel20 = new CuoreUI.Controls.cuiLabel();
-            cuiPictureBox6 = new CuoreUI.Controls.cuiPictureBox();
+            TotalBatchesPanel = new CuoreUI.Controls.cuiPanel();
+            TBGB2 = new CuoreUI.Controls.cuiGroupBox();
+            TBIcon2 = new CuoreUI.Controls.cuiPictureBox();
+            TBLabel2 = new CuoreUI.Controls.cuiLabel();
+            TBNumber2 = new CuoreUI.Controls.cuiLabel();
+            TBGB1 = new CuoreUI.Controls.cuiGroupBox();
+            TBLabel1 = new CuoreUI.Controls.cuiLabel();
+            TBNumber1 = new CuoreUI.Controls.cuiLabel();
+            TBIcon1 = new CuoreUI.Controls.cuiPictureBox();
             cuiLabel21 = new CuoreUI.Controls.cuiLabel();
-            dataGridView1 = new DataGridView();
-            cuiPanel4 = new CuoreUI.Controls.cuiPanel();
-            cuiGroupBox7 = new CuoreUI.Controls.cuiGroupBox();
-            cuiLabel22 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel23 = new CuoreUI.Controls.cuiLabel();
-            cuiPictureBox7 = new CuoreUI.Controls.cuiPictureBox();
-            dataGridView2 = new DataGridView();
-            cuiPanel5 = new CuoreUI.Controls.cuiPanel();
-            cuiGroupBox8 = new CuoreUI.Controls.cuiGroupBox();
-            cuiLabel24 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel25 = new CuoreUI.Controls.cuiLabel();
-            cuiPictureBox8 = new CuoreUI.Controls.cuiPictureBox();
+            WarrantyPanel = new CuoreUI.Controls.cuiPanel();
+            WGB = new CuoreUI.Controls.cuiGroupBox();
+            WLabel = new CuoreUI.Controls.cuiLabel();
+            WNumber = new CuoreUI.Controls.cuiLabel();
+            WIcon = new CuoreUI.Controls.cuiPictureBox();
+            OutOfStockPanel = new CuoreUI.Controls.cuiPanel();
+            OOSGB = new CuoreUI.Controls.cuiGroupBox();
+            OOSLabel = new CuoreUI.Controls.cuiLabel();
+            OOSNumber = new CuoreUI.Controls.cuiLabel();
+            OOSIcon = new CuoreUI.Controls.cuiPictureBox();
             cuiPanel6 = new CuoreUI.Controls.cuiPanel();
             DashboardHeader = new CuoreUI.Controls.cuiLabel();
-            cuiPictureBox9 = new CuoreUI.Controls.cuiPictureBox();
             SearchBar = new CuoreUI.Controls.cuiTextBox();
-            ItemSummary.SuspendLayout();
+            cuiGradientPanel1 = new CuoreUI.Controls.cuiGradientPanel();
+            cuiPictureBox9 = new CuoreUI.Controls.cuiPictureBox();
+            cuiPanel7 = new CuoreUI.Controls.cuiPanel();
+            dataGridView1 = new DataGridView();
+            cuiPanel8 = new CuoreUI.Controls.cuiPanel();
+            dataGridView2 = new DataGridView();
+            ItemSummaryPanel.SuspendLayout();
             ISGB2.SuspendLayout();
             ISGB1.SuspendLayout();
-            cuiPanel1.SuspendLayout();
-            cuiGroupBox1.SuspendLayout();
-            cuiGroupBox2.SuspendLayout();
-            cuiPanel2.SuspendLayout();
-            cuiGroupBox3.SuspendLayout();
-            cuiGroupBox4.SuspendLayout();
-            cuiPanel3.SuspendLayout();
-            cuiGroupBox5.SuspendLayout();
-            cuiGroupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            cuiPanel4.SuspendLayout();
-            cuiGroupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            cuiPanel5.SuspendLayout();
-            cuiGroupBox8.SuspendLayout();
+            ProductSummaryPanel.SuspendLayout();
+            PSG2.SuspendLayout();
+            PSGB1.SuspendLayout();
+            TotalItemsPanel.SuspendLayout();
+            TIGB2.SuspendLayout();
+            TIGB1.SuspendLayout();
+            TotalBatchesPanel.SuspendLayout();
+            TBGB2.SuspendLayout();
+            TBGB1.SuspendLayout();
+            WarrantyPanel.SuspendLayout();
+            WGB.SuspendLayout();
+            OutOfStockPanel.SuspendLayout();
+            OOSGB.SuspendLayout();
             cuiPanel6.SuspendLayout();
+            cuiGradientPanel1.SuspendLayout();
+            cuiPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            cuiPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
-            // ItemSummary
+            // ItemSummaryPanel
             // 
-            ItemSummary.Controls.Add(ISGB2);
-            ItemSummary.Controls.Add(ISGB1);
-            ItemSummary.Controls.Add(cuiLabel2);
-            ItemSummary.Location = new Point(67, 138);
-            ItemSummary.Name = "ItemSummary";
-            ItemSummary.OutlineThickness = 1F;
-            ItemSummary.PanelColor = Color.White;
-            ItemSummary.PanelOutlineColor = Color.Black;
-            ItemSummary.Rounding = new Padding(10);
-            ItemSummary.Size = new Size(448, 208);
-            ItemSummary.TabIndex = 0;
+            ItemSummaryPanel.Controls.Add(ISGB2);
+            ItemSummaryPanel.Controls.Add(ISGB1);
+            ItemSummaryPanel.Controls.Add(cuiLabel2);
+            ItemSummaryPanel.Location = new Point(61, 143);
+            ItemSummaryPanel.Name = "ItemSummaryPanel";
+            ItemSummaryPanel.OutlineThickness = 1F;
+            ItemSummaryPanel.PanelColor = Color.White;
+            ItemSummaryPanel.PanelOutlineColor = Color.Black;
+            ItemSummaryPanel.Rounding = new Padding(10);
+            ItemSummaryPanel.Size = new Size(448, 208);
+            ItemSummaryPanel.TabIndex = 0;
             // 
             // ISGB2
             // 
             ISGB2.BackColor = Color.Transparent;
             ISGB2.BorderColor = Color.DarkGray;
             ISGB2.Content = "";
-            ISGB2.Controls.Add(cuiLabel8);
-            ISGB2.Controls.Add(cuiLabel9);
             ISGB2.Controls.Add(ISIcon2);
+            ISGB2.Controls.Add(ISLabel2);
+            ISGB2.Controls.Add(ISNumber2);
             ISGB2.Location = new Point(243, 54);
             ISGB2.Name = "ISGB2";
             ISGB2.Padding = new Padding(8, 22, 8, 8);
@@ -136,54 +142,54 @@
             ISGB2.Size = new Size(174, 127);
             ISGB2.TabIndex = 2;
             // 
-            // cuiLabel8
-            // 
-            cuiLabel8.Content = "To\\ be\\ received";
-            cuiLabel8.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel8.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel8.Location = new Point(8, 101);
-            cuiLabel8.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel8.Name = "cuiLabel8";
-            cuiLabel8.Size = new Size(158, 19);
-            cuiLabel8.TabIndex = 4;
-            cuiLabel8.VerticalAlignment = StringAlignment.Far;
-            cuiLabel8.Load += cuiLabel8_Load;
-            // 
-            // cuiLabel9
-            // 
-            cuiLabel9.Content = "123";
-            cuiLabel9.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel9.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel9.Location = new Point(8, 66);
-            cuiLabel9.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel9.Name = "cuiLabel9";
-            cuiLabel9.Size = new Size(158, 34);
-            cuiLabel9.TabIndex = 3;
-            cuiLabel9.VerticalAlignment = StringAlignment.Far;
-            // 
             // ISIcon2
             // 
             ISIcon2.BackgroundImage = (Image)resources.GetObject("ISIcon2.BackgroundImage");
             ISIcon2.BackgroundImageLayout = ImageLayout.Zoom;
             ISIcon2.Content = null;
             ISIcon2.ImageTint = Color.White;
-            ISIcon2.Location = new Point(64, 19);
+            ISIcon2.Location = new Point(57, 19);
             ISIcon2.Margin = new Padding(4, 3, 4, 3);
             ISIcon2.Name = "ISIcon2";
             ISIcon2.OutlineThickness = 1F;
             ISIcon2.PanelOutlineColor = Color.Empty;
             ISIcon2.Rotation = 0;
             ISIcon2.Rounding = new Padding(8);
-            ISIcon2.Size = new Size(53, 44);
-            ISIcon2.TabIndex = 1;
+            ISIcon2.Size = new Size(66, 60);
+            ISIcon2.TabIndex = 5;
+            // 
+            // ISLabel2
+            // 
+            ISLabel2.Content = "To\\ be\\ received";
+            ISLabel2.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ISLabel2.HorizontalAlignment = StringAlignment.Center;
+            ISLabel2.Location = new Point(8, 101);
+            ISLabel2.Margin = new Padding(4, 3, 4, 3);
+            ISLabel2.Name = "ISLabel2";
+            ISLabel2.Size = new Size(158, 19);
+            ISLabel2.TabIndex = 4;
+            ISLabel2.VerticalAlignment = StringAlignment.Far;
+            ISLabel2.Load += cuiLabel8_Load;
+            // 
+            // ISNumber2
+            // 
+            ISNumber2.Content = "123";
+            ISNumber2.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ISNumber2.HorizontalAlignment = StringAlignment.Center;
+            ISNumber2.Location = new Point(8, 66);
+            ISNumber2.Margin = new Padding(4, 3, 4, 3);
+            ISNumber2.Name = "ISNumber2";
+            ISNumber2.Size = new Size(158, 34);
+            ISNumber2.TabIndex = 3;
+            ISNumber2.VerticalAlignment = StringAlignment.Far;
             // 
             // ISGB1
             // 
             ISGB1.BackColor = Color.Transparent;
             ISGB1.BorderColor = Color.DarkGray;
             ISGB1.Content = "";
-            ISGB1.Controls.Add(cuiLabel7);
-            ISGB1.Controls.Add(cuiLabel6);
+            ISGB1.Controls.Add(ISLabel1);
+            ISGB1.Controls.Add(ISNumber);
             ISGB1.Controls.Add(ISIcon1);
             ISGB1.Location = new Point(27, 54);
             ISGB1.Name = "ISGB1";
@@ -192,35 +198,35 @@
             ISGB1.Size = new Size(174, 127);
             ISGB1.TabIndex = 1;
             // 
-            // cuiLabel7
+            // ISLabel1
             // 
-            cuiLabel7.Content = "Quantity\\ in\\ Hand";
-            cuiLabel7.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel7.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel7.Location = new Point(8, 101);
-            cuiLabel7.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel7.Name = "cuiLabel7";
-            cuiLabel7.Size = new Size(158, 19);
-            cuiLabel7.TabIndex = 2;
-            cuiLabel7.VerticalAlignment = StringAlignment.Far;
-            cuiLabel7.Load += cuiLabel7_Load;
+            ISLabel1.Content = "Quantity\\ in\\ Hand";
+            ISLabel1.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ISLabel1.HorizontalAlignment = StringAlignment.Center;
+            ISLabel1.Location = new Point(8, 101);
+            ISLabel1.Margin = new Padding(4, 3, 4, 3);
+            ISLabel1.Name = "ISLabel1";
+            ISLabel1.Size = new Size(158, 19);
+            ISLabel1.TabIndex = 2;
+            ISLabel1.VerticalAlignment = StringAlignment.Far;
+            ISLabel1.Load += cuiLabel7_Load;
             // 
-            // cuiLabel6
+            // ISNumber
             // 
-            cuiLabel6.Content = "123";
-            cuiLabel6.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel6.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel6.Location = new Point(8, 66);
-            cuiLabel6.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel6.Name = "cuiLabel6";
-            cuiLabel6.Size = new Size(158, 34);
-            cuiLabel6.TabIndex = 1;
-            cuiLabel6.VerticalAlignment = StringAlignment.Far;
-            cuiLabel6.Load += cuiLabel6_Load;
+            ISNumber.Content = "123";
+            ISNumber.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ISNumber.HorizontalAlignment = StringAlignment.Center;
+            ISNumber.Location = new Point(8, 66);
+            ISNumber.Margin = new Padding(4, 3, 4, 3);
+            ISNumber.Name = "ISNumber";
+            ISNumber.Size = new Size(158, 34);
+            ISNumber.TabIndex = 1;
+            ISNumber.VerticalAlignment = StringAlignment.Far;
+            ISNumber.Load += cuiLabel6_Load;
             // 
             // ISIcon1
             // 
-            ISIcon1.BackgroundImage = Properties.Resources.package;
+            ISIcon1.BackgroundImage = (Image)resources.GetObject("ISIcon1.BackgroundImage");
             ISIcon1.BackgroundImageLayout = ImageLayout.Zoom;
             ISIcon1.Content = null;
             ISIcon1.ImageTint = Color.White;
@@ -260,58 +266,58 @@
             cuiLabel1.VerticalAlignment = StringAlignment.Near;
             cuiLabel1.Load += cuiLabel1_Load;
             // 
-            // cuiPanel1
+            // ProductSummaryPanel
             // 
-            cuiPanel1.Controls.Add(cuiGroupBox1);
-            cuiPanel1.Controls.Add(cuiGroupBox2);
-            cuiPanel1.Controls.Add(cuiLabel11);
-            cuiPanel1.Location = new Point(544, 138);
-            cuiPanel1.Name = "cuiPanel1";
-            cuiPanel1.OutlineThickness = 1F;
-            cuiPanel1.PanelColor = Color.White;
-            cuiPanel1.PanelOutlineColor = Color.Black;
-            cuiPanel1.Rounding = new Padding(10);
-            cuiPanel1.Size = new Size(448, 208);
-            cuiPanel1.TabIndex = 3;
+            ProductSummaryPanel.Controls.Add(PSG2);
+            ProductSummaryPanel.Controls.Add(PSGB1);
+            ProductSummaryPanel.Controls.Add(cuiLabel11);
+            ProductSummaryPanel.Location = new Point(538, 143);
+            ProductSummaryPanel.Name = "ProductSummaryPanel";
+            ProductSummaryPanel.OutlineThickness = 1F;
+            ProductSummaryPanel.PanelColor = Color.White;
+            ProductSummaryPanel.PanelOutlineColor = Color.Black;
+            ProductSummaryPanel.Rounding = new Padding(10);
+            ProductSummaryPanel.Size = new Size(448, 208);
+            ProductSummaryPanel.TabIndex = 3;
             // 
-            // cuiGroupBox1
+            // PSG2
             // 
-            cuiGroupBox1.BackColor = Color.Transparent;
-            cuiGroupBox1.BorderColor = Color.DarkGray;
-            cuiGroupBox1.Content = "";
-            cuiGroupBox1.Controls.Add(cuiLabel3);
-            cuiGroupBox1.Controls.Add(cuiLabel4);
-            cuiGroupBox1.Controls.Add(cuiPictureBox1);
-            cuiGroupBox1.Location = new Point(243, 54);
-            cuiGroupBox1.Name = "cuiGroupBox1";
-            cuiGroupBox1.Padding = new Padding(8, 22, 8, 8);
-            cuiGroupBox1.Rounding = new Padding(8);
-            cuiGroupBox1.Size = new Size(174, 127);
-            cuiGroupBox1.TabIndex = 2;
+            PSG2.BackColor = Color.Transparent;
+            PSG2.BorderColor = Color.DarkGray;
+            PSG2.Content = "";
+            PSG2.Controls.Add(PSLabel2);
+            PSG2.Controls.Add(PSNumber2);
+            PSG2.Controls.Add(cuiPictureBox1);
+            PSG2.Location = new Point(243, 54);
+            PSG2.Name = "PSG2";
+            PSG2.Padding = new Padding(8, 22, 8, 8);
+            PSG2.Rounding = new Padding(8);
+            PSG2.Size = new Size(174, 127);
+            PSG2.TabIndex = 2;
             // 
-            // cuiLabel3
+            // PSLabel2
             // 
-            cuiLabel3.Content = "Categories";
-            cuiLabel3.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel3.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel3.Location = new Point(8, 101);
-            cuiLabel3.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel3.Name = "cuiLabel3";
-            cuiLabel3.Size = new Size(158, 19);
-            cuiLabel3.TabIndex = 4;
-            cuiLabel3.VerticalAlignment = StringAlignment.Far;
+            PSLabel2.Content = "Categories";
+            PSLabel2.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            PSLabel2.HorizontalAlignment = StringAlignment.Center;
+            PSLabel2.Location = new Point(8, 101);
+            PSLabel2.Margin = new Padding(4, 3, 4, 3);
+            PSLabel2.Name = "PSLabel2";
+            PSLabel2.Size = new Size(158, 19);
+            PSLabel2.TabIndex = 4;
+            PSLabel2.VerticalAlignment = StringAlignment.Far;
             // 
-            // cuiLabel4
+            // PSNumber2
             // 
-            cuiLabel4.Content = "123";
-            cuiLabel4.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel4.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel4.Location = new Point(8, 66);
-            cuiLabel4.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel4.Name = "cuiLabel4";
-            cuiLabel4.Size = new Size(158, 34);
-            cuiLabel4.TabIndex = 3;
-            cuiLabel4.VerticalAlignment = StringAlignment.Far;
+            PSNumber2.Content = "123";
+            PSNumber2.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            PSNumber2.HorizontalAlignment = StringAlignment.Center;
+            PSNumber2.Location = new Point(8, 66);
+            PSNumber2.Margin = new Padding(4, 3, 4, 3);
+            PSNumber2.Name = "PSNumber2";
+            PSNumber2.Size = new Size(158, 34);
+            PSNumber2.TabIndex = 3;
+            PSNumber2.VerticalAlignment = StringAlignment.Far;
             // 
             // cuiPictureBox1
             // 
@@ -329,49 +335,49 @@
             cuiPictureBox1.Size = new Size(53, 44);
             cuiPictureBox1.TabIndex = 1;
             // 
-            // cuiGroupBox2
+            // PSGB1
             // 
-            cuiGroupBox2.BackColor = Color.Transparent;
-            cuiGroupBox2.BorderColor = Color.DarkGray;
-            cuiGroupBox2.Content = "";
-            cuiGroupBox2.Controls.Add(cuiLabel5);
-            cuiGroupBox2.Controls.Add(cuiLabel10);
-            cuiGroupBox2.Controls.Add(cuiPictureBox2);
-            cuiGroupBox2.Location = new Point(27, 54);
-            cuiGroupBox2.Name = "cuiGroupBox2";
-            cuiGroupBox2.Padding = new Padding(8, 22, 8, 8);
-            cuiGroupBox2.Rounding = new Padding(8);
-            cuiGroupBox2.Size = new Size(174, 127);
-            cuiGroupBox2.TabIndex = 1;
+            PSGB1.BackColor = Color.Transparent;
+            PSGB1.BorderColor = Color.DarkGray;
+            PSGB1.Content = "";
+            PSGB1.Controls.Add(PSLabel1);
+            PSGB1.Controls.Add(PSNumber1);
+            PSGB1.Controls.Add(cuiPictureBox2);
+            PSGB1.Location = new Point(27, 54);
+            PSGB1.Name = "PSGB1";
+            PSGB1.Padding = new Padding(8, 22, 8, 8);
+            PSGB1.Rounding = new Padding(8);
+            PSGB1.Size = new Size(174, 127);
+            PSGB1.TabIndex = 1;
             // 
-            // cuiLabel5
+            // PSLabel1
             // 
-            cuiLabel5.Content = "Suppliers";
-            cuiLabel5.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel5.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel5.Location = new Point(8, 101);
-            cuiLabel5.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel5.Name = "cuiLabel5";
-            cuiLabel5.Size = new Size(158, 19);
-            cuiLabel5.TabIndex = 2;
-            cuiLabel5.VerticalAlignment = StringAlignment.Far;
-            cuiLabel5.Load += cuiLabel5_Load;
+            PSLabel1.Content = "Suppliers";
+            PSLabel1.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            PSLabel1.HorizontalAlignment = StringAlignment.Center;
+            PSLabel1.Location = new Point(8, 101);
+            PSLabel1.Margin = new Padding(4, 3, 4, 3);
+            PSLabel1.Name = "PSLabel1";
+            PSLabel1.Size = new Size(158, 19);
+            PSLabel1.TabIndex = 2;
+            PSLabel1.VerticalAlignment = StringAlignment.Far;
+            PSLabel1.Load += cuiLabel5_Load;
             // 
-            // cuiLabel10
+            // PSNumber1
             // 
-            cuiLabel10.Content = "123";
-            cuiLabel10.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel10.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel10.Location = new Point(8, 66);
-            cuiLabel10.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel10.Name = "cuiLabel10";
-            cuiLabel10.Size = new Size(158, 34);
-            cuiLabel10.TabIndex = 1;
-            cuiLabel10.VerticalAlignment = StringAlignment.Far;
+            PSNumber1.Content = "123";
+            PSNumber1.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            PSNumber1.HorizontalAlignment = StringAlignment.Center;
+            PSNumber1.Location = new Point(8, 66);
+            PSNumber1.Margin = new Padding(4, 3, 4, 3);
+            PSNumber1.Name = "PSNumber1";
+            PSNumber1.Size = new Size(158, 34);
+            PSNumber1.TabIndex = 1;
+            PSNumber1.VerticalAlignment = StringAlignment.Far;
             // 
             // cuiPictureBox2
             // 
-            cuiPictureBox2.BackgroundImage = Properties.Resources.package;
+            cuiPictureBox2.BackgroundImage = (Image)resources.GetObject("cuiPictureBox2.BackgroundImage");
             cuiPictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
             cuiPictureBox2.Content = null;
             cuiPictureBox2.ImageTint = Color.White;
@@ -388,7 +394,7 @@
             // cuiLabel11
             // 
             cuiLabel11.BackColor = Color.Transparent;
-            cuiLabel11.Content = "Item\\ Summary";
+            cuiLabel11.Content = "Product\\ Summary";
             cuiLabel11.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiLabel11.HorizontalAlignment = StringAlignment.Near;
             cuiLabel11.Location = new Point(11, 9);
@@ -398,134 +404,134 @@
             cuiLabel11.TabIndex = 0;
             cuiLabel11.VerticalAlignment = StringAlignment.Near;
             // 
-            // cuiPanel2
+            // TotalItemsPanel
             // 
-            cuiPanel2.Controls.Add(cuiGroupBox3);
-            cuiPanel2.Controls.Add(cuiGroupBox4);
-            cuiPanel2.Controls.Add(cuiLabel16);
-            cuiPanel2.Location = new Point(67, 362);
-            cuiPanel2.Name = "cuiPanel2";
-            cuiPanel2.OutlineThickness = 1F;
-            cuiPanel2.PanelColor = Color.White;
-            cuiPanel2.PanelOutlineColor = Color.Black;
-            cuiPanel2.Rounding = new Padding(10);
-            cuiPanel2.Size = new Size(448, 208);
-            cuiPanel2.TabIndex = 3;
+            TotalItemsPanel.Controls.Add(TIGB2);
+            TotalItemsPanel.Controls.Add(TIGB1);
+            TotalItemsPanel.Controls.Add(cuiLabel16);
+            TotalItemsPanel.Location = new Point(61, 367);
+            TotalItemsPanel.Name = "TotalItemsPanel";
+            TotalItemsPanel.OutlineThickness = 1F;
+            TotalItemsPanel.PanelColor = Color.White;
+            TotalItemsPanel.PanelOutlineColor = Color.Black;
+            TotalItemsPanel.Rounding = new Padding(10);
+            TotalItemsPanel.Size = new Size(448, 208);
+            TotalItemsPanel.TabIndex = 3;
             // 
-            // cuiGroupBox3
+            // TIGB2
             // 
-            cuiGroupBox3.BackColor = Color.Transparent;
-            cuiGroupBox3.BorderColor = Color.DarkGray;
-            cuiGroupBox3.Content = "";
-            cuiGroupBox3.Controls.Add(cuiLabel12);
-            cuiGroupBox3.Controls.Add(cuiLabel13);
-            cuiGroupBox3.Controls.Add(cuiPictureBox3);
-            cuiGroupBox3.Location = new Point(243, 54);
-            cuiGroupBox3.Name = "cuiGroupBox3";
-            cuiGroupBox3.Padding = new Padding(8, 22, 8, 8);
-            cuiGroupBox3.Rounding = new Padding(8);
-            cuiGroupBox3.Size = new Size(174, 127);
-            cuiGroupBox3.TabIndex = 2;
+            TIGB2.BackColor = Color.Transparent;
+            TIGB2.BorderColor = Color.DarkGray;
+            TIGB2.Content = "";
+            TIGB2.Controls.Add(TILabel2);
+            TIGB2.Controls.Add(TINumber2);
+            TIGB2.Controls.Add(TIIcon2);
+            TIGB2.Location = new Point(243, 54);
+            TIGB2.Name = "TIGB2";
+            TIGB2.Padding = new Padding(8, 22, 8, 8);
+            TIGB2.Rounding = new Padding(8);
+            TIGB2.Size = new Size(174, 127);
+            TIGB2.TabIndex = 2;
             // 
-            // cuiLabel12
+            // TILabel2
             // 
-            cuiLabel12.Content = "To\\ be\\ received";
-            cuiLabel12.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel12.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel12.Location = new Point(8, 101);
-            cuiLabel12.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel12.Name = "cuiLabel12";
-            cuiLabel12.Size = new Size(158, 19);
-            cuiLabel12.TabIndex = 4;
-            cuiLabel12.VerticalAlignment = StringAlignment.Far;
+            TILabel2.Content = "To\\ be\\ received";
+            TILabel2.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TILabel2.HorizontalAlignment = StringAlignment.Center;
+            TILabel2.Location = new Point(8, 101);
+            TILabel2.Margin = new Padding(4, 3, 4, 3);
+            TILabel2.Name = "TILabel2";
+            TILabel2.Size = new Size(158, 19);
+            TILabel2.TabIndex = 4;
+            TILabel2.VerticalAlignment = StringAlignment.Far;
             // 
-            // cuiLabel13
+            // TINumber2
             // 
-            cuiLabel13.Content = "123";
-            cuiLabel13.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel13.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel13.Location = new Point(8, 66);
-            cuiLabel13.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel13.Name = "cuiLabel13";
-            cuiLabel13.Size = new Size(158, 34);
-            cuiLabel13.TabIndex = 3;
-            cuiLabel13.VerticalAlignment = StringAlignment.Far;
+            TINumber2.Content = "123";
+            TINumber2.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TINumber2.HorizontalAlignment = StringAlignment.Center;
+            TINumber2.Location = new Point(8, 66);
+            TINumber2.Margin = new Padding(4, 3, 4, 3);
+            TINumber2.Name = "TINumber2";
+            TINumber2.Size = new Size(158, 34);
+            TINumber2.TabIndex = 3;
+            TINumber2.VerticalAlignment = StringAlignment.Far;
             // 
-            // cuiPictureBox3
+            // TIIcon2
             // 
-            cuiPictureBox3.BackgroundImage = (Image)resources.GetObject("cuiPictureBox3.BackgroundImage");
-            cuiPictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
-            cuiPictureBox3.Content = null;
-            cuiPictureBox3.ImageTint = Color.White;
-            cuiPictureBox3.Location = new Point(64, 19);
-            cuiPictureBox3.Margin = new Padding(4, 3, 4, 3);
-            cuiPictureBox3.Name = "cuiPictureBox3";
-            cuiPictureBox3.OutlineThickness = 1F;
-            cuiPictureBox3.PanelOutlineColor = Color.Empty;
-            cuiPictureBox3.Rotation = 0;
-            cuiPictureBox3.Rounding = new Padding(8);
-            cuiPictureBox3.Size = new Size(53, 44);
-            cuiPictureBox3.TabIndex = 1;
+            TIIcon2.BackgroundImage = (Image)resources.GetObject("TIIcon2.BackgroundImage");
+            TIIcon2.BackgroundImageLayout = ImageLayout.Zoom;
+            TIIcon2.Content = null;
+            TIIcon2.ImageTint = Color.White;
+            TIIcon2.Location = new Point(57, 19);
+            TIIcon2.Margin = new Padding(4, 3, 4, 3);
+            TIIcon2.Name = "TIIcon2";
+            TIIcon2.OutlineThickness = 1F;
+            TIIcon2.PanelOutlineColor = Color.Empty;
+            TIIcon2.Rotation = 0;
+            TIIcon2.Rounding = new Padding(8);
+            TIIcon2.Size = new Size(66, 60);
+            TIIcon2.TabIndex = 1;
             // 
-            // cuiGroupBox4
+            // TIGB1
             // 
-            cuiGroupBox4.BackColor = Color.Transparent;
-            cuiGroupBox4.BorderColor = Color.DarkGray;
-            cuiGroupBox4.Content = "";
-            cuiGroupBox4.Controls.Add(cuiLabel14);
-            cuiGroupBox4.Controls.Add(cuiLabel15);
-            cuiGroupBox4.Controls.Add(cuiPictureBox4);
-            cuiGroupBox4.Location = new Point(27, 54);
-            cuiGroupBox4.Name = "cuiGroupBox4";
-            cuiGroupBox4.Padding = new Padding(8, 22, 8, 8);
-            cuiGroupBox4.Rounding = new Padding(8);
-            cuiGroupBox4.Size = new Size(174, 127);
-            cuiGroupBox4.TabIndex = 1;
+            TIGB1.BackColor = Color.Transparent;
+            TIGB1.BorderColor = Color.DarkGray;
+            TIGB1.Content = "";
+            TIGB1.Controls.Add(TIGLabel1);
+            TIGB1.Controls.Add(TInumber1);
+            TIGB1.Controls.Add(TIIcon1);
+            TIGB1.Location = new Point(27, 54);
+            TIGB1.Name = "TIGB1";
+            TIGB1.Padding = new Padding(8, 22, 8, 8);
+            TIGB1.Rounding = new Padding(8);
+            TIGB1.Size = new Size(174, 127);
+            TIGB1.TabIndex = 1;
             // 
-            // cuiLabel14
+            // TIGLabel1
             // 
-            cuiLabel14.Content = "Items";
-            cuiLabel14.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel14.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel14.Location = new Point(8, 101);
-            cuiLabel14.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel14.Name = "cuiLabel14";
-            cuiLabel14.Size = new Size(158, 19);
-            cuiLabel14.TabIndex = 2;
-            cuiLabel14.VerticalAlignment = StringAlignment.Far;
+            TIGLabel1.Content = "Items";
+            TIGLabel1.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TIGLabel1.HorizontalAlignment = StringAlignment.Center;
+            TIGLabel1.Location = new Point(8, 101);
+            TIGLabel1.Margin = new Padding(4, 3, 4, 3);
+            TIGLabel1.Name = "TIGLabel1";
+            TIGLabel1.Size = new Size(158, 19);
+            TIGLabel1.TabIndex = 2;
+            TIGLabel1.VerticalAlignment = StringAlignment.Far;
             // 
-            // cuiLabel15
+            // TInumber1
             // 
-            cuiLabel15.Content = "123";
-            cuiLabel15.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel15.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel15.Location = new Point(8, 66);
-            cuiLabel15.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel15.Name = "cuiLabel15";
-            cuiLabel15.Size = new Size(158, 34);
-            cuiLabel15.TabIndex = 1;
-            cuiLabel15.VerticalAlignment = StringAlignment.Far;
+            TInumber1.Content = "123";
+            TInumber1.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TInumber1.HorizontalAlignment = StringAlignment.Center;
+            TInumber1.Location = new Point(8, 66);
+            TInumber1.Margin = new Padding(4, 3, 4, 3);
+            TInumber1.Name = "TInumber1";
+            TInumber1.Size = new Size(158, 34);
+            TInumber1.TabIndex = 1;
+            TInumber1.VerticalAlignment = StringAlignment.Far;
             // 
-            // cuiPictureBox4
+            // TIIcon1
             // 
-            cuiPictureBox4.BackgroundImage = Properties.Resources.package;
-            cuiPictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
-            cuiPictureBox4.Content = null;
-            cuiPictureBox4.ImageTint = Color.White;
-            cuiPictureBox4.Location = new Point(60, 19);
-            cuiPictureBox4.Margin = new Padding(4, 3, 4, 3);
-            cuiPictureBox4.Name = "cuiPictureBox4";
-            cuiPictureBox4.OutlineThickness = 1F;
-            cuiPictureBox4.PanelOutlineColor = Color.Empty;
-            cuiPictureBox4.Rotation = 0;
-            cuiPictureBox4.Rounding = new Padding(8);
-            cuiPictureBox4.Size = new Size(53, 44);
-            cuiPictureBox4.TabIndex = 0;
+            TIIcon1.BackgroundImage = (Image)resources.GetObject("TIIcon1.BackgroundImage");
+            TIIcon1.BackgroundImageLayout = ImageLayout.Zoom;
+            TIIcon1.Content = null;
+            TIIcon1.ImageTint = Color.White;
+            TIIcon1.Location = new Point(60, 19);
+            TIIcon1.Margin = new Padding(4, 3, 4, 3);
+            TIIcon1.Name = "TIIcon1";
+            TIIcon1.OutlineThickness = 1F;
+            TIIcon1.PanelOutlineColor = Color.Empty;
+            TIIcon1.Rotation = 0;
+            TIIcon1.Rounding = new Padding(8);
+            TIIcon1.Size = new Size(53, 44);
+            TIIcon1.TabIndex = 0;
             // 
             // cuiLabel16
             // 
             cuiLabel16.BackColor = Color.Transparent;
-            cuiLabel16.Content = "Item\\ Summary";
+            cuiLabel16.Content = "Total\\ Items";
             cuiLabel16.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiLabel16.HorizontalAlignment = StringAlignment.Near;
             cuiLabel16.Location = new Point(11, 9);
@@ -534,136 +540,137 @@
             cuiLabel16.Size = new Size(158, 28);
             cuiLabel16.TabIndex = 0;
             cuiLabel16.VerticalAlignment = StringAlignment.Near;
+            cuiLabel16.Load += cuiLabel16_Load;
             // 
-            // cuiPanel3
+            // TotalBatchesPanel
             // 
-            cuiPanel3.Controls.Add(cuiGroupBox5);
-            cuiPanel3.Controls.Add(cuiGroupBox6);
-            cuiPanel3.Controls.Add(cuiLabel21);
-            cuiPanel3.Location = new Point(544, 362);
-            cuiPanel3.Name = "cuiPanel3";
-            cuiPanel3.OutlineThickness = 1F;
-            cuiPanel3.PanelColor = Color.White;
-            cuiPanel3.PanelOutlineColor = Color.Black;
-            cuiPanel3.Rounding = new Padding(10);
-            cuiPanel3.Size = new Size(448, 208);
-            cuiPanel3.TabIndex = 3;
+            TotalBatchesPanel.Controls.Add(TBGB2);
+            TotalBatchesPanel.Controls.Add(TBGB1);
+            TotalBatchesPanel.Controls.Add(cuiLabel21);
+            TotalBatchesPanel.Location = new Point(538, 367);
+            TotalBatchesPanel.Name = "TotalBatchesPanel";
+            TotalBatchesPanel.OutlineThickness = 1F;
+            TotalBatchesPanel.PanelColor = Color.White;
+            TotalBatchesPanel.PanelOutlineColor = Color.Black;
+            TotalBatchesPanel.Rounding = new Padding(10);
+            TotalBatchesPanel.Size = new Size(448, 208);
+            TotalBatchesPanel.TabIndex = 3;
             // 
-            // cuiGroupBox5
+            // TBGB2
             // 
-            cuiGroupBox5.BackColor = Color.Transparent;
-            cuiGroupBox5.BorderColor = Color.DarkGray;
-            cuiGroupBox5.Content = "";
-            cuiGroupBox5.Controls.Add(cuiLabel17);
-            cuiGroupBox5.Controls.Add(cuiLabel18);
-            cuiGroupBox5.Controls.Add(cuiPictureBox5);
-            cuiGroupBox5.Location = new Point(243, 54);
-            cuiGroupBox5.Name = "cuiGroupBox5";
-            cuiGroupBox5.Padding = new Padding(8, 22, 8, 8);
-            cuiGroupBox5.Rounding = new Padding(8);
-            cuiGroupBox5.Size = new Size(174, 127);
-            cuiGroupBox5.TabIndex = 2;
+            TBGB2.BackColor = Color.Transparent;
+            TBGB2.BorderColor = Color.DarkGray;
+            TBGB2.Content = "";
+            TBGB2.Controls.Add(TBIcon2);
+            TBGB2.Controls.Add(TBLabel2);
+            TBGB2.Controls.Add(TBNumber2);
+            TBGB2.Location = new Point(243, 54);
+            TBGB2.Name = "TBGB2";
+            TBGB2.Padding = new Padding(8, 22, 8, 8);
+            TBGB2.Rounding = new Padding(8);
+            TBGB2.Size = new Size(174, 127);
+            TBGB2.TabIndex = 2;
             // 
-            // cuiLabel17
+            // TBIcon2
             // 
-            cuiLabel17.Content = "To\\ be\\ received";
-            cuiLabel17.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel17.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel17.Location = new Point(8, 101);
-            cuiLabel17.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel17.Name = "cuiLabel17";
-            cuiLabel17.Size = new Size(158, 19);
-            cuiLabel17.TabIndex = 4;
-            cuiLabel17.VerticalAlignment = StringAlignment.Far;
+            TBIcon2.BackgroundImage = (Image)resources.GetObject("TBIcon2.BackgroundImage");
+            TBIcon2.BackgroundImageLayout = ImageLayout.Zoom;
+            TBIcon2.Content = null;
+            TBIcon2.ImageTint = Color.White;
+            TBIcon2.Location = new Point(56, 19);
+            TBIcon2.Margin = new Padding(4, 3, 4, 3);
+            TBIcon2.Name = "TBIcon2";
+            TBIcon2.OutlineThickness = 1F;
+            TBIcon2.PanelOutlineColor = Color.Empty;
+            TBIcon2.Rotation = 0;
+            TBIcon2.Rounding = new Padding(8);
+            TBIcon2.Size = new Size(66, 60);
+            TBIcon2.TabIndex = 5;
             // 
-            // cuiLabel18
+            // TBLabel2
             // 
-            cuiLabel18.Content = "123";
-            cuiLabel18.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel18.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel18.Location = new Point(8, 66);
-            cuiLabel18.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel18.Name = "cuiLabel18";
-            cuiLabel18.Size = new Size(158, 34);
-            cuiLabel18.TabIndex = 3;
-            cuiLabel18.VerticalAlignment = StringAlignment.Far;
+            TBLabel2.Content = "To\\ be\\ received";
+            TBLabel2.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TBLabel2.HorizontalAlignment = StringAlignment.Center;
+            TBLabel2.Location = new Point(8, 101);
+            TBLabel2.Margin = new Padding(4, 3, 4, 3);
+            TBLabel2.Name = "TBLabel2";
+            TBLabel2.Size = new Size(158, 19);
+            TBLabel2.TabIndex = 4;
+            TBLabel2.VerticalAlignment = StringAlignment.Far;
             // 
-            // cuiPictureBox5
+            // TBNumber2
             // 
-            cuiPictureBox5.BackgroundImage = (Image)resources.GetObject("cuiPictureBox5.BackgroundImage");
-            cuiPictureBox5.BackgroundImageLayout = ImageLayout.Zoom;
-            cuiPictureBox5.Content = null;
-            cuiPictureBox5.ImageTint = Color.White;
-            cuiPictureBox5.Location = new Point(64, 19);
-            cuiPictureBox5.Margin = new Padding(4, 3, 4, 3);
-            cuiPictureBox5.Name = "cuiPictureBox5";
-            cuiPictureBox5.OutlineThickness = 1F;
-            cuiPictureBox5.PanelOutlineColor = Color.Empty;
-            cuiPictureBox5.Rotation = 0;
-            cuiPictureBox5.Rounding = new Padding(8);
-            cuiPictureBox5.Size = new Size(53, 44);
-            cuiPictureBox5.TabIndex = 1;
+            TBNumber2.Content = "123";
+            TBNumber2.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TBNumber2.HorizontalAlignment = StringAlignment.Center;
+            TBNumber2.Location = new Point(8, 66);
+            TBNumber2.Margin = new Padding(4, 3, 4, 3);
+            TBNumber2.Name = "TBNumber2";
+            TBNumber2.Size = new Size(158, 34);
+            TBNumber2.TabIndex = 3;
+            TBNumber2.VerticalAlignment = StringAlignment.Far;
             // 
-            // cuiGroupBox6
+            // TBGB1
             // 
-            cuiGroupBox6.BackColor = Color.Transparent;
-            cuiGroupBox6.BorderColor = Color.DarkGray;
-            cuiGroupBox6.Content = "";
-            cuiGroupBox6.Controls.Add(cuiLabel19);
-            cuiGroupBox6.Controls.Add(cuiLabel20);
-            cuiGroupBox6.Controls.Add(cuiPictureBox6);
-            cuiGroupBox6.Location = new Point(27, 54);
-            cuiGroupBox6.Name = "cuiGroupBox6";
-            cuiGroupBox6.Padding = new Padding(8, 22, 8, 8);
-            cuiGroupBox6.Rounding = new Padding(8);
-            cuiGroupBox6.Size = new Size(174, 127);
-            cuiGroupBox6.TabIndex = 1;
+            TBGB1.BackColor = Color.Transparent;
+            TBGB1.BorderColor = Color.DarkGray;
+            TBGB1.Content = "";
+            TBGB1.Controls.Add(TBLabel1);
+            TBGB1.Controls.Add(TBNumber1);
+            TBGB1.Controls.Add(TBIcon1);
+            TBGB1.Location = new Point(27, 54);
+            TBGB1.Name = "TBGB1";
+            TBGB1.Padding = new Padding(8, 22, 8, 8);
+            TBGB1.Rounding = new Padding(8);
+            TBGB1.Size = new Size(174, 127);
+            TBGB1.TabIndex = 1;
             // 
-            // cuiLabel19
+            // TBLabel1
             // 
-            cuiLabel19.Content = "Assets";
-            cuiLabel19.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel19.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel19.Location = new Point(8, 101);
-            cuiLabel19.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel19.Name = "cuiLabel19";
-            cuiLabel19.Size = new Size(158, 19);
-            cuiLabel19.TabIndex = 2;
-            cuiLabel19.VerticalAlignment = StringAlignment.Far;
-            cuiLabel19.Load += cuiLabel19_Load;
+            TBLabel1.Content = "Assets";
+            TBLabel1.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TBLabel1.HorizontalAlignment = StringAlignment.Center;
+            TBLabel1.Location = new Point(8, 101);
+            TBLabel1.Margin = new Padding(4, 3, 4, 3);
+            TBLabel1.Name = "TBLabel1";
+            TBLabel1.Size = new Size(158, 19);
+            TBLabel1.TabIndex = 2;
+            TBLabel1.VerticalAlignment = StringAlignment.Far;
+            TBLabel1.Load += cuiLabel19_Load;
             // 
-            // cuiLabel20
+            // TBNumber1
             // 
-            cuiLabel20.Content = "123";
-            cuiLabel20.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel20.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel20.Location = new Point(8, 66);
-            cuiLabel20.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel20.Name = "cuiLabel20";
-            cuiLabel20.Size = new Size(158, 34);
-            cuiLabel20.TabIndex = 1;
-            cuiLabel20.VerticalAlignment = StringAlignment.Far;
+            TBNumber1.Content = "123";
+            TBNumber1.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            TBNumber1.HorizontalAlignment = StringAlignment.Center;
+            TBNumber1.Location = new Point(8, 66);
+            TBNumber1.Margin = new Padding(4, 3, 4, 3);
+            TBNumber1.Name = "TBNumber1";
+            TBNumber1.Size = new Size(158, 34);
+            TBNumber1.TabIndex = 1;
+            TBNumber1.VerticalAlignment = StringAlignment.Far;
             // 
-            // cuiPictureBox6
+            // TBIcon1
             // 
-            cuiPictureBox6.BackgroundImage = Properties.Resources.package;
-            cuiPictureBox6.BackgroundImageLayout = ImageLayout.Zoom;
-            cuiPictureBox6.Content = null;
-            cuiPictureBox6.ImageTint = Color.White;
-            cuiPictureBox6.Location = new Point(60, 19);
-            cuiPictureBox6.Margin = new Padding(4, 3, 4, 3);
-            cuiPictureBox6.Name = "cuiPictureBox6";
-            cuiPictureBox6.OutlineThickness = 1F;
-            cuiPictureBox6.PanelOutlineColor = Color.Empty;
-            cuiPictureBox6.Rotation = 0;
-            cuiPictureBox6.Rounding = new Padding(8);
-            cuiPictureBox6.Size = new Size(53, 44);
-            cuiPictureBox6.TabIndex = 0;
+            TBIcon1.BackgroundImage = (Image)resources.GetObject("TBIcon1.BackgroundImage");
+            TBIcon1.BackgroundImageLayout = ImageLayout.Zoom;
+            TBIcon1.Content = null;
+            TBIcon1.ImageTint = Color.White;
+            TBIcon1.Location = new Point(60, 19);
+            TBIcon1.Margin = new Padding(4, 3, 4, 3);
+            TBIcon1.Name = "TBIcon1";
+            TBIcon1.OutlineThickness = 1F;
+            TBIcon1.PanelOutlineColor = Color.Empty;
+            TBIcon1.Rotation = 0;
+            TBIcon1.Rounding = new Padding(8);
+            TBIcon1.Size = new Size(53, 44);
+            TBIcon1.TabIndex = 0;
             // 
             // cuiLabel21
             // 
             cuiLabel21.BackColor = Color.Transparent;
-            cuiLabel21.Content = "Item\\ Summary";
+            cuiLabel21.Content = "Total\\ Batches";
             cuiLabel21.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiLabel21.HorizontalAlignment = StringAlignment.Near;
             cuiLabel21.Location = new Point(11, 9);
@@ -672,169 +679,153 @@
             cuiLabel21.Size = new Size(158, 28);
             cuiLabel21.TabIndex = 0;
             cuiLabel21.VerticalAlignment = StringAlignment.Near;
+            cuiLabel21.Load += cuiLabel21_Load;
             // 
-            // dataGridView1
+            // WarrantyPanel
             // 
-            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(67, 593);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(448, 456);
-            dataGridView1.TabIndex = 4;
+            WarrantyPanel.Controls.Add(WGB);
+            WarrantyPanel.Location = new Point(538, 598);
+            WarrantyPanel.Name = "WarrantyPanel";
+            WarrantyPanel.OutlineThickness = 1F;
+            WarrantyPanel.PanelColor = Color.White;
+            WarrantyPanel.PanelOutlineColor = Color.Black;
+            WarrantyPanel.Rounding = new Padding(8);
+            WarrantyPanel.Size = new Size(217, 150);
+            WarrantyPanel.TabIndex = 5;
             // 
-            // cuiPanel4
+            // WGB
             // 
-            cuiPanel4.Controls.Add(cuiGroupBox7);
-            cuiPanel4.Location = new Point(544, 593);
-            cuiPanel4.Name = "cuiPanel4";
-            cuiPanel4.OutlineThickness = 1F;
-            cuiPanel4.PanelColor = Color.White;
-            cuiPanel4.PanelOutlineColor = Color.Black;
-            cuiPanel4.Rounding = new Padding(8);
-            cuiPanel4.Size = new Size(217, 150);
-            cuiPanel4.TabIndex = 5;
+            WGB.BackColor = Color.Transparent;
+            WGB.BorderColor = Color.DarkGray;
+            WGB.Content = "";
+            WGB.Controls.Add(WLabel);
+            WGB.Controls.Add(WNumber);
+            WGB.Controls.Add(WIcon);
+            WGB.Location = new Point(14, 10);
+            WGB.Name = "WGB";
+            WGB.Padding = new Padding(8, 22, 8, 8);
+            WGB.Rounding = new Padding(8);
+            WGB.Size = new Size(190, 127);
+            WGB.TabIndex = 3;
+            WGB.Paint += WGB_Paint;
             // 
-            // cuiGroupBox7
+            // WLabel
             // 
-            cuiGroupBox7.BackColor = Color.Transparent;
-            cuiGroupBox7.BorderColor = Color.DarkGray;
-            cuiGroupBox7.Content = "";
-            cuiGroupBox7.Controls.Add(cuiLabel22);
-            cuiGroupBox7.Controls.Add(cuiLabel23);
-            cuiGroupBox7.Controls.Add(cuiPictureBox7);
-            cuiGroupBox7.Location = new Point(14, 10);
-            cuiGroupBox7.Name = "cuiGroupBox7";
-            cuiGroupBox7.Padding = new Padding(8, 22, 8, 8);
-            cuiGroupBox7.Rounding = new Padding(8);
-            cuiGroupBox7.Size = new Size(190, 127);
-            cuiGroupBox7.TabIndex = 3;
+            WLabel.BackColor = Color.Transparent;
+            WLabel.Content = "Warranty";
+            WLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            WLabel.HorizontalAlignment = StringAlignment.Near;
+            WLabel.Location = new Point(89, 80);
+            WLabel.Margin = new Padding(4, 3, 4, 3);
+            WLabel.Name = "WLabel";
+            WLabel.Size = new Size(85, 19);
+            WLabel.TabIndex = 2;
+            WLabel.VerticalAlignment = StringAlignment.Far;
+            WLabel.Load += cuiLabel22_Load;
             // 
-            // cuiLabel22
+            // WNumber
             // 
-            cuiLabel22.BackColor = Color.Transparent;
-            cuiLabel22.Content = "Warranty";
-            cuiLabel22.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel22.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel22.Location = new Point(89, 80);
-            cuiLabel22.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel22.Name = "cuiLabel22";
-            cuiLabel22.Size = new Size(85, 19);
-            cuiLabel22.TabIndex = 2;
-            cuiLabel22.VerticalAlignment = StringAlignment.Far;
-            cuiLabel22.Load += cuiLabel22_Load;
+            WNumber.Content = "123";
+            WNumber.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            WNumber.HorizontalAlignment = StringAlignment.Near;
+            WNumber.Location = new Point(86, 40);
+            WNumber.Margin = new Padding(4, 3, 4, 3);
+            WNumber.Name = "WNumber";
+            WNumber.Size = new Size(92, 34);
+            WNumber.TabIndex = 1;
+            WNumber.VerticalAlignment = StringAlignment.Far;
             // 
-            // cuiLabel23
+            // WIcon
             // 
-            cuiLabel23.Content = "123";
-            cuiLabel23.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel23.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel23.Location = new Point(86, 40);
-            cuiLabel23.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel23.Name = "cuiLabel23";
-            cuiLabel23.Size = new Size(92, 34);
-            cuiLabel23.TabIndex = 1;
-            cuiLabel23.VerticalAlignment = StringAlignment.Far;
+            WIcon.BackgroundImage = (Image)resources.GetObject("WIcon.BackgroundImage");
+            WIcon.BackgroundImageLayout = ImageLayout.Zoom;
+            WIcon.Content = null;
+            WIcon.ImageTint = Color.White;
+            WIcon.Location = new Point(25, 40);
+            WIcon.Margin = new Padding(4, 3, 4, 3);
+            WIcon.Name = "WIcon";
+            WIcon.OutlineThickness = 1F;
+            WIcon.PanelOutlineColor = Color.Empty;
+            WIcon.Rotation = 0;
+            WIcon.Rounding = new Padding(8);
+            WIcon.Size = new Size(53, 44);
+            WIcon.TabIndex = 0;
+            WIcon.Load += cuiPictureBox7_Load;
             // 
-            // cuiPictureBox7
+            // OutOfStockPanel
             // 
-            cuiPictureBox7.BackgroundImage = (Image)resources.GetObject("cuiPictureBox7.BackgroundImage");
-            cuiPictureBox7.BackgroundImageLayout = ImageLayout.Zoom;
-            cuiPictureBox7.Content = null;
-            cuiPictureBox7.ImageTint = Color.White;
-            cuiPictureBox7.Location = new Point(25, 40);
-            cuiPictureBox7.Margin = new Padding(4, 3, 4, 3);
-            cuiPictureBox7.Name = "cuiPictureBox7";
-            cuiPictureBox7.OutlineThickness = 1F;
-            cuiPictureBox7.PanelOutlineColor = Color.Empty;
-            cuiPictureBox7.Rotation = 0;
-            cuiPictureBox7.Rounding = new Padding(8);
-            cuiPictureBox7.Size = new Size(53, 44);
-            cuiPictureBox7.TabIndex = 0;
-            cuiPictureBox7.Load += cuiPictureBox7_Load;
+            OutOfStockPanel.BackColor = Color.Transparent;
+            OutOfStockPanel.Controls.Add(OOSGB);
+            OutOfStockPanel.Location = new Point(769, 598);
+            OutOfStockPanel.Name = "OutOfStockPanel";
+            OutOfStockPanel.OutlineThickness = 1F;
+            OutOfStockPanel.PanelColor = Color.White;
+            OutOfStockPanel.PanelOutlineColor = Color.Black;
+            OutOfStockPanel.Rounding = new Padding(8);
+            OutOfStockPanel.Size = new Size(217, 150);
+            OutOfStockPanel.TabIndex = 6;
             // 
-            // dataGridView2
+            // OOSGB
             // 
-            dataGridView2.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(544, 762);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(448, 287);
-            dataGridView2.TabIndex = 7;
+            OOSGB.BackColor = Color.Transparent;
+            OOSGB.BorderColor = Color.DarkGray;
+            OOSGB.Content = "";
+            OOSGB.Controls.Add(OOSLabel);
+            OOSGB.Controls.Add(OOSNumber);
+            OOSGB.Controls.Add(OOSIcon);
+            OOSGB.Location = new Point(14, 10);
+            OOSGB.Name = "OOSGB";
+            OOSGB.Padding = new Padding(8, 22, 8, 8);
+            OOSGB.Rounding = new Padding(8);
+            OOSGB.Size = new Size(190, 127);
+            OOSGB.TabIndex = 3;
             // 
-            // cuiPanel5
+            // OOSLabel
             // 
-            cuiPanel5.BackColor = Color.Transparent;
-            cuiPanel5.Controls.Add(cuiGroupBox8);
-            cuiPanel5.Location = new Point(775, 593);
-            cuiPanel5.Name = "cuiPanel5";
-            cuiPanel5.OutlineThickness = 1F;
-            cuiPanel5.PanelColor = Color.White;
-            cuiPanel5.PanelOutlineColor = Color.Black;
-            cuiPanel5.Rounding = new Padding(8);
-            cuiPanel5.Size = new Size(217, 150);
-            cuiPanel5.TabIndex = 6;
+            OOSLabel.BackColor = Color.Transparent;
+            OOSLabel.Content = "Out\\ of\\ Stock";
+            OOSLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            OOSLabel.HorizontalAlignment = StringAlignment.Near;
+            OOSLabel.Location = new Point(89, 80);
+            OOSLabel.Margin = new Padding(4, 3, 4, 3);
+            OOSLabel.Name = "OOSLabel";
+            OOSLabel.Size = new Size(85, 19);
+            OOSLabel.TabIndex = 2;
+            OOSLabel.VerticalAlignment = StringAlignment.Far;
             // 
-            // cuiGroupBox8
+            // OOSNumber
             // 
-            cuiGroupBox8.BackColor = Color.Transparent;
-            cuiGroupBox8.BorderColor = Color.DarkGray;
-            cuiGroupBox8.Content = "";
-            cuiGroupBox8.Controls.Add(cuiLabel24);
-            cuiGroupBox8.Controls.Add(cuiLabel25);
-            cuiGroupBox8.Controls.Add(cuiPictureBox8);
-            cuiGroupBox8.Location = new Point(14, 10);
-            cuiGroupBox8.Name = "cuiGroupBox8";
-            cuiGroupBox8.Padding = new Padding(8, 22, 8, 8);
-            cuiGroupBox8.Rounding = new Padding(8);
-            cuiGroupBox8.Size = new Size(190, 127);
-            cuiGroupBox8.TabIndex = 3;
+            OOSNumber.Content = "123";
+            OOSNumber.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            OOSNumber.HorizontalAlignment = StringAlignment.Near;
+            OOSNumber.Location = new Point(86, 40);
+            OOSNumber.Margin = new Padding(4, 3, 4, 3);
+            OOSNumber.Name = "OOSNumber";
+            OOSNumber.Size = new Size(92, 34);
+            OOSNumber.TabIndex = 1;
+            OOSNumber.VerticalAlignment = StringAlignment.Far;
             // 
-            // cuiLabel24
+            // OOSIcon
             // 
-            cuiLabel24.BackColor = Color.Transparent;
-            cuiLabel24.Content = "Out\\ of\\ Stock";
-            cuiLabel24.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel24.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel24.Location = new Point(89, 80);
-            cuiLabel24.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel24.Name = "cuiLabel24";
-            cuiLabel24.Size = new Size(85, 19);
-            cuiLabel24.TabIndex = 2;
-            cuiLabel24.VerticalAlignment = StringAlignment.Far;
-            // 
-            // cuiLabel25
-            // 
-            cuiLabel25.Content = "123";
-            cuiLabel25.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel25.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel25.Location = new Point(86, 40);
-            cuiLabel25.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel25.Name = "cuiLabel25";
-            cuiLabel25.Size = new Size(92, 34);
-            cuiLabel25.TabIndex = 1;
-            cuiLabel25.VerticalAlignment = StringAlignment.Far;
-            // 
-            // cuiPictureBox8
-            // 
-            cuiPictureBox8.BackgroundImage = (Image)resources.GetObject("cuiPictureBox8.BackgroundImage");
-            cuiPictureBox8.BackgroundImageLayout = ImageLayout.Zoom;
-            cuiPictureBox8.Content = null;
-            cuiPictureBox8.ImageTint = Color.White;
-            cuiPictureBox8.Location = new Point(25, 40);
-            cuiPictureBox8.Margin = new Padding(4, 3, 4, 3);
-            cuiPictureBox8.Name = "cuiPictureBox8";
-            cuiPictureBox8.OutlineThickness = 1F;
-            cuiPictureBox8.PanelOutlineColor = Color.Empty;
-            cuiPictureBox8.Rotation = 0;
-            cuiPictureBox8.Rounding = new Padding(8);
-            cuiPictureBox8.Size = new Size(53, 44);
-            cuiPictureBox8.TabIndex = 0;
+            OOSIcon.BackgroundImage = (Image)resources.GetObject("OOSIcon.BackgroundImage");
+            OOSIcon.BackgroundImageLayout = ImageLayout.Zoom;
+            OOSIcon.Content = null;
+            OOSIcon.ImageTint = Color.White;
+            OOSIcon.Location = new Point(25, 40);
+            OOSIcon.Margin = new Padding(4, 3, 4, 3);
+            OOSIcon.Name = "OOSIcon";
+            OOSIcon.OutlineThickness = 1F;
+            OOSIcon.PanelOutlineColor = Color.Empty;
+            OOSIcon.Rotation = 0;
+            OOSIcon.Rounding = new Padding(8);
+            OOSIcon.Size = new Size(53, 44);
+            OOSIcon.TabIndex = 0;
             // 
             // cuiPanel6
             // 
             cuiPanel6.Controls.Add(DashboardHeader);
-            cuiPanel6.Controls.Add(cuiPictureBox9);
             cuiPanel6.Controls.Add(SearchBar);
+            cuiPanel6.Controls.Add(cuiGradientPanel1);
             cuiPanel6.Dock = DockStyle.Top;
             cuiPanel6.Location = new Point(0, 0);
             cuiPanel6.Name = "cuiPanel6";
@@ -858,32 +849,14 @@
             DashboardHeader.TabIndex = 1;
             DashboardHeader.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiPictureBox9
-            // 
-            cuiPictureBox9.BackColor = Color.Transparent;
-            cuiPictureBox9.BackgroundImage = (Image)resources.GetObject("cuiPictureBox9.BackgroundImage");
-            cuiPictureBox9.BackgroundImageLayout = ImageLayout.Zoom;
-            cuiPictureBox9.Content = null;
-            cuiPictureBox9.ImageTint = Color.White;
-            cuiPictureBox9.Location = new Point(990, 15);
-            cuiPictureBox9.Margin = new Padding(4, 3, 4, 3);
-            cuiPictureBox9.Name = "cuiPictureBox9";
-            cuiPictureBox9.OutlineThickness = 1F;
-            cuiPictureBox9.PanelOutlineColor = Color.Empty;
-            cuiPictureBox9.Rotation = 0;
-            cuiPictureBox9.Rounding = new Padding(8);
-            cuiPictureBox9.Size = new Size(28, 28);
-            cuiPictureBox9.TabIndex = 0;
-            cuiPictureBox9.Load += cuiPictureBox9_Load;
-            // 
             // SearchBar
             // 
             SearchBar.BackColor = Color.Transparent;
             SearchBar.BackgroundColor = Color.White;
-            SearchBar.Content = "";
+            SearchBar.Content = "Search here";
             SearchBar.FocusBackgroundColor = Color.White;
             SearchBar.FocusImageTint = Color.White;
-            SearchBar.FocusOutlineColor = Color.Transparent;
+            SearchBar.FocusOutlineColor = Color.DarkGray;
             SearchBar.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             SearchBar.ForeColor = Color.Gray;
             SearchBar.Image = null;
@@ -905,105 +878,189 @@
             SearchBar.TextOffset = new Size(0, 0);
             SearchBar.UnderlinedStyle = true;
             // 
+            // cuiGradientPanel1
+            // 
+            cuiGradientPanel1.Controls.Add(cuiPictureBox9);
+            cuiGradientPanel1.GradientAngle = 90F;
+            cuiGradientPanel1.Location = new Point(990, 10);
+            cuiGradientPanel1.Name = "cuiGradientPanel1";
+            cuiGradientPanel1.OutlineThickness = 1F;
+            cuiGradientPanel1.PanelColor1 = Color.White;
+            cuiGradientPanel1.PanelColor2 = Color.LightGray;
+            cuiGradientPanel1.PanelOutlineColor1 = Color.FromArgb(224, 224, 224);
+            cuiGradientPanel1.PanelOutlineColor2 = Color.Silver;
+            cuiGradientPanel1.Rounding = new Padding(8);
+            cuiGradientPanel1.Size = new Size(35, 35);
+            cuiGradientPanel1.TabIndex = 12;
+            // 
+            // cuiPictureBox9
+            // 
+            cuiPictureBox9.BackColor = Color.Transparent;
+            cuiPictureBox9.BackgroundImage = (Image)resources.GetObject("cuiPictureBox9.BackgroundImage");
+            cuiPictureBox9.BackgroundImageLayout = ImageLayout.Zoom;
+            cuiPictureBox9.Content = null;
+            cuiPictureBox9.ImageTint = Color.White;
+            cuiPictureBox9.Location = new Point(4, 3);
+            cuiPictureBox9.Margin = new Padding(4, 3, 4, 3);
+            cuiPictureBox9.Name = "cuiPictureBox9";
+            cuiPictureBox9.OutlineThickness = 1F;
+            cuiPictureBox9.PanelOutlineColor = Color.Empty;
+            cuiPictureBox9.Rotation = 0;
+            cuiPictureBox9.Rounding = new Padding(8);
+            cuiPictureBox9.Size = new Size(28, 28);
+            cuiPictureBox9.TabIndex = 0;
+            cuiPictureBox9.Load += cuiPictureBox9_Load;
+            // 
+            // cuiPanel7
+            // 
+            cuiPanel7.BackColor = Color.Transparent;
+            cuiPanel7.Controls.Add(dataGridView1);
+            cuiPanel7.Location = new Point(61, 598);
+            cuiPanel7.Name = "cuiPanel7";
+            cuiPanel7.OutlineThickness = 1F;
+            cuiPanel7.PanelColor = Color.White;
+            cuiPanel7.PanelOutlineColor = Color.Black;
+            cuiPanel7.Rounding = new Padding(8);
+            cuiPanel7.Size = new Size(448, 456);
+            cuiPanel7.TabIndex = 9;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = Color.WhiteSmoke;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(23, 90);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(404, 366);
+            dataGridView1.TabIndex = 10;
+            // 
+            // cuiPanel8
+            // 
+            cuiPanel8.BackColor = Color.Transparent;
+            cuiPanel8.Controls.Add(dataGridView2);
+            cuiPanel8.Location = new Point(538, 768);
+            cuiPanel8.Name = "cuiPanel8";
+            cuiPanel8.OutlineThickness = 1F;
+            cuiPanel8.PanelColor = Color.White;
+            cuiPanel8.PanelOutlineColor = Color.Black;
+            cuiPanel8.Rounding = new Padding(8);
+            cuiPanel8.Size = new Size(448, 286);
+            cuiPanel8.TabIndex = 11;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.BackgroundColor = Color.WhiteSmoke;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(14, 47);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.Size = new Size(419, 239);
+            dataGridView2.TabIndex = 10;
+            // 
             // DashboardContent
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.AliceBlue;
+            Controls.Add(cuiPanel8);
+            Controls.Add(cuiPanel7);
             Controls.Add(cuiPanel6);
-            Controls.Add(cuiPanel5);
-            Controls.Add(dataGridView2);
-            Controls.Add(cuiPanel4);
-            Controls.Add(dataGridView1);
-            Controls.Add(cuiPanel3);
-            Controls.Add(cuiPanel2);
-            Controls.Add(cuiPanel1);
+            Controls.Add(OutOfStockPanel);
+            Controls.Add(WarrantyPanel);
+            Controls.Add(TotalBatchesPanel);
+            Controls.Add(TotalItemsPanel);
+            Controls.Add(ProductSummaryPanel);
             Controls.Add(cuiLabel1);
-            Controls.Add(ItemSummary);
+            Controls.Add(ItemSummaryPanel);
             Name = "DashboardContent";
             Size = new Size(1060, 1100);
             Load += DashboardContent_Load;
-            ItemSummary.ResumeLayout(false);
+            MouseClick += DashboardContent_MouseClick;
+            ItemSummaryPanel.ResumeLayout(false);
             ISGB2.ResumeLayout(false);
             ISGB1.ResumeLayout(false);
-            cuiPanel1.ResumeLayout(false);
-            cuiGroupBox1.ResumeLayout(false);
-            cuiGroupBox2.ResumeLayout(false);
-            cuiPanel2.ResumeLayout(false);
-            cuiGroupBox3.ResumeLayout(false);
-            cuiGroupBox4.ResumeLayout(false);
-            cuiPanel3.ResumeLayout(false);
-            cuiGroupBox5.ResumeLayout(false);
-            cuiGroupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            cuiPanel4.ResumeLayout(false);
-            cuiGroupBox7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            cuiPanel5.ResumeLayout(false);
-            cuiGroupBox8.ResumeLayout(false);
+            ProductSummaryPanel.ResumeLayout(false);
+            PSG2.ResumeLayout(false);
+            PSGB1.ResumeLayout(false);
+            TotalItemsPanel.ResumeLayout(false);
+            TIGB2.ResumeLayout(false);
+            TIGB1.ResumeLayout(false);
+            TotalBatchesPanel.ResumeLayout(false);
+            TBGB2.ResumeLayout(false);
+            TBGB1.ResumeLayout(false);
+            WarrantyPanel.ResumeLayout(false);
+            WGB.ResumeLayout(false);
+            OutOfStockPanel.ResumeLayout(false);
+            OOSGB.ResumeLayout(false);
             cuiPanel6.ResumeLayout(false);
+            cuiGradientPanel1.ResumeLayout(false);
+            cuiPanel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            cuiPanel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private CuoreUI.Controls.cuiPanel ItemSummary;
+        private CuoreUI.Controls.cuiPanel ItemSummaryPanel;
         private CuoreUI.Controls.cuiLabel cuiLabel1;
         private CuoreUI.Controls.cuiLabel cuiLabel2;
         private CuoreUI.Controls.cuiGroupBox ISGB2;
         private CuoreUI.Controls.cuiGroupBox ISGB1;
         private CuoreUI.Controls.cuiPictureBox ISIcon1;
-        private CuoreUI.Controls.cuiPictureBox ISIcon2;
-        private CuoreUI.Controls.cuiLabel cuiLabel7;
-        private CuoreUI.Controls.cuiLabel cuiLabel6;
-        private CuoreUI.Controls.cuiLabel cuiLabel8;
-        private CuoreUI.Controls.cuiLabel cuiLabel9;
-        private CuoreUI.Controls.cuiPanel cuiPanel1;
-        private CuoreUI.Controls.cuiGroupBox cuiGroupBox1;
-        private CuoreUI.Controls.cuiLabel cuiLabel3;
-        private CuoreUI.Controls.cuiLabel cuiLabel4;
+        private CuoreUI.Controls.cuiLabel ISLabel1;
+        private CuoreUI.Controls.cuiLabel ISNumber;
+        private CuoreUI.Controls.cuiLabel ISLabel2;
+        private CuoreUI.Controls.cuiLabel ISNumber2;
+        private CuoreUI.Controls.cuiPanel ProductSummaryPanel;
+        private CuoreUI.Controls.cuiGroupBox PSG2;
+        private CuoreUI.Controls.cuiLabel PSLabel2;
+        private CuoreUI.Controls.cuiLabel PSNumber2;
         private CuoreUI.Controls.cuiPictureBox cuiPictureBox1;
-        private CuoreUI.Controls.cuiGroupBox cuiGroupBox2;
-        private CuoreUI.Controls.cuiLabel cuiLabel5;
-        private CuoreUI.Controls.cuiLabel cuiLabel10;
+        private CuoreUI.Controls.cuiGroupBox PSGB1;
+        private CuoreUI.Controls.cuiLabel PSLabel1;
+        private CuoreUI.Controls.cuiLabel PSNumber1;
         private CuoreUI.Controls.cuiPictureBox cuiPictureBox2;
         private CuoreUI.Controls.cuiLabel cuiLabel11;
-        private CuoreUI.Controls.cuiPanel cuiPanel2;
-        private CuoreUI.Controls.cuiGroupBox cuiGroupBox3;
-        private CuoreUI.Controls.cuiLabel cuiLabel12;
-        private CuoreUI.Controls.cuiLabel cuiLabel13;
-        private CuoreUI.Controls.cuiPictureBox cuiPictureBox3;
-        private CuoreUI.Controls.cuiGroupBox cuiGroupBox4;
-        private CuoreUI.Controls.cuiLabel cuiLabel14;
-        private CuoreUI.Controls.cuiLabel cuiLabel15;
-        private CuoreUI.Controls.cuiPictureBox cuiPictureBox4;
+        private CuoreUI.Controls.cuiPanel TotalItemsPanel;
+        private CuoreUI.Controls.cuiGroupBox TIGB2;
+        private CuoreUI.Controls.cuiLabel TILabel2;
+        private CuoreUI.Controls.cuiLabel TINumber2;
+        private CuoreUI.Controls.cuiPictureBox TIIcon2;
+        private CuoreUI.Controls.cuiGroupBox TIGB1;
+        private CuoreUI.Controls.cuiLabel TIGLabel1;
+        private CuoreUI.Controls.cuiLabel TInumber1;
+        private CuoreUI.Controls.cuiPictureBox TIIcon1;
         private CuoreUI.Controls.cuiLabel cuiLabel16;
-        private CuoreUI.Controls.cuiPanel cuiPanel3;
-        private CuoreUI.Controls.cuiGroupBox cuiGroupBox5;
-        private CuoreUI.Controls.cuiLabel cuiLabel17;
-        private CuoreUI.Controls.cuiLabel cuiLabel18;
-        private CuoreUI.Controls.cuiPictureBox cuiPictureBox5;
-        private CuoreUI.Controls.cuiGroupBox cuiGroupBox6;
-        private CuoreUI.Controls.cuiLabel cuiLabel19;
-        private CuoreUI.Controls.cuiLabel cuiLabel20;
-        private CuoreUI.Controls.cuiPictureBox cuiPictureBox6;
+        private CuoreUI.Controls.cuiPanel TotalBatchesPanel;
+        private CuoreUI.Controls.cuiGroupBox TBGB2;
+        private CuoreUI.Controls.cuiLabel TBLabel2;
+        private CuoreUI.Controls.cuiLabel TBNumber2;
+        private CuoreUI.Controls.cuiGroupBox TBGB1;
+        private CuoreUI.Controls.cuiLabel TBLabel1;
+        private CuoreUI.Controls.cuiLabel TBNumber1;
+        private CuoreUI.Controls.cuiPictureBox TBIcon1;
         private CuoreUI.Controls.cuiLabel cuiLabel21;
-        private DataGridView dataGridView1;
-        private CuoreUI.Controls.cuiPanel cuiPanel4;
-        private CuoreUI.Controls.cuiGroupBox cuiGroupBox7;
-        private CuoreUI.Controls.cuiLabel cuiLabel22;
-        private CuoreUI.Controls.cuiLabel cuiLabel23;
-        private CuoreUI.Controls.cuiPictureBox cuiPictureBox7;
-        private DataGridView dataGridView2;
-        private CuoreUI.Controls.cuiPanel cuiPanel5;
-        private CuoreUI.Controls.cuiGroupBox cuiGroupBox8;
-        private CuoreUI.Controls.cuiLabel cuiLabel24;
-        private CuoreUI.Controls.cuiLabel cuiLabel25;
-        private CuoreUI.Controls.cuiPictureBox cuiPictureBox8;
+        private CuoreUI.Controls.cuiPanel WarrantyPanel;
+        private CuoreUI.Controls.cuiGroupBox WGB;
+        private CuoreUI.Controls.cuiLabel WLabel;
+        private CuoreUI.Controls.cuiLabel WNumber;
+        private CuoreUI.Controls.cuiPictureBox WIcon;
+        private CuoreUI.Controls.cuiPanel OutOfStockPanel;
+        private CuoreUI.Controls.cuiGroupBox OOSGB;
+        private CuoreUI.Controls.cuiLabel OOSLabel;
+        private CuoreUI.Controls.cuiLabel OOSNumber;
+        private CuoreUI.Controls.cuiPictureBox OOSIcon;
         private CuoreUI.Controls.cuiPanel cuiPanel6;
         private CuoreUI.Controls.cuiLabel DashboardHeader;
         private CuoreUI.Controls.cuiPictureBox cuiPictureBox9;
         private CuoreUI.Controls.cuiTextBox SearchBar;
+        private CuoreUI.Controls.cuiPictureBox ISIcon2;
+        private CuoreUI.Controls.cuiPictureBox TBIcon2;
+        private CuoreUI.Controls.cuiPanel cuiPanel7;
+        private DataGridView dataGridView1;
+        private CuoreUI.Controls.cuiPanel cuiPanel8;
+        private DataGridView dataGridView2;
+        private CuoreUI.Controls.cuiGradientPanel cuiGradientPanel1;
     }
 }

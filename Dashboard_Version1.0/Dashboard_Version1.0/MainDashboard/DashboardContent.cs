@@ -66,5 +66,25 @@ namespace MainDashboard
         {
 
         }
+
+        private void cuiLabel16_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cuiLabel21_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DashboardContent_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void WGB_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

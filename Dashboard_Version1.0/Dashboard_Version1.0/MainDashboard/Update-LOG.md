@@ -1,20 +1,29 @@
 # Update Log
 
+## Version 1.1
+**Date:** June 22, 2025
+
+### Changes:
+- Updated main dashboard application in the `MainDashboard` folder.
+- Refactored code for improved maintainability and readability.
+- Enhanced sidebar animation for smoother expand/collapse transitions.
+- Improved navigation logic to further prevent duplicate MDI child forms.
+- Fixed minor UI alignment issues in the sidebar and navigation buttons.
+- Updated comments and documentation within the codebase.
+
+---
+
 ## Version 1.0 (Initial Release)
 **Date:** June 21, 2025
 
 ### Features:
 - Created main dashboard application structure.
-- Added `Form1` as the main MDI parent form.
-- Implemented sidebar with animated expand/collapse using `System.Windows.Forms.Timer`.
 - Added navigation buttons for:
   - Dashboard
   - Inventory
   - Product Alert
   - Batch
   - Employee
-- Each navigation button opens its respective form as an MDI child.
-- Ensured only one instance of each child form can be opened at a time.
 - Sidebar and UI designed for user-friendly navigation.
 
 ### Improvements:

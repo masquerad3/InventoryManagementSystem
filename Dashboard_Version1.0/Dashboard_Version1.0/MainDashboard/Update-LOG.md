@@ -6,8 +6,7 @@
 ### Changes:
 - Updated main dashboard application in the `MainDashboard` folder.
 - Refactored code for improved maintainability and readability.
-- Enhanced sidebar animation for smoother expand/collapse transitions.
-- Improved navigation logic to further prevent duplicate MDI child forms.
+- Generated navigation logic for sidebar buttons to ensure proper form activation inside the main dashboard.
 - Fixed minor UI alignment issues in the sidebar and navigation buttons.
 - Updated comments and documentation within the codebase.
 

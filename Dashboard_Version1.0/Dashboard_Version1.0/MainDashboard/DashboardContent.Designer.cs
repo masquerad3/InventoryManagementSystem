@@ -83,8 +83,8 @@
             cuiPanel6 = new CuoreUI.Controls.cuiPanel();
             DashboardHeader = new CuoreUI.Controls.cuiLabel();
             SearchBar = new CuoreUI.Controls.cuiTextBox();
-            cuiGradientPanel1 = new CuoreUI.Controls.cuiGradientPanel();
-            cuiPictureBox9 = new CuoreUI.Controls.cuiPictureBox();
+            NotifIconBG = new CuoreUI.Controls.cuiGradientPanel();
+            NotificationIcon = new CuoreUI.Controls.cuiPictureBox();
             cuiPanel7 = new CuoreUI.Controls.cuiPanel();
             dataGridView1 = new DataGridView();
             cuiPanel8 = new CuoreUI.Controls.cuiPanel();
@@ -106,7 +106,7 @@
             OutOfStockPanel.SuspendLayout();
             OOSGB.SuspendLayout();
             cuiPanel6.SuspendLayout();
-            cuiGradientPanel1.SuspendLayout();
+            NotifIconBG.SuspendLayout();
             cuiPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             cuiPanel8.SuspendLayout();
@@ -825,7 +825,7 @@
             // 
             cuiPanel6.Controls.Add(DashboardHeader);
             cuiPanel6.Controls.Add(SearchBar);
-            cuiPanel6.Controls.Add(cuiGradientPanel1);
+            cuiPanel6.Controls.Add(NotifIconBG);
             cuiPanel6.Dock = DockStyle.Top;
             cuiPanel6.Location = new Point(0, 0);
             cuiPanel6.Name = "cuiPanel6";
@@ -878,38 +878,38 @@
             SearchBar.TextOffset = new Size(0, 0);
             SearchBar.UnderlinedStyle = true;
             // 
-            // cuiGradientPanel1
+            // NotifIconBG
             // 
-            cuiGradientPanel1.Controls.Add(cuiPictureBox9);
-            cuiGradientPanel1.GradientAngle = 90F;
-            cuiGradientPanel1.Location = new Point(990, 10);
-            cuiGradientPanel1.Name = "cuiGradientPanel1";
-            cuiGradientPanel1.OutlineThickness = 1F;
-            cuiGradientPanel1.PanelColor1 = Color.White;
-            cuiGradientPanel1.PanelColor2 = Color.LightGray;
-            cuiGradientPanel1.PanelOutlineColor1 = Color.FromArgb(224, 224, 224);
-            cuiGradientPanel1.PanelOutlineColor2 = Color.Silver;
-            cuiGradientPanel1.Rounding = new Padding(8);
-            cuiGradientPanel1.Size = new Size(35, 35);
-            cuiGradientPanel1.TabIndex = 12;
+            NotifIconBG.Controls.Add(NotificationIcon);
+            NotifIconBG.GradientAngle = 90F;
+            NotifIconBG.Location = new Point(990, 10);
+            NotifIconBG.Name = "NotifIconBG";
+            NotifIconBG.OutlineThickness = 1F;
+            NotifIconBG.PanelColor1 = Color.White;
+            NotifIconBG.PanelColor2 = Color.LightGray;
+            NotifIconBG.PanelOutlineColor1 = Color.FromArgb(224, 224, 224);
+            NotifIconBG.PanelOutlineColor2 = Color.Silver;
+            NotifIconBG.Rounding = new Padding(8);
+            NotifIconBG.Size = new Size(35, 35);
+            NotifIconBG.TabIndex = 12;
             // 
-            // cuiPictureBox9
+            // NotificationIcon
             // 
-            cuiPictureBox9.BackColor = Color.Transparent;
-            cuiPictureBox9.BackgroundImage = (Image)resources.GetObject("cuiPictureBox9.BackgroundImage");
-            cuiPictureBox9.BackgroundImageLayout = ImageLayout.Zoom;
-            cuiPictureBox9.Content = null;
-            cuiPictureBox9.ImageTint = Color.White;
-            cuiPictureBox9.Location = new Point(4, 3);
-            cuiPictureBox9.Margin = new Padding(4, 3, 4, 3);
-            cuiPictureBox9.Name = "cuiPictureBox9";
-            cuiPictureBox9.OutlineThickness = 1F;
-            cuiPictureBox9.PanelOutlineColor = Color.Empty;
-            cuiPictureBox9.Rotation = 0;
-            cuiPictureBox9.Rounding = new Padding(8);
-            cuiPictureBox9.Size = new Size(28, 28);
-            cuiPictureBox9.TabIndex = 0;
-            cuiPictureBox9.Load += cuiPictureBox9_Load;
+            NotificationIcon.BackColor = Color.Transparent;
+            NotificationIcon.BackgroundImage = (Image)resources.GetObject("NotificationIcon.BackgroundImage");
+            NotificationIcon.BackgroundImageLayout = ImageLayout.Zoom;
+            NotificationIcon.Content = null;
+            NotificationIcon.ImageTint = Color.White;
+            NotificationIcon.Location = new Point(4, 3);
+            NotificationIcon.Margin = new Padding(4, 3, 4, 3);
+            NotificationIcon.Name = "NotificationIcon";
+            NotificationIcon.OutlineThickness = 1F;
+            NotificationIcon.PanelOutlineColor = Color.Empty;
+            NotificationIcon.Rotation = 0;
+            NotificationIcon.Rounding = new Padding(8);
+            NotificationIcon.Size = new Size(28, 28);
+            NotificationIcon.TabIndex = 0;
+            NotificationIcon.Load += cuiPictureBox9_Load;
             // 
             // cuiPanel7
             // 
@@ -992,7 +992,7 @@
             OutOfStockPanel.ResumeLayout(false);
             OOSGB.ResumeLayout(false);
             cuiPanel6.ResumeLayout(false);
-            cuiGradientPanel1.ResumeLayout(false);
+            NotifIconBG.ResumeLayout(false);
             cuiPanel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             cuiPanel8.ResumeLayout(false);
@@ -1053,7 +1053,7 @@
         private CuoreUI.Controls.cuiPictureBox OOSIcon;
         private CuoreUI.Controls.cuiPanel cuiPanel6;
         private CuoreUI.Controls.cuiLabel DashboardHeader;
-        private CuoreUI.Controls.cuiPictureBox cuiPictureBox9;
+        private CuoreUI.Controls.cuiPictureBox NotificationIcon;
         private CuoreUI.Controls.cuiTextBox SearchBar;
         private CuoreUI.Controls.cuiPictureBox ISIcon2;
         private CuoreUI.Controls.cuiPictureBox TBIcon2;
@@ -1061,6 +1061,6 @@
         private DataGridView dataGridView1;
         private CuoreUI.Controls.cuiPanel cuiPanel8;
         private DataGridView dataGridView2;
-        private CuoreUI.Controls.cuiGradientPanel cuiGradientPanel1;
+        private CuoreUI.Controls.cuiGradientPanel NotifIconBG;
     }
 }

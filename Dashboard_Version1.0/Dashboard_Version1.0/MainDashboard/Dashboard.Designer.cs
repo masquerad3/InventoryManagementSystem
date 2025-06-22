@@ -42,6 +42,7 @@
             ProfilePicture = new CuoreUI.Controls.cuiPictureBox();
             ProfileName = new CuoreUI.Controls.cuiLabel();
             dashboardContent1 = new DashboardContent();
+            inventory1 = new Inventory();
             DashboardPanel.SuspendLayout();
             SuspendLayout();
             // 
@@ -238,6 +239,7 @@
             ProductAlertBtn.TabIndex = 5;
             ProductAlertBtn.TextAlignment = StringAlignment.Near;
             ProductAlertBtn.TextOffset = new Point(50, 0);
+            ProductAlertBtn.Click += ProductAlertBtn_Click;
             // 
             // InventoryBtn
             // 
@@ -276,7 +278,7 @@
             InventoryBtn.TabIndex = 3;
             InventoryBtn.TextAlignment = StringAlignment.Near;
             InventoryBtn.TextOffset = new Point(50, 0);
-            InventoryBtn.Click += cuiButton2_Click;
+            InventoryBtn.Click += InventoryBtn_Click;
             // 
             // DashboardBtn
             // 
@@ -315,6 +317,7 @@
             DashboardBtn.TabIndex = 3;
             DashboardBtn.TextAlignment = StringAlignment.Near;
             DashboardBtn.TextOffset = new Point(50, 0);
+            DashboardBtn.Click += DashboardBtn_Click;
             // 
             // ProfileLabel
             // 
@@ -366,14 +369,21 @@
             // dashboardContent1
             // 
             dashboardContent1.AutoScroll = true;
-            dashboardContent1.AutoSize = true;
-            dashboardContent1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             dashboardContent1.BackColor = Color.AliceBlue;
             dashboardContent1.Dock = DockStyle.Fill;
             dashboardContent1.Location = new Point(224, 0);
             dashboardContent1.Name = "dashboardContent1";
             dashboardContent1.Size = new Size(1060, 681);
             dashboardContent1.TabIndex = 4;
+            // 
+            // inventory1
+            // 
+            inventory1.BackColor = Color.AliceBlue;
+            inventory1.Dock = DockStyle.Fill;
+            inventory1.Location = new Point(224, 0);
+            inventory1.Name = "inventory1";
+            inventory1.Size = new Size(1060, 681);
+            inventory1.TabIndex = 5;
             // 
             // Dashboard
             // 
@@ -382,6 +392,7 @@
             AutoScroll = true;
             BackColor = Color.GhostWhite;
             ClientSize = new Size(1284, 681);
+            Controls.Add(inventory1);
             Controls.Add(dashboardContent1);
             Controls.Add(DashboardPanel);
             ForeColor = SystemColors.ControlText;
@@ -390,7 +401,6 @@
             Text = "IMS - Dashboard";
             DashboardPanel.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -408,5 +418,6 @@
         private CuoreUI.Controls.cuiButton ProductAlertBtn;
         private CuoreUI.Controls.cuiButton LogoutBtn;
         private DashboardContent dashboardContent1;
+        private Inventory inventory1;
     }
 }

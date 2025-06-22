@@ -52,7 +52,7 @@
           "dependencies": {
             "CuoreUI.Winforms": {
               "target": "Package",
-              "version": "[2025.6.16, )"
+              "version": "[2025.6.19, )"
             }
           },
           "imports": [

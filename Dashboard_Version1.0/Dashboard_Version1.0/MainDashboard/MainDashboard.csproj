@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CuoreUI.Winforms" Version="2025.6.16" />
+    <PackageReference Include="CuoreUI.Winforms" Version="2025.6.19" />
   </ItemGroup>
 
   <ItemGroup>

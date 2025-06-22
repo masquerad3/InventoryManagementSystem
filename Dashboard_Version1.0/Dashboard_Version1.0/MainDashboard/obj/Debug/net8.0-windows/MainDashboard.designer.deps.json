@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "CuoreUI.Winforms/2025.6.16": {
+      "CuoreUI.Winforms/2025.6.19": {
         "runtime": {
           "lib/net8.0/CuoreUI.dll": {
             "assemblyVersion": "0.0.0.0",
@@ -17,12 +17,12 @@
     }
   },
   "libraries": {
-    "CuoreUI.Winforms/2025.6.16": {
+    "CuoreUI.Winforms/2025.6.19": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4QMGGZA8KBDjoRxNIryFsySAP4PsHXTf1TIqHfABfO4gNWdqXkZVV0+YQxeq5bpETQmr+n/M8Y9jqiJT5PEh8g==",
-      "path": "cuoreui.winforms/2025.6.16",
-      "hashPath": "cuoreui.winforms.2025.6.16.nupkg.sha512"
+      "sha512": "sha512-QwvMiuF1tPIYeKvsMoLtupYmBQw8I99b4u6gVI2wjUlEBOHwJ06z4TwR25s63iD5oO4Ui75boVKsKsWsC5rSqg==",
+      "path": "cuoreui.winforms/2025.6.19",
+      "hashPath": "cuoreui.winforms.2025.6.19.nupkg.sha512"
     }
   }
 }

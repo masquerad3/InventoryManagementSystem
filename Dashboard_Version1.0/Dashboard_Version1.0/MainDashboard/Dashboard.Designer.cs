@@ -43,6 +43,9 @@
             ProfileName = new CuoreUI.Controls.cuiLabel();
             dashboardContent1 = new DashboardContent();
             inventory1 = new Inventory();
+            productAlert1 = new ProductAlert();
+            batch1 = new Batch();
+            employee1 = new Employee();
             DashboardPanel.SuspendLayout();
             SuspendLayout();
             // 
@@ -163,6 +166,7 @@
             EmployeeBtn.TabIndex = 4;
             EmployeeBtn.TextAlignment = StringAlignment.Near;
             EmployeeBtn.TextOffset = new Point(50, 0);
+            EmployeeBtn.Click += EmployeeBtn_Click;
             // 
             // BatchBtn
             // 
@@ -201,6 +205,7 @@
             BatchBtn.TabIndex = 4;
             BatchBtn.TextAlignment = StringAlignment.Near;
             BatchBtn.TextOffset = new Point(50, 0);
+            BatchBtn.Click += BatchBtn_Click;
             // 
             // ProductAlertBtn
             // 
@@ -378,12 +383,42 @@
             // 
             // inventory1
             // 
+            inventory1.AutoScroll = true;
             inventory1.BackColor = Color.AliceBlue;
             inventory1.Dock = DockStyle.Fill;
-            inventory1.Location = new Point(224, 0);
+            inventory1.Location = new Point(0, 0);
             inventory1.Name = "inventory1";
-            inventory1.Size = new Size(1060, 681);
+            inventory1.Size = new Size(1284, 681);
             inventory1.TabIndex = 5;
+            // 
+            // productAlert1
+            // 
+            productAlert1.AutoScroll = true;
+            productAlert1.BackColor = Color.AliceBlue;
+            productAlert1.Dock = DockStyle.Fill;
+            productAlert1.Location = new Point(0, 0);
+            productAlert1.Name = "productAlert1";
+            productAlert1.Size = new Size(1284, 681);
+            productAlert1.TabIndex = 6;
+            // 
+            // batch1
+            // 
+            batch1.AutoScroll = true;
+            batch1.BackColor = Color.AliceBlue;
+            batch1.Dock = DockStyle.Fill;
+            batch1.Location = new Point(0, 0);
+            batch1.Name = "batch1";
+            batch1.Size = new Size(1284, 681);
+            batch1.TabIndex = 7;
+            // 
+            // employee1
+            // 
+            employee1.BackColor = Color.AliceBlue;
+            employee1.Dock = DockStyle.Fill;
+            employee1.Location = new Point(0, 0);
+            employee1.Name = "employee1";
+            employee1.Size = new Size(1284, 681);
+            employee1.TabIndex = 8;
             // 
             // Dashboard
             // 
@@ -392,9 +427,12 @@
             AutoScroll = true;
             BackColor = Color.GhostWhite;
             ClientSize = new Size(1284, 681);
-            Controls.Add(inventory1);
             Controls.Add(dashboardContent1);
             Controls.Add(DashboardPanel);
+            Controls.Add(inventory1);
+            Controls.Add(productAlert1);
+            Controls.Add(batch1);
+            Controls.Add(employee1);
             ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Dashboard";
@@ -419,5 +457,8 @@
         private CuoreUI.Controls.cuiButton LogoutBtn;
         private DashboardContent dashboardContent1;
         private Inventory inventory1;
+        private ProductAlert productAlert1;
+        private Batch batch1;
+        private Employee employee1;
     }
 }

@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
-      "CuoreUI.Winforms/2025.6.16": {
+      "CuoreUI.Winforms/2025.6.19": {
         "type": "package",
         "compile": {
           "lib/net8.0/CuoreUI.dll": {}
@@ -14,15 +14,15 @@
     }
   },
   "libraries": {
-    "CuoreUI.Winforms/2025.6.16": {
-      "sha512": "4QMGGZA8KBDjoRxNIryFsySAP4PsHXTf1TIqHfABfO4gNWdqXkZVV0+YQxeq5bpETQmr+n/M8Y9jqiJT5PEh8g==",
+    "CuoreUI.Winforms/2025.6.19": {
+      "sha512": "QwvMiuF1tPIYeKvsMoLtupYmBQw8I99b4u6gVI2wjUlEBOHwJ06z4TwR25s63iD5oO4Ui75boVKsKsWsC5rSqg==",
       "type": "package",
-      "path": "cuoreui.winforms/2025.6.16",
+      "path": "cuoreui.winforms/2025.6.19",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "cuoreui.winforms.2025.6.16.nupkg.sha512",
+        "cuoreui.winforms.2025.6.19.nupkg.sha512",
         "cuoreui.winforms.nuspec",
         "icon.png",
         "lib/net472/CuoreUI.dll",
@@ -32,7 +32,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
-      "CuoreUI.Winforms >= 2025.6.16"
+      "CuoreUI.Winforms >= 2025.6.19"
     ]
   },
   "packageFolders": {
@@ -42,11 +42,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
+      "projectUniqueName": "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
       "projectName": "MainDashboard",
-      "projectPath": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
+      "projectPath": "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
       "packagesPath": "C:\\Users\\Steven\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\obj\\",
+      "outputPath": "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -87,7 +87,7 @@
         "dependencies": {
           "CuoreUI.Winforms": {
             "target": "Package",
-            "version": "[2025.6.16, )"
+            "version": "[2025.6.19, )"
           }
         },
         "imports": [

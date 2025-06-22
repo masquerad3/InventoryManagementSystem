@@ -144,7 +144,7 @@
             // 
             // ISIcon2
             // 
-            ISIcon2.BackgroundImage = (Image)resources.GetObject("ISIcon2.BackgroundImage");
+            ISIcon2.BackgroundImage = Properties.Resources.bus;
             ISIcon2.BackgroundImageLayout = ImageLayout.Zoom;
             ISIcon2.Content = null;
             ISIcon2.ImageTint = Color.White;
@@ -226,7 +226,7 @@
             // 
             // ISIcon1
             // 
-            ISIcon1.BackgroundImage = (Image)resources.GetObject("ISIcon1.BackgroundImage");
+            ISIcon1.BackgroundImage = Properties.Resources.package1;
             ISIcon1.BackgroundImageLayout = ImageLayout.Zoom;
             ISIcon1.Content = null;
             ISIcon1.ImageTint = Color.White;
@@ -377,7 +377,7 @@
             // 
             // cuiPictureBox2
             // 
-            cuiPictureBox2.BackgroundImage = (Image)resources.GetObject("cuiPictureBox2.BackgroundImage");
+            cuiPictureBox2.BackgroundImage = Properties.Resources.users;
             cuiPictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
             cuiPictureBox2.Content = null;
             cuiPictureBox2.ImageTint = Color.White;
@@ -459,7 +459,7 @@
             // 
             // TIIcon2
             // 
-            TIIcon2.BackgroundImage = (Image)resources.GetObject("TIIcon2.BackgroundImage");
+            TIIcon2.BackgroundImage = Properties.Resources.bus;
             TIIcon2.BackgroundImageLayout = ImageLayout.Zoom;
             TIIcon2.Content = null;
             TIIcon2.ImageTint = Color.White;
@@ -514,7 +514,7 @@
             // 
             // TIIcon1
             // 
-            TIIcon1.BackgroundImage = (Image)resources.GetObject("TIIcon1.BackgroundImage");
+            TIIcon1.BackgroundImage = Properties.Resources.package1;
             TIIcon1.BackgroundImageLayout = ImageLayout.Zoom;
             TIIcon1.Content = null;
             TIIcon1.ImageTint = Color.White;
@@ -573,7 +573,7 @@
             // 
             // TBIcon2
             // 
-            TBIcon2.BackgroundImage = (Image)resources.GetObject("TBIcon2.BackgroundImage");
+            TBIcon2.BackgroundImage = Properties.Resources.bus;
             TBIcon2.BackgroundImageLayout = ImageLayout.Zoom;
             TBIcon2.Content = null;
             TBIcon2.ImageTint = Color.White;
@@ -653,7 +653,7 @@
             // 
             // TBIcon1
             // 
-            TBIcon1.BackgroundImage = (Image)resources.GetObject("TBIcon1.BackgroundImage");
+            TBIcon1.BackgroundImage = Properties.Resources.package1;
             TBIcon1.BackgroundImageLayout = ImageLayout.Zoom;
             TBIcon1.Content = null;
             TBIcon1.ImageTint = Color.White;
@@ -737,7 +737,7 @@
             // 
             // WIcon
             // 
-            WIcon.BackgroundImage = (Image)resources.GetObject("WIcon.BackgroundImage");
+            WIcon.BackgroundImage = Properties.Resources.package_check;
             WIcon.BackgroundImageLayout = ImageLayout.Zoom;
             WIcon.Content = null;
             WIcon.ImageTint = Color.White;
@@ -807,7 +807,7 @@
             // 
             // OOSIcon
             // 
-            OOSIcon.BackgroundImage = (Image)resources.GetObject("OOSIcon.BackgroundImage");
+            OOSIcon.BackgroundImage = Properties.Resources.package_x;
             OOSIcon.BackgroundImageLayout = ImageLayout.Zoom;
             OOSIcon.Content = null;
             OOSIcon.ImageTint = Color.White;
@@ -853,7 +853,7 @@
             // 
             SearchBar.BackColor = Color.Transparent;
             SearchBar.BackgroundColor = Color.White;
-            SearchBar.Content = "Search here";
+            SearchBar.Content = "";
             SearchBar.FocusBackgroundColor = Color.White;
             SearchBar.FocusImageTint = Color.White;
             SearchBar.FocusOutlineColor = Color.DarkGray;
@@ -896,7 +896,7 @@
             // NotificationIcon
             // 
             NotificationIcon.BackColor = Color.Transparent;
-            NotificationIcon.BackgroundImage = (Image)resources.GetObject("NotificationIcon.BackgroundImage");
+            NotificationIcon.BackgroundImage = Properties.Resources.bell;
             NotificationIcon.BackgroundImageLayout = ImageLayout.Zoom;
             NotificationIcon.Content = null;
             NotificationIcon.ImageTint = Color.White;

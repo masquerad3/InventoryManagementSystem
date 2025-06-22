@@ -1,6 +1,6 @@
 ﻿namespace MainDashboard
 {
-    partial class Inventory
+    partial class ProductAlert
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             cuiPanel6 = new CuoreUI.Controls.cuiPanel();
-            InventoryHeader = new CuoreUI.Controls.cuiLabel();
+            DashboardHeader = new CuoreUI.Controls.cuiLabel();
             SearchBar = new CuoreUI.Controls.cuiTextBox();
             NotifIconBG = new CuoreUI.Controls.cuiGradientPanel();
             NotificationIcon = new CuoreUI.Controls.cuiPictureBox();
             cuiPanel1 = new CuoreUI.Controls.cuiPanel();
             cuiLabel1 = new CuoreUI.Controls.cuiLabel();
             FilterBtn = new CuoreUI.Controls.cuiButton();
-            AddBtn = new CuoreUI.Controls.cuiButton();
             TableSearchBar = new CuoreUI.Controls.cuiTextBox();
             dataGridView1 = new DataGridView();
             cuiPanel6.SuspendLayout();
@@ -47,7 +46,7 @@
             // 
             // cuiPanel6
             // 
-            cuiPanel6.Controls.Add(InventoryHeader);
+            cuiPanel6.Controls.Add(DashboardHeader);
             cuiPanel6.Controls.Add(SearchBar);
             cuiPanel6.Controls.Add(NotifIconBG);
             cuiPanel6.Dock = DockStyle.Top;
@@ -60,18 +59,18 @@
             cuiPanel6.Size = new Size(1060, 61);
             cuiPanel6.TabIndex = 9;
             // 
-            // InventoryHeader
+            // DashboardHeader
             // 
-            InventoryHeader.BackColor = Color.Transparent;
-            InventoryHeader.Content = "Inventory";
-            InventoryHeader.Font = new Font("Leelawadee UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            InventoryHeader.HorizontalAlignment = StringAlignment.Near;
-            InventoryHeader.Location = new Point(22, 3);
-            InventoryHeader.Margin = new Padding(4, 3, 4, 3);
-            InventoryHeader.Name = "InventoryHeader";
-            InventoryHeader.Size = new Size(245, 54);
-            InventoryHeader.TabIndex = 1;
-            InventoryHeader.VerticalAlignment = StringAlignment.Center;
+            DashboardHeader.BackColor = Color.Transparent;
+            DashboardHeader.Content = "Product\\ Alert";
+            DashboardHeader.Font = new Font("Leelawadee UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            DashboardHeader.HorizontalAlignment = StringAlignment.Near;
+            DashboardHeader.Location = new Point(22, 3);
+            DashboardHeader.Margin = new Padding(4, 3, 4, 3);
+            DashboardHeader.Name = "DashboardHeader";
+            DashboardHeader.Size = new Size(245, 54);
+            DashboardHeader.TabIndex = 1;
+            DashboardHeader.VerticalAlignment = StringAlignment.Center;
             // 
             // SearchBar
             // 
@@ -138,7 +137,6 @@
             // 
             cuiPanel1.Controls.Add(cuiLabel1);
             cuiPanel1.Controls.Add(FilterBtn);
-            cuiPanel1.Controls.Add(AddBtn);
             cuiPanel1.Controls.Add(TableSearchBar);
             cuiPanel1.Controls.Add(dataGridView1);
             cuiPanel1.Location = new Point(30, 100);
@@ -148,7 +146,7 @@
             cuiPanel1.PanelOutlineColor = Color.FromArgb(224, 224, 224);
             cuiPanel1.Rounding = new Padding(8);
             cuiPanel1.Size = new Size(1000, 900);
-            cuiPanel1.TabIndex = 10;
+            cuiPanel1.TabIndex = 11;
             // 
             // cuiLabel1
             // 
@@ -202,45 +200,6 @@
             FilterBtn.TextAlignment = StringAlignment.Center;
             FilterBtn.TextOffset = new Point(0, 0);
             // 
-            // AddBtn
-            // 
-            AddBtn.BackColor = Color.Transparent;
-            AddBtn.CheckButton = false;
-            AddBtn.Checked = false;
-            AddBtn.CheckedBackground = Color.FromArgb(255, 106, 0);
-            AddBtn.CheckedForeColor = Color.White;
-            AddBtn.CheckedImageTint = Color.White;
-            AddBtn.CheckedOutline = Color.FromArgb(255, 106, 0);
-            AddBtn.Content = "Add Item";
-            AddBtn.DialogResult = DialogResult.None;
-            AddBtn.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            AddBtn.ForeColor = Color.White;
-            AddBtn.HoverBackground = Color.SteelBlue;
-            AddBtn.HoveredImageTint = Color.White;
-            AddBtn.HoverForeColor = Color.White;
-            AddBtn.HoverOutline = Color.SteelBlue;
-            AddBtn.Image = Properties.Resources.plus_circle;
-            AddBtn.ImageAutoCenter = true;
-            AddBtn.ImageExpand = new Point(3, 3);
-            AddBtn.ImageOffset = new Point(-15, 0);
-            AddBtn.Location = new Point(711, 8);
-            AddBtn.Name = "AddBtn";
-            AddBtn.NormalBackground = Color.SteelBlue;
-            AddBtn.NormalForeColor = Color.White;
-            AddBtn.NormalImageTint = Color.White;
-            AddBtn.NormalOutline = Color.Transparent;
-            AddBtn.OutlineThickness = 1F;
-            AddBtn.PressedBackground = Color.FromArgb(49, 93, 130);
-            AddBtn.PressedForeColor = Color.White;
-            AddBtn.PressedImageTint = Color.White;
-            AddBtn.PressedOutline = Color.FromArgb(33, 64, 89);
-            AddBtn.Rounding = new Padding(8);
-            AddBtn.Size = new Size(153, 45);
-            AddBtn.TabIndex = 14;
-            AddBtn.TextAlignment = StringAlignment.Center;
-            AddBtn.TextOffset = new Point(0, 0);
-            AddBtn.Click += cuiButton1_Click;
-            // 
             // TableSearchBar
             // 
             TableSearchBar.BackColor = Color.Transparent;
@@ -280,7 +239,7 @@
             dataGridView1.Size = new Size(950, 735);
             dataGridView1.TabIndex = 0;
             // 
-            // Inventory
+            // ProductAlert
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -288,9 +247,8 @@
             BackColor = Color.AliceBlue;
             Controls.Add(cuiPanel1);
             Controls.Add(cuiPanel6);
-            Name = "Inventory";
+            Name = "ProductAlert";
             Size = new Size(1060, 1100);
-            Load += Inventory_Load;
             cuiPanel6.ResumeLayout(false);
             NotifIconBG.ResumeLayout(false);
             cuiPanel1.ResumeLayout(false);
@@ -301,15 +259,14 @@
         #endregion
 
         private CuoreUI.Controls.cuiPanel cuiPanel6;
-        private CuoreUI.Controls.cuiLabel InventoryHeader;
+        private CuoreUI.Controls.cuiLabel DashboardHeader;
         private CuoreUI.Controls.cuiTextBox SearchBar;
         private CuoreUI.Controls.cuiGradientPanel NotifIconBG;
         private CuoreUI.Controls.cuiPictureBox NotificationIcon;
         private CuoreUI.Controls.cuiPanel cuiPanel1;
-        private DataGridView dataGridView1;
-        private CuoreUI.Controls.cuiTextBox TableSearchBar;
-        private CuoreUI.Controls.cuiButton FilterBtn;
-        private CuoreUI.Controls.cuiButton AddBtn;
         private CuoreUI.Controls.cuiLabel cuiLabel1;
+        private CuoreUI.Controls.cuiButton FilterBtn;
+        private CuoreUI.Controls.cuiTextBox TableSearchBar;
+        private DataGridView dataGridView1;
     }
 }

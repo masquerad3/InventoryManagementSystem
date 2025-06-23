@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hsq3jJqwqGk=",
+  "dgSpecHash": "aINGUZsYAYU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login_Version1.0.csproj",
+  "projectFilePath": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Login_Version1.0\\Login_Version1.0\\Login_Version1.0.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Steven\\.nuget\\packages\\cuoreui.winforms\\2025.6.5\\cuoreui.winforms.2025.6.5.nupkg.sha512"
+    "C:\\Users\\mural\\.nuget\\packages\\cuoreui.winforms\\2025.6.5\\cuoreui.winforms.2025.6.5.nupkg.sha512"
   ],
   "logs": []
 }

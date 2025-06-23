@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj": {}
+    "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj": {
+    "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
+        "projectUniqueName": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
         "projectName": "MainDashboard",
-        "projectPath": "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
-        "packagesPath": "C:\\Users\\Steven\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\obj\\",
+        "projectPath": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
+        "packagesPath": "C:\\Users\\mural\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Steven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mural\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

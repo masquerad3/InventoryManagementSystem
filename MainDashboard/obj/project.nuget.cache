@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jBqZ4SQ6KjY=",
+  "dgSpecHash": "7K0keZkag2U=",
   "success": true,
-  "projectFilePath": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
+  "projectFilePath": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\MainDashboard\\MainDashboard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mural\\.nuget\\packages\\cuoreui.winforms\\2025.6.19\\cuoreui.winforms.2025.6.19.nupkg.sha512"
   ],

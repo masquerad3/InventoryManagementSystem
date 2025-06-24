@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj": {}
+    "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\MainDashboard\\MainDashboard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj": {
+    "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\MainDashboard\\MainDashboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
+        "projectUniqueName": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\MainDashboard\\MainDashboard.csproj",
         "projectName": "MainDashboard",
-        "projectPath": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
+        "projectPath": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\MainDashboard\\MainDashboard.csproj",
         "packagesPath": "C:\\Users\\mural\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\obj\\",
+        "outputPath": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\MainDashboard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

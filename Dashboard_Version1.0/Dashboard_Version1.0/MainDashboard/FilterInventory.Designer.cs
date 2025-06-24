@@ -31,10 +31,10 @@ namespace MainDashboard
         {
             FilterHeader = new CuoreUI.Controls.cuiLabel();
             FilterLabel = new CuoreUI.Controls.cuiLabel();
-            cuiComboBox1 = new CuoreUI.Controls.cuiComboBox();
-            cuiLabel1 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel2 = new CuoreUI.Controls.cuiLabel();
-            cuiComboBox2 = new CuoreUI.Controls.cuiComboBox();
+            ComputerDropdown = new CuoreUI.Controls.cuiComboBox();
+            ComputerTypeLabel = new CuoreUI.Controls.cuiLabel();
+            BrandLabel = new CuoreUI.Controls.cuiLabel();
+            BrandDropdown = new CuoreUI.Controls.cuiComboBox();
             InventoryFilterBtn = new CuoreUI.Controls.cuiButton();
             FilterCancelBtn = new CuoreUI.Controls.cuiButton();
             SuspendLayout();
@@ -63,72 +63,72 @@ namespace MainDashboard
             FilterLabel.TabIndex = 1;
             FilterLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiComboBox1
+            // ComputerDropdown
             // 
-            cuiComboBox1.BackgroundColor = Color.FromArgb(255, 255, 255);
-            cuiComboBox1.ButtonCursor = Cursors.Arrow;
-            cuiComboBox1.ButtonHoverBackground = Color.FromArgb(192, 255, 106, 0);
-            cuiComboBox1.ButtonHoverOutline = Color.Empty;
-            cuiComboBox1.ButtonNormalBackground = Color.FromArgb(255, 106, 0);
-            cuiComboBox1.ButtonNormalOutline = Color.Empty;
-            cuiComboBox1.ButtonPressedBackground = Color.FromArgb(255, 106, 0);
-            cuiComboBox1.ButtonPressedOutline = Color.Empty;
-            cuiComboBox1.DropDownBackgroundColor = Color.White;
-            cuiComboBox1.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
-            cuiComboBox1.ExpandArrowColor = Color.Gray;
-            cuiComboBox1.ForeColor = Color.Gray;
-            cuiComboBox1.Location = new Point(13, 127);
-            cuiComboBox1.Margin = new Padding(4, 3, 4, 3);
-            cuiComboBox1.Name = "cuiComboBox1";
-            cuiComboBox1.NoSelectionDropdownText = "Empty";
-            cuiComboBox1.NoSelectionText = "Select Type";
-            cuiComboBox1.OutlineColor = Color.FromArgb(64, 128, 128, 128);
-            cuiComboBox1.OutlineThickness = 1F;
-            cuiComboBox1.Rounding = 8;
-            cuiComboBox1.Size = new Size(317, 38);
-            cuiComboBox1.TabIndex = 2;
+            ComputerDropdown.BackgroundColor = Color.FromArgb(255, 255, 255);
+            ComputerDropdown.ButtonCursor = Cursors.Arrow;
+            ComputerDropdown.ButtonHoverBackground = Color.FromArgb(224, 224, 224);
+            ComputerDropdown.ButtonHoverOutline = Color.Empty;
+            ComputerDropdown.ButtonNormalBackground = Color.White;
+            ComputerDropdown.ButtonNormalOutline = Color.Empty;
+            ComputerDropdown.ButtonPressedBackground = Color.Silver;
+            ComputerDropdown.ButtonPressedOutline = Color.Empty;
+            ComputerDropdown.DropDownBackgroundColor = Color.White;
+            ComputerDropdown.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
+            ComputerDropdown.ExpandArrowColor = Color.Gray;
+            ComputerDropdown.ForeColor = Color.Gray;
+            ComputerDropdown.Location = new Point(13, 130);
+            ComputerDropdown.Margin = new Padding(4, 3, 4, 3);
+            ComputerDropdown.Name = "ComputerDropdown";
+            ComputerDropdown.NoSelectionDropdownText = "Empty";
+            ComputerDropdown.NoSelectionText = "Select Type";
+            ComputerDropdown.OutlineColor = Color.FromArgb(64, 128, 128, 128);
+            ComputerDropdown.OutlineThickness = 1F;
+            ComputerDropdown.Rounding = 8;
+            ComputerDropdown.Size = new Size(317, 38);
+            ComputerDropdown.TabIndex = 2;
             // 
-            // cuiLabel1
+            // ComputerTypeLabel
             // 
-            cuiLabel1.BackColor = Color.Transparent;
-            cuiLabel1.Content = "Computer\\ Type:";
-            cuiLabel1.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel1.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel1.Location = new Point(13, 102);
-            cuiLabel1.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel1.Name = "cuiLabel1";
-            cuiLabel1.Size = new Size(222, 28);
-            cuiLabel1.TabIndex = 3;
-            cuiLabel1.VerticalAlignment = StringAlignment.Center;
+            ComputerTypeLabel.BackColor = Color.Transparent;
+            ComputerTypeLabel.Content = "Computer\\ Type:";
+            ComputerTypeLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ComputerTypeLabel.HorizontalAlignment = StringAlignment.Near;
+            ComputerTypeLabel.Location = new Point(13, 102);
+            ComputerTypeLabel.Margin = new Padding(4, 3, 4, 3);
+            ComputerTypeLabel.Name = "ComputerTypeLabel";
+            ComputerTypeLabel.Size = new Size(222, 28);
+            ComputerTypeLabel.TabIndex = 3;
+            ComputerTypeLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiLabel2
+            // BrandLabel
             // 
-            cuiLabel2.BackColor = Color.Transparent;
-            cuiLabel2.Content = "Brand";
-            cuiLabel2.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel2.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel2.Location = new Point(13, 182);
-            cuiLabel2.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel2.Name = "cuiLabel2";
-            cuiLabel2.Size = new Size(222, 28);
-            cuiLabel2.TabIndex = 4;
-            cuiLabel2.VerticalAlignment = StringAlignment.Center;
+            BrandLabel.BackColor = Color.Transparent;
+            BrandLabel.Content = "Brand";
+            BrandLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BrandLabel.HorizontalAlignment = StringAlignment.Near;
+            BrandLabel.Location = new Point(13, 182);
+            BrandLabel.Margin = new Padding(4, 3, 4, 3);
+            BrandLabel.Name = "BrandLabel";
+            BrandLabel.Size = new Size(222, 28);
+            BrandLabel.TabIndex = 4;
+            BrandLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiComboBox2
+            // BrandDropdown
             // 
-            cuiComboBox2.BackgroundColor = Color.FromArgb(255, 255, 255);
-            cuiComboBox2.ButtonCursor = Cursors.Arrow;
-            cuiComboBox2.ButtonHoverBackground = Color.FromArgb(192, 255, 106, 0);
-            cuiComboBox2.ButtonHoverOutline = Color.Empty;
-            cuiComboBox2.ButtonNormalBackground = Color.FromArgb(255, 106, 0);
-            cuiComboBox2.ButtonNormalOutline = Color.Empty;
-            cuiComboBox2.ButtonPressedBackground = Color.FromArgb(255, 106, 0);
-            cuiComboBox2.ButtonPressedOutline = Color.Empty;
-            cuiComboBox2.DropDownBackgroundColor = Color.White;
-            cuiComboBox2.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
-            cuiComboBox2.ExpandArrowColor = Color.Gray;
-            cuiComboBox2.ForeColor = Color.Gray;
-            cuiComboBox2.Items = new string[]
+            BrandDropdown.BackgroundColor = Color.FromArgb(255, 255, 255);
+            BrandDropdown.ButtonCursor = Cursors.Arrow;
+            BrandDropdown.ButtonHoverBackground = Color.FromArgb(224, 224, 224);
+            BrandDropdown.ButtonHoverOutline = Color.Empty;
+            BrandDropdown.ButtonNormalBackground = Color.White;
+            BrandDropdown.ButtonNormalOutline = Color.Empty;
+            BrandDropdown.ButtonPressedBackground = Color.Silver;
+            BrandDropdown.ButtonPressedOutline = Color.Empty;
+            BrandDropdown.DropDownBackgroundColor = Color.White;
+            BrandDropdown.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
+            BrandDropdown.ExpandArrowColor = Color.Gray;
+            BrandDropdown.ForeColor = Color.Gray;
+            BrandDropdown.Items = new string[]
     {
     "Apple",
     "Lenovo",
@@ -141,17 +141,17 @@ namespace MainDashboard
     "Microsoft",
     "Samsung"
     };
-            cuiComboBox2.Location = new Point(13, 206);
-            cuiComboBox2.Margin = new Padding(4, 3, 4, 3);
-            cuiComboBox2.Name = "cuiComboBox2";
-            cuiComboBox2.NoSelectionDropdownText = "Empty";
-            cuiComboBox2.NoSelectionText = "Select Brand";
-            cuiComboBox2.OutlineColor = Color.FromArgb(64, 128, 128, 128);
-            cuiComboBox2.OutlineThickness = 1F;
-            cuiComboBox2.Rounding = 8;
-            cuiComboBox2.Size = new Size(317, 38);
-            cuiComboBox2.TabIndex = 5;
-            cuiComboBox2.SelectedIndexChanged += this.cuiComboBox2_SelectedIndexChanged;
+            BrandDropdown.Location = new Point(13, 206);
+            BrandDropdown.Margin = new Padding(4, 3, 4, 3);
+            BrandDropdown.Name = "BrandDropdown";
+            BrandDropdown.NoSelectionDropdownText = "Empty";
+            BrandDropdown.NoSelectionText = "Select Brand";
+            BrandDropdown.OutlineColor = Color.FromArgb(64, 128, 128, 128);
+            BrandDropdown.OutlineThickness = 1F;
+            BrandDropdown.Rounding = 8;
+            BrandDropdown.Size = new Size(317, 38);
+            BrandDropdown.TabIndex = 5;
+            BrandDropdown.SelectedIndexChanged += cuiComboBox2_SelectedIndexChanged;
             // 
             // InventoryFilterBtn
             // 
@@ -189,7 +189,7 @@ namespace MainDashboard
             InventoryFilterBtn.TabIndex = 6;
             InventoryFilterBtn.TextAlignment = StringAlignment.Center;
             InventoryFilterBtn.TextOffset = new Point(0, 0);
-            InventoryFilterBtn.Click += this.InventoryFilterBtn_Click;
+            InventoryFilterBtn.Click += InventoryFilterBtn_Click;
             // 
             // FilterCancelBtn
             // 
@@ -227,7 +227,7 @@ namespace MainDashboard
             FilterCancelBtn.TabIndex = 7;
             FilterCancelBtn.TextAlignment = StringAlignment.Center;
             FilterCancelBtn.TextOffset = new Point(0, 0);
-            FilterCancelBtn.Click += this.FilterCancelBtn_Click;
+            FilterCancelBtn.Click += FilterCancelBtn_Click;
             // 
             // FilterInventory
             // 
@@ -237,10 +237,10 @@ namespace MainDashboard
             ClientSize = new Size(343, 400);
             Controls.Add(FilterCancelBtn);
             Controls.Add(InventoryFilterBtn);
-            Controls.Add(cuiComboBox2);
-            Controls.Add(cuiLabel2);
-            Controls.Add(cuiLabel1);
-            Controls.Add(cuiComboBox1);
+            Controls.Add(BrandDropdown);
+            Controls.Add(BrandLabel);
+            Controls.Add(ComputerTypeLabel);
+            Controls.Add(ComputerDropdown);
             Controls.Add(FilterLabel);
             Controls.Add(FilterHeader);
             Font = new Font("Leelawadee UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -255,10 +255,10 @@ namespace MainDashboard
 
         private CuoreUI.Controls.cuiLabel FilterHeader;
         private CuoreUI.Controls.cuiLabel FilterLabel;
-        private CuoreUI.Controls.cuiComboBox cuiComboBox1;
-        private CuoreUI.Controls.cuiLabel cuiLabel1;
-        private CuoreUI.Controls.cuiLabel cuiLabel2;
-        private CuoreUI.Controls.cuiComboBox cuiComboBox2;
+        private CuoreUI.Controls.cuiComboBox ComputerDropdown;
+        private CuoreUI.Controls.cuiLabel ComputerTypeLabel;
+        private CuoreUI.Controls.cuiLabel BrandLabel;
+        private CuoreUI.Controls.cuiComboBox BrandDropdown;
         private CuoreUI.Controls.cuiButton InventoryFilterBtn;
         private CuoreUI.Controls.cuiButton FilterCancelBtn;
     }

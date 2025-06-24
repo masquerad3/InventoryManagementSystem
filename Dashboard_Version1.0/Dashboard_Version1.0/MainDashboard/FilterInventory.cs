@@ -35,7 +35,7 @@ namespace MainDashboard
         {
             // Implement the filtering logic here
             // For example, you can filter the DataGridView based on the selected category
-            string selectedCategory = cuiComboBox2.SelectedItem.ToString();
+            string selectedCategory = BrandDropdown.SelectedItem.ToString();
             // Assuming dataGridView1 is the DataGridView containing inventory items
             // You would filter the data source of dataGridView1 based on selectedCategory
             MessageBox.Show($"Filtering inventory by category: {selectedCategory}", "Filter", MessageBoxButtons.OK, MessageBoxIcon.Information);

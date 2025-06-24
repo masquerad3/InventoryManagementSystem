@@ -29,155 +29,158 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddItemForm));
-            AILabel = new CuoreUI.Controls.cuiLabel();
-            cuiLabel1 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel2 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel3 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel4 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel5 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel7 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel8 = new CuoreUI.Controls.cuiLabel();
-            cuiComboBox1 = new CuoreUI.Controls.cuiComboBox();
+            AILabel1 = new CuoreUI.Controls.cuiLabel();
+            ManufacturerLabel = new CuoreUI.Controls.cuiLabel();
+            UnitLabel = new CuoreUI.Controls.cuiLabel();
+            SupplierLabel = new CuoreUI.Controls.cuiLabel();
+            QuantityLabel = new CuoreUI.Controls.cuiLabel();
+            SerialLabel = new CuoreUI.Controls.cuiLabel();
+            PriceLabel = new CuoreUI.Controls.cuiLabel();
+            DateDeliveredLabel = new CuoreUI.Controls.cuiLabel();
+            ManufacturerCB = new CuoreUI.Controls.cuiComboBox();
             SaveBtn = new CuoreUI.Controls.cuiButton();
             CancelBtn = new CuoreUI.Controls.cuiButton();
-            cuiCalendarDatePicker1 = new CuoreUI.Controls.cuiCalendarDatePicker();
-            cuiTextBox1 = new CuoreUI.Controls.cuiTextBox();
-            cuiTextBox2 = new CuoreUI.Controls.cuiTextBox();
-            cuiTextBox3 = new CuoreUI.Controls.cuiTextBox();
-            cuiTextBox5 = new CuoreUI.Controls.cuiTextBox();
-            cuiTextBox6 = new CuoreUI.Controls.cuiTextBox();
-            cuiTextBox7 = new CuoreUI.Controls.cuiTextBox();
-            cuiLabel10 = new CuoreUI.Controls.cuiLabel();
-            cuiTextBox4 = new CuoreUI.Controls.cuiTextBox();
-            cuiLabel6 = new CuoreUI.Controls.cuiLabel();
-            cuiTextBox8 = new CuoreUI.Controls.cuiTextBox();
-            cuiLabel9 = new CuoreUI.Controls.cuiLabel();
-            cuiTextBox9 = new CuoreUI.Controls.cuiTextBox();
-            cuiLabel11 = new CuoreUI.Controls.cuiLabel();
-            cuiComboBox2 = new CuoreUI.Controls.cuiComboBox();
-            cuiLabel12 = new CuoreUI.Controls.cuiLabel();
+            DateDeliveredCDP = new CuoreUI.Controls.cuiCalendarDatePicker();
+            SupplierIDTextbox = new CuoreUI.Controls.cuiTextBox();
+            SerialIDTextbox = new CuoreUI.Controls.cuiTextBox();
+            PriceTextbox = new CuoreUI.Controls.cuiTextBox();
+            QuantityTextbox = new CuoreUI.Controls.cuiTextBox();
+            UnitIDTextbox = new CuoreUI.Controls.cuiTextBox();
+            ModelTextbox = new CuoreUI.Controls.cuiTextBox();
+            ModelLabel = new CuoreUI.Controls.cuiLabel();
+            ConditionTextbox = new CuoreUI.Controls.cuiTextBox();
+            ConditionLabel = new CuoreUI.Controls.cuiLabel();
+            WeightTextbox = new CuoreUI.Controls.cuiTextBox();
+            WeightLabel = new CuoreUI.Controls.cuiLabel();
+            WarrantyLabel = new CuoreUI.Controls.cuiLabel();
+            CategoryCB = new CuoreUI.Controls.cuiComboBox();
+            CategoryLabel = new CuoreUI.Controls.cuiLabel();
+            DescriptionLabel = new CuoreUI.Controls.cuiLabel();
+            DescriptionTextbox = new CuoreUI.Controls.cuiTextBox();
+            AILabel2 = new CuoreUI.Controls.cuiLabel();
+            WarrantyFD = new CuoreUI.Controls.cuiFileDropper();
             SuspendLayout();
             // 
-            // AILabel
+            // AILabel1
             // 
-            AILabel.Content = "Add\\ New\\ Item";
-            AILabel.Font = new Font("Leelawadee UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            AILabel.HorizontalAlignment = StringAlignment.Near;
-            AILabel.Location = new Point(24, 24);
-            AILabel.Margin = new Padding(4, 3, 4, 3);
-            AILabel.Name = "AILabel";
-            AILabel.Size = new Size(245, 33);
-            AILabel.TabIndex = 0;
-            AILabel.VerticalAlignment = StringAlignment.Center;
+            AILabel1.Content = "Add\\ New\\ Item";
+            AILabel1.Font = new Font("Leelawadee UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AILabel1.HorizontalAlignment = StringAlignment.Near;
+            AILabel1.Location = new Point(24, 24);
+            AILabel1.Margin = new Padding(4, 3, 4, 3);
+            AILabel1.Name = "AILabel1";
+            AILabel1.Size = new Size(245, 33);
+            AILabel1.TabIndex = 0;
+            AILabel1.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiLabel1
+            // ManufacturerLabel
             // 
-            cuiLabel1.Content = "Manufacturer";
-            cuiLabel1.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel1.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel1.Location = new Point(24, 91);
-            cuiLabel1.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel1.Name = "cuiLabel1";
-            cuiLabel1.Size = new Size(245, 33);
-            cuiLabel1.TabIndex = 1;
-            cuiLabel1.VerticalAlignment = StringAlignment.Center;
+            ManufacturerLabel.Content = "Manufacturer";
+            ManufacturerLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ManufacturerLabel.HorizontalAlignment = StringAlignment.Near;
+            ManufacturerLabel.Location = new Point(24, 91);
+            ManufacturerLabel.Margin = new Padding(4, 3, 4, 3);
+            ManufacturerLabel.Name = "ManufacturerLabel";
+            ManufacturerLabel.Size = new Size(245, 33);
+            ManufacturerLabel.TabIndex = 1;
+            ManufacturerLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiLabel2
+            // UnitLabel
             // 
-            cuiLabel2.Content = "Unit\\ ID";
-            cuiLabel2.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel2.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel2.Location = new Point(322, 169);
-            cuiLabel2.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel2.Name = "cuiLabel2";
-            cuiLabel2.Size = new Size(245, 33);
-            cuiLabel2.TabIndex = 2;
-            cuiLabel2.VerticalAlignment = StringAlignment.Center;
+            UnitLabel.Content = "Unit\\ ID";
+            UnitLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UnitLabel.HorizontalAlignment = StringAlignment.Near;
+            UnitLabel.Location = new Point(322, 169);
+            UnitLabel.Margin = new Padding(4, 3, 4, 3);
+            UnitLabel.Name = "UnitLabel";
+            UnitLabel.Size = new Size(245, 33);
+            UnitLabel.TabIndex = 2;
+            UnitLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiLabel3
+            // SupplierLabel
             // 
-            cuiLabel3.Content = "Supplier\\ ID";
-            cuiLabel3.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel3.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel3.Location = new Point(24, 260);
-            cuiLabel3.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel3.Name = "cuiLabel3";
-            cuiLabel3.Size = new Size(245, 33);
-            cuiLabel3.TabIndex = 3;
-            cuiLabel3.VerticalAlignment = StringAlignment.Center;
+            SupplierLabel.Content = "Supplier\\ ID";
+            SupplierLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SupplierLabel.HorizontalAlignment = StringAlignment.Near;
+            SupplierLabel.Location = new Point(24, 244);
+            SupplierLabel.Margin = new Padding(4, 3, 4, 3);
+            SupplierLabel.Name = "SupplierLabel";
+            SupplierLabel.Size = new Size(245, 33);
+            SupplierLabel.TabIndex = 3;
+            SupplierLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiLabel4
+            // QuantityLabel
             // 
-            cuiLabel4.Content = "Quantity";
-            cuiLabel4.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel4.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel4.Location = new Point(24, 350);
-            cuiLabel4.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel4.Name = "cuiLabel4";
-            cuiLabel4.Size = new Size(245, 33);
-            cuiLabel4.TabIndex = 4;
-            cuiLabel4.VerticalAlignment = StringAlignment.Center;
+            QuantityLabel.Content = "Quantity";
+            QuantityLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            QuantityLabel.HorizontalAlignment = StringAlignment.Near;
+            QuantityLabel.Location = new Point(24, 320);
+            QuantityLabel.Margin = new Padding(4, 3, 4, 3);
+            QuantityLabel.Name = "QuantityLabel";
+            QuantityLabel.Size = new Size(245, 33);
+            QuantityLabel.TabIndex = 4;
+            QuantityLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiLabel5
+            // SerialLabel
             // 
-            cuiLabel5.Content = "Serial\\ ID";
-            cuiLabel5.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel5.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel5.Location = new Point(322, 259);
-            cuiLabel5.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel5.Name = "cuiLabel5";
-            cuiLabel5.Size = new Size(245, 33);
-            cuiLabel5.TabIndex = 5;
-            cuiLabel5.VerticalAlignment = StringAlignment.Center;
+            SerialLabel.Content = "Serial\\ ID";
+            SerialLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SerialLabel.HorizontalAlignment = StringAlignment.Near;
+            SerialLabel.Location = new Point(322, 243);
+            SerialLabel.Margin = new Padding(4, 3, 4, 3);
+            SerialLabel.Name = "SerialLabel";
+            SerialLabel.Size = new Size(245, 33);
+            SerialLabel.TabIndex = 5;
+            SerialLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiLabel7
+            // PriceLabel
             // 
-            cuiLabel7.Content = "Price";
-            cuiLabel7.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel7.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel7.Location = new Point(24, 444);
-            cuiLabel7.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel7.Name = "cuiLabel7";
-            cuiLabel7.Size = new Size(245, 33);
-            cuiLabel7.TabIndex = 7;
-            cuiLabel7.VerticalAlignment = StringAlignment.Center;
+            PriceLabel.Content = "Price";
+            PriceLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PriceLabel.HorizontalAlignment = StringAlignment.Near;
+            PriceLabel.Location = new Point(24, 399);
+            PriceLabel.Margin = new Padding(4, 3, 4, 3);
+            PriceLabel.Name = "PriceLabel";
+            PriceLabel.Size = new Size(245, 33);
+            PriceLabel.TabIndex = 7;
+            PriceLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiLabel8
+            // DateDeliveredLabel
             // 
-            cuiLabel8.Content = "Date\\ Delivered";
-            cuiLabel8.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel8.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel8.Location = new Point(322, 441);
-            cuiLabel8.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel8.Name = "cuiLabel8";
-            cuiLabel8.Size = new Size(245, 33);
-            cuiLabel8.TabIndex = 8;
-            cuiLabel8.VerticalAlignment = StringAlignment.Center;
+            DateDeliveredLabel.Content = "Date\\ Delivered";
+            DateDeliveredLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DateDeliveredLabel.HorizontalAlignment = StringAlignment.Near;
+            DateDeliveredLabel.Location = new Point(322, 396);
+            DateDeliveredLabel.Margin = new Padding(4, 3, 4, 3);
+            DateDeliveredLabel.Name = "DateDeliveredLabel";
+            DateDeliveredLabel.Size = new Size(245, 33);
+            DateDeliveredLabel.TabIndex = 8;
+            DateDeliveredLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiComboBox1
+            // ManufacturerCB
             // 
-            cuiComboBox1.BackgroundColor = Color.FromArgb(255, 255, 255);
-            cuiComboBox1.ButtonCursor = Cursors.Arrow;
-            cuiComboBox1.ButtonHoverBackground = Color.FromArgb(192, 255, 106, 0);
-            cuiComboBox1.ButtonHoverOutline = Color.Empty;
-            cuiComboBox1.ButtonNormalBackground = Color.FromArgb(255, 106, 0);
-            cuiComboBox1.ButtonNormalOutline = Color.Empty;
-            cuiComboBox1.ButtonPressedBackground = Color.FromArgb(255, 106, 0);
-            cuiComboBox1.ButtonPressedOutline = Color.Empty;
-            cuiComboBox1.DropDownBackgroundColor = Color.White;
-            cuiComboBox1.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
-            cuiComboBox1.ExpandArrowColor = Color.Gray;
-            cuiComboBox1.ForeColor = Color.Gray;
-            cuiComboBox1.Location = new Point(24, 119);
-            cuiComboBox1.Margin = new Padding(4, 3, 4, 3);
-            cuiComboBox1.Name = "cuiComboBox1";
-            cuiComboBox1.NoSelectionDropdownText = "Empty";
-            cuiComboBox1.NoSelectionText = "Manufacturer";
-            cuiComboBox1.OutlineColor = Color.FromArgb(64, 128, 128, 128);
-            cuiComboBox1.OutlineThickness = 1F;
-            cuiComboBox1.Rounding = 8;
-            cuiComboBox1.Size = new Size(223, 43);
-            cuiComboBox1.TabIndex = 10;
+            ManufacturerCB.BackgroundColor = Color.FromArgb(255, 255, 255);
+            ManufacturerCB.ButtonCursor = Cursors.Arrow;
+            ManufacturerCB.ButtonHoverBackground = Color.FromArgb(192, 255, 106, 0);
+            ManufacturerCB.ButtonHoverOutline = Color.Empty;
+            ManufacturerCB.ButtonNormalBackground = Color.FromArgb(255, 106, 0);
+            ManufacturerCB.ButtonNormalOutline = Color.Empty;
+            ManufacturerCB.ButtonPressedBackground = Color.FromArgb(255, 106, 0);
+            ManufacturerCB.ButtonPressedOutline = Color.Empty;
+            ManufacturerCB.DropDownBackgroundColor = Color.White;
+            ManufacturerCB.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
+            ManufacturerCB.ExpandArrowColor = Color.Gray;
+            ManufacturerCB.ForeColor = Color.Gray;
+            ManufacturerCB.Location = new Point(24, 119);
+            ManufacturerCB.Margin = new Padding(4, 3, 4, 3);
+            ManufacturerCB.Name = "ManufacturerCB";
+            ManufacturerCB.NoSelectionDropdownText = "Empty";
+            ManufacturerCB.NoSelectionText = "Manufacturer";
+            ManufacturerCB.OutlineColor = Color.FromArgb(64, 128, 128, 128);
+            ManufacturerCB.OutlineThickness = 1F;
+            ManufacturerCB.Rounding = 8;
+            ManufacturerCB.Size = new Size(223, 43);
+            ManufacturerCB.TabIndex = 10;
             // 
             // SaveBtn
             // 
@@ -256,368 +259,426 @@
             CancelBtn.TextOffset = new Point(0, 0);
             CancelBtn.Click += CancelBtn_Click;
             // 
-            // cuiCalendarDatePicker1
+            // DateDeliveredCDP
             // 
-            cuiCalendarDatePicker1.BackColor = Color.Transparent;
-            cuiCalendarDatePicker1.EnableThemeChangeButton = true;
-            cuiCalendarDatePicker1.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiCalendarDatePicker1.ForeColor = Color.Gray;
-            cuiCalendarDatePicker1.HoverBackground = Color.FromArgb(50, 128, 128, 128);
-            cuiCalendarDatePicker1.HoverOutline = Color.FromArgb(180, 128, 128, 128);
-            cuiCalendarDatePicker1.Icon = (Image)resources.GetObject("cuiCalendarDatePicker1.Icon");
-            cuiCalendarDatePicker1.IconTint = Color.Gray;
-            cuiCalendarDatePicker1.Location = new Point(322, 472);
-            cuiCalendarDatePicker1.Margin = new Padding(4, 3, 4, 3);
-            cuiCalendarDatePicker1.Name = "cuiCalendarDatePicker1";
-            cuiCalendarDatePicker1.NormalBackground = Color.White;
-            cuiCalendarDatePicker1.NormalOutline = Color.FromArgb(150, 128, 128, 128);
-            cuiCalendarDatePicker1.OutlineThickness = 1.5F;
-            cuiCalendarDatePicker1.PickerPosition = CuoreUI.Controls.cuiCalendarDatePicker.Position.Bottom;
-            cuiCalendarDatePicker1.PressedBackground = Color.FromArgb(80, 128, 128, 128);
-            cuiCalendarDatePicker1.PressedOutline = Color.FromArgb(210, 128, 128, 128);
-            cuiCalendarDatePicker1.Rounding = 8;
-            cuiCalendarDatePicker1.ShowIcon = true;
-            cuiCalendarDatePicker1.Size = new Size(223, 42);
-            cuiCalendarDatePicker1.TabIndex = 13;
-            cuiCalendarDatePicker1.Theme = CuoreUI.Controls.Forms.DatePicker.Themes.Light;
-            cuiCalendarDatePicker1.Value = new DateTime(2025, 6, 24, 0, 0, 0, 0);
+            DateDeliveredCDP.BackColor = Color.Transparent;
+            DateDeliveredCDP.EnableThemeChangeButton = true;
+            DateDeliveredCDP.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DateDeliveredCDP.ForeColor = Color.Gray;
+            DateDeliveredCDP.HoverBackground = Color.FromArgb(50, 128, 128, 128);
+            DateDeliveredCDP.HoverOutline = Color.FromArgb(180, 128, 128, 128);
+            DateDeliveredCDP.Icon = (Image)resources.GetObject("DateDeliveredCDP.Icon");
+            DateDeliveredCDP.IconTint = Color.Gray;
+            DateDeliveredCDP.Location = new Point(322, 427);
+            DateDeliveredCDP.Margin = new Padding(4, 3, 4, 3);
+            DateDeliveredCDP.Name = "DateDeliveredCDP";
+            DateDeliveredCDP.NormalBackground = Color.White;
+            DateDeliveredCDP.NormalOutline = Color.FromArgb(150, 128, 128, 128);
+            DateDeliveredCDP.OutlineThickness = 1.5F;
+            DateDeliveredCDP.PickerPosition = CuoreUI.Controls.cuiCalendarDatePicker.Position.Bottom;
+            DateDeliveredCDP.PressedBackground = Color.FromArgb(80, 128, 128, 128);
+            DateDeliveredCDP.PressedOutline = Color.FromArgb(210, 128, 128, 128);
+            DateDeliveredCDP.Rounding = 8;
+            DateDeliveredCDP.ShowIcon = true;
+            DateDeliveredCDP.Size = new Size(223, 42);
+            DateDeliveredCDP.TabIndex = 13;
+            DateDeliveredCDP.Theme = CuoreUI.Controls.Forms.DatePicker.Themes.Light;
+            DateDeliveredCDP.Value = new DateTime(2025, 6, 24, 0, 0, 0, 0);
             // 
-            // cuiTextBox1
+            // SupplierIDTextbox
             // 
-            cuiTextBox1.BackgroundColor = Color.White;
-            cuiTextBox1.Content = "";
-            cuiTextBox1.FocusBackgroundColor = Color.White;
-            cuiTextBox1.FocusImageTint = Color.White;
-            cuiTextBox1.FocusOutlineColor = Color.FromArgb(64, 64, 64);
-            cuiTextBox1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiTextBox1.ForeColor = Color.Gray;
-            cuiTextBox1.Image = null;
-            cuiTextBox1.ImageExpand = new Point(0, 0);
-            cuiTextBox1.ImageOffset = new Point(0, 0);
-            cuiTextBox1.Location = new Point(24, 290);
-            cuiTextBox1.Margin = new Padding(4);
-            cuiTextBox1.Multiline = false;
-            cuiTextBox1.Name = "cuiTextBox1";
-            cuiTextBox1.NormalImageTint = Color.White;
-            cuiTextBox1.OutlineColor = Color.FromArgb(128, 128, 128, 128);
-            cuiTextBox1.Padding = new Padding(15, 14, 15, 0);
-            cuiTextBox1.PasswordChar = false;
-            cuiTextBox1.PlaceholderColor = SystemColors.WindowText;
-            cuiTextBox1.PlaceholderText = "";
-            cuiTextBox1.Rounding = new Padding(8);
-            cuiTextBox1.Size = new Size(223, 42);
-            cuiTextBox1.TabIndex = 14;
-            cuiTextBox1.TextOffset = new Size(0, 0);
-            cuiTextBox1.UnderlinedStyle = true;
+            SupplierIDTextbox.BackgroundColor = Color.White;
+            SupplierIDTextbox.Content = "";
+            SupplierIDTextbox.FocusBackgroundColor = Color.White;
+            SupplierIDTextbox.FocusImageTint = Color.White;
+            SupplierIDTextbox.FocusOutlineColor = Color.FromArgb(64, 64, 64);
+            SupplierIDTextbox.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SupplierIDTextbox.ForeColor = Color.Gray;
+            SupplierIDTextbox.Image = null;
+            SupplierIDTextbox.ImageExpand = new Point(0, 0);
+            SupplierIDTextbox.ImageOffset = new Point(0, 0);
+            SupplierIDTextbox.Location = new Point(24, 274);
+            SupplierIDTextbox.Margin = new Padding(4);
+            SupplierIDTextbox.Multiline = false;
+            SupplierIDTextbox.Name = "SupplierIDTextbox";
+            SupplierIDTextbox.NormalImageTint = Color.White;
+            SupplierIDTextbox.OutlineColor = Color.FromArgb(128, 128, 128, 128);
+            SupplierIDTextbox.Padding = new Padding(15, 14, 15, 0);
+            SupplierIDTextbox.PasswordChar = false;
+            SupplierIDTextbox.PlaceholderColor = SystemColors.WindowText;
+            SupplierIDTextbox.PlaceholderText = "";
+            SupplierIDTextbox.Rounding = new Padding(8);
+            SupplierIDTextbox.Size = new Size(223, 42);
+            SupplierIDTextbox.TabIndex = 14;
+            SupplierIDTextbox.TextOffset = new Size(0, 0);
+            SupplierIDTextbox.UnderlinedStyle = true;
             // 
-            // cuiTextBox2
+            // SerialIDTextbox
             // 
-            cuiTextBox2.BackgroundColor = Color.White;
-            cuiTextBox2.Content = "";
-            cuiTextBox2.FocusBackgroundColor = Color.White;
-            cuiTextBox2.FocusImageTint = Color.White;
-            cuiTextBox2.FocusOutlineColor = Color.FromArgb(64, 64, 64);
-            cuiTextBox2.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiTextBox2.ForeColor = Color.Gray;
-            cuiTextBox2.Image = null;
-            cuiTextBox2.ImageExpand = new Point(0, 0);
-            cuiTextBox2.ImageOffset = new Point(0, 0);
-            cuiTextBox2.Location = new Point(322, 290);
-            cuiTextBox2.Margin = new Padding(4);
-            cuiTextBox2.Multiline = false;
-            cuiTextBox2.Name = "cuiTextBox2";
-            cuiTextBox2.NormalImageTint = Color.White;
-            cuiTextBox2.OutlineColor = Color.FromArgb(128, 128, 128, 128);
-            cuiTextBox2.Padding = new Padding(15, 14, 15, 0);
-            cuiTextBox2.PasswordChar = false;
-            cuiTextBox2.PlaceholderColor = SystemColors.WindowText;
-            cuiTextBox2.PlaceholderText = "";
-            cuiTextBox2.Rounding = new Padding(8);
-            cuiTextBox2.Size = new Size(223, 42);
-            cuiTextBox2.TabIndex = 15;
-            cuiTextBox2.TextOffset = new Size(0, 0);
-            cuiTextBox2.UnderlinedStyle = true;
+            SerialIDTextbox.BackgroundColor = Color.White;
+            SerialIDTextbox.Content = "";
+            SerialIDTextbox.FocusBackgroundColor = Color.White;
+            SerialIDTextbox.FocusImageTint = Color.White;
+            SerialIDTextbox.FocusOutlineColor = Color.FromArgb(64, 64, 64);
+            SerialIDTextbox.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SerialIDTextbox.ForeColor = Color.Gray;
+            SerialIDTextbox.Image = null;
+            SerialIDTextbox.ImageExpand = new Point(0, 0);
+            SerialIDTextbox.ImageOffset = new Point(0, 0);
+            SerialIDTextbox.Location = new Point(322, 274);
+            SerialIDTextbox.Margin = new Padding(4);
+            SerialIDTextbox.Multiline = false;
+            SerialIDTextbox.Name = "SerialIDTextbox";
+            SerialIDTextbox.NormalImageTint = Color.White;
+            SerialIDTextbox.OutlineColor = Color.FromArgb(128, 128, 128, 128);
+            SerialIDTextbox.Padding = new Padding(15, 14, 15, 0);
+            SerialIDTextbox.PasswordChar = false;
+            SerialIDTextbox.PlaceholderColor = SystemColors.WindowText;
+            SerialIDTextbox.PlaceholderText = "";
+            SerialIDTextbox.Rounding = new Padding(8);
+            SerialIDTextbox.Size = new Size(223, 42);
+            SerialIDTextbox.TabIndex = 15;
+            SerialIDTextbox.TextOffset = new Size(0, 0);
+            SerialIDTextbox.UnderlinedStyle = true;
             // 
-            // cuiTextBox3
+            // PriceTextbox
             // 
-            cuiTextBox3.BackgroundColor = Color.White;
-            cuiTextBox3.Content = "";
-            cuiTextBox3.FocusBackgroundColor = Color.White;
-            cuiTextBox3.FocusImageTint = Color.White;
-            cuiTextBox3.FocusOutlineColor = Color.FromArgb(64, 64, 64);
-            cuiTextBox3.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiTextBox3.ForeColor = Color.Gray;
-            cuiTextBox3.Image = null;
-            cuiTextBox3.ImageExpand = new Point(0, 0);
-            cuiTextBox3.ImageOffset = new Point(0, 0);
-            cuiTextBox3.Location = new Point(24, 472);
-            cuiTextBox3.Margin = new Padding(4);
-            cuiTextBox3.Multiline = false;
-            cuiTextBox3.Name = "cuiTextBox3";
-            cuiTextBox3.NormalImageTint = Color.White;
-            cuiTextBox3.OutlineColor = Color.FromArgb(128, 128, 128, 128);
-            cuiTextBox3.Padding = new Padding(15, 14, 15, 0);
-            cuiTextBox3.PasswordChar = false;
-            cuiTextBox3.PlaceholderColor = SystemColors.WindowText;
-            cuiTextBox3.PlaceholderText = "";
-            cuiTextBox3.Rounding = new Padding(8);
-            cuiTextBox3.Size = new Size(223, 42);
-            cuiTextBox3.TabIndex = 16;
-            cuiTextBox3.TextOffset = new Size(0, 0);
-            cuiTextBox3.UnderlinedStyle = true;
+            PriceTextbox.BackgroundColor = Color.White;
+            PriceTextbox.Content = "";
+            PriceTextbox.FocusBackgroundColor = Color.White;
+            PriceTextbox.FocusImageTint = Color.White;
+            PriceTextbox.FocusOutlineColor = Color.FromArgb(64, 64, 64);
+            PriceTextbox.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PriceTextbox.ForeColor = Color.Gray;
+            PriceTextbox.Image = null;
+            PriceTextbox.ImageExpand = new Point(0, 0);
+            PriceTextbox.ImageOffset = new Point(0, 0);
+            PriceTextbox.Location = new Point(24, 427);
+            PriceTextbox.Margin = new Padding(4);
+            PriceTextbox.Multiline = false;
+            PriceTextbox.Name = "PriceTextbox";
+            PriceTextbox.NormalImageTint = Color.White;
+            PriceTextbox.OutlineColor = Color.FromArgb(128, 128, 128, 128);
+            PriceTextbox.Padding = new Padding(15, 14, 15, 0);
+            PriceTextbox.PasswordChar = false;
+            PriceTextbox.PlaceholderColor = SystemColors.WindowText;
+            PriceTextbox.PlaceholderText = "";
+            PriceTextbox.Rounding = new Padding(8);
+            PriceTextbox.Size = new Size(223, 42);
+            PriceTextbox.TabIndex = 16;
+            PriceTextbox.TextOffset = new Size(0, 0);
+            PriceTextbox.UnderlinedStyle = true;
             // 
-            // cuiTextBox5
+            // QuantityTextbox
             // 
-            cuiTextBox5.BackgroundColor = Color.White;
-            cuiTextBox5.Content = "";
-            cuiTextBox5.FocusBackgroundColor = Color.White;
-            cuiTextBox5.FocusImageTint = Color.White;
-            cuiTextBox5.FocusOutlineColor = Color.FromArgb(64, 64, 64);
-            cuiTextBox5.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiTextBox5.ForeColor = Color.Gray;
-            cuiTextBox5.Image = null;
-            cuiTextBox5.ImageExpand = new Point(0, 0);
-            cuiTextBox5.ImageOffset = new Point(0, 0);
-            cuiTextBox5.Location = new Point(24, 380);
-            cuiTextBox5.Margin = new Padding(4);
-            cuiTextBox5.Multiline = false;
-            cuiTextBox5.Name = "cuiTextBox5";
-            cuiTextBox5.NormalImageTint = Color.White;
-            cuiTextBox5.OutlineColor = Color.FromArgb(128, 128, 128, 128);
-            cuiTextBox5.Padding = new Padding(15, 14, 15, 0);
-            cuiTextBox5.PasswordChar = false;
-            cuiTextBox5.PlaceholderColor = SystemColors.WindowText;
-            cuiTextBox5.PlaceholderText = "";
-            cuiTextBox5.Rounding = new Padding(8);
-            cuiTextBox5.Size = new Size(223, 42);
-            cuiTextBox5.TabIndex = 18;
-            cuiTextBox5.TextOffset = new Size(0, 0);
-            cuiTextBox5.UnderlinedStyle = true;
+            QuantityTextbox.BackgroundColor = Color.White;
+            QuantityTextbox.Content = "";
+            QuantityTextbox.FocusBackgroundColor = Color.White;
+            QuantityTextbox.FocusImageTint = Color.White;
+            QuantityTextbox.FocusOutlineColor = Color.FromArgb(64, 64, 64);
+            QuantityTextbox.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            QuantityTextbox.ForeColor = Color.Gray;
+            QuantityTextbox.Image = null;
+            QuantityTextbox.ImageExpand = new Point(0, 0);
+            QuantityTextbox.ImageOffset = new Point(0, 0);
+            QuantityTextbox.Location = new Point(24, 350);
+            QuantityTextbox.Margin = new Padding(4);
+            QuantityTextbox.Multiline = false;
+            QuantityTextbox.Name = "QuantityTextbox";
+            QuantityTextbox.NormalImageTint = Color.White;
+            QuantityTextbox.OutlineColor = Color.FromArgb(128, 128, 128, 128);
+            QuantityTextbox.Padding = new Padding(15, 14, 15, 0);
+            QuantityTextbox.PasswordChar = false;
+            QuantityTextbox.PlaceholderColor = SystemColors.WindowText;
+            QuantityTextbox.PlaceholderText = "";
+            QuantityTextbox.Rounding = new Padding(8);
+            QuantityTextbox.Size = new Size(223, 42);
+            QuantityTextbox.TabIndex = 18;
+            QuantityTextbox.TextOffset = new Size(0, 0);
+            QuantityTextbox.UnderlinedStyle = true;
             // 
-            // cuiTextBox6
+            // UnitIDTextbox
             // 
-            cuiTextBox6.BackgroundColor = Color.White;
-            cuiTextBox6.Content = "";
-            cuiTextBox6.FocusBackgroundColor = Color.White;
-            cuiTextBox6.FocusImageTint = Color.White;
-            cuiTextBox6.FocusOutlineColor = Color.FromArgb(64, 64, 64);
-            cuiTextBox6.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiTextBox6.ForeColor = Color.Gray;
-            cuiTextBox6.Image = null;
-            cuiTextBox6.ImageExpand = new Point(0, 0);
-            cuiTextBox6.ImageOffset = new Point(0, 0);
-            cuiTextBox6.Location = new Point(322, 198);
-            cuiTextBox6.Margin = new Padding(4);
-            cuiTextBox6.Multiline = false;
-            cuiTextBox6.Name = "cuiTextBox6";
-            cuiTextBox6.NormalImageTint = Color.White;
-            cuiTextBox6.OutlineColor = Color.FromArgb(128, 128, 128, 128);
-            cuiTextBox6.Padding = new Padding(15, 14, 15, 0);
-            cuiTextBox6.PasswordChar = false;
-            cuiTextBox6.PlaceholderColor = SystemColors.WindowText;
-            cuiTextBox6.PlaceholderText = "";
-            cuiTextBox6.Rounding = new Padding(8);
-            cuiTextBox6.Size = new Size(223, 42);
-            cuiTextBox6.TabIndex = 19;
-            cuiTextBox6.TextOffset = new Size(0, 0);
-            cuiTextBox6.UnderlinedStyle = true;
+            UnitIDTextbox.BackgroundColor = Color.White;
+            UnitIDTextbox.Content = "";
+            UnitIDTextbox.FocusBackgroundColor = Color.White;
+            UnitIDTextbox.FocusImageTint = Color.White;
+            UnitIDTextbox.FocusOutlineColor = Color.FromArgb(64, 64, 64);
+            UnitIDTextbox.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UnitIDTextbox.ForeColor = Color.Gray;
+            UnitIDTextbox.Image = null;
+            UnitIDTextbox.ImageExpand = new Point(0, 0);
+            UnitIDTextbox.ImageOffset = new Point(0, 0);
+            UnitIDTextbox.Location = new Point(322, 198);
+            UnitIDTextbox.Margin = new Padding(4);
+            UnitIDTextbox.Multiline = false;
+            UnitIDTextbox.Name = "UnitIDTextbox";
+            UnitIDTextbox.NormalImageTint = Color.White;
+            UnitIDTextbox.OutlineColor = Color.FromArgb(128, 128, 128, 128);
+            UnitIDTextbox.Padding = new Padding(15, 14, 15, 0);
+            UnitIDTextbox.PasswordChar = false;
+            UnitIDTextbox.PlaceholderColor = SystemColors.WindowText;
+            UnitIDTextbox.PlaceholderText = "";
+            UnitIDTextbox.Rounding = new Padding(8);
+            UnitIDTextbox.Size = new Size(223, 42);
+            UnitIDTextbox.TabIndex = 19;
+            UnitIDTextbox.TextOffset = new Size(0, 0);
+            UnitIDTextbox.UnderlinedStyle = true;
             // 
-            // cuiTextBox7
+            // ModelTextbox
             // 
-            cuiTextBox7.BackgroundColor = Color.White;
-            cuiTextBox7.Content = "";
-            cuiTextBox7.FocusBackgroundColor = Color.White;
-            cuiTextBox7.FocusImageTint = Color.White;
-            cuiTextBox7.FocusOutlineColor = Color.FromArgb(64, 64, 64);
-            cuiTextBox7.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiTextBox7.ForeColor = Color.Gray;
-            cuiTextBox7.Image = null;
-            cuiTextBox7.ImageExpand = new Point(0, 0);
-            cuiTextBox7.ImageOffset = new Point(0, 0);
-            cuiTextBox7.Location = new Point(24, 198);
-            cuiTextBox7.Margin = new Padding(4);
-            cuiTextBox7.Multiline = false;
-            cuiTextBox7.Name = "cuiTextBox7";
-            cuiTextBox7.NormalImageTint = Color.White;
-            cuiTextBox7.OutlineColor = Color.FromArgb(128, 128, 128, 128);
-            cuiTextBox7.Padding = new Padding(15, 14, 15, 0);
-            cuiTextBox7.PasswordChar = false;
-            cuiTextBox7.PlaceholderColor = SystemColors.WindowText;
-            cuiTextBox7.PlaceholderText = "";
-            cuiTextBox7.Rounding = new Padding(8);
-            cuiTextBox7.Size = new Size(223, 42);
-            cuiTextBox7.TabIndex = 21;
-            cuiTextBox7.TextOffset = new Size(0, 0);
-            cuiTextBox7.UnderlinedStyle = true;
+            ModelTextbox.BackgroundColor = Color.White;
+            ModelTextbox.Content = "";
+            ModelTextbox.FocusBackgroundColor = Color.White;
+            ModelTextbox.FocusImageTint = Color.White;
+            ModelTextbox.FocusOutlineColor = Color.FromArgb(64, 64, 64);
+            ModelTextbox.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ModelTextbox.ForeColor = Color.Gray;
+            ModelTextbox.Image = null;
+            ModelTextbox.ImageExpand = new Point(0, 0);
+            ModelTextbox.ImageOffset = new Point(0, 0);
+            ModelTextbox.Location = new Point(24, 198);
+            ModelTextbox.Margin = new Padding(4);
+            ModelTextbox.Multiline = false;
+            ModelTextbox.Name = "ModelTextbox";
+            ModelTextbox.NormalImageTint = Color.White;
+            ModelTextbox.OutlineColor = Color.FromArgb(128, 128, 128, 128);
+            ModelTextbox.Padding = new Padding(15, 14, 15, 0);
+            ModelTextbox.PasswordChar = false;
+            ModelTextbox.PlaceholderColor = SystemColors.WindowText;
+            ModelTextbox.PlaceholderText = "";
+            ModelTextbox.Rounding = new Padding(8);
+            ModelTextbox.Size = new Size(223, 42);
+            ModelTextbox.TabIndex = 21;
+            ModelTextbox.TextOffset = new Size(0, 0);
+            ModelTextbox.UnderlinedStyle = true;
             // 
-            // cuiLabel10
+            // ModelLabel
             // 
-            cuiLabel10.Content = "Model";
-            cuiLabel10.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel10.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel10.Location = new Point(24, 169);
-            cuiLabel10.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel10.Name = "cuiLabel10";
-            cuiLabel10.Size = new Size(245, 33);
-            cuiLabel10.TabIndex = 20;
-            cuiLabel10.VerticalAlignment = StringAlignment.Center;
+            ModelLabel.Content = "Model";
+            ModelLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ModelLabel.HorizontalAlignment = StringAlignment.Near;
+            ModelLabel.Location = new Point(24, 169);
+            ModelLabel.Margin = new Padding(4, 3, 4, 3);
+            ModelLabel.Name = "ModelLabel";
+            ModelLabel.Size = new Size(245, 33);
+            ModelLabel.TabIndex = 20;
+            ModelLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiTextBox4
+            // ConditionTextbox
             // 
-            cuiTextBox4.BackgroundColor = Color.White;
-            cuiTextBox4.Content = "";
-            cuiTextBox4.FocusBackgroundColor = Color.White;
-            cuiTextBox4.FocusImageTint = Color.White;
-            cuiTextBox4.FocusOutlineColor = Color.FromArgb(64, 64, 64);
-            cuiTextBox4.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiTextBox4.ForeColor = Color.Gray;
-            cuiTextBox4.Image = null;
-            cuiTextBox4.ImageExpand = new Point(0, 0);
-            cuiTextBox4.ImageOffset = new Point(0, 0);
-            cuiTextBox4.Location = new Point(322, 380);
-            cuiTextBox4.Margin = new Padding(4);
-            cuiTextBox4.Multiline = false;
-            cuiTextBox4.Name = "cuiTextBox4";
-            cuiTextBox4.NormalImageTint = Color.White;
-            cuiTextBox4.OutlineColor = Color.FromArgb(128, 128, 128, 128);
-            cuiTextBox4.Padding = new Padding(15, 14, 15, 0);
-            cuiTextBox4.PasswordChar = false;
-            cuiTextBox4.PlaceholderColor = SystemColors.WindowText;
-            cuiTextBox4.PlaceholderText = "";
-            cuiTextBox4.Rounding = new Padding(8);
-            cuiTextBox4.Size = new Size(223, 42);
-            cuiTextBox4.TabIndex = 23;
-            cuiTextBox4.TextOffset = new Size(0, 0);
-            cuiTextBox4.UnderlinedStyle = true;
+            ConditionTextbox.BackgroundColor = Color.White;
+            ConditionTextbox.Content = "";
+            ConditionTextbox.FocusBackgroundColor = Color.White;
+            ConditionTextbox.FocusImageTint = Color.White;
+            ConditionTextbox.FocusOutlineColor = Color.FromArgb(64, 64, 64);
+            ConditionTextbox.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ConditionTextbox.ForeColor = Color.Gray;
+            ConditionTextbox.Image = null;
+            ConditionTextbox.ImageExpand = new Point(0, 0);
+            ConditionTextbox.ImageOffset = new Point(0, 0);
+            ConditionTextbox.Location = new Point(322, 350);
+            ConditionTextbox.Margin = new Padding(4);
+            ConditionTextbox.Multiline = false;
+            ConditionTextbox.Name = "ConditionTextbox";
+            ConditionTextbox.NormalImageTint = Color.White;
+            ConditionTextbox.OutlineColor = Color.FromArgb(128, 128, 128, 128);
+            ConditionTextbox.Padding = new Padding(15, 14, 15, 0);
+            ConditionTextbox.PasswordChar = false;
+            ConditionTextbox.PlaceholderColor = SystemColors.WindowText;
+            ConditionTextbox.PlaceholderText = "";
+            ConditionTextbox.Rounding = new Padding(8);
+            ConditionTextbox.Size = new Size(223, 42);
+            ConditionTextbox.TabIndex = 23;
+            ConditionTextbox.TextOffset = new Size(0, 0);
+            ConditionTextbox.UnderlinedStyle = true;
             // 
-            // cuiLabel6
+            // ConditionLabel
             // 
-            cuiLabel6.Content = "Condition";
-            cuiLabel6.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel6.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel6.Location = new Point(322, 350);
-            cuiLabel6.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel6.Name = "cuiLabel6";
-            cuiLabel6.Size = new Size(245, 33);
-            cuiLabel6.TabIndex = 22;
-            cuiLabel6.VerticalAlignment = StringAlignment.Center;
+            ConditionLabel.Content = "Condition";
+            ConditionLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ConditionLabel.HorizontalAlignment = StringAlignment.Near;
+            ConditionLabel.Location = new Point(322, 320);
+            ConditionLabel.Margin = new Padding(4, 3, 4, 3);
+            ConditionLabel.Name = "ConditionLabel";
+            ConditionLabel.Size = new Size(245, 33);
+            ConditionLabel.TabIndex = 22;
+            ConditionLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiTextBox8
+            // WeightTextbox
             // 
-            cuiTextBox8.BackgroundColor = Color.White;
-            cuiTextBox8.Content = "";
-            cuiTextBox8.FocusBackgroundColor = Color.White;
-            cuiTextBox8.FocusImageTint = Color.White;
-            cuiTextBox8.FocusOutlineColor = Color.FromArgb(64, 64, 64);
-            cuiTextBox8.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiTextBox8.ForeColor = Color.Gray;
-            cuiTextBox8.Image = null;
-            cuiTextBox8.ImageExpand = new Point(0, 0);
-            cuiTextBox8.ImageOffset = new Point(0, 0);
-            cuiTextBox8.Location = new Point(24, 570);
-            cuiTextBox8.Margin = new Padding(4);
-            cuiTextBox8.Multiline = false;
-            cuiTextBox8.Name = "cuiTextBox8";
-            cuiTextBox8.NormalImageTint = Color.White;
-            cuiTextBox8.OutlineColor = Color.FromArgb(128, 128, 128, 128);
-            cuiTextBox8.Padding = new Padding(15, 14, 15, 0);
-            cuiTextBox8.PasswordChar = false;
-            cuiTextBox8.PlaceholderColor = SystemColors.WindowText;
-            cuiTextBox8.PlaceholderText = "";
-            cuiTextBox8.Rounding = new Padding(8);
-            cuiTextBox8.Size = new Size(223, 42);
-            cuiTextBox8.TabIndex = 25;
-            cuiTextBox8.TextOffset = new Size(0, 0);
-            cuiTextBox8.UnderlinedStyle = true;
+            WeightTextbox.BackgroundColor = Color.White;
+            WeightTextbox.Content = "";
+            WeightTextbox.FocusBackgroundColor = Color.White;
+            WeightTextbox.FocusImageTint = Color.White;
+            WeightTextbox.FocusOutlineColor = Color.FromArgb(64, 64, 64);
+            WeightTextbox.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            WeightTextbox.ForeColor = Color.Gray;
+            WeightTextbox.Image = null;
+            WeightTextbox.ImageExpand = new Point(0, 0);
+            WeightTextbox.ImageOffset = new Point(0, 0);
+            WeightTextbox.Location = new Point(24, 501);
+            WeightTextbox.Margin = new Padding(4);
+            WeightTextbox.Multiline = false;
+            WeightTextbox.Name = "WeightTextbox";
+            WeightTextbox.NormalImageTint = Color.White;
+            WeightTextbox.OutlineColor = Color.FromArgb(128, 128, 128, 128);
+            WeightTextbox.Padding = new Padding(15, 14, 15, 0);
+            WeightTextbox.PasswordChar = false;
+            WeightTextbox.PlaceholderColor = SystemColors.WindowText;
+            WeightTextbox.PlaceholderText = "";
+            WeightTextbox.Rounding = new Padding(8);
+            WeightTextbox.Size = new Size(223, 42);
+            WeightTextbox.TabIndex = 25;
+            WeightTextbox.TextOffset = new Size(0, 0);
+            WeightTextbox.UnderlinedStyle = true;
             // 
-            // cuiLabel9
+            // WeightLabel
             // 
-            cuiLabel9.Content = "Price";
-            cuiLabel9.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel9.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel9.Location = new Point(24, 542);
-            cuiLabel9.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel9.Name = "cuiLabel9";
-            cuiLabel9.Size = new Size(245, 33);
-            cuiLabel9.TabIndex = 24;
-            cuiLabel9.VerticalAlignment = StringAlignment.Center;
+            WeightLabel.Content = "Weight";
+            WeightLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            WeightLabel.HorizontalAlignment = StringAlignment.Near;
+            WeightLabel.Location = new Point(24, 473);
+            WeightLabel.Margin = new Padding(4, 3, 4, 3);
+            WeightLabel.Name = "WeightLabel";
+            WeightLabel.Size = new Size(245, 33);
+            WeightLabel.TabIndex = 24;
+            WeightLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiTextBox9
+            // WarrantyLabel
             // 
-            cuiTextBox9.BackgroundColor = Color.White;
-            cuiTextBox9.Content = "";
-            cuiTextBox9.FocusBackgroundColor = Color.White;
-            cuiTextBox9.FocusImageTint = Color.White;
-            cuiTextBox9.FocusOutlineColor = Color.FromArgb(64, 64, 64);
-            cuiTextBox9.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiTextBox9.ForeColor = Color.Gray;
-            cuiTextBox9.Image = null;
-            cuiTextBox9.ImageExpand = new Point(0, 0);
-            cuiTextBox9.ImageOffset = new Point(0, 0);
-            cuiTextBox9.Location = new Point(322, 570);
-            cuiTextBox9.Margin = new Padding(4);
-            cuiTextBox9.Multiline = false;
-            cuiTextBox9.Name = "cuiTextBox9";
-            cuiTextBox9.NormalImageTint = Color.White;
-            cuiTextBox9.OutlineColor = Color.FromArgb(128, 128, 128, 128);
-            cuiTextBox9.Padding = new Padding(15, 14, 15, 0);
-            cuiTextBox9.PasswordChar = false;
-            cuiTextBox9.PlaceholderColor = SystemColors.WindowText;
-            cuiTextBox9.PlaceholderText = "";
-            cuiTextBox9.Rounding = new Padding(8);
-            cuiTextBox9.Size = new Size(223, 42);
-            cuiTextBox9.TabIndex = 27;
-            cuiTextBox9.TextOffset = new Size(0, 0);
-            cuiTextBox9.UnderlinedStyle = true;
+            WarrantyLabel.Content = "Warranty";
+            WarrantyLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            WarrantyLabel.HorizontalAlignment = StringAlignment.Near;
+            WarrantyLabel.Location = new Point(322, 473);
+            WarrantyLabel.Margin = new Padding(4, 3, 4, 3);
+            WarrantyLabel.Name = "WarrantyLabel";
+            WarrantyLabel.Size = new Size(245, 33);
+            WarrantyLabel.TabIndex = 26;
+            WarrantyLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiLabel11
+            // CategoryCB
             // 
-            cuiLabel11.Content = "Price";
-            cuiLabel11.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel11.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel11.Location = new Point(322, 542);
-            cuiLabel11.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel11.Name = "cuiLabel11";
-            cuiLabel11.Size = new Size(245, 33);
-            cuiLabel11.TabIndex = 26;
-            cuiLabel11.VerticalAlignment = StringAlignment.Center;
+            CategoryCB.BackgroundColor = Color.White;
+            CategoryCB.ButtonCursor = Cursors.Arrow;
+            CategoryCB.ButtonHoverBackground = Color.FromArgb(192, 255, 106, 0);
+            CategoryCB.ButtonHoverOutline = Color.Empty;
+            CategoryCB.ButtonNormalBackground = Color.FromArgb(255, 106, 0);
+            CategoryCB.ButtonNormalOutline = Color.Empty;
+            CategoryCB.ButtonPressedBackground = Color.FromArgb(255, 106, 0);
+            CategoryCB.ButtonPressedOutline = Color.Empty;
+            CategoryCB.DropDownBackgroundColor = Color.White;
+            CategoryCB.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
+            CategoryCB.ExpandArrowColor = Color.Gray;
+            CategoryCB.ForeColor = Color.Gray;
+            CategoryCB.Location = new Point(322, 119);
+            CategoryCB.Margin = new Padding(4, 3, 4, 3);
+            CategoryCB.Name = "CategoryCB";
+            CategoryCB.NoSelectionDropdownText = "Empty";
+            CategoryCB.NoSelectionText = "Category";
+            CategoryCB.OutlineColor = Color.FromArgb(64, 128, 128, 128);
+            CategoryCB.OutlineThickness = 1F;
+            CategoryCB.Rounding = 8;
+            CategoryCB.Size = new Size(223, 43);
+            CategoryCB.TabIndex = 29;
             // 
-            // cuiComboBox2
+            // CategoryLabel
             // 
-            cuiComboBox2.BackgroundColor = Color.White;
-            cuiComboBox2.ButtonCursor = Cursors.Arrow;
-            cuiComboBox2.ButtonHoverBackground = Color.FromArgb(192, 255, 106, 0);
-            cuiComboBox2.ButtonHoverOutline = Color.Empty;
-            cuiComboBox2.ButtonNormalBackground = Color.FromArgb(255, 106, 0);
-            cuiComboBox2.ButtonNormalOutline = Color.Empty;
-            cuiComboBox2.ButtonPressedBackground = Color.FromArgb(255, 106, 0);
-            cuiComboBox2.ButtonPressedOutline = Color.Empty;
-            cuiComboBox2.DropDownBackgroundColor = Color.White;
-            cuiComboBox2.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
-            cuiComboBox2.ExpandArrowColor = Color.Gray;
-            cuiComboBox2.ForeColor = Color.Gray;
-            cuiComboBox2.Location = new Point(322, 119);
-            cuiComboBox2.Margin = new Padding(4, 3, 4, 3);
-            cuiComboBox2.Name = "cuiComboBox2";
-            cuiComboBox2.NoSelectionDropdownText = "Empty";
-            cuiComboBox2.NoSelectionText = "Category";
-            cuiComboBox2.OutlineColor = Color.FromArgb(64, 128, 128, 128);
-            cuiComboBox2.OutlineThickness = 1F;
-            cuiComboBox2.Rounding = 8;
-            cuiComboBox2.Size = new Size(223, 43);
-            cuiComboBox2.TabIndex = 29;
+            CategoryLabel.Content = "Category";
+            CategoryLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CategoryLabel.HorizontalAlignment = StringAlignment.Near;
+            CategoryLabel.Location = new Point(322, 91);
+            CategoryLabel.Margin = new Padding(4, 3, 4, 3);
+            CategoryLabel.Name = "CategoryLabel";
+            CategoryLabel.Size = new Size(245, 33);
+            CategoryLabel.TabIndex = 28;
+            CategoryLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiLabel12
+            // DescriptionLabel
             // 
-            cuiLabel12.Content = "Model";
-            cuiLabel12.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel12.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel12.Location = new Point(322, 91);
-            cuiLabel12.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel12.Name = "cuiLabel12";
-            cuiLabel12.Size = new Size(245, 33);
-            cuiLabel12.TabIndex = 28;
-            cuiLabel12.VerticalAlignment = StringAlignment.Center;
+            DescriptionLabel.BackColor = Color.Transparent;
+            DescriptionLabel.Content = "Description";
+            DescriptionLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DescriptionLabel.HorizontalAlignment = StringAlignment.Near;
+            DescriptionLabel.Location = new Point(24, 572);
+            DescriptionLabel.Margin = new Padding(4, 3, 4, 3);
+            DescriptionLabel.Name = "DescriptionLabel";
+            DescriptionLabel.Size = new Size(245, 33);
+            DescriptionLabel.TabIndex = 31;
+            DescriptionLabel.VerticalAlignment = StringAlignment.Center;
+            // 
+            // DescriptionTextbox
+            // 
+            DescriptionTextbox.BackgroundColor = Color.White;
+            DescriptionTextbox.Content = "";
+            DescriptionTextbox.FocusBackgroundColor = Color.White;
+            DescriptionTextbox.FocusImageTint = Color.White;
+            DescriptionTextbox.FocusOutlineColor = Color.FromArgb(64, 64, 64);
+            DescriptionTextbox.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DescriptionTextbox.ForeColor = Color.Gray;
+            DescriptionTextbox.Image = null;
+            DescriptionTextbox.ImageExpand = new Point(0, 0);
+            DescriptionTextbox.ImageOffset = new Point(0, 0);
+            DescriptionTextbox.Location = new Point(24, 601);
+            DescriptionTextbox.Margin = new Padding(4);
+            DescriptionTextbox.Multiline = false;
+            DescriptionTextbox.Name = "DescriptionTextbox";
+            DescriptionTextbox.NormalImageTint = Color.White;
+            DescriptionTextbox.OutlineColor = Color.FromArgb(128, 128, 128, 128);
+            DescriptionTextbox.Padding = new Padding(15, 91, 15, 0);
+            DescriptionTextbox.PasswordChar = false;
+            DescriptionTextbox.PlaceholderColor = SystemColors.WindowText;
+            DescriptionTextbox.PlaceholderText = "";
+            DescriptionTextbox.Rounding = new Padding(8);
+            DescriptionTextbox.Size = new Size(521, 196);
+            DescriptionTextbox.TabIndex = 32;
+            DescriptionTextbox.TextOffset = new Size(0, 0);
+            DescriptionTextbox.UnderlinedStyle = true;
+            // 
+            // AILabel2
+            // 
+            AILabel2.BackColor = Color.Transparent;
+            AILabel2.Content = "Please\\ fill\\ in\\ the\\ information";
+            AILabel2.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AILabel2.HorizontalAlignment = StringAlignment.Near;
+            AILabel2.Location = new Point(24, 52);
+            AILabel2.Margin = new Padding(4, 3, 4, 3);
+            AILabel2.Name = "AILabel2";
+            AILabel2.Size = new Size(245, 21);
+            AILabel2.TabIndex = 33;
+            AILabel2.VerticalAlignment = StringAlignment.Center;
+            // 
+            // WarrantyFD
+            // 
+            WarrantyFD.AllowDrop = true;
+            WarrantyFD.BackColor = Color.LightSteelBlue;
+            WarrantyFD.DashedOutline = true;
+            WarrantyFD.DashedOutlineColor = Color.FromArgb(128, 128, 128, 128);
+            WarrantyFD.DashLength = 8;
+            WarrantyFD.Filter = "";
+            WarrantyFD.ForeColor = Color.Black;
+            WarrantyFD.HoverContent = "Release to drop";
+            WarrantyFD.HoverForeColor = Color.FromArgb(128, 128, 128, 128);
+            WarrantyFD.HoverUploadForeColor = Color.FromArgb(255, 106, 0);
+            WarrantyFD.Image = (Image)resources.GetObject("WarrantyFD.Image");
+            WarrantyFD.ImagePadding = 2;
+            WarrantyFD.ImageSize = new Size(24, 24);
+            WarrantyFD.ImageTint = Color.Gray;
+            WarrantyFD.Location = new Point(322, 501);
+            WarrantyFD.Multiselect = false;
+            WarrantyFD.Name = "WarrantyFD";
+            WarrantyFD.NormalContent = "Drop file here";
+            WarrantyFD.NormalForeColor = Color.Black;
+            WarrantyFD.NormalUploadForeColor = Color.FromArgb(255, 106, 0);
+            WarrantyFD.OutlineThickness = 1F;
+            WarrantyFD.PanelColor = Color.FromArgb(16, 255, 255, 255);
+            WarrantyFD.Rounding = new Padding(8);
+            WarrantyFD.Size = new Size(223, 93);
+            WarrantyFD.TabIndex = 34;
+            WarrantyFD.Text = "WarrantyFD1";
+            WarrantyFD.UploadContent = "Click to upload";
+            WarrantyFD.UploadWithClick = true;
+            WarrantyFD.FileDropped += cuiFileDropper1_FileDropped;
             // 
             // AddItemForm
             // 
@@ -625,33 +686,36 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(600, 900);
-            Controls.Add(cuiComboBox2);
-            Controls.Add(cuiLabel12);
-            Controls.Add(cuiTextBox9);
-            Controls.Add(cuiLabel11);
-            Controls.Add(cuiTextBox8);
-            Controls.Add(cuiLabel9);
-            Controls.Add(cuiTextBox4);
-            Controls.Add(cuiLabel6);
-            Controls.Add(cuiTextBox7);
-            Controls.Add(cuiLabel10);
-            Controls.Add(cuiTextBox6);
-            Controls.Add(cuiTextBox5);
-            Controls.Add(cuiTextBox3);
-            Controls.Add(cuiTextBox2);
-            Controls.Add(cuiTextBox1);
-            Controls.Add(cuiCalendarDatePicker1);
+            Controls.Add(WarrantyFD);
+            Controls.Add(AILabel2);
+            Controls.Add(DescriptionTextbox);
+            Controls.Add(DescriptionLabel);
+            Controls.Add(CategoryCB);
+            Controls.Add(CategoryLabel);
+            Controls.Add(WarrantyLabel);
+            Controls.Add(WeightTextbox);
+            Controls.Add(WeightLabel);
+            Controls.Add(ConditionTextbox);
+            Controls.Add(ConditionLabel);
+            Controls.Add(ModelTextbox);
+            Controls.Add(ModelLabel);
+            Controls.Add(UnitIDTextbox);
+            Controls.Add(QuantityTextbox);
+            Controls.Add(PriceTextbox);
+            Controls.Add(SerialIDTextbox);
+            Controls.Add(SupplierIDTextbox);
+            Controls.Add(DateDeliveredCDP);
             Controls.Add(CancelBtn);
             Controls.Add(SaveBtn);
-            Controls.Add(cuiComboBox1);
-            Controls.Add(cuiLabel8);
-            Controls.Add(cuiLabel7);
-            Controls.Add(cuiLabel5);
-            Controls.Add(cuiLabel4);
-            Controls.Add(cuiLabel3);
-            Controls.Add(cuiLabel2);
-            Controls.Add(cuiLabel1);
-            Controls.Add(AILabel);
+            Controls.Add(ManufacturerCB);
+            Controls.Add(DateDeliveredLabel);
+            Controls.Add(PriceLabel);
+            Controls.Add(SerialLabel);
+            Controls.Add(QuantityLabel);
+            Controls.Add(SupplierLabel);
+            Controls.Add(UnitLabel);
+            Controls.Add(ManufacturerLabel);
+            Controls.Add(AILabel1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "AddItemForm";
             Text = "Add Item";
@@ -661,32 +725,35 @@
 
         #endregion
 
-        private CuoreUI.Controls.cuiLabel AILabel;
-        private CuoreUI.Controls.cuiLabel cuiLabel1;
-        private CuoreUI.Controls.cuiLabel cuiLabel2;
-        private CuoreUI.Controls.cuiLabel cuiLabel3;
-        private CuoreUI.Controls.cuiLabel cuiLabel4;
-        private CuoreUI.Controls.cuiLabel cuiLabel5;
-        private CuoreUI.Controls.cuiLabel cuiLabel7;
-        private CuoreUI.Controls.cuiLabel cuiLabel8;
-        private CuoreUI.Controls.cuiComboBox cuiComboBox1;
+        private CuoreUI.Controls.cuiLabel AILabel1;
+        private CuoreUI.Controls.cuiLabel ManufacturerLabel;
+        private CuoreUI.Controls.cuiLabel UnitLabel;
+        private CuoreUI.Controls.cuiLabel SupplierLabel;
+        private CuoreUI.Controls.cuiLabel QuantityLabel;
+        private CuoreUI.Controls.cuiLabel SerialLabel;
+        private CuoreUI.Controls.cuiLabel PriceLabel;
+        private CuoreUI.Controls.cuiLabel DateDeliveredLabel;
+        private CuoreUI.Controls.cuiComboBox ManufacturerCB;
         private CuoreUI.Controls.cuiButton SaveBtn;
         private CuoreUI.Controls.cuiButton CancelBtn;
-        private CuoreUI.Controls.cuiCalendarDatePicker cuiCalendarDatePicker1;
-        private CuoreUI.Controls.cuiTextBox cuiTextBox1;
-        private CuoreUI.Controls.cuiTextBox cuiTextBox2;
-        private CuoreUI.Controls.cuiTextBox cuiTextBox3;
-        private CuoreUI.Controls.cuiTextBox cuiTextBox5;
-        private CuoreUI.Controls.cuiTextBox cuiTextBox6;
-        private CuoreUI.Controls.cuiTextBox cuiTextBox7;
-        private CuoreUI.Controls.cuiLabel cuiLabel10;
-        private CuoreUI.Controls.cuiTextBox cuiTextBox4;
-        private CuoreUI.Controls.cuiLabel cuiLabel6;
-        private CuoreUI.Controls.cuiTextBox cuiTextBox8;
-        private CuoreUI.Controls.cuiLabel cuiLabel9;
-        private CuoreUI.Controls.cuiTextBox cuiTextBox9;
-        private CuoreUI.Controls.cuiLabel cuiLabel11;
-        private CuoreUI.Controls.cuiComboBox cuiComboBox2;
-        private CuoreUI.Controls.cuiLabel cuiLabel12;
+        private CuoreUI.Controls.cuiCalendarDatePicker DateDeliveredCDP;
+        private CuoreUI.Controls.cuiTextBox SupplierIDTextbox;
+        private CuoreUI.Controls.cuiTextBox SerialIDTextbox;
+        private CuoreUI.Controls.cuiTextBox PriceTextbox;
+        private CuoreUI.Controls.cuiTextBox QuantityTextbox;
+        private CuoreUI.Controls.cuiTextBox UnitIDTextbox;
+        private CuoreUI.Controls.cuiTextBox ModelTextbox;
+        private CuoreUI.Controls.cuiLabel ModelLabel;
+        private CuoreUI.Controls.cuiTextBox ConditionTextbox;
+        private CuoreUI.Controls.cuiLabel ConditionLabel;
+        private CuoreUI.Controls.cuiTextBox WeightTextbox;
+        private CuoreUI.Controls.cuiLabel WeightLabel;
+        private CuoreUI.Controls.cuiLabel WarrantyLabel;
+        private CuoreUI.Controls.cuiComboBox CategoryCB;
+        private CuoreUI.Controls.cuiLabel CategoryLabel;
+        private CuoreUI.Controls.cuiLabel DescriptionLabel;
+        private CuoreUI.Controls.cuiTextBox DescriptionTextbox;
+        private CuoreUI.Controls.cuiLabel AILabel2;
+        private CuoreUI.Controls.cuiFileDropper WarrantyFD;
     }
 }

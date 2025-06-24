@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36212.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login_Version1.0", "Login_Version1.0\Login_Version1.0\Login_Version1.0.csproj", "{B66B2998-9F6F-1666-D693-03E9E3FCD050}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainDashboard", "Dashboard_Version1.0\Dashboard_Version1.0\MainDashboard\MainDashboard.csproj", "{D187B419-D8C7-2B4C-69A3-52D6017DC911}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B66B2998-9F6F-1666-D693-03E9E3FCD050}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B66B2998-9F6F-1666-D693-03E9E3FCD050}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B66B2998-9F6F-1666-D693-03E9E3FCD050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D187B419-D8C7-2B4C-69A3-52D6017DC911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D187B419-D8C7-2B4C-69A3-52D6017DC911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D187B419-D8C7-2B4C-69A3-52D6017DC911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D187B419-D8C7-2B4C-69A3-52D6017DC911}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

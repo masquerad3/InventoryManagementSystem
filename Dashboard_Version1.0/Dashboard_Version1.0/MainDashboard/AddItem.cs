@@ -35,5 +35,15 @@ namespace MainDashboard
         {
 
         }
+
+        private void cuiTextBox9_ContentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cuiFileDropper1_FileDropped(object sender, CuoreUI.Controls.FileDroppedEventArgs e)
+        {
+
+        }
     }
 }

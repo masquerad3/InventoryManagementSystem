@@ -21,4 +21,11 @@ obj/
 
 # User-specific files
 *.user
+<<<<<<< HEAD
 *.vs/
+=======
+*.vs/
+*.suo
+*.db
+*.vsidx
+>>>>>>> github/dev-Steven

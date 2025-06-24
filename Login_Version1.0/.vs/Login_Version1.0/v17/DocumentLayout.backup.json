@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Login_Version1.0\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|c:\\users\\mural\\desktop\\programming\\c#\\ims\\login_version1.0\\login_version1.0\\updatelog.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+=======
+      "AbsoluteMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|c:\\users\\steven\\source\\repos\\inventorymanagementsystem\\login_version1.0\\login_version1.0\\updatelog.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+>>>>>>> github/dev-Steven
       "RelativeMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|solutionrelative:login_version1.0\\updatelog.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
@@ -15,6 +19,7 @@
       "RelativeMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|solutionrelative:login_version1.0\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|c:\\users\\mural\\desktop\\programming\\c#\\ims\\login_version1.0\\login_version1.0\\signup.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|solutionrelative:login_version1.0\\signup.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -24,6 +29,17 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Login_Version1.0\\login_version1.0\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+=======
+      "AbsoluteMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|c:\\users\\steven\\source\\repos\\inventorymanagementsystem\\login_version1.0\\login_version1.0\\signup.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|solutionrelative:login_version1.0\\signup.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|c:\\users\\steven\\source\\repos\\inventorymanagementsystem\\login_version1.0\\login_version1.0\\verify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|solutionrelative:login_version1.0\\verify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\login_version1.0\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+>>>>>>> github/dev-Steven
       "RelativeMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|solutionrelative:login_version1.0\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -31,6 +47,7 @@
       "RelativeMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|solutionrelative:login_version1.0\\verify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|c:\\users\\mural\\desktop\\programming\\c#\\ims\\login_version1.0\\login_version1.0\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|solutionrelative:login_version1.0\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -40,6 +57,17 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|c:\\users\\mural\\desktop\\programming\\c#\\ims\\login_version1.0\\login_version1.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+=======
+      "AbsoluteMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|c:\\users\\steven\\source\\repos\\inventorymanagementsystem\\login_version1.0\\login_version1.0\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|solutionrelative:login_version1.0\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|c:\\users\\steven\\source\\repos\\inventorymanagementsystem\\login_version1.0\\login_version1.0\\verify.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|solutionrelative:login_version1.0\\verify.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|c:\\users\\steven\\source\\repos\\inventorymanagementsystem\\login_version1.0\\login_version1.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+>>>>>>> github/dev-Steven
       "RelativeMoniker": "D:0:0:{C3CFC4CB-DE51-4B40-BE9B-FDABE279C0BA}|Login_Version1.0\\Login_Version1.0.csproj|solutionrelative:login_version1.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -54,11 +82,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+=======
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+>>>>>>> github/dev-Steven
               "Title": "Login.cs [Design]",
               "DocumentMoniker": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Login_Version1.0\\Login_Version1.0\\Login.cs",
               "RelativeDocumentMoniker": "Login_Version1.0\\Login.cs",
@@ -68,6 +104,19 @@
               "WhenOpened": "2025-06-09T17:35:33.921Z",
               "IsPinned": true,
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpdateLog.txt",
+              "DocumentMoniker": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\UpdateLog.txt",
+              "RelativeDocumentMoniker": "Login_Version1.0\\UpdateLog.txt",
+              "ToolTip": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\UpdateLog.txt",
+              "RelativeToolTip": "Login_Version1.0\\UpdateLog.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-06-14T18:20:47.442Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -120,7 +169,37 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 8,
+=======
+              "DocumentIndex": 9,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login.cs",
+              "RelativeDocumentMoniker": "Login_Version1.0\\Login.cs",
+              "ToolTip": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login.cs",
+              "RelativeToolTip": "Login_Version1.0\\Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T17:57:00.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Program.cs",
+              "RelativeDocumentMoniker": "Login_Version1.0\\Program.cs",
+              "ToolTip": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Program.cs",
+              "RelativeToolTip": "Login_Version1.0\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T17:08:46.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+>>>>>>> github/dev-Steven
               "Title": "Verify.Designer.cs",
               "DocumentMoniker": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Login_Version1.0\\Login_Version1.0\\Verify.Designer.cs",
               "RelativeDocumentMoniker": "Login_Version1.0\\Verify.Designer.cs",
@@ -128,11 +207,28 @@
               "RelativeToolTip": "Login_Version1.0\\Verify.Designer.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAowD0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
               "WhenOpened": "2025-06-10T16:19:38.422Z"
+=======
+              "WhenOpened": "2025-06-10T16:19:38.422Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
+              "Title": "Verify.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Verify.cs",
+              "RelativeDocumentMoniker": "Login_Version1.0\\Verify.cs",
+              "ToolTip": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Verify.cs [Design]",
+              "RelativeToolTip": "Login_Version1.0\\Verify.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T16:14:32.486Z",
+              "EditorCaption": " [Design]"
+>>>>>>> github/dev-Steven
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Verify.cs",
               "DocumentMoniker": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Login_Version1.0\\Login_Version1.0\\Verify.cs",
               "RelativeDocumentMoniker": "Login_Version1.0\\Verify.cs",
@@ -145,11 +241,31 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 3,
+=======
+              "DocumentIndex": 4,
+              "Title": "Signup.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Signup.cs",
+              "RelativeDocumentMoniker": "Login_Version1.0\\Signup.cs",
+              "ToolTip": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Signup.cs [Design]",
+              "RelativeToolTip": "Login_Version1.0\\Signup.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T17:31:57.159Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+>>>>>>> github/dev-Steven
               "Title": "Signup.Designer.cs",
               "DocumentMoniker": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Login_Version1.0\\Login_Version1.0\\Signup.Designer.cs",
               "RelativeDocumentMoniker": "Login_Version1.0\\Signup.Designer.cs",
+<<<<<<< HEAD
               "ToolTip": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Login_Version1.0\\Login_Version1.0\\Signup.Designer.cs",
+=======
+              "ToolTip": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Signup.Designer.cs",
+>>>>>>> github/dev-Steven
               "RelativeToolTip": "Login_Version1.0\\Signup.Designer.cs",
               "ViewState": "AgIAAEgBAAAAAAAAAAAcwFcBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -170,7 +286,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 7,
+=======
+              "DocumentIndex": 6,
+>>>>>>> github/dev-Steven
               "Title": "Login.Designer.cs",
               "DocumentMoniker": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Login_Version1.0\\Login_Version1.0\\Login.Designer.cs",
               "RelativeDocumentMoniker": "Login_Version1.0\\Login.Designer.cs",

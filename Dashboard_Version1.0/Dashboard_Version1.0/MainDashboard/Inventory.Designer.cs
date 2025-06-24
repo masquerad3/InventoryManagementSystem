@@ -38,7 +38,6 @@
             NotifIconBG = new CuoreUI.Controls.cuiGradientPanel();
             NotificationIcon = new CuoreUI.Controls.cuiPictureBox();
             cuiPanel1 = new CuoreUI.Controls.cuiPanel();
-            cuiLabel1 = new CuoreUI.Controls.cuiLabel();
             FilterBtn = new CuoreUI.Controls.cuiButton();
             AddBtn = new CuoreUI.Controls.cuiButton();
             TableSearchBar = new CuoreUI.Controls.cuiTextBox();
@@ -143,7 +142,6 @@
             // 
             // cuiPanel1
             // 
-            cuiPanel1.Controls.Add(cuiLabel1);
             cuiPanel1.Controls.Add(FilterBtn);
             cuiPanel1.Controls.Add(AddBtn);
             cuiPanel1.Controls.Add(TableSearchBar);
@@ -156,19 +154,6 @@
             cuiPanel1.Rounding = new Padding(8);
             cuiPanel1.Size = new Size(1000, 900);
             cuiPanel1.TabIndex = 10;
-            // 
-            // cuiLabel1
-            // 
-            cuiLabel1.BackColor = Color.Transparent;
-            cuiLabel1.Content = "Showing";
-            cuiLabel1.Font = new Font("Leelawadee UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel1.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel1.Location = new Point(37, 836);
-            cuiLabel1.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel1.Name = "cuiLabel1";
-            cuiLabel1.Size = new Size(57, 24);
-            cuiLabel1.TabIndex = 16;
-            cuiLabel1.VerticalAlignment = StringAlignment.Center;
             // 
             // FilterBtn
             // 
@@ -187,7 +172,7 @@
             FilterBtn.HoverBackground = Color.White;
             FilterBtn.HoveredImageTint = Color.White;
             FilterBtn.HoverForeColor = Color.Black;
-            FilterBtn.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            FilterBtn.HoverOutline = Color.Black;
             FilterBtn.Image = Properties.Resources.sliders_horizontal;
             FilterBtn.ImageAutoCenter = true;
             FilterBtn.ImageExpand = new Point(0, 0);
@@ -356,7 +341,6 @@
         private CuoreUI.Controls.cuiTextBox TableSearchBar;
         private CuoreUI.Controls.cuiButton FilterBtn;
         private CuoreUI.Controls.cuiButton AddBtn;
-        private CuoreUI.Controls.cuiLabel cuiLabel1;
         private DataGridViewImageColumn View;
         private DataGridViewImageColumn Edit;
         private DataGridViewImageColumn Delete;

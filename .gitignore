@@ -1,5 +1,23 @@
-.vs/
-*.suo
+# Ignore build results
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.editorconfig
+*.nuget.dgspec.json
+*.nuget.cache
+*.sourcelink.json
+*.FileListAbsolute.txt
+*.genruntimeconfig.cache
+*.assets.cache
+*.csproj.CoreCompileInputs.cache
+*.csproj.GenerateResource.cache
+*.AssemblyInfoInputs.cache
+*.GeneratedMSBuildEditorConfig.editorconfig
+
+
+# User-specific files
 *.user
-*.db
-*.vsidx
+*.vs/

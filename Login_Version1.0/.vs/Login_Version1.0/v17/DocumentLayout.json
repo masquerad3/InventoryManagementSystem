@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -66,21 +66,7 @@
               "RelativeToolTip": "Login_Version1.0\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T17:35:33.921Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UpdateLog.txt",
-              "DocumentMoniker": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\UpdateLog.txt",
-              "RelativeDocumentMoniker": "Login_Version1.0\\UpdateLog.txt",
-              "ToolTip": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\UpdateLog.txt",
-              "RelativeToolTip": "Login_Version1.0\\UpdateLog.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-06-14T18:20:47.442Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -96,6 +82,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpdateLog.txt",
+              "DocumentMoniker": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\UpdateLog.txt",
+              "RelativeDocumentMoniker": "Login_Version1.0\\UpdateLog.txt",
+              "ToolTip": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\UpdateLog.txt",
+              "RelativeToolTip": "Login_Version1.0\\UpdateLog.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-06-14T18:20:47.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Login.cs",
@@ -104,8 +103,7 @@
               "RelativeToolTip": "Login_Version1.0\\Login.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T17:57:00.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T17:57:00.995Z"
             },
             {
               "$type": "Document",
@@ -117,8 +115,7 @@
               "RelativeToolTip": "Login_Version1.0\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T17:08:46.738Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T17:08:46.738Z"
             },
             {
               "$type": "Document",
@@ -130,8 +127,7 @@
               "RelativeToolTip": "Login_Version1.0\\Verify.Designer.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAowD0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T16:19:38.422Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T16:19:38.422Z"
             },
             {
               "$type": "Document",
@@ -142,8 +138,7 @@
               "ToolTip": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Verify.cs [Design]",
               "RelativeToolTip": "Login_Version1.0\\Verify.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T16:14:32.486Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-10T16:14:32.486Z"
             },
             {
               "$type": "Document",
@@ -155,8 +150,7 @@
               "RelativeToolTip": "Login_Version1.0\\Verify.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAgwDcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T16:19:29.531Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T16:19:29.531Z"
             },
             {
               "$type": "Document",
@@ -167,8 +161,7 @@
               "ToolTip": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Login_Version1.0\\Login_Version1.0\\Signup.cs [Design]",
               "RelativeToolTip": "Login_Version1.0\\Signup.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T17:31:57.159Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-09T17:31:57.159Z"
             },
             {
               "$type": "Document",
@@ -180,8 +173,7 @@
               "RelativeToolTip": "Login_Version1.0\\Signup.Designer.cs",
               "ViewState": "AgIAAEgBAAAAAAAAAAAcwFcBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T16:59:20.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T16:59:20.508Z"
             },
             {
               "$type": "Document",
@@ -193,8 +185,7 @@
               "RelativeToolTip": "Login_Version1.0\\Signup.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAgwFIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T17:32:38.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T17:32:38.572Z"
             },
             {
               "$type": "Document",
@@ -206,8 +197,7 @@
               "RelativeToolTip": "Login_Version1.0\\Login.Designer.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAA1wEQAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T14:22:23.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T14:22:23.314Z"
             }
           ]
         }

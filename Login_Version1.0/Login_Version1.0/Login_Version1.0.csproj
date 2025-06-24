@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Dashboard_Version1.0\Dashboard_Version1.0\MainDashboard\MainDashboard.csproj" />
     <ProjectReference Include="..\..\MainDashboard\MainDashboard.csproj" />
   </ItemGroup>
 

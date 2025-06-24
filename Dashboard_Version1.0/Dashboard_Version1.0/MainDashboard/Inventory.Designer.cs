@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             cuiPanel6 = new CuoreUI.Controls.cuiPanel();
             InventoryHeader = new CuoreUI.Controls.cuiLabel();
             SearchBar = new CuoreUI.Controls.cuiTextBox();
@@ -39,6 +43,9 @@
             AddBtn = new CuoreUI.Controls.cuiButton();
             TableSearchBar = new CuoreUI.Controls.cuiTextBox();
             dataGridView1 = new DataGridView();
+            View = new DataGridViewImageColumn();
+            Edit = new DataGridViewImageColumn();
+            Delete = new DataGridViewImageColumn();
             cuiPanel6.SuspendLayout();
             NotifIconBG.SuspendLayout();
             cuiPanel1.SuspendLayout();
@@ -201,6 +208,7 @@
             FilterBtn.TabIndex = 15;
             FilterBtn.TextAlignment = StringAlignment.Center;
             FilterBtn.TextOffset = new Point(0, 0);
+            FilterBtn.Click += FilterBtn_Click;
             // 
             // AddBtn
             // 
@@ -275,10 +283,48 @@
             // 
             dataGridView1.BackgroundColor = SystemColors.ControlLight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { View, Edit, Delete });
             dataGridView1.Location = new Point(25, 60);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(950, 735);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // View
+            // 
+            View.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.NullValue = resources.GetObject("dataGridViewCellStyle1.NullValue");
+            View.DefaultCellStyle = dataGridViewCellStyle1;
+            View.HeaderText = "";
+            View.Image = Properties.Resources.eye1;
+            View.Name = "View";
+            View.Resizable = DataGridViewTriState.False;
+            View.Width = 21;
+            // 
+            // Edit
+            // 
+            Edit.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.NullValue = resources.GetObject("dataGridViewCellStyle2.NullValue");
+            Edit.DefaultCellStyle = dataGridViewCellStyle2;
+            Edit.HeaderText = "";
+            Edit.Image = Properties.Resources.pencil1;
+            Edit.Name = "Edit";
+            Edit.Resizable = DataGridViewTriState.True;
+            Edit.Width = 21;
+            // 
+            // Delete
+            // 
+            Delete.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.NullValue = resources.GetObject("dataGridViewCellStyle3.NullValue");
+            Delete.DefaultCellStyle = dataGridViewCellStyle3;
+            Delete.HeaderText = "";
+            Delete.Image = Properties.Resources.trash_21;
+            Delete.Name = "Delete";
+            Delete.Resizable = DataGridViewTriState.True;
+            Delete.Width = 21;
             // 
             // Inventory
             // 
@@ -311,5 +357,8 @@
         private CuoreUI.Controls.cuiButton FilterBtn;
         private CuoreUI.Controls.cuiButton AddBtn;
         private CuoreUI.Controls.cuiLabel cuiLabel1;
+        private DataGridViewImageColumn View;
+        private DataGridViewImageColumn Edit;
+        private DataGridViewImageColumn Delete;
     }
 }

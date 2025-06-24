@@ -8,6 +8,7 @@ namespace MainDashboard
         private ProductAlert productAlert; // Declare the ProductAlert field
         private Batch batch; // Declare the Batch field
 
+
         public Dashboard()
         {
             InitializeComponent();

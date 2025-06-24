@@ -24,3 +24,5 @@ C:\Users\Steven\Source\Repos\InventoryManagementSystem\Dashboard_Version1.0\Dash
 C:\Users\Steven\Source\Repos\InventoryManagementSystem\Dashboard_Version1.0\Dashboard_Version1.0\MainDashboard\obj\Debug\net8.0-windows\MainDashboard.Batch.resources
 C:\Users\Steven\Source\Repos\InventoryManagementSystem\Dashboard_Version1.0\Dashboard_Version1.0\MainDashboard\obj\Debug\net8.0-windows\MainDashboard.Employee.resources
 C:\Users\Steven\Source\Repos\InventoryManagementSystem\Dashboard_Version1.0\Dashboard_Version1.0\MainDashboard\obj\Debug\net8.0-windows\MainDashboard.ProductAlert.resources
+C:\Users\Steven\Source\Repos\InventoryManagementSystem\Dashboard_Version1.0\Dashboard_Version1.0\MainDashboard\obj\Debug\net8.0-windows\MainDashboard.AddItemForm.resources
+C:\Users\Steven\source\repos\InventoryManagementSystem\Dashboard_Version1.0\Dashboard_Version1.0\MainDashboard\obj\Debug\net8.0-windows\MainDashboard.FilterInventory.resources

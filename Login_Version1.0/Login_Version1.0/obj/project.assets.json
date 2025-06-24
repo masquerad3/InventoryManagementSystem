@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
-      "CuoreUI.Winforms/2025.6.5": {
+      "CuoreUI.Winforms/2025.6.19": {
         "type": "package",
         "compile": {
           "lib/net8.0/CuoreUI.dll": {}
@@ -10,28 +10,51 @@
         "runtime": {
           "lib/net8.0/CuoreUI.dll": {}
         }
+      },
+      "MainDashboard/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "CuoreUI.Winforms": "2025.6.19"
+        },
+        "compile": {
+          "bin/placeholder/MainDashboard.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MainDashboard.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
       }
     }
   },
   "libraries": {
-    "CuoreUI.Winforms/2025.6.5": {
-      "sha512": "x7isPWCM6ZgOZkpY+pxVg0YmOTzEfdp+iDym62KmVyr8Gf+rvPdaTZv35ywRjm+ORo4f4kdE75MyrIad88+G4A==",
+    "CuoreUI.Winforms/2025.6.19": {
+      "sha512": "QwvMiuF1tPIYeKvsMoLtupYmBQw8I99b4u6gVI2wjUlEBOHwJ06z4TwR25s63iD5oO4Ui75boVKsKsWsC5rSqg==",
       "type": "package",
-      "path": "cuoreui.winforms/2025.6.5",
+      "path": "cuoreui.winforms/2025.6.19",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "cuoreui.winforms.2025.6.5.nupkg.sha512",
+        "README.md",
+        "cuoreui.winforms.2025.6.19.nupkg.sha512",
         "cuoreui.winforms.nuspec",
         "icon.png",
-        "lib/net8.0/CuoreUI.dll",
-        "lib/netstandard2.0/CuoreUI.dll"
+        "lib/net472/CuoreUI.dll",
+        "lib/net8.0/CuoreUI.dll"
       ]
+    },
+    "MainDashboard/1.0.0": {
+      "type": "project",
+      "path": "../../Dashboard_Version1.0/Dashboard_Version1.0/MainDashboard/MainDashboard.csproj",
+      "msbuildProject": "../../Dashboard_Version1.0/Dashboard_Version1.0/MainDashboard/MainDashboard.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
-      "CuoreUI.Winforms >= 2025.6.5"
+      "CuoreUI.Winforms >= 2025.6.19",
+      "MainDashboard >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -65,7 +88,14 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj": {
+              "projectPath": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj"
+            },
+            "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\MainDashboard\\MainDashboard.csproj": {
+              "projectPath": "C:\\Users\\mural\\Desktop\\Programming\\C#\\IMS\\MainDashboard\\MainDashboard.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -86,7 +116,7 @@
         "dependencies": {
           "CuoreUI.Winforms": {
             "target": "Package",
-            "version": "[2025.6.5, )"
+            "version": "[2025.6.19, )"
           }
         },
         "imports": [

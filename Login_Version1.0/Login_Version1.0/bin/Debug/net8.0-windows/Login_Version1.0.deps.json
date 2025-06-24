@@ -8,17 +8,29 @@
     ".NETCoreApp,Version=v8.0": {
       "Login_Version1.0/1.0.0": {
         "dependencies": {
-          "CuoreUI.Winforms": "2025.6.5"
+          "CuoreUI.Winforms": "2025.6.19",
+          "MainDashboard": "1.0.0"
         },
         "runtime": {
           "Login_Version1.0.dll": {}
         }
       },
-      "CuoreUI.Winforms/2025.6.5": {
+      "CuoreUI.Winforms/2025.6.19": {
         "runtime": {
           "lib/net8.0/CuoreUI.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "MainDashboard/1.0.0": {
+        "dependencies": {
+          "CuoreUI.Winforms": "2025.6.19"
+        },
+        "runtime": {
+          "MainDashboard.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       }
@@ -30,12 +42,17 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CuoreUI.Winforms/2025.6.5": {
+    "CuoreUI.Winforms/2025.6.19": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-x7isPWCM6ZgOZkpY+pxVg0YmOTzEfdp+iDym62KmVyr8Gf+rvPdaTZv35ywRjm+ORo4f4kdE75MyrIad88+G4A==",
-      "path": "cuoreui.winforms/2025.6.5",
-      "hashPath": "cuoreui.winforms.2025.6.5.nupkg.sha512"
+      "sha512": "sha512-QwvMiuF1tPIYeKvsMoLtupYmBQw8I99b4u6gVI2wjUlEBOHwJ06z4TwR25s63iD5oO4Ui75boVKsKsWsC5rSqg==",
+      "path": "cuoreui.winforms/2025.6.19",
+      "hashPath": "cuoreui.winforms.2025.6.19.nupkg.sha512"
+    },
+    "MainDashboard/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

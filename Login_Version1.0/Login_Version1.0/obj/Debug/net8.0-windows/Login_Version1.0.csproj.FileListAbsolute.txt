@@ -42,3 +42,8 @@ C:\Users\mural\Desktop\Programming\C#\IMS\Login_Version1.0\Login_Version1.0\obj\
 C:\Users\mural\Desktop\Programming\C#\IMS\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\Login_Version1.0.pdb
 C:\Users\mural\Desktop\Programming\C#\IMS\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\Login_Version1.0.genruntimeconfig.cache
 C:\Users\mural\Desktop\Programming\C#\IMS\Login_Version1.0\Login_Version1.0\obj\Debug\net8.0-windows\ref\Login_Version1.0.dll
+C:\Users\mural\Desktop\Programming\C#\IMS\Login_Version1.0\Login_Version1.0\bin\Debug\net8.0-windows\MainDashboard.deps.json
+C:\Users\mural\Desktop\Programming\C#\IMS\Login_Version1.0\Login_Version1.0\bin\Debug\net8.0-windows\MainDashboard.runtimeconfig.json
+C:\Users\mural\Desktop\Programming\C#\IMS\Login_Version1.0\Login_Version1.0\bin\Debug\net8.0-windows\MainDashboard.exe
+C:\Users\mural\Desktop\Programming\C#\IMS\Login_Version1.0\Login_Version1.0\bin\Debug\net8.0-windows\MainDashboard.dll
+C:\Users\mural\Desktop\Programming\C#\IMS\Login_Version1.0\Login_Version1.0\bin\Debug\net8.0-windows\MainDashboard.pdb

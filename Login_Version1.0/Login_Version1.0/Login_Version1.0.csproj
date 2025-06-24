@@ -10,7 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CuoreUI.Winforms" Version="2025.6.5" />
+    <PackageReference Include="CuoreUI.Winforms" Version="2025.6.19" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dashboard_Version1.0\Dashboard_Version1.0\MainDashboard\MainDashboard.csproj" />
+    <ProjectReference Include="..\..\MainDashboard\MainDashboard.csproj" />
   </ItemGroup>
 
 </Project>

@@ -16,6 +16,7 @@ obj/
 *.csproj.GenerateResource.cache
 *.AssemblyInfoInputs.cache
 *.GeneratedMSBuildEditorConfig.editorconfig
+*.resources
 
 
 # User-specific files

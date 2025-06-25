@@ -52,7 +52,7 @@
             CategoryLabel = new CuoreUI.Controls.cuiLabel();
             DescriptionLabel = new CuoreUI.Controls.cuiLabel();
             DescriptionTextbox = new CuoreUI.Controls.cuiTextBox();
-            AILabel2 = new CuoreUI.Controls.cuiLabel();
+            SubLabel = new CuoreUI.Controls.cuiLabel();
             ProductNameLabel = new CuoreUI.Controls.cuiLabel();
             ProductNameTextBox = new CuoreUI.Controls.cuiTextBox();
             WarrantyDatePicker = new CuoreUI.Controls.cuiCalendarDatePicker();
@@ -553,18 +553,18 @@
             DescriptionTextbox.TextOffset = new Size(0, 0);
             DescriptionTextbox.UnderlinedStyle = true;
             // 
-            // AILabel2
+            // SubLabel
             // 
-            AILabel2.BackColor = Color.Transparent;
-            AILabel2.Content = "Please\\ fill\\ in\\ the\\ information";
-            AILabel2.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            AILabel2.HorizontalAlignment = StringAlignment.Near;
-            AILabel2.Location = new Point(28, 68);
-            AILabel2.Margin = new Padding(5, 4, 5, 4);
-            AILabel2.Name = "AILabel2";
-            AILabel2.Size = new Size(280, 28);
-            AILabel2.TabIndex = 33;
-            AILabel2.VerticalAlignment = StringAlignment.Center;
+            SubLabel.BackColor = Color.Transparent;
+            SubLabel.Content = "Please\\ fill\\ in\\ the\\ information";
+            SubLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SubLabel.HorizontalAlignment = StringAlignment.Near;
+            SubLabel.Location = new Point(28, 68);
+            SubLabel.Margin = new Padding(5, 4, 5, 4);
+            SubLabel.Name = "SubLabel";
+            SubLabel.Size = new Size(280, 28);
+            SubLabel.TabIndex = 33;
+            SubLabel.VerticalAlignment = StringAlignment.Center;
             // 
             // ProductNameLabel
             // 
@@ -675,7 +675,7 @@
             Controls.Add(WarrantyDatePicker);
             Controls.Add(ProductNameTextBox);
             Controls.Add(ProductNameLabel);
-            Controls.Add(AILabel2);
+            Controls.Add(SubLabel);
             Controls.Add(DescriptionTextbox);
             Controls.Add(DescriptionLabel);
             Controls.Add(CategoryCB);
@@ -731,7 +731,7 @@
         private CuoreUI.Controls.cuiLabel CategoryLabel;
         private CuoreUI.Controls.cuiLabel DescriptionLabel;
         private CuoreUI.Controls.cuiTextBox DescriptionTextbox;
-        private CuoreUI.Controls.cuiLabel AILabel2;
+        private CuoreUI.Controls.cuiLabel SubLabel;
         private CuoreUI.Controls.cuiLabel ProductNameLabel;
         private CuoreUI.Controls.cuiTextBox ProductNameTextBox;
         private CuoreUI.Controls.cuiCalendarDatePicker WarrantyDatePicker;

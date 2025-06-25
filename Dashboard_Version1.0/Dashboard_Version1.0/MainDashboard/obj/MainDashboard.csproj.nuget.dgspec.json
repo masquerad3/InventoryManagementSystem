@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj": {}
+    "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj": {
+    "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
+        "projectUniqueName": "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
         "projectName": "MainDashboard",
-        "projectPath": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
+        "projectPath": "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
         "packagesPath": "C:\\Users\\Steven\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\obj\\",
         "projectStyle": "PackageReference",

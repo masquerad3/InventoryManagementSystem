@@ -28,38 +28,61 @@ namespace MainDashboard
 
         private void InitializeControls()
         {
-            dashboardContent = new DashboardContent() // Initialize the field
+            dashboardContent = new DashboardContent()
             {
-                Dock = DockStyle.Fill // Set the Dock property to fill the parent container
+                Dock = DockStyle.Fill
             };
             this.Controls.Add(dashboardContent);
 
-            inventory = new Inventory() // Initialize the Inventory field
+            inventory = new Inventory()
             {
-                Dock = DockStyle.Fill // Set the Dock property to fill the parent container
+                Dock = DockStyle.Fill
             };
             this.Controls.Add(inventory);
 
-            employee = new Employee() // Initialize the Employee field
+            employee = new Employee()
             {
-                Dock = DockStyle.Fill // Set the Dock property to fill the parent container
+                Dock = DockStyle.Fill
             };
             this.Controls.Add(employee);
 
-            productAlert = new ProductAlert() // Initialize the ProductAlert field
+            productAlert = new ProductAlert()
             {
-                Dock = DockStyle.Fill // Set the Dock property to fill the parent container
+                Dock = DockStyle.Fill
             };
             this.Controls.Add(productAlert);
 
-            batch = new Batch() // Initialize the Batch field
+            batch = new Batch()
             {
-                Dock = DockStyle.Fill // Set the Dock property to fill the parent container
+                Dock = DockStyle.Fill
             };
             this.Controls.Add(batch);
 
             // Bring dashboard to front by default
             dashboardContent.BringToFront();
+
+            // Set up the logout button click handler
+            LogoutBtn.Click += LogoutBtn_Click;
+        }
+
+        // Logout button click handler
+        private void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            // Ask for confirmation
+            var result = MessageBox.Show(
+                "Are you sure you want to log out?",
+                "Confirm Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Close all open forms
+                this.Close();
+
+                // Restart the application to show login form
+                Application.Restart();
+            }
         }
 
         private void InventoryBtn_Click(object sender, EventArgs e)

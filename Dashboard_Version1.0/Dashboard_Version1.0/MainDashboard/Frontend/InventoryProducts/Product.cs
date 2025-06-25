@@ -231,7 +231,7 @@ namespace MainDashboard
                 }
                 else
                 {
-                    MessageBox.Show("Cannot edit product: Unknown Error.", "Add Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Cannot edit product: Unknown Error.", "Edit Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

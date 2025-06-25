@@ -34,16 +34,29 @@
             NotifIconBG = new CuoreUI.Controls.cuiGradientPanel();
             NotificationIcon = new CuoreUI.Controls.cuiPictureBox();
             cuiPanel1 = new CuoreUI.Controls.cuiPanel();
+<<<<<<< Updated upstream
             cuiLabel1 = new CuoreUI.Controls.cuiLabel();
             FilterBtn = new CuoreUI.Controls.cuiButton();
             TableSearchBar = new CuoreUI.Controls.cuiTextBox();
             dataGridView1 = new DataGridView();
             cuiButton1 = new CuoreUI.Controls.cuiButton();
             cuiButton2 = new CuoreUI.Controls.cuiButton();
+=======
+            AddBtn = new CuoreUI.Controls.cuiButton();
+            cuiLabel1 = new CuoreUI.Controls.cuiLabel();
+            FilterBtn = new CuoreUI.Controls.cuiButton();
+            TableSearchBar = new CuoreUI.Controls.cuiTextBox();
+            EmployeeStaffGridView = new DataGridView();
+            EmployeeName = new DataGridViewTextBoxColumn();
+            EmployeePosition = new DataGridViewTextBoxColumn();
+            Email = new DataGridViewTextBoxColumn();
+            Edit = new DataGridViewImageColumn();
+            Delete = new DataGridViewImageColumn();
+>>>>>>> Stashed changes
             cuiPanel6.SuspendLayout();
             NotifIconBG.SuspendLayout();
             cuiPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)EmployeeStaffGridView).BeginInit();
             SuspendLayout();
             // 
             // cuiPanel6
@@ -87,8 +100,13 @@
             SearchBar.Image = null;
             SearchBar.ImageExpand = new Point(5, 5);
             SearchBar.ImageOffset = new Point(0, 0);
+<<<<<<< Updated upstream
             SearchBar.Location = new Point(600, 10);
             SearchBar.Margin = new Padding(4);
+=======
+            SearchBar.Location = new Point(686, 13);
+            SearchBar.Margin = new Padding(5);
+>>>>>>> Stashed changes
             SearchBar.Multiline = false;
             SearchBar.Name = "SearchBar";
             SearchBar.NormalImageTint = Color.Transparent;
@@ -137,6 +155,7 @@
             // 
             // cuiPanel1
             // 
+<<<<<<< Updated upstream
             cuiPanel1.Controls.Add(cuiButton2);
             cuiPanel1.Controls.Add(cuiButton1);
             cuiPanel1.Controls.Add(cuiLabel1);
@@ -144,6 +163,15 @@
             cuiPanel1.Controls.Add(TableSearchBar);
             cuiPanel1.Controls.Add(dataGridView1);
             cuiPanel1.Location = new Point(30, 100);
+=======
+            cuiPanel1.Controls.Add(AddBtn);
+            cuiPanel1.Controls.Add(cuiLabel1);
+            cuiPanel1.Controls.Add(FilterBtn);
+            cuiPanel1.Controls.Add(TableSearchBar);
+            cuiPanel1.Controls.Add(EmployeeStaffGridView);
+            cuiPanel1.Location = new Point(34, 133);
+            cuiPanel1.Margin = new Padding(3, 4, 3, 4);
+>>>>>>> Stashed changes
             cuiPanel1.Name = "cuiPanel1";
             cuiPanel1.OutlineThickness = 1F;
             cuiPanel1.PanelColor = Color.White;
@@ -152,6 +180,49 @@
             cuiPanel1.Size = new Size(1000, 900);
             cuiPanel1.TabIndex = 11;
             // 
+<<<<<<< Updated upstream
+=======
+            // AddBtn
+            // 
+            AddBtn.BackColor = Color.Transparent;
+            AddBtn.CheckButton = false;
+            AddBtn.Checked = false;
+            AddBtn.CheckedBackground = Color.FromArgb(255, 106, 0);
+            AddBtn.CheckedForeColor = Color.White;
+            AddBtn.CheckedImageTint = Color.White;
+            AddBtn.CheckedOutline = Color.FromArgb(255, 106, 0);
+            AddBtn.Content = "Add Employee";
+            AddBtn.DialogResult = DialogResult.None;
+            AddBtn.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AddBtn.ForeColor = Color.White;
+            AddBtn.HoverBackground = Color.SteelBlue;
+            AddBtn.HoveredImageTint = Color.White;
+            AddBtn.HoverForeColor = Color.White;
+            AddBtn.HoverOutline = Color.SteelBlue;
+            AddBtn.Image = Properties.Resources.user_plus;
+            AddBtn.ImageAutoCenter = true;
+            AddBtn.ImageExpand = new Point(3, 3);
+            AddBtn.ImageOffset = new Point(-7, 0);
+            AddBtn.Location = new Point(784, 11);
+            AddBtn.Margin = new Padding(3, 4, 3, 4);
+            AddBtn.Name = "AddBtn";
+            AddBtn.NormalBackground = Color.SteelBlue;
+            AddBtn.NormalForeColor = Color.White;
+            AddBtn.NormalImageTint = Color.White;
+            AddBtn.NormalOutline = Color.Transparent;
+            AddBtn.OutlineThickness = 1F;
+            AddBtn.PressedBackground = Color.FromArgb(49, 93, 130);
+            AddBtn.PressedForeColor = Color.White;
+            AddBtn.PressedImageTint = Color.White;
+            AddBtn.PressedOutline = Color.FromArgb(33, 64, 89);
+            AddBtn.Rounding = new Padding(8);
+            AddBtn.Size = new Size(192, 60);
+            AddBtn.TabIndex = 17;
+            AddBtn.TextAlignment = StringAlignment.Center;
+            AddBtn.TextOffset = new Point(0, 0);
+            AddBtn.Click += AddBtn_Click;
+            // 
+>>>>>>> Stashed changes
             // cuiLabel1
             // 
             cuiLabel1.BackColor = Color.Transparent;
@@ -218,8 +289,13 @@
             TableSearchBar.Image = null;
             TableSearchBar.ImageExpand = new Point(0, 0);
             TableSearchBar.ImageOffset = new Point(0, 0);
+<<<<<<< Updated upstream
             TableSearchBar.Location = new Point(25, 10);
             TableSearchBar.Margin = new Padding(4);
+=======
+            TableSearchBar.Location = new Point(29, 13);
+            TableSearchBar.Margin = new Padding(5);
+>>>>>>> Stashed changes
             TableSearchBar.Multiline = false;
             TableSearchBar.Name = "TableSearchBar";
             TableSearchBar.NormalImageTint = Color.Transparent;
@@ -234,14 +310,60 @@
             TableSearchBar.TextOffset = new Size(0, 0);
             TableSearchBar.UnderlinedStyle = true;
             // 
-            // dataGridView1
+            // EmployeeStaffGridView
             // 
+<<<<<<< Updated upstream
             dataGridView1.BackgroundColor = SystemColors.ControlLight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(25, 60);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(950, 735);
             dataGridView1.TabIndex = 0;
+=======
+            EmployeeStaffGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            EmployeeStaffGridView.BackgroundColor = SystemColors.ControlLight;
+            EmployeeStaffGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            EmployeeStaffGridView.Columns.AddRange(new DataGridViewColumn[] { EmployeeName, EmployeePosition, Email, Edit, Delete });
+            EmployeeStaffGridView.Location = new Point(29, 80);
+            EmployeeStaffGridView.Margin = new Padding(3, 4, 3, 4);
+            EmployeeStaffGridView.Name = "EmployeeStaffGridView";
+            EmployeeStaffGridView.RowHeadersWidth = 51;
+            EmployeeStaffGridView.Size = new Size(1086, 980);
+            EmployeeStaffGridView.TabIndex = 0;
+            EmployeeStaffGridView.CellContentClick += EmployeeStaffGridView_CellContentClick;
+            // 
+            // EmployeeName
+            // 
+            EmployeeName.HeaderText = "Employee Name";
+            EmployeeName.MinimumWidth = 6;
+            EmployeeName.Name = "EmployeeName";
+            // 
+            // EmployeePosition
+            // 
+            EmployeePosition.HeaderText = "Position";
+            EmployeePosition.MinimumWidth = 6;
+            EmployeePosition.Name = "EmployeePosition";
+            // 
+            // Email
+            // 
+            Email.HeaderText = "Email";
+            Email.MinimumWidth = 6;
+            Email.Name = "Email";
+            // 
+            // Edit
+            // 
+            Edit.HeaderText = "Edit";
+            Edit.Image = Properties.Resources.pencil;
+            Edit.MinimumWidth = 6;
+            Edit.Name = "Edit";
+            // 
+            // Delete
+            // 
+            Delete.HeaderText = "Delete";
+            Delete.Image = Properties.Resources.trash_2;
+            Delete.MinimumWidth = 6;
+            Delete.Name = "Delete";
+>>>>>>> Stashed changes
             // 
             // cuiButton1
             // 
@@ -328,12 +450,16 @@
             Controls.Add(cuiPanel1);
             Controls.Add(cuiPanel6);
             Name = "Employee";
+<<<<<<< Updated upstream
             Size = new Size(1060, 1100);
             Load += Employee_Load;
+=======
+            Size = new Size(1211, 1467);
+>>>>>>> Stashed changes
             cuiPanel6.ResumeLayout(false);
             NotifIconBG.ResumeLayout(false);
             cuiPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)EmployeeStaffGridView).EndInit();
             ResumeLayout(false);
         }
 
@@ -348,8 +474,18 @@
         private CuoreUI.Controls.cuiLabel cuiLabel1;
         private CuoreUI.Controls.cuiButton FilterBtn;
         private CuoreUI.Controls.cuiTextBox TableSearchBar;
+<<<<<<< Updated upstream
         private DataGridView dataGridView1;
         private CuoreUI.Controls.cuiButton cuiButton1;
         private CuoreUI.Controls.cuiButton cuiButton2;
+=======
+        private DataGridView EmployeeStaffGridView;
+        private CuoreUI.Controls.cuiButton AddBtn;
+        private DataGridViewTextBoxColumn EmployeeName;
+        private DataGridViewTextBoxColumn EmployeePosition;
+        private DataGridViewTextBoxColumn Email;
+        private DataGridViewImageColumn Edit;
+        private DataGridViewImageColumn Delete;
+>>>>>>> Stashed changes
     }
 }

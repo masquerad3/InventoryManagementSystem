@@ -104,7 +104,7 @@ namespace MainDashboard
                     // Confirmation message box with item ID and name
                     DialogResult confirmResult = MessageBox.Show(
                         $"Are you sure you want to delete this item?\n\n   Product ID : {productId}\n   Product Name : {productName}",
-                        "Confirm Archiving",
+                        "Confirm Deletion",
                         MessageBoxButtons.YesNo,
                         MessageBoxIcon.Question
                     );

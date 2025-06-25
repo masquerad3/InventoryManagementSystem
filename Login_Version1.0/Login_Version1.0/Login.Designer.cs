@@ -1,4 +1,6 @@
-﻿namespace Login_Version1._0
+﻿using MainDashboard;
+
+namespace Login_Version1._0
 {
     partial class Login
     {
@@ -149,16 +151,16 @@
             cuiButton1.TabIndex = 2;
             cuiButton1.TextAlignment = StringAlignment.Center;
             cuiButton1.TextOffset = new Point(0, 0);
+            cuiButton1.Click += cuiButton1_Click;
             // 
             // cuiTextBox2
             // 
             cuiTextBox2.BackColor = Color.Transparent;
             cuiTextBox2.BackgroundColor = Color.White;
-            cuiTextBox2.BorderColor = Color.FromArgb(128, 128, 128, 128);
             cuiTextBox2.Content = "";
             cuiTextBox2.FocusBackgroundColor = Color.White;
-            cuiTextBox2.FocusBorderColor = Color.DimGray;
             cuiTextBox2.FocusImageTint = Color.White;
+            cuiTextBox2.FocusOutlineColor = Color.FromArgb(255, 106, 0);
             cuiTextBox2.Font = new Font("Arial", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiTextBox2.ForeColor = Color.Gray;
             cuiTextBox2.Image = null;
@@ -169,6 +171,7 @@
             cuiTextBox2.Multiline = false;
             cuiTextBox2.Name = "cuiTextBox2";
             cuiTextBox2.NormalImageTint = Color.White;
+            cuiTextBox2.OutlineColor = Color.FromArgb(128, 128, 128, 128);
             cuiTextBox2.Padding = new Padding(15, 15, 15, 0);
             cuiTextBox2.PasswordChar = true;
             cuiTextBox2.PlaceholderColor = Color.Gray;
@@ -183,11 +186,10 @@
             // 
             EmailLabel.BackColor = Color.Transparent;
             EmailLabel.BackgroundColor = Color.White;
-            EmailLabel.BorderColor = Color.DarkGray;
             EmailLabel.Content = "";
             EmailLabel.FocusBackgroundColor = Color.White;
-            EmailLabel.FocusBorderColor = Color.DimGray;
             EmailLabel.FocusImageTint = Color.White;
+            EmailLabel.FocusOutlineColor = Color.FromArgb(255, 106, 0);
             EmailLabel.Font = new Font("Arial", 9.5F);
             EmailLabel.ForeColor = Color.Gray;
             EmailLabel.Image = null;
@@ -198,6 +200,7 @@
             EmailLabel.Multiline = false;
             EmailLabel.Name = "EmailLabel";
             EmailLabel.NormalImageTint = Color.White;
+            EmailLabel.OutlineColor = Color.FromArgb(128, 128, 128, 128);
             EmailLabel.Padding = new Padding(15, 15, 15, 0);
             EmailLabel.PasswordChar = false;
             EmailLabel.PlaceholderColor = Color.Gray;

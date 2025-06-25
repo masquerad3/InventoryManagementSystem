@@ -104,10 +104,10 @@
             // 
             PasswordTextBox2.BackColor = Color.Transparent;
             PasswordTextBox2.BackgroundColor = Color.White;
-            PasswordTextBox2.BorderColor = Color.FromArgb(128, 128, 128, 128);
+            //PasswordTextBox2.BorderColor = Color.FromArgb(128, 128, 128, 128);
             PasswordTextBox2.Content = "";
             PasswordTextBox2.FocusBackgroundColor = Color.White;
-            PasswordTextBox2.FocusBorderColor = Color.Black;
+            //PasswordTextBox2.FocusBorderColor = Color.Black;
             PasswordTextBox2.FocusImageTint = Color.White;
             PasswordTextBox2.Font = new Font("Arial", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PasswordTextBox2.ForeColor = Color.Gray;
@@ -133,10 +133,10 @@
             // 
             PasswordTextBox1.BackColor = Color.Transparent;
             PasswordTextBox1.BackgroundColor = Color.White;
-            PasswordTextBox1.BorderColor = Color.FromArgb(128, 128, 128, 128);
+            //PasswordTextBox1.BorderColor = Color.FromArgb(128, 128, 128, 128);
             PasswordTextBox1.Content = "";
             PasswordTextBox1.FocusBackgroundColor = Color.White;
-            PasswordTextBox1.FocusBorderColor = Color.Black;
+            //PasswordTextBox1.FocusBorderColor = Color.Black;
             PasswordTextBox1.FocusImageTint = Color.White;
             PasswordTextBox1.Font = new Font("Arial", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PasswordTextBox1.ForeColor = Color.Gray;
@@ -162,10 +162,10 @@
             // 
             EmailTextBox1.BackColor = Color.Transparent;
             EmailTextBox1.BackgroundColor = Color.White;
-            EmailTextBox1.BorderColor = Color.FromArgb(128, 128, 128, 128);
+            //EmailTextBox1.BorderColor = Color.FromArgb(128, 128, 128, 128);
             EmailTextBox1.Content = "";
             EmailTextBox1.FocusBackgroundColor = Color.White;
-            EmailTextBox1.FocusBorderColor = Color.Black;
+            //EmailTextBox1.FocusBorderColor = Color.Black;
             EmailTextBox1.FocusImageTint = Color.White;
             EmailTextBox1.Font = new Font("Arial", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             EmailTextBox1.ForeColor = Color.Gray;
@@ -192,10 +192,10 @@
             // 
             NameTextBox2.BackColor = Color.Transparent;
             NameTextBox2.BackgroundColor = Color.White;
-            NameTextBox2.BorderColor = Color.FromArgb(128, 128, 128, 128);
+            //NameTextBox2.BorderColor = Color.FromArgb(128, 128, 128, 128);
             NameTextBox2.Content = "";
             NameTextBox2.FocusBackgroundColor = Color.White;
-            NameTextBox2.FocusBorderColor = Color.Black;
+            //NameTextBox2.FocusBorderColor = Color.Black;
             NameTextBox2.FocusImageTint = Color.White;
             NameTextBox2.Font = new Font("Arial", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             NameTextBox2.ForeColor = Color.Gray;
@@ -221,10 +221,10 @@
             // 
             NameTextBox1.BackColor = Color.Transparent;
             NameTextBox1.BackgroundColor = Color.White;
-            NameTextBox1.BorderColor = Color.FromArgb(128, 128, 128, 128);
+            //NameTextBox1.BorderColor = Color.FromArgb(128, 128, 128, 128);
             NameTextBox1.Content = "";
             NameTextBox1.FocusBackgroundColor = Color.White;
-            NameTextBox1.FocusBorderColor = Color.Black;
+            //NameTextBox1.FocusBorderColor = Color.Black;
             NameTextBox1.FocusImageTint = Color.White;
             NameTextBox1.Font = new Font("Arial", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             NameTextBox1.ForeColor = Color.Gray;

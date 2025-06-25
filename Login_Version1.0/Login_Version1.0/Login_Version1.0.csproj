@@ -10,7 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CuoreUI.Winforms" Version="2025.6.5" />
+    <PackageReference Include="CuoreUI.Winforms" Version="2025.6.19" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dashboard_Version1.0\Dashboard_Version1.0\MainDashboard\MainDashboard.csproj" />
   </ItemGroup>
 
 </Project>

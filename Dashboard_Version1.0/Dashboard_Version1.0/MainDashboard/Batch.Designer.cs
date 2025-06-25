@@ -38,11 +38,17 @@
             FilterBtn = new CuoreUI.Controls.cuiButton();
             AddBtn = new CuoreUI.Controls.cuiButton();
             TableSearchBar = new CuoreUI.Controls.cuiTextBox();
-            dataGridView1 = new DataGridView();
+            BatchOrdersGridView = new DataGridView();
+            BatchOrderID = new DataGridViewTextBoxColumn();
+            BatchOrderName = new DataGridViewTextBoxColumn();
+            ProductName = new DataGridViewTextBoxColumn();
+            BatchOrderStatus = new DataGridViewTextBoxColumn();
+            DateRequested = new DataGridViewTextBoxColumn();
+            DateReceived = new DataGridViewTextBoxColumn();
             cuiPanel6.SuspendLayout();
             NotifIconBG.SuspendLayout();
             cuiPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BatchOrdersGridView).BeginInit();
             SuspendLayout();
             // 
             // cuiPanel6
@@ -52,24 +58,25 @@
             cuiPanel6.Controls.Add(NotifIconBG);
             cuiPanel6.Dock = DockStyle.Top;
             cuiPanel6.Location = new Point(0, 0);
+            cuiPanel6.Margin = new Padding(3, 4, 3, 4);
             cuiPanel6.Name = "cuiPanel6";
             cuiPanel6.OutlineThickness = 1F;
             cuiPanel6.PanelColor = Color.AliceBlue;
             cuiPanel6.PanelOutlineColor = Color.Transparent;
             cuiPanel6.Rounding = new Padding(8);
-            cuiPanel6.Size = new Size(1060, 61);
+            cuiPanel6.Size = new Size(1211, 81);
             cuiPanel6.TabIndex = 9;
             // 
             // DashboardHeader
             // 
             DashboardHeader.BackColor = Color.Transparent;
-            DashboardHeader.Content = "Batch";
+            DashboardHeader.Content = "Batch\\ Orders";
             DashboardHeader.Font = new Font("Leelawadee UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             DashboardHeader.HorizontalAlignment = StringAlignment.Near;
-            DashboardHeader.Location = new Point(22, 3);
-            DashboardHeader.Margin = new Padding(4, 3, 4, 3);
+            DashboardHeader.Location = new Point(25, 4);
+            DashboardHeader.Margin = new Padding(5, 4, 5, 4);
             DashboardHeader.Name = "DashboardHeader";
-            DashboardHeader.Size = new Size(245, 54);
+            DashboardHeader.Size = new Size(280, 72);
             DashboardHeader.TabIndex = 1;
             DashboardHeader.VerticalAlignment = StringAlignment.Center;
             // 
@@ -86,18 +93,18 @@
             SearchBar.Image = null;
             SearchBar.ImageExpand = new Point(5, 5);
             SearchBar.ImageOffset = new Point(0, 0);
-            SearchBar.Location = new Point(600, 10);
-            SearchBar.Margin = new Padding(4);
+            SearchBar.Location = new Point(686, 13);
+            SearchBar.Margin = new Padding(5);
             SearchBar.Multiline = false;
             SearchBar.Name = "SearchBar";
             SearchBar.NormalImageTint = Color.Transparent;
             SearchBar.OutlineColor = Color.DarkGray;
-            SearchBar.Padding = new Padding(18, 11, 18, 0);
+            SearchBar.Padding = new Padding(22, 15, 22, 0);
             SearchBar.PasswordChar = false;
             SearchBar.PlaceholderColor = SystemColors.WindowText;
             SearchBar.PlaceholderText = "Search";
             SearchBar.Rounding = new Padding(8);
-            SearchBar.Size = new Size(371, 40);
+            SearchBar.Size = new Size(424, 53);
             SearchBar.TabIndex = 3;
             SearchBar.TextOffset = new Size(0, 0);
             SearchBar.UnderlinedStyle = true;
@@ -106,7 +113,8 @@
             // 
             NotifIconBG.Controls.Add(NotificationIcon);
             NotifIconBG.GradientAngle = 90F;
-            NotifIconBG.Location = new Point(990, 10);
+            NotifIconBG.Location = new Point(1131, 13);
+            NotifIconBG.Margin = new Padding(3, 4, 3, 4);
             NotifIconBG.Name = "NotifIconBG";
             NotifIconBG.OutlineThickness = 1F;
             NotifIconBG.PanelColor1 = Color.White;
@@ -114,7 +122,7 @@
             NotifIconBG.PanelOutlineColor1 = Color.FromArgb(224, 224, 224);
             NotifIconBG.PanelOutlineColor2 = Color.Silver;
             NotifIconBG.Rounding = new Padding(8);
-            NotifIconBG.Size = new Size(35, 35);
+            NotifIconBG.Size = new Size(40, 47);
             NotifIconBG.TabIndex = 12;
             // 
             // NotificationIcon
@@ -124,14 +132,14 @@
             NotificationIcon.BackgroundImageLayout = ImageLayout.Zoom;
             NotificationIcon.Content = null;
             NotificationIcon.ImageTint = Color.White;
-            NotificationIcon.Location = new Point(4, 3);
-            NotificationIcon.Margin = new Padding(4, 3, 4, 3);
+            NotificationIcon.Location = new Point(5, 4);
+            NotificationIcon.Margin = new Padding(5, 4, 5, 4);
             NotificationIcon.Name = "NotificationIcon";
             NotificationIcon.OutlineThickness = 1F;
             NotificationIcon.PanelOutlineColor = Color.Empty;
             NotificationIcon.Rotation = 0;
             NotificationIcon.Rounding = new Padding(8);
-            NotificationIcon.Size = new Size(28, 28);
+            NotificationIcon.Size = new Size(32, 37);
             NotificationIcon.TabIndex = 0;
             // 
             // cuiPanel1
@@ -140,14 +148,15 @@
             cuiPanel1.Controls.Add(FilterBtn);
             cuiPanel1.Controls.Add(AddBtn);
             cuiPanel1.Controls.Add(TableSearchBar);
-            cuiPanel1.Controls.Add(dataGridView1);
-            cuiPanel1.Location = new Point(30, 100);
+            cuiPanel1.Controls.Add(BatchOrdersGridView);
+            cuiPanel1.Location = new Point(34, 133);
+            cuiPanel1.Margin = new Padding(3, 4, 3, 4);
             cuiPanel1.Name = "cuiPanel1";
             cuiPanel1.OutlineThickness = 1F;
             cuiPanel1.PanelColor = Color.White;
             cuiPanel1.PanelOutlineColor = Color.FromArgb(224, 224, 224);
             cuiPanel1.Rounding = new Padding(8);
-            cuiPanel1.Size = new Size(1000, 900);
+            cuiPanel1.Size = new Size(1143, 1200);
             cuiPanel1.TabIndex = 11;
             // 
             // cuiLabel1
@@ -156,10 +165,10 @@
             cuiLabel1.Content = "Showing";
             cuiLabel1.Font = new Font("Leelawadee UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel1.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel1.Location = new Point(37, 836);
-            cuiLabel1.Margin = new Padding(4, 3, 4, 3);
+            cuiLabel1.Location = new Point(42, 1115);
+            cuiLabel1.Margin = new Padding(5, 4, 5, 4);
             cuiLabel1.Name = "cuiLabel1";
-            cuiLabel1.Size = new Size(57, 24);
+            cuiLabel1.Size = new Size(65, 32);
             cuiLabel1.TabIndex = 16;
             cuiLabel1.VerticalAlignment = StringAlignment.Center;
             // 
@@ -185,7 +194,8 @@
             FilterBtn.ImageAutoCenter = true;
             FilterBtn.ImageExpand = new Point(0, 0);
             FilterBtn.ImageOffset = new Point(-5, 0);
-            FilterBtn.Location = new Point(870, 8);
+            FilterBtn.Location = new Point(994, 11);
+            FilterBtn.Margin = new Padding(3, 4, 3, 4);
             FilterBtn.Name = "FilterBtn";
             FilterBtn.NormalBackground = Color.White;
             FilterBtn.NormalForeColor = Color.Black;
@@ -197,7 +207,7 @@
             FilterBtn.PressedImageTint = Color.White;
             FilterBtn.PressedOutline = Color.Black;
             FilterBtn.Rounding = new Padding(8);
-            FilterBtn.Size = new Size(105, 45);
+            FilterBtn.Size = new Size(120, 60);
             FilterBtn.TabIndex = 15;
             FilterBtn.TextAlignment = StringAlignment.Center;
             FilterBtn.TextOffset = new Point(0, 0);
@@ -224,7 +234,8 @@
             AddBtn.ImageAutoCenter = true;
             AddBtn.ImageExpand = new Point(3, 3);
             AddBtn.ImageOffset = new Point(-12, 0);
-            AddBtn.Location = new Point(711, 8);
+            AddBtn.Location = new Point(813, 11);
+            AddBtn.Margin = new Padding(3, 4, 3, 4);
             AddBtn.Name = "AddBtn";
             AddBtn.NormalBackground = Color.SteelBlue;
             AddBtn.NormalForeColor = Color.White;
@@ -236,10 +247,11 @@
             AddBtn.PressedImageTint = Color.White;
             AddBtn.PressedOutline = Color.FromArgb(33, 64, 89);
             AddBtn.Rounding = new Padding(8);
-            AddBtn.Size = new Size(153, 45);
+            AddBtn.Size = new Size(175, 60);
             AddBtn.TabIndex = 14;
             AddBtn.TextAlignment = StringAlignment.Center;
             AddBtn.TextOffset = new Point(0, 0);
+            AddBtn.Click += AddBtn_Click;
             // 
             // TableSearchBar
             // 
@@ -255,45 +267,87 @@
             TableSearchBar.Image = null;
             TableSearchBar.ImageExpand = new Point(0, 0);
             TableSearchBar.ImageOffset = new Point(0, 0);
-            TableSearchBar.Location = new Point(25, 10);
-            TableSearchBar.Margin = new Padding(4);
+            TableSearchBar.Location = new Point(29, 13);
+            TableSearchBar.Margin = new Padding(5);
             TableSearchBar.Multiline = false;
             TableSearchBar.Name = "TableSearchBar";
             TableSearchBar.NormalImageTint = Color.Transparent;
             TableSearchBar.OutlineColor = Color.Transparent;
-            TableSearchBar.Padding = new Padding(18, 11, 18, 0);
+            TableSearchBar.Padding = new Padding(22, 15, 22, 0);
             TableSearchBar.PasswordChar = false;
             TableSearchBar.PlaceholderColor = SystemColors.WindowText;
             TableSearchBar.PlaceholderText = "Search";
             TableSearchBar.Rounding = new Padding(8);
-            TableSearchBar.Size = new Size(371, 40);
+            TableSearchBar.Size = new Size(424, 53);
             TableSearchBar.TabIndex = 13;
             TableSearchBar.TextOffset = new Size(0, 0);
             TableSearchBar.UnderlinedStyle = true;
             // 
-            // dataGridView1
+            // BatchOrdersGridView
             // 
-            dataGridView1.BackgroundColor = SystemColors.ControlLight;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(25, 60);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(950, 735);
-            dataGridView1.TabIndex = 0;
+            BatchOrdersGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            BatchOrdersGridView.BackgroundColor = SystemColors.ControlLight;
+            BatchOrdersGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            BatchOrdersGridView.Columns.AddRange(new DataGridViewColumn[] { BatchOrderID, BatchOrderName, ProductName, BatchOrderStatus, DateRequested, DateReceived });
+            BatchOrdersGridView.Location = new Point(29, 80);
+            BatchOrdersGridView.Margin = new Padding(3, 4, 3, 4);
+            BatchOrdersGridView.Name = "BatchOrdersGridView";
+            BatchOrdersGridView.RowHeadersWidth = 51;
+            BatchOrdersGridView.Size = new Size(1086, 980);
+            BatchOrdersGridView.TabIndex = 0;
+            BatchOrdersGridView.CellContentClick += BatchOrdersGridView_CellContentClick;
+            // 
+            // BatchOrderID
+            // 
+            BatchOrderID.HeaderText = "Batch Order ID";
+            BatchOrderID.MinimumWidth = 6;
+            BatchOrderID.Name = "BatchOrderID";
+            // 
+            // BatchOrderName
+            // 
+            BatchOrderName.HeaderText = "Batch Name";
+            BatchOrderName.MinimumWidth = 6;
+            BatchOrderName.Name = "BatchOrderName";
+            // 
+            // ProductName
+            // 
+            ProductName.HeaderText = "Product Name";
+            ProductName.MinimumWidth = 6;
+            ProductName.Name = "ProductName";
+            // 
+            // BatchOrderStatus
+            // 
+            BatchOrderStatus.HeaderText = "Order Status";
+            BatchOrderStatus.MinimumWidth = 6;
+            BatchOrderStatus.Name = "BatchOrderStatus";
+            // 
+            // DateRequested
+            // 
+            DateRequested.HeaderText = "Date Requested";
+            DateRequested.MinimumWidth = 6;
+            DateRequested.Name = "DateRequested";
+            // 
+            // DateReceived
+            // 
+            DateReceived.HeaderText = "Date Received";
+            DateReceived.MinimumWidth = 6;
+            DateReceived.Name = "DateReceived";
             // 
             // Batch
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.AliceBlue;
             Controls.Add(cuiPanel1);
             Controls.Add(cuiPanel6);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Batch";
-            Size = new Size(1060, 1100);
+            Size = new Size(1211, 1467);
             cuiPanel6.ResumeLayout(false);
             NotifIconBG.ResumeLayout(false);
             cuiPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BatchOrdersGridView).EndInit();
             ResumeLayout(false);
         }
 
@@ -309,6 +363,12 @@
         private CuoreUI.Controls.cuiButton FilterBtn;
         private CuoreUI.Controls.cuiButton AddBtn;
         private CuoreUI.Controls.cuiTextBox TableSearchBar;
-        private DataGridView dataGridView1;
+        private DataGridView BatchOrdersGridView;
+        private DataGridViewTextBoxColumn BatchOrderID;
+        private DataGridViewTextBoxColumn BatchOrderName;
+        private DataGridViewTextBoxColumn ProductName;
+        private DataGridViewTextBoxColumn BatchOrderStatus;
+        private DataGridViewTextBoxColumn DateRequested;
+        private DataGridViewTextBoxColumn DateReceived;
     }
 }

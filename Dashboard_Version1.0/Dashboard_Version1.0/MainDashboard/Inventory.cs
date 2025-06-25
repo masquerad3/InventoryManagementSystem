@@ -13,21 +13,34 @@ namespace MainDashboard
 {
     public partial class Inventory : UserControl
     {
-        private AddItemForm addItemForm; // Declare the AddItemForm field
-        private FilterInventory filterInventoryForm; // Declare the FilterInventory field
+        private AddItemForm addItemForm = null!; // Declare the AddItemForm field as null
+        private FilterInventory filterInventoryForm = null!; // Declare the FilterInventory field as null
 
         public Inventory()
         {
             InitializeComponent();
-            addItemForm = new AddItemForm(); // Initialize the AddItemForm to ensure it is not null
-            filterInventoryForm = new FilterInventory(); // Initialize the FilterInventory to ensure it is not null
 
             // load the data to the table
-            ReloadInventory.LoadProductsData(InventoryGridView);
+            ReloadProducts.LoadProductsData(InventoryGridView);
 
         }
 
-        //addItemForm.ShowDialog(); // Show the AddItemForm as a dialog
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            if (addItemForm == null || addItemForm.IsDisposed) // Check if it's already open  
+            {
+                addItemForm = new AddItemForm("Add", InventoryGridView);
+                addItemForm.ShowDialog();
+                addItemForm.Focus();
+            }
+            else
+            {
+                addItemForm.Focus(); // Bring existing form to front 
+            }
+            
+        }
+
+
         //filterInventoryForm.ShowDialog(); // Show the FilterInventory form as a dialog
 
     }

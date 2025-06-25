@@ -241,6 +241,7 @@
             AddBtn.TabIndex = 14;
             AddBtn.TextAlignment = StringAlignment.Center;
             AddBtn.TextOffset = new Point(0, 0);
+            AddBtn.Click += AddBtn_Click;
             // 
             // TableSearchBar
             // 
@@ -323,6 +324,7 @@
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle1.NullValue = resources.GetObject("dataGridViewCellStyle1.NullValue");
             View.DefaultCellStyle = dataGridViewCellStyle1;
+            View.Description = "View";
             View.HeaderText = "";
             View.Image = Properties.Resources.eye1;
             View.MinimumWidth = 6;
@@ -336,6 +338,7 @@
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle2.NullValue = resources.GetObject("dataGridViewCellStyle2.NullValue");
             Edit.DefaultCellStyle = dataGridViewCellStyle2;
+            Edit.Description = "Edit";
             Edit.HeaderText = "";
             Edit.Image = Properties.Resources.pencil1;
             Edit.MinimumWidth = 6;
@@ -349,6 +352,7 @@
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle3.NullValue = resources.GetObject("dataGridViewCellStyle3.NullValue");
             Delete.DefaultCellStyle = dataGridViewCellStyle3;
+            Delete.Description = "Delete";
             Delete.HeaderText = "";
             Delete.Image = Properties.Resources.trash_21;
             Delete.MinimumWidth = 6;

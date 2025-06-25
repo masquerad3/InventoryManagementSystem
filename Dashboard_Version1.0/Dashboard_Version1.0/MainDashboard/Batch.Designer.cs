@@ -94,7 +94,7 @@
             SearchBar.ImageExpand = new Point(5, 5);
             SearchBar.ImageOffset = new Point(0, 0);
             SearchBar.Location = new Point(686, 13);
-            SearchBar.Margin = new Padding(5, 5, 5, 5);
+            SearchBar.Margin = new Padding(5);
             SearchBar.Multiline = false;
             SearchBar.Name = "SearchBar";
             SearchBar.NormalImageTint = Color.Transparent;
@@ -251,6 +251,7 @@
             AddBtn.TabIndex = 14;
             AddBtn.TextAlignment = StringAlignment.Center;
             AddBtn.TextOffset = new Point(0, 0);
+            AddBtn.Click += AddBtn_Click;
             // 
             // TableSearchBar
             // 
@@ -267,7 +268,7 @@
             TableSearchBar.ImageExpand = new Point(0, 0);
             TableSearchBar.ImageOffset = new Point(0, 0);
             TableSearchBar.Location = new Point(29, 13);
-            TableSearchBar.Margin = new Padding(5, 5, 5, 5);
+            TableSearchBar.Margin = new Padding(5);
             TableSearchBar.Multiline = false;
             TableSearchBar.Name = "TableSearchBar";
             TableSearchBar.NormalImageTint = Color.Transparent;

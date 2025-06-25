@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sG+YTh9CH5g=",
+  "dgSpecHash": "cL7eqzWwa3Q=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Steven\\Source\\Repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
+  "projectFilePath": "C:\\Users\\Steven\\source\\repos\\InventoryManagementSystem\\Dashboard_Version1.0\\Dashboard_Version1.0\\MainDashboard\\MainDashboard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Steven\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Steven\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

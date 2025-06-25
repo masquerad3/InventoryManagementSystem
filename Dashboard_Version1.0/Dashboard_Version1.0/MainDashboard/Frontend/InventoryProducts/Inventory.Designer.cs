@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridView InventoryGridView;
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
@@ -41,8 +42,7 @@
             FilterBtn = new CuoreUI.Controls.cuiButton();
             AddBtn = new CuoreUI.Controls.cuiButton();
             TableSearchBar = new CuoreUI.Controls.cuiTextBox();
-            InventoryGridView = new DataGridView();
-            ItemName = new DataGridViewTextBoxColumn();
+            ProductName = new DataGridViewTextBoxColumn();
             ItemCategory = new DataGridViewTextBoxColumn();
             ItemQuantity = new DataGridViewTextBoxColumn();
             ItemCondition = new DataGridViewTextBoxColumn();
@@ -50,6 +50,7 @@
             View = new DataGridViewImageColumn();
             Edit = new DataGridViewImageColumn();
             Delete = new DataGridViewImageColumn();
+            InventoryGridView = new DataGridView();
             cuiPanel6.SuspendLayout();
             NotifIconBG.SuspendLayout();
             cuiPanel1.SuspendLayout();
@@ -153,7 +154,7 @@
             cuiPanel1.Controls.Add(AddBtn);
             cuiPanel1.Controls.Add(TableSearchBar);
             cuiPanel1.Controls.Add(InventoryGridView);
-            cuiPanel1.Location = new Point(34, 133);
+            cuiPanel1.Location = new Point(28, 133);
             cuiPanel1.Margin = new Padding(3, 4, 3, 4);
             cuiPanel1.Name = "cuiPanel1";
             cuiPanel1.OutlineThickness = 1F;
@@ -275,90 +276,102 @@
             // 
             // InventoryGridView
             // 
-            InventoryGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            InventoryGridView.AllowUserToAddRows = false;
+            InventoryGridView.AllowUserToDeleteRows = false;
+            InventoryGridView.AllowUserToResizeColumns = false;
+            InventoryGridView.AllowUserToResizeRows = false;
+            InventoryGridView.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             InventoryGridView.BackgroundColor = SystemColors.ControlLight;
-            InventoryGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            InventoryGridView.Columns.AddRange(new DataGridViewColumn[] { ItemName, ItemCategory, ItemQuantity, ItemCondition, ItemPrice, View, Edit, Delete });
-            InventoryGridView.Location = new Point(29, 80);
+            InventoryGridView.ColumnHeadersHeight = 29;
+            InventoryGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            InventoryGridView.Columns.AddRange(new DataGridViewColumn[] { ProductName, ItemCategory, ItemQuantity, ItemCondition, ItemPrice, View, Edit, Delete });
+            InventoryGridView.EditMode = DataGridViewEditMode.EditProgrammatically;
+            InventoryGridView.Location = new Point(28, 79);
             InventoryGridView.Margin = new Padding(3, 4, 3, 4);
             InventoryGridView.Name = "InventoryGridView";
             InventoryGridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            InventoryGridView.RowHeadersVisible = false;
             InventoryGridView.RowHeadersWidth = 51;
+            InventoryGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             InventoryGridView.RowTemplate.Height = 30;
+            InventoryGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             InventoryGridView.Size = new Size(1086, 980);
-            InventoryGridView.TabIndex = 0;
+            InventoryGridView.TabIndex = 29;
+            InventoryGridView.CellContentClick += InventoryGridView_CellContentClick;
             // 
-            // ItemName
+            // ProductName
             // 
-            ItemName.HeaderText = "Item Name";
-            ItemName.MinimumWidth = 6;
-            ItemName.Name = "ItemName";
+            ProductName.HeaderText = "Product Name";
+            ProductName.MinimumWidth = 6;
+            ProductName.Name = "ProductName";
+            ProductName.Width = 200;
             // 
             // ItemCategory
             // 
             ItemCategory.HeaderText = "Category";
             ItemCategory.MinimumWidth = 6;
             ItemCategory.Name = "ItemCategory";
+            ItemCategory.Width = 200;
             // 
             // ItemQuantity
             // 
             ItemQuantity.HeaderText = "Quantity";
             ItemQuantity.MinimumWidth = 6;
             ItemQuantity.Name = "ItemQuantity";
+            ItemQuantity.Width = 155;
             // 
             // ItemCondition
             // 
             ItemCondition.HeaderText = "Condition";
             ItemCondition.MinimumWidth = 6;
             ItemCondition.Name = "ItemCondition";
+            ItemCondition.Width = 200;
             // 
             // ItemPrice
             // 
             ItemPrice.HeaderText = "Price";
             ItemPrice.MinimumWidth = 6;
             ItemPrice.Name = "ItemPrice";
+            ItemPrice.Width = 155;
             // 
             // View
             // 
-            View.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle1.NullValue = resources.GetObject("dataGridViewCellStyle1.NullValue");
             View.DefaultCellStyle = dataGridViewCellStyle1;
             View.Description = "View";
-            View.HeaderText = "";
+            View.HeaderText = "View";
             View.Image = Properties.Resources.eye1;
             View.MinimumWidth = 6;
             View.Name = "View";
             View.Resizable = DataGridViewTriState.False;
-            View.Width = 24;
+            View.Width = 140;
             // 
             // Edit
             // 
-            Edit.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle2.NullValue = resources.GetObject("dataGridViewCellStyle2.NullValue");
             Edit.DefaultCellStyle = dataGridViewCellStyle2;
             Edit.Description = "Edit";
-            Edit.HeaderText = "";
+            Edit.HeaderText = "Edit";
             Edit.Image = Properties.Resources.pencil1;
             Edit.MinimumWidth = 6;
             Edit.Name = "Edit";
-            Edit.Resizable = DataGridViewTriState.True;
-            Edit.Width = 24;
+            Edit.Resizable = DataGridViewTriState.False;
+            Edit.Width = 136;
             // 
             // Delete
             // 
-            Delete.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle3.NullValue = resources.GetObject("dataGridViewCellStyle3.NullValue");
             Delete.DefaultCellStyle = dataGridViewCellStyle3;
             Delete.Description = "Delete";
-            Delete.HeaderText = "";
+            Delete.HeaderText = "Delete";
             Delete.Image = Properties.Resources.trash_21;
             Delete.MinimumWidth = 6;
             Delete.Name = "Delete";
-            Delete.Resizable = DataGridViewTriState.True;
-            Delete.Width = 24;
+            Delete.Resizable = DataGridViewTriState.False;
+            Delete.Width = 135;
             // 
             // Inventory
             // 
@@ -390,7 +403,7 @@
         private CuoreUI.Controls.cuiTextBox TableSearchBar;
         private CuoreUI.Controls.cuiButton FilterBtn;
         private CuoreUI.Controls.cuiButton AddBtn;
-        private DataGridViewTextBoxColumn ItemName;
+        private DataGridViewTextBoxColumn ProductName;
         private DataGridViewTextBoxColumn ItemCategory;
         private DataGridViewTextBoxColumn ItemQuantity;
         private DataGridViewTextBoxColumn ItemCondition;

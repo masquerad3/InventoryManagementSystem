@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MainDashboard.Backend.Logics.Products.Add
+namespace MainDashboard.Backend.Logics.Products.Edit
 {
-    public class AddToProduct
+    public class EditProduct
     {
 
-        public static bool HandleAddProduct(
+        public static bool HandleEditProduct(
             string productName,
             string manufacturer,
             string model,
@@ -138,25 +138,25 @@ namespace MainDashboard.Backend.Logics.Products.Add
                 return false;
             }
 
-            // --- If all validations passed, proceed to insert the product ---
-            bool insertSuccess = ProductAdd.AddProductToDatabase(
-                    productName,
-                    manufacturer,
-                    model,
-                    categoryName,
-                    supplierID,
-                    parsedQty,           // make sure you've parsed this to int
-                    condition,
-                    parsedPrice,              // parsed decimal
-                    dateDelivered,
-                    warrantyDate,
-                    parsedWeight,             // parsed decimal?
-                    description
-                );
+            // --- If all validations passed, proceed to update/edit the product ---
+            bool editSuccess = ProductEdit.EditProduct(
+                productName,
+                manufacturer,
+                model,
+                categoryName,
+                supplierID,
+                parsedQty,
+                condition,
+                parsedPrice,
+                dateDelivered,
+                warrantyDate,
+                parsedWeight,
+                description
+            );
 
-            if (insertSuccess)
+            if (editSuccess)
             {
-                MessageBox.Show("Product added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Product edited successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // --- Reload DataGridView ---
                 if (targetDataGridView != null)
@@ -168,7 +168,7 @@ namespace MainDashboard.Backend.Logics.Products.Add
             }
             else
             {
-                MessageBox.Show("Failed to add product. See error log.", "Database Insert Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Failed to edit product. See error log.", "Database Insert Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

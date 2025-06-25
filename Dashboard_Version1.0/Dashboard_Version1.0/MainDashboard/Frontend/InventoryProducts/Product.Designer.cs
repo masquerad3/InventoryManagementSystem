@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddItemForm));
-            AILabel1 = new CuoreUI.Controls.cuiLabel();
+            AddEditProductLabel = new CuoreUI.Controls.cuiLabel();
             ManufacturerLabel = new CuoreUI.Controls.cuiLabel();
             SupplierLabel = new CuoreUI.Controls.cuiLabel();
             QuantityLabel = new CuoreUI.Controls.cuiLabel();
@@ -44,7 +44,6 @@
             QuantityTextbox = new CuoreUI.Controls.cuiTextBox();
             ModelTextbox = new CuoreUI.Controls.cuiTextBox();
             ModelLabel = new CuoreUI.Controls.cuiLabel();
-            ConditionTextbox = new CuoreUI.Controls.cuiTextBox();
             ConditionLabel = new CuoreUI.Controls.cuiLabel();
             WeightTextbox = new CuoreUI.Controls.cuiTextBox();
             WeightLabel = new CuoreUI.Controls.cuiLabel();
@@ -57,19 +56,20 @@
             ProductNameLabel = new CuoreUI.Controls.cuiLabel();
             ProductNameTextBox = new CuoreUI.Controls.cuiTextBox();
             WarrantyDatePicker = new CuoreUI.Controls.cuiCalendarDatePicker();
+            ConditionCB = new CuoreUI.Controls.cuiComboBox();
             SuspendLayout();
             // 
-            // AILabel1
+            // AddEditProductLabel
             // 
-            AILabel1.Content = "Add\\ New\\ Item";
-            AILabel1.Font = new Font("Leelawadee UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            AILabel1.HorizontalAlignment = StringAlignment.Near;
-            AILabel1.Location = new Point(28, 29);
-            AILabel1.Margin = new Padding(5, 4, 5, 4);
-            AILabel1.Name = "AILabel1";
-            AILabel1.Size = new Size(280, 44);
-            AILabel1.TabIndex = 0;
-            AILabel1.VerticalAlignment = StringAlignment.Center;
+            AddEditProductLabel.Content = "Add\\ Edit\\ New\\ Product";
+            AddEditProductLabel.Font = new Font("Leelawadee UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            AddEditProductLabel.HorizontalAlignment = StringAlignment.Near;
+            AddEditProductLabel.Location = new Point(28, 29);
+            AddEditProductLabel.Margin = new Padding(5, 4, 5, 4);
+            AddEditProductLabel.Name = "AddEditProductLabel";
+            AddEditProductLabel.Size = new Size(280, 44);
+            AddEditProductLabel.TabIndex = 0;
+            AddEditProductLabel.VerticalAlignment = StringAlignment.Center;
             // 
             // ManufacturerLabel
             // 
@@ -398,34 +398,6 @@
             ModelLabel.TabIndex = 20;
             ModelLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // ConditionTextbox
-            // 
-            ConditionTextbox.BackgroundColor = Color.White;
-            ConditionTextbox.Content = "";
-            ConditionTextbox.FocusBackgroundColor = Color.White;
-            ConditionTextbox.FocusImageTint = Color.White;
-            ConditionTextbox.FocusOutlineColor = Color.FromArgb(64, 64, 64);
-            ConditionTextbox.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ConditionTextbox.ForeColor = Color.Gray;
-            ConditionTextbox.Image = null;
-            ConditionTextbox.ImageExpand = new Point(0, 0);
-            ConditionTextbox.ImageOffset = new Point(0, 0);
-            ConditionTextbox.Location = new Point(367, 484);
-            ConditionTextbox.Margin = new Padding(5);
-            ConditionTextbox.Multiline = false;
-            ConditionTextbox.Name = "ConditionTextbox";
-            ConditionTextbox.NormalImageTint = Color.White;
-            ConditionTextbox.OutlineColor = Color.FromArgb(128, 128, 128, 128);
-            ConditionTextbox.Padding = new Padding(18, 19, 18, 0);
-            ConditionTextbox.PasswordChar = false;
-            ConditionTextbox.PlaceholderColor = SystemColors.WindowText;
-            ConditionTextbox.PlaceholderText = "";
-            ConditionTextbox.Rounding = new Padding(8);
-            ConditionTextbox.Size = new Size(255, 56);
-            ConditionTextbox.TabIndex = 23;
-            ConditionTextbox.TextOffset = new Size(0, 0);
-            ConditionTextbox.UnderlinedStyle = true;
-            // 
             // ConditionLabel
             // 
             ConditionLabel.Content = "Condition";
@@ -660,12 +632,46 @@
             WarrantyDatePicker.Theme = CuoreUI.Controls.Forms.DatePicker.Themes.Light;
             WarrantyDatePicker.Value = new DateTime(2025, 6, 24, 0, 0, 0, 0);
             // 
+            // ConditionCB
+            // 
+            ConditionCB.BackgroundColor = Color.White;
+            ConditionCB.ButtonCursor = Cursors.Arrow;
+            ConditionCB.ButtonHoverBackground = Color.FromArgb(192, 255, 106, 0);
+            ConditionCB.ButtonHoverOutline = Color.Empty;
+            ConditionCB.ButtonNormalBackground = Color.FromArgb(255, 106, 0);
+            ConditionCB.ButtonNormalOutline = Color.Empty;
+            ConditionCB.ButtonPressedBackground = Color.FromArgb(255, 106, 0);
+            ConditionCB.ButtonPressedOutline = Color.Empty;
+            ConditionCB.DropDownBackgroundColor = Color.White;
+            ConditionCB.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
+            ConditionCB.ExpandArrowColor = Color.Gray;
+            ConditionCB.ForeColor = Color.Gray;
+            ConditionCB.Items = new string[]
+    {
+    "Defective",
+    "Damaged",
+    "Unsealed : Unused",
+    "Unsealed : Used",
+    "Sealed : New"
+    };
+            ConditionCB.Location = new Point(367, 483);
+            ConditionCB.Margin = new Padding(5, 4, 5, 4);
+            ConditionCB.Name = "ConditionCB";
+            ConditionCB.NoSelectionDropdownText = "Empty";
+            ConditionCB.NoSelectionText = "Condition";
+            ConditionCB.OutlineColor = Color.FromArgb(64, 128, 128, 128);
+            ConditionCB.OutlineThickness = 1F;
+            ConditionCB.Rounding = 8;
+            ConditionCB.Size = new Size(255, 57);
+            ConditionCB.TabIndex = 39;
+            // 
             // AddItemForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(686, 1200);
+            Controls.Add(ConditionCB);
             Controls.Add(WarrantyDatePicker);
             Controls.Add(ProductNameTextBox);
             Controls.Add(ProductNameLabel);
@@ -677,7 +683,6 @@
             Controls.Add(WarrantyLabel);
             Controls.Add(WeightTextbox);
             Controls.Add(WeightLabel);
-            Controls.Add(ConditionTextbox);
             Controls.Add(ConditionLabel);
             Controls.Add(ModelTextbox);
             Controls.Add(ModelLabel);
@@ -693,18 +698,17 @@
             Controls.Add(QuantityLabel);
             Controls.Add(SupplierLabel);
             Controls.Add(ManufacturerLabel);
-            Controls.Add(AILabel1);
+            Controls.Add(AddEditProductLabel);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(3, 4, 3, 4);
             Name = "AddItemForm";
-            Text = "Add Item";
-            Load += AddItemForm_Load;
+            Text = "Product";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private CuoreUI.Controls.cuiLabel AILabel1;
+        private CuoreUI.Controls.cuiLabel AddEditProductLabel;
         private CuoreUI.Controls.cuiLabel ManufacturerLabel;
         private CuoreUI.Controls.cuiLabel SupplierLabel;
         private CuoreUI.Controls.cuiLabel QuantityLabel;
@@ -719,7 +723,6 @@
         private CuoreUI.Controls.cuiTextBox QuantityTextbox;
         private CuoreUI.Controls.cuiTextBox ModelTextbox;
         private CuoreUI.Controls.cuiLabel ModelLabel;
-        private CuoreUI.Controls.cuiTextBox ConditionTextbox;
         private CuoreUI.Controls.cuiLabel ConditionLabel;
         private CuoreUI.Controls.cuiTextBox WeightTextbox;
         private CuoreUI.Controls.cuiLabel WeightLabel;
@@ -732,5 +735,6 @@
         private CuoreUI.Controls.cuiLabel ProductNameLabel;
         private CuoreUI.Controls.cuiTextBox ProductNameTextBox;
         private CuoreUI.Controls.cuiCalendarDatePicker WarrantyDatePicker;
+        private CuoreUI.Controls.cuiComboBox ConditionCB;
     }
 }

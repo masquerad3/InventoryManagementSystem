@@ -125,7 +125,7 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
     {
         // Centralized connection string
         // samuels string
-        protected readonly string connectionString = @"Data Source=LAPTOP-M4LNTBNL\SQLEXPRESS;Initial Catalog=InventoryManagementSystem;Integrated Security=True;Trust Server Certificate=True";
+        protected readonly string connectionString = @"Data Source=LAPTOP-M4LNTBNL\SQLEXPRESS;Initial Catalog=InventoryManagementSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
 
         // Shared method to open a new connection
         protected SqlConnection GetConnection()
@@ -231,6 +231,62 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
             return list;
         }   //end of read for display
 
+        // for editing
+        public Product? GetProductByID(int productId)
+        {
+            using (SqlConnection connection = GetConnection())
+            {
+                string query = @"
+                    SELECT 
+                        ProductID,
+                        ProductName,
+                        Manufacturer,
+                        Model,
+                        CategoryName,
+                        SupplierID,
+                        ProductQuantity,
+                        ProductCondition,
+                        ProductPrice,
+                        DateDelivered,
+                        ProductWarranty,
+                        PackageWeight,
+                        ProductDescription
+                    FROM Products
+                    WHERE ProductID = @ProductID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ProductID", productId);
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Product(
+                                productID: reader.GetInt32(0),
+                                productName: reader.GetString(1),
+                                manufacturer: reader.GetString(2),
+                                model: reader.GetString(3),
+                                categoryName: reader.GetString(4),
+                                supplierID: reader.IsDBNull(5) ? null : reader.GetString(5),
+                                productQuantity: reader.GetString(6),
+                                productCondition: reader.GetString(7),
+                                productPrice: reader.GetDecimal(8),
+                                dateDelivered: reader.IsDBNull(9) ? null : reader.GetDateTime(9),
+                                productWarranty: reader.GetString(10),
+                                packageWeight: reader.IsDBNull(11) ? null : reader.GetDecimal(11),
+                                productDescription: reader.IsDBNull(12) ? null : reader.GetString(12)
+                            );
+                        }
+                    }
+                }
+            }
+
+            return null; // no match found
+        }
+        // end of for editing
+
         // read for getting product details to update
         public Product? GetProductByName(string productName)
         {
@@ -284,6 +340,34 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
             }
 
             return null;
+        }
+        // end of get product by name
+
+        // get product id by name
+        public int? GetProductIDByName(string productName)
+        {
+            using (SqlConnection connection = GetConnection())
+            {
+                string query = @"
+            SELECT ProductID
+            FROM Products
+            WHERE ProductName = @ProductName";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ProductName", productName);
+                    connection.Open();
+
+                    object? result = command.ExecuteScalar();
+
+                    if (result != null && int.TryParse(result.ToString(), out int productId))
+                    {
+                        return productId;
+                    }
+                }
+            }
+
+            return null; // Return null if not found or error
         }
 
     }
@@ -352,5 +436,113 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
             }
         }
     }
+    // end of product add
+
+    public class ProductEdit : DatabaseConnection
+    {
+        public static bool EditProduct(
+            string productName,
+            string manufacturer,
+            string model,
+            string categoryName,
+            string supplierID,
+            int productQuantity,
+            string productCondition,
+            decimal productPrice,
+            DateTime dateDelivered,
+            DateTime warrantyDate,
+            decimal? packageWeight,
+            string? productDescription)
+        {
+            try
+            {
+                using (SqlConnection connection = new ProductEdit().GetConnection())
+                {
+                    string query = @"
+                        UPDATE Products
+                        SET 
+                            Manufacturer = @Manufacturer,
+                            Model = @Model,
+                            CategoryName = @CategoryName,
+                            SupplierID = @SupplierID,
+                            ProductQuantity = @ProductQuantity,
+                            ProductCondition = @ProductCondition,
+                            ProductPrice = @ProductPrice,
+                            DateDelivered = @DateDelivered,
+                            ProductWarranty = @ProductWarranty,
+                            PackageWeight = @PackageWeight,
+                            ProductDescription = @ProductDescription
+                        WHERE ProductName = @ProductName";
+
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@ProductName", productName);
+                        cmd.Parameters.AddWithValue("@Manufacturer", manufacturer);
+                        cmd.Parameters.AddWithValue("@Model", model);
+                        cmd.Parameters.AddWithValue("@CategoryName", categoryName);
+                        cmd.Parameters.AddWithValue("@SupplierID", (object)supplierID ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@ProductQuantity", productQuantity);
+                        cmd.Parameters.AddWithValue("@ProductCondition", productCondition);
+                        cmd.Parameters.AddWithValue("@ProductPrice", productPrice);
+                        cmd.Parameters.AddWithValue("@DateDelivered", (object)dateDelivered);
+                        cmd.Parameters.AddWithValue("@ProductWarranty", warrantyDate.ToString("yyyy-MM-dd")); // or .ToShortDateString()
+                        cmd.Parameters.AddWithValue("@PackageWeight", (object?)packageWeight ?? DBNull.Value);
+                        cmd.Parameters.AddWithValue("@ProductDescription", (object?)productDescription ?? DBNull.Value);
+
+                        connection.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while editing product:\n" + ex.Message, "Edit Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+
+    }
+    // end of product editing / updating
+
+        public class ProductDelete: DatabaseConnection
+    {
+        public bool DeleteProductByID(int? productId)
+        {
+            try
+            {
+                using (SqlConnection connection = GetConnection())
+                {
+                    string query = "DELETE FROM Products WHERE ProductID = @ProductID";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@ProductID", productId);
+
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No product was deleted. The ID might not exist.", "Delete Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while deleting the product:\n\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+    }
+
 
 }

@@ -134,7 +134,7 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
     {
         // Centralized connection string
         // samuels string
-        protected readonly string connectionString = @"Data Source=LAPTOP-M4LNTBNL\SQLEXPRESS;Initial Catalog=InventoryManagementSystem;Integrated Security=True;Trust Server Certificate=True";
+        protected readonly string connectionString = @"Data Source=LAPTOP-M4LNTBNL\SQLEXPRESS;Initial Catalog=InventoryManagementSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
 
         // Shared method to open a new connection
         protected SqlConnection GetConnection()

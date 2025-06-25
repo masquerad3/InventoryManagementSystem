@@ -28,7 +28,13 @@ namespace MainDashboard
         // This method is called when the selected index of the ComboBox changes yet there is no implementation yet.
         private void cuiComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            // Basic implementation for handling ComboBox changes
+            // You can customize this based on your specific requirements
+            if (sender is ComboBox comboBox && comboBox.SelectedItem != null)
+            {
+                // Do something with the selected item
+                Console.WriteLine($"Selected: {comboBox.SelectedItem}");
+            }
         }
 
         private void InventoryFilterBtn_Click(object sender, EventArgs e)

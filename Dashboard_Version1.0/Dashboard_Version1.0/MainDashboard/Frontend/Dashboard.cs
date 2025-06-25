@@ -8,15 +8,30 @@ namespace MainDashboard
         private ProductAlert productAlert; // Declare the ProductAlert field
         private Batch batch; // Declare the Batch field
 
-
+        // Default constructor
         public Dashboard()
         {
             InitializeComponent();
+            InitializeControls();
+        }
+
+        // Constructor with user information
+        public Dashboard(string staffName, string staffPosition)
+        {
+            InitializeComponent();
+            InitializeControls();
+
+            // Update profile section with user information
+            ProfileName.Content = staffName;
+            ProfileLabel.Content = staffPosition;
+        }
+
+        private void InitializeControls()
+        {
             dashboardContent = new DashboardContent() // Initialize the field
             {
                 Dock = DockStyle.Fill // Set the Dock property to fill the parent container
             };
-
             this.Controls.Add(dashboardContent);
 
             inventory = new Inventory() // Initialize the Inventory field
@@ -43,16 +58,14 @@ namespace MainDashboard
             };
             this.Controls.Add(batch);
 
+            // Bring dashboard to front by default
+            dashboardContent.BringToFront();
         }
-
-
-
 
         private void InventoryBtn_Click(object sender, EventArgs e)
         {
             inventory.BringToFront(); // Bring the Inventory control to the front
         }
-
 
         private void DashboardBtn_Click(object sender, EventArgs e)
         {

@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using System.Net.Mail;
 using System.Net;
+using MainDashboard.Backend.Queries.AuthCrud;
+using MainDashboard.Backend.Queries.StaffCrud;
 
 namespace Login_Version1._0
 {
@@ -63,6 +65,20 @@ namespace Login_Version1._0
                 return;
             }
 
+            // Check if email is already in use
+            var staffCrud = new StaffCrud();
+            if (staffCrud.IsEmailInUse(email))
+            {
+                MessageBox.Show("This email is already registered. Please use a different email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Collect user registration data
+            string firstName = NameTextBox1.Content.Trim();
+            string lastName = NameTextBox2.Content.Trim();
+            string fullName = $"{firstName} {lastName}";
+            string password = PasswordTextBox1.Content;
+
             // Generate a 6-digit verification code
             Random random = new Random();
             verificationCode = random.Next(100000, 999999).ToString();
@@ -87,8 +103,8 @@ namespace Login_Version1._0
                 smtpClient.Send(mail);
                 MessageBox.Show("Verification code sent to your email. Please check your inbox.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Proceed to Verify form (adjust constructor)
-                Verify verifyForm = new Verify(verificationCode); // Match Verify constructor
+                // Proceed to Verify form with user details
+                Verify verifyForm = new Verify(verificationCode, fullName, email, password);
                 verifyForm.Show();
                 this.Close();
             }

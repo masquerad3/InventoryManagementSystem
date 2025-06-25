@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridView InventoryGridView;
+            //DataGridView InventoryGridView;
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();

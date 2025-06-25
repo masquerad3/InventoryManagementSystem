@@ -11,6 +11,8 @@
 
   <ItemGroup>
     <PackageReference Include="CuoreUI.Winforms" Version="2025.6.19" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.6" />
   </ItemGroup>
 
   <ItemGroup>

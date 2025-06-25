@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MainDashboard.Backend.Logics.BatchOrders.Reload;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace MainDashboard
         public Batch()
         {
             InitializeComponent();
+
+            // load the data to the table
+            ReloadBatchOrders.LoadBatchOrdersData(BatchOrdersGridView);
+        }
+
+        private void BatchOrdersGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

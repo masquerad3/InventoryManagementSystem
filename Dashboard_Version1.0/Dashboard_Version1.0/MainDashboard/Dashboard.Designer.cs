@@ -203,7 +203,6 @@
             OrdersBtn.TabIndex = 5;
             OrdersBtn.TextAlignment = StringAlignment.Near;
             OrdersBtn.TextOffset = new Point(50, 0);
-            OrdersBtn.Click += ProductAlertBtn_Click;
             // 
             // InventoryBtn
             // 
@@ -313,7 +312,6 @@
             ProfilePicture.Rounding = new Padding(8);
             ProfilePicture.Size = new Size(55, 50);
             ProfilePicture.TabIndex = 0;
-            ProfilePicture.Load += ProfilePicture_Load;
             // 
             // ProfileName
             // 

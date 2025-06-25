@@ -45,49 +45,18 @@ namespace MainDashboard
 
         }
 
-        private void cuiComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
 
-        private void ProfilePicture_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cuiButton1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void InventoryBtn_Click(object sender, EventArgs e)
         {
             inventory.BringToFront(); // Bring the Inventory control to the front
         }
 
-        private void DashboardHeader_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SearchBar_ContentChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void DashboardBtn_Click(object sender, EventArgs e)
         {
             dashboardContent.BringToFront();
-        }
-
-        private void ProductAlertBtn_Click(object sender, EventArgs e)
-        {
-            productAlert.BringToFront(); // Bring the ProductAlert control to the front
         }
 
         private void BatchBtn_Click(object sender, EventArgs e)

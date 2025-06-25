@@ -351,6 +351,7 @@
             CancelBtn.TabIndex = 40;
             CancelBtn.TextAlignment = StringAlignment.Center;
             CancelBtn.TextOffset = new Point(0, 0);
+            CancelBtn.Click += CancelBtn_Click;
             // 
             // SaveBtn
             // 
@@ -389,6 +390,7 @@
             SaveBtn.TabIndex = 40;
             SaveBtn.TextAlignment = StringAlignment.Center;
             SaveBtn.TextOffset = new Point(0, 0);
+            SaveBtn.Click += SaveBtn_Click;
             // 
             // ManageEmployeeStaff
             // 

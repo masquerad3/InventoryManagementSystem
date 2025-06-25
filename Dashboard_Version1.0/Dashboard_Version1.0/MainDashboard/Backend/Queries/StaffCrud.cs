@@ -143,11 +143,50 @@ namespace MainDashboard.Backend.Queries.StaffCrud
         }
     }
 
+    public class StaffRead : DatabaseConnection
+    {
+        //read all
+        public List<Staff> GetAllStaff()
+>>>>>>> Stashed changes
+        {
+            var staffList = new List<Staff>();
+
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                var cmd = new SqlCommand(
+                    "SELECT StaffID, StaffName, StaffPosition, StaffEmail, StaffDateOfBirth, StaffAddress " +
+                    "FROM Staff", conn);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        staffList.Add(new Staff(
+                            reader.GetInt32(0),
+                            reader.GetString(1),
+                            reader.GetString(2),
+                            reader.GetString(3),
+                            null,
+                            reader.IsDBNull(4) ? null : reader.GetDateTime(4),
+                            reader.IsDBNull(5) ? null : reader.GetString(5)
+                        ));
+                    }
+                }
+            }
+
+            return staffList;
+        }
+
+
+    }
+
+    //basic read all
+
 
     public abstract class DatabaseConnection
     {
         // Centralized connection string
-        // remos string
         //protected readonly string connectionString = @"Data Source=LAPTOP-M4LNTBNL\SQLEXPRESS;Initial Catalog=InventoryManagementSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
         // samuels string
         protected readonly string connectionString = @"Data Source=DESKTOP-K3DB62P\SQLEXPRESS01;Initial Catalog=IMS;Integrated Security=True;Trust Server Certificate=True";

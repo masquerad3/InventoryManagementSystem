@@ -60,12 +60,14 @@ namespace MainDashboard
                 //replaces the dashboard title and button with "Add Item"
                 AddEditProductLabel.Content = "Edit Product";
                 SaveBtn.Content = "Edit Product";
+                SubLabel.Visible = false;
             }
             else
             {
                 // for checking
                 AddEditProductLabel.Content = "EDIT ERROR DO NOT PROCEED";
                 SaveBtn.Content = "ERROR DO NOT CLICK";
+                SubLabel.Visible = false;
             }
 
             LoadProductDetails();
@@ -87,12 +89,14 @@ namespace MainDashboard
                 AddEditProductLabel.Content = "Product Details";
                 CancelBtn.Content = "Close";
                 SaveBtn.Visible = false;
+                SubLabel.Visible = false;
             }
             else
             {
                 // for checking
                 AddEditProductLabel.Content = "Product Viewing ERROR";
                 SaveBtn.Visible = false;
+                SubLabel.Visible = false;
             }
 
             LoadProductDetails();

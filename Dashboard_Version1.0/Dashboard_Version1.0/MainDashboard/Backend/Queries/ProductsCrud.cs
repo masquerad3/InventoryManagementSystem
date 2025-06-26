@@ -53,7 +53,7 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
         public string? SupplierID { get; set; } // Now string and nullable
 
         // INVENTORY
-        public string ProductQuantity { get; set; }
+        public int ProductQuantity { get; set; }
         public string ProductCondition { get; set; }
 
         // PRICING & DELIVERY
@@ -75,7 +75,7 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
             string model,
             string categoryName,
             string? supplierID,
-            string productQuantity,
+            int productQuantity,
             string productCondition,
             decimal productPrice,
             DateTime? dateDelivered,
@@ -104,14 +104,14 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
     {
         public string ProductName { get; set; }       // item name
         public string CategoryName { get; set; }      // category name
-        public string ProductQuantity { get; set; }   // quantity (as string)
+        public int ProductQuantity { get; set; }   // quantity (as int)
         public string ProductCondition { get; set; }  // condition (e.g., "New", "Damaged")
         public decimal ProductPrice { get; set; }     // price
 
         public ProductEssential(
             string productName,
             string categoryName,
-            string productQuantity,
+            int productQuantity,
             string productCondition,
             decimal productPrice)
         {
@@ -175,7 +175,7 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
                                 model: reader.GetString(3),
                                 categoryName: reader.GetString(4),
                                 supplierID: reader.IsDBNull(5) ? null : reader.GetString(5),
-                                productQuantity: reader.GetString(6),
+                                productQuantity: reader.GetInt32(6),
                                 productCondition: reader.GetString(7),
                                 productPrice: reader.GetDecimal(8),
                                 dateDelivered: reader.IsDBNull(9) ? null : reader.GetDateTime(9),
@@ -219,7 +219,7 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
                             var product = new ProductEssential(
                                 productName: reader.GetString(0),
                                 categoryName: reader.GetString(1),
-                                productQuantity: reader.GetString(2),
+                                productQuantity: reader.GetInt32(2),
                                 productCondition: reader.GetString(3),
                                 productPrice: reader.GetDecimal(4)
                             );
@@ -272,7 +272,7 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
                                 model: reader.GetString(3),
                                 categoryName: reader.GetString(4),
                                 supplierID: reader.IsDBNull(5) ? null : reader.GetString(5),
-                                productQuantity: reader.GetString(6),
+                                productQuantity: reader.GetInt32(6),
                                 productCondition: reader.GetString(7),
                                 productPrice: reader.GetDecimal(8),
                                 dateDelivered: reader.IsDBNull(9) ? null : reader.GetDateTime(9),
@@ -328,7 +328,7 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
                                 model: reader.GetString(3),
                                 categoryName: reader.GetString(4),
                                 supplierID: reader.IsDBNull(5) ? null : reader.GetString(5),
-                                productQuantity: reader.GetString(6),
+                                productQuantity: reader.GetInt32(6),
                                 productCondition: reader.GetString(7),
                                 productPrice: reader.GetDecimal(8),
                                 dateDelivered: reader.IsDBNull(9) ? null : reader.GetDateTime(9),
@@ -351,9 +351,9 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
             using (SqlConnection connection = GetConnection())
             {
                 string query = @"
-            SELECT ProductID
-            FROM Products
-            WHERE ProductName = @ProductName";
+                    SELECT ProductID
+                    FROM Products
+                    WHERE ProductName = @ProductName";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {

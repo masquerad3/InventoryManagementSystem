@@ -93,7 +93,7 @@ namespace MainDashboard.Backend.Queries.AuthCrud
     public abstract class DatabaseConnection
     {
         // Centralized connection string
-        //remos string
+        //samuel string
         protected readonly string connectionString = @"Data Source=LAPTOP-M4LNTBNL\SQLEXPRESS;Initial Catalog=InventoryManagementSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
         // samuels string
         //protected readonly string connectionString = @"Data Source=DESKTOP-K3DB62P\SQLEXPRESS01;Initial Catalog=IMS;Integrated Security=True;Trust Server Certificate=True";

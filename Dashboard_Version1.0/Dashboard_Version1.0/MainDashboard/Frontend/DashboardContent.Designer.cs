@@ -169,7 +169,6 @@
             ISLabel2.Size = new Size(158, 19);
             ISLabel2.TabIndex = 4;
             ISLabel2.VerticalAlignment = StringAlignment.Far;
-            ISLabel2.Load += cuiLabel8_Load;
             // 
             // ISNumber2
             // 
@@ -209,7 +208,6 @@
             ISLabel1.Size = new Size(158, 19);
             ISLabel1.TabIndex = 2;
             ISLabel1.VerticalAlignment = StringAlignment.Far;
-            ISLabel1.Load += cuiLabel7_Load;
             // 
             // ISNumber
             // 
@@ -222,7 +220,6 @@
             ISNumber.Size = new Size(158, 34);
             ISNumber.TabIndex = 1;
             ISNumber.VerticalAlignment = StringAlignment.Far;
-            ISNumber.Load += cuiLabel6_Load;
             // 
             // ISIcon1
             // 
@@ -264,7 +261,6 @@
             cuiLabel1.Size = new Size(183, 36);
             cuiLabel1.TabIndex = 3;
             cuiLabel1.VerticalAlignment = StringAlignment.Near;
-            cuiLabel1.Load += cuiLabel1_Load;
             // 
             // ProductSummaryPanel
             // 
@@ -361,7 +357,6 @@
             PSLabel1.Size = new Size(158, 19);
             PSLabel1.TabIndex = 2;
             PSLabel1.VerticalAlignment = StringAlignment.Far;
-            PSLabel1.Load += cuiLabel5_Load;
             // 
             // PSNumber1
             // 
@@ -540,7 +535,6 @@
             cuiLabel16.Size = new Size(158, 28);
             cuiLabel16.TabIndex = 0;
             cuiLabel16.VerticalAlignment = StringAlignment.Near;
-            cuiLabel16.Load += cuiLabel16_Load;
             // 
             // TotalBatchesPanel
             // 
@@ -637,7 +631,6 @@
             TBLabel1.Size = new Size(158, 19);
             TBLabel1.TabIndex = 2;
             TBLabel1.VerticalAlignment = StringAlignment.Far;
-            TBLabel1.Load += cuiLabel19_Load;
             // 
             // TBNumber1
             // 
@@ -679,7 +672,6 @@
             cuiLabel21.Size = new Size(158, 28);
             cuiLabel21.TabIndex = 0;
             cuiLabel21.VerticalAlignment = StringAlignment.Near;
-            cuiLabel21.Load += cuiLabel21_Load;
             // 
             // WarrantyPanel
             // 
@@ -707,7 +699,6 @@
             WGB.Rounding = new Padding(8);
             WGB.Size = new Size(190, 127);
             WGB.TabIndex = 3;
-            WGB.Paint += WGB_Paint;
             // 
             // WLabel
             // 
@@ -721,7 +712,6 @@
             WLabel.Size = new Size(85, 19);
             WLabel.TabIndex = 2;
             WLabel.VerticalAlignment = StringAlignment.Far;
-            WLabel.Load += cuiLabel22_Load;
             // 
             // WNumber
             // 
@@ -750,7 +740,6 @@
             WIcon.Rounding = new Padding(8);
             WIcon.Size = new Size(53, 44);
             WIcon.TabIndex = 0;
-            WIcon.Load += cuiPictureBox7_Load;
             // 
             // OutOfStockPanel
             // 
@@ -909,7 +898,6 @@
             NotificationIcon.Rounding = new Padding(8);
             NotificationIcon.Size = new Size(28, 28);
             NotificationIcon.TabIndex = 0;
-            NotificationIcon.Load += cuiPictureBox9_Load;
             // 
             // cuiPanel7
             // 
@@ -973,8 +961,6 @@
             Controls.Add(ItemSummaryPanel);
             Name = "DashboardContent";
             Size = new Size(1060, 1100);
-            Load += DashboardContent_Load;
-            MouseClick += DashboardContent_MouseClick;
             ItemSummaryPanel.ResumeLayout(false);
             ISGB2.ResumeLayout(false);
             ISGB1.ResumeLayout(false);

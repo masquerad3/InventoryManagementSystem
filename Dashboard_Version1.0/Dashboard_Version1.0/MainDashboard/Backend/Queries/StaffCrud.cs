@@ -141,13 +141,41 @@ namespace MainDashboard.Backend.Queries.StaffCrud
                 }
             }
         }
+        public bool UpdateStaff(int staffId, Staff updatedStaff)
+        {
+            try
+            {
+                using (var conn = GetConnection())
+                {
+                    conn.Open();
+                    var cmd = new SqlCommand(
+                        "UPDATE Staff SET StaffName = @Name, StaffPosition = @Position, StaffEmail = @Email, " +
+                        "StaffDateOfBirth = @DOB, StaffAddress = @Address " +
+                        "WHERE StaffID = @StaffID", conn);
+
+                    cmd.Parameters.AddWithValue("@StaffID", staffId);
+                    cmd.Parameters.AddWithValue("@Name", updatedStaff.StaffName);
+                    cmd.Parameters.AddWithValue("@Position", updatedStaff.StaffPosition);
+                    cmd.Parameters.AddWithValue("@Email", updatedStaff.StaffEmail);
+                    cmd.Parameters.AddWithValue("@DOB", (object?)updatedStaff.StaffDateOfBirth ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Address", (object?)updatedStaff.StaffAddress ?? DBNull.Value);
+
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating staff: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
     }
+
 
     public class StaffRead : DatabaseConnection
     {
-        //read all
+        // Implement the GetAllStaff method
         public List<Staff> GetAllStaff()
->>>>>>> Stashed changes
         {
             var staffList = new List<Staff>();
 
@@ -177,11 +205,7 @@ namespace MainDashboard.Backend.Queries.StaffCrud
 
             return staffList;
         }
-
-
     }
-
-    //basic read all
 
 
     public abstract class DatabaseConnection

@@ -1,4 +1,5 @@
-﻿using MainDashboard.Backend.Queries.StaffCrud;
+﻿using MainDashboard.Backend.Queries.AuthCrud;
+using MainDashboard.Backend.Queries.StaffCrud;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,9 +58,9 @@ namespace MainDashboard.Backend.Logics.EmployeeStaffs.Add
                 isValidInput = false;
             }
 
-            if (empBday == null || empBday > DateTime.Now)
+            if (empBday > DateTime.Now)
             {
-                errorMessage += "Date of birth must be valid and not in the future.\n";
+                errorMessage += "Date of birth cannot be in the future.\n";
                 isValidInput = false;
             }
 
@@ -69,22 +70,14 @@ namespace MainDashboard.Backend.Logics.EmployeeStaffs.Add
                 isValidInput = false;
             }
 
-            /*
             // Check for duplicate email
-            var staffReader = new StaffCrud();
-            var allStaff = staffReader.GetAllStaff();
-            
-
-            bool isDuplicate = allStaff.Any(s =>
-                string.Equals(s.StaffEmail.Trim(), empEmail.Trim(), StringComparison.OrdinalIgnoreCase)
-            );
-
-            if (isDuplicate)
+            var staffCrud = new StaffCrud();
+            int? existingStaffId = staffCrud.GetStaffIdByEmail(empEmail);
+            if (existingStaffId.HasValue)
             {
                 errorMessage += "An employee with the same email already exists.\n";
                 isValidInput = false;
             }
-            */
 
             // Show validation errors
             if (!isValidInput)
@@ -93,47 +86,65 @@ namespace MainDashboard.Backend.Logics.EmployeeStaffs.Add
                 return false;
             }
 
-            /*
-
-            // DO SOMETHING SIMILAR BUT FOR EMPLOYEE / STAFF
-
-            // --- If all validations passed, proceed to insert the product ---
-            bool insertSuccess = ProductAdd.AddProductToDatabase(
-                    productName,
-                    manufacturer,
-                    model,
-                    categoryName,
-                    supplierID,
-                    parsedQty,           // make sure you've parsed this to int
-                    condition,
-                    parsedPrice,              // parsed decimal
-                    dateDelivered,
-                    warrantyDate,
-                    parsedWeight,             // parsed decimal?
-                    description
-                );
-
-            if (insertSuccess)
+            // If all validations passed, proceed to create the employee record
+            try
             {
-                MessageBox.Show("Product added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // --- Reload DataGridView ---
-                if (targetDataGridView != null)
+                // Check if email is already in use
+                if (staffCrud.IsEmailInUse(empEmail))
                 {
-                    ReloadProducts.LoadProductsData(targetDataGridView);
+                    MessageBox.Show("This email is already registered. Please use a different email.",
+                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
                 }
 
-                return true;
+                // Create staff object with new information
+                Staff newStaff = new Staff(
+                    staffName: empName,
+                    staffPosition: empPosition,
+                    staffEmail: empEmail,
+                    staffPassword: empPassword,
+                    staffDateOfBirth: empBday,
+                    staffAddress: empAddress
+                );
+
+                // Add staff record and get new ID
+                int staffId = staffCrud.AddStaff(newStaff);
+
+                if (staffId > 0)
+                {
+                    // Create auth record with hashed password
+                    var authCrud = new AuthCrud();
+                    bool authSuccess = authCrud.Register(staffId, empPassword);
+
+                    if (authSuccess)
+                    {
+                        MessageBox.Show("Employee added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Reload DataGridView if needed here
+                        // Add code to reload your employee DataGridView
+
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to create authentication record.", "Database Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Failed to create employee record.", "Database Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Failed to add product. See error log.", "Database Insert Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error creating employee: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-
-            */
-
-            return false;
 
         }
 

@@ -10,6 +10,7 @@ namespace MainDashboard.Backend.Logics.EmployeeStaffs.Add
     public class EditEmployeeStaff
     {
         public static bool HandleEditEmployeeStaff(
+            int staffId,          // Added staffId parameter
             string empName,
             string empPosition,
             string empEmail,
@@ -57,9 +58,9 @@ namespace MainDashboard.Backend.Logics.EmployeeStaffs.Add
                 isValidInput = false;
             }
 
-            if (empBday == null || empBday > DateTime.Now)
+            if (empBday > DateTime.Now)
             {
-                errorMessage += "Date of birth must be valid and not in the future.\n";
+                errorMessage += "Date of birth cannot be in the future.\n";
                 isValidInput = false;
             }
 
@@ -69,74 +70,55 @@ namespace MainDashboard.Backend.Logics.EmployeeStaffs.Add
                 isValidInput = false;
             }
 
-            /*
-            // Check for duplicate email
-            var staffReader = new StaffCrud();
-            var allStaff = staffReader.GetAllStaff();
-            
-
-            bool isDuplicate = allStaff.Any(s =>
-                string.Equals(s.StaffEmail.Trim(), empEmail.Trim(), StringComparison.OrdinalIgnoreCase)
-            );
-
-            if (isDuplicate)
+            // Check for duplicate email (excluding the current staff)
+            var staffCrud = new StaffCrud();
+            int? existingStaffId = staffCrud.GetStaffIdByEmail(empEmail);
+            if (existingStaffId.HasValue && existingStaffId.Value != staffId)
             {
                 errorMessage += "An employee with the same email already exists.\n";
                 isValidInput = false;
             }
-            */
 
             // END OF VALIDATIONS
 
-            // Show validation errors
             if (!isValidInput)
             {
                 MessageBox.Show(errorMessage, "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            /*
-
-            // DO SOMETHING SIMILAR BUT FOR EMPLOYEE / STAFF
-
-            // --- If all validations passed, proceed to update/edit the product ---
-            bool editSuccess = ProductEdit.EditProduct(
-                productName,
-                manufacturer,
-                model,
-                categoryName,
-                supplierID,
-                parsedQty,
-                condition,
-                parsedPrice,
-                dateDelivered,
-                warrantyDate,
-                parsedWeight,
-                description
-            );
-
-            if (editSuccess)
+            // If all validations passed, proceed to update the staff record
+            try
             {
-                MessageBox.Show("Product edited successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Create staff object with updated information
+                Staff updatedStaff = new Staff(
+                    staffName: empName,
+                    staffPosition: empPosition,
+                    staffEmail: empEmail,
+                    staffPassword: empPassword,
+                    staffDateOfBirth: empBday,
+                    staffAddress: empAddress
+                );
 
-                // --- Reload DataGridView ---
-                if (targetDataGridView != null)
+                // Update staff record using the passed staffId parameter
+                bool updateSuccess = staffCrud.UpdateStaff(staffId, updatedStaff);
+
+                if (updateSuccess)
                 {
-                    ReloadProducts.LoadProductsData(targetDataGridView);
+                    MessageBox.Show("Employee information updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
                 }
-
-                return true;
+                else
+                {
+                    MessageBox.Show("Failed to update employee information.", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Failed to edit product. See error log.", "Database Insert Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error updating employee: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-
-            */
-
-            return false;
-
         }
 
     }

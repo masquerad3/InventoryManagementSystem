@@ -129,7 +129,7 @@ namespace MainDashboard.Frontend.EmployeeStaff
             DateTime empBday = DOBPicker.Value;
             string empAddress = AddressTextBox.Content.Trim();
 
-            if (SaveBtn.Content == "Add Product")
+            if (SaveBtn.Content == "Create")  // Changed from "Add Product" to "Create"
             {
                 bool addSuccess = AddEmployeeStaff.HandleAddEmployeeStaff(
                     empName,
@@ -149,11 +149,17 @@ namespace MainDashboard.Frontend.EmployeeStaff
                 {
                     MessageBox.Show("Error Employee Account Creation: Unknown Error.", "Add Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
-            else if (SaveBtn.Content == "Edit Product")
+            else if (SaveBtn.Content == "Update")  // Changed from "Edit Product" to "Update"
             {
-                bool editSuccess = EditProduct.HandleEditProduct(
+                bool editSuccess = EditEmployeeStaff.HandleEditEmployeeStaff(
+                    empId.Value,        // Pass the staffId
+                    empName,
+                    empPosition,
+                    empEmail,
+                    empPassword,
+                    empBday,
+                    empAddress,
                     _targetDataGridView
                 );
 
@@ -165,9 +171,7 @@ namespace MainDashboard.Frontend.EmployeeStaff
                 {
                     MessageBox.Show("Error Employee Updating of Account: Unknown Error.", "Edit Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
-
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)

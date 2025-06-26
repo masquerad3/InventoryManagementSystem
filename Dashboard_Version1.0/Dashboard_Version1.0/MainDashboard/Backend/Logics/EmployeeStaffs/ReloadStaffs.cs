@@ -1,40 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using MainDashboard.Backend.Queries.StaffCrud;
+using System.Windows.Forms;
+using System.Collections.Generic;
+using System.Drawing;
 
 namespace MainDashboard.Backend.Logics.EmployeeStaffs.Reload
 {
     public class ReloadEmployeeStaffs
     {
-        // method to load unarchived inventory data into the DataGridView
         public static void LoadEmployeeStaffData(DataGridView dataGridView)
         {
+
+            if (dataGridView == null)
+            {
+                MessageBox.Show("Error: GridView is not initialized.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // Clear existing rows before loading new data to prevent duplicates
             dataGridView.Rows.Clear();
 
-            /*
-            
-            // DO SOMETHING SIMILAR BUT FOR EMPLOYEE / STAFF
-            
-            var readAll = new CategoryRead();
-            List<Queries.CategoryCrud.Category> categories = readAll.ReadAllCategories();
-
-            foreach (var item in categories)
+            var staffList = new StaffRead().GetAllStaff();
+            foreach (var staff in staffList)
             {
                 dataGridView.Rows.Add(
-                    item.EmployeeName,
-                    item.EmployeePosition,
-                    item.EmployeeEmail
+                    //staff.StaffID,
+                    staff.StaffName,
+                    staff.StaffPosition,
+                    staff.StaffEmail,
+                    //staff.StaffDateOfBirth?.ToShortDateString() ?? "",
+                    //staff.StaffAddress ?? "",
+                    null,
+                    null
                 );
             }
-
-            */
-
         }
-
     }
-
 }

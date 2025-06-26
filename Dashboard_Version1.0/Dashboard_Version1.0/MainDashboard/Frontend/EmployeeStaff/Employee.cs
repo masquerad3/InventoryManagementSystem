@@ -1,5 +1,7 @@
-﻿using MainDashboard.Backend.Logics.Inventory.Reload;
+﻿using MainDashboard.Backend.Logics.EmployeeStaffs.Reload;
+using MainDashboard.Backend.Logics.Inventory.Reload;
 using MainDashboard.Backend.Queries.ProductsCrud;
+using MainDashboard.Backend.Queries.StaffCrud;
 using MainDashboard.Frontend.EmployeeStaff;
 using System;
 using System.Collections.Generic;
@@ -20,15 +22,14 @@ namespace MainDashboard
         public Employee()
         {
             InitializeComponent();
+            ReloadEmployeeStaffs.LoadEmployeeStaffData(EmployeeStaffGridView);
+            this.Load += Employee_Load;
+        }
 
-            /*
-
-            // CALL READ HERE
-
-            ReloadProducts.LoadProductsData(InventoryGridView);
-
-            */
-
+        // Add this method to match the one referenced in Designer.cs
+        private void Employee_Load(object sender, EventArgs e)
+        {
+            ReloadEmployeeStaffs.LoadEmployeeStaffData(EmployeeStaffGridView);
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
@@ -49,84 +50,49 @@ namespace MainDashboard
 
             string clickedColumnName = EmployeeStaffGridView.Columns[e.ColumnIndex].Name;
             DataGridViewRow selectedRow = EmployeeStaffGridView.Rows[e.RowIndex];
-            string employeeName = selectedRow.Cells["EmployeeName"].Value?.ToString()?.Trim() ?? "";
 
-            /*
-            
-            // DO SOMETHING SIMILAR
-            
-            var productRead = new ProductRead();
-            int? productId = productRead.GetProductIDByName(employeeName );
-            
-            //
+            // Get staff ID and name from the selected row
+            int staffId = Convert.ToInt32(selectedRow.Cells["StaffID"].Value);
+            string staffName = selectedRow.Cells["EmployeeName"].Value?.ToString()?.Trim() ?? "";
 
             if (clickedColumnName == "Edit")
             {
-                if (productId != null)
-                {
-                    var editEmployeeForm = new ManageEmployeeStaff("Edit", EmployeeStaffGridView, empId.Value, "admin");
-                    editEmployeeForm.Show();
-
-                }
-                else
-                {
-                    MessageBox.Show("Employee not found.");
-                }
-
+                var editEmployeeForm = new ManageEmployeeStaff("Edit", EmployeeStaffGridView, staffId, "admin");
+                editEmployeeForm.Show();
             }
             else if (clickedColumnName == "Delete")
             {
-                if (productId != null)
-                {
-                    // Confirmation message box with item ID and name
-                    DialogResult confirmResult = MessageBox.Show(
-                        $"Are you sure you want to delete this account?\n\n   Employee ID : {empId}\n   Employee Name : {productName}",
-                        "Confirm Deletion",
-                        MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Question
-                    );
+                // Confirmation message box with staff ID and name
+                DialogResult confirmResult = MessageBox.Show(
+                    $"Are you sure you want to delete this account?\n\n   Employee ID: {staffId}\n   Employee Name: {staffName}",
+                    "Confirm Deletion",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
 
-                    if (confirmResult == DialogResult.Yes)
+                if (confirmResult == DialogResult.Yes)
+                {
+                    var deleteHandler = new StaffDelete();
+                    bool deletingStaffSuccess = deleteHandler.DeleteStaffByID(staffId);
+
+                    if (deletingStaffSuccess)
                     {
-                        /*
-                        
-                        DO SOMETHING SIMILAR BUT FOR EMPLOYEE STAFF
+                        MessageBox.Show("Successfully deleted the employee.", "Deletion Window",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        ProductDelete deleteHandler = new ProductDelete();
-                        bool deletingProductSuccess = deleteHandler.DeleteProductByID(productId);
-
-                        if (deletingProductSuccess)
+                        // --- Reload DataGridView with employee data ---
+                        if (EmployeeStaffGridView != null)
                         {
-                            MessageBox.Show("Successfully deleted the item.", "Deletion Window", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            // --- Reload DataGridView ---
-                            if (EmployeeStaffGridView != null)
-                            {
-                                ReloadProducts.LoadProductsData(EmployeeStaffGridView);
-                            }
+                            ReloadEmployeeStaffs.LoadEmployeeStaffData(EmployeeStaffGridView);
                         }
-                        else
-                        {
-                            MessageBox.Show("Failed to delete the item. Check Error Logs.", "Deletion Window", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-
-                        
-
-        
-
-    
-                else
-                {
-                    MessageBox.Show("Employee not found.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete the employee. Check Error Logs.",
+                            "Deletion Window", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-
-
-
             }
-            */
-
         }
-
-
     }
 }

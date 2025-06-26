@@ -57,6 +57,13 @@ namespace Login_Version1._0
                 return;
             }
 
+            // Add password length validation matching the employee creation requirement
+            if (PasswordTextBox1.Content.Length < 6)
+            {
+                MessageBox.Show("Password must be at least 6 characters long.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // Validate email format
             string email = EmailTextBox1.Content.Trim();
             if (!IsValidEmail(email))

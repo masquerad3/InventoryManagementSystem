@@ -35,10 +35,10 @@
             NotificationIcon = new CuoreUI.Controls.cuiPictureBox();
             cuiPanel1 = new CuoreUI.Controls.cuiPanel();
             cuiButton2 = new CuoreUI.Controls.cuiButton();
+            AddBtn = new CuoreUI.Controls.cuiButton();
             cuiLabel1 = new CuoreUI.Controls.cuiLabel();
             FilterBtn = new CuoreUI.Controls.cuiButton();
             TableSearchBar = new CuoreUI.Controls.cuiTextBox();
-            AddBtn = new CuoreUI.Controls.cuiButton();
             EmployeeStaffGridView = new DataGridView();
             EmployeeName = new DataGridViewTextBoxColumn();
             EmployeePosition = new DataGridViewTextBoxColumn();
@@ -197,6 +197,46 @@
             cuiButton2.TextAlignment = StringAlignment.Center;
             cuiButton2.TextOffset = new Point(0, 0);
             // 
+            // AddBtn
+            // 
+            AddBtn.BackColor = Color.Transparent;
+            AddBtn.CheckButton = false;
+            AddBtn.Checked = false;
+            AddBtn.CheckedBackground = Color.FromArgb(255, 106, 0);
+            AddBtn.CheckedForeColor = Color.White;
+            AddBtn.CheckedImageTint = Color.White;
+            AddBtn.CheckedOutline = Color.FromArgb(255, 106, 0);
+            AddBtn.Content = "Add Employee";
+            AddBtn.DialogResult = DialogResult.None;
+            AddBtn.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AddBtn.ForeColor = Color.White;
+            AddBtn.HoverBackground = Color.SteelBlue;
+            AddBtn.HoveredImageTint = Color.White;
+            AddBtn.HoverForeColor = Color.White;
+            AddBtn.HoverOutline = Color.SteelBlue;
+            AddBtn.Image = Properties.Resources.user_plus;
+            AddBtn.ImageAutoCenter = true;
+            AddBtn.ImageExpand = new Point(3, 3);
+            AddBtn.ImageOffset = new Point(-7, 0);
+            AddBtn.Location = new Point(495, 8);
+            AddBtn.Margin = new Padding(3, 4, 3, 4);
+            AddBtn.Name = "AddBtn";
+            AddBtn.NormalBackground = Color.SteelBlue;
+            AddBtn.NormalForeColor = Color.White;
+            AddBtn.NormalImageTint = Color.White;
+            AddBtn.NormalOutline = Color.Transparent;
+            AddBtn.OutlineThickness = 1F;
+            AddBtn.PressedBackground = Color.FromArgb(49, 93, 130);
+            AddBtn.PressedForeColor = Color.White;
+            AddBtn.PressedImageTint = Color.White;
+            AddBtn.PressedOutline = Color.FromArgb(33, 64, 89);
+            AddBtn.Rounding = new Padding(8);
+            AddBtn.Size = new Size(172, 45);
+            AddBtn.TabIndex = 17;
+            AddBtn.TextAlignment = StringAlignment.Center;
+            AddBtn.TextOffset = new Point(0, 0);
+            AddBtn.Click += AddBtn_Click;
+            // 
             // cuiLabel1
             // 
             cuiLabel1.BackColor = Color.Transparent;
@@ -278,46 +318,6 @@
             TableSearchBar.TabIndex = 13;
             TableSearchBar.TextOffset = new Size(0, 0);
             TableSearchBar.UnderlinedStyle = true;
-            // 
-            // AddBtn
-            // 
-            AddBtn.BackColor = Color.Transparent;
-            AddBtn.CheckButton = false;
-            AddBtn.Checked = false;
-            AddBtn.CheckedBackground = Color.FromArgb(255, 106, 0);
-            AddBtn.CheckedForeColor = Color.White;
-            AddBtn.CheckedImageTint = Color.White;
-            AddBtn.CheckedOutline = Color.FromArgb(255, 106, 0);
-            AddBtn.Content = "Add Employee";
-            AddBtn.DialogResult = DialogResult.None;
-            AddBtn.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            AddBtn.ForeColor = Color.White;
-            AddBtn.HoverBackground = Color.SteelBlue;
-            AddBtn.HoveredImageTint = Color.White;
-            AddBtn.HoverForeColor = Color.White;
-            AddBtn.HoverOutline = Color.SteelBlue;
-            AddBtn.Image = Properties.Resources.user_plus;
-            AddBtn.ImageAutoCenter = true;
-            AddBtn.ImageExpand = new Point(3, 3);
-            AddBtn.ImageOffset = new Point(-7, 0);
-            AddBtn.Location = new Point(495, 8);
-            AddBtn.Margin = new Padding(3, 4, 3, 4);
-            AddBtn.Name = "AddBtn";
-            AddBtn.NormalBackground = Color.SteelBlue;
-            AddBtn.NormalForeColor = Color.White;
-            AddBtn.NormalImageTint = Color.White;
-            AddBtn.NormalOutline = Color.Transparent;
-            AddBtn.OutlineThickness = 1F;
-            AddBtn.PressedBackground = Color.FromArgb(49, 93, 130);
-            AddBtn.PressedForeColor = Color.White;
-            AddBtn.PressedImageTint = Color.White;
-            AddBtn.PressedOutline = Color.FromArgb(33, 64, 89);
-            AddBtn.Rounding = new Padding(8);
-            AddBtn.Size = new Size(172, 45);
-            AddBtn.TabIndex = 17;
-            AddBtn.TextAlignment = StringAlignment.Center;
-            AddBtn.TextOffset = new Point(0, 0);
-            AddBtn.Click += AddBtn_Click;
             // 
             // EmployeeStaffGridView
             // 

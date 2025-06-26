@@ -12,7 +12,7 @@ CREATE TABLE Staff (
     StaffName NVARCHAR(100) NOT NULL,
     --removed staff position/roles
     --add admin edit, employee view
-    StaffPosition NVARCHAR(50) NOT NULL,
+    StaffPosition NVARCHAR(50) NOT NULL DEFAULT "Regular",
     StaffEmail NVARCHAR(50) NOT NULL,
     --removed password
     StaffDateOfBirth DATE NULL,

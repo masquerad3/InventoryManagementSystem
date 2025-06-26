@@ -179,6 +179,10 @@ namespace MainDashboard.Frontend.EmployeeStaff
             this.Close();
         }
 
+        private void EmpHeader_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

@@ -455,7 +455,7 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
                         try
                         {
                             // 1. Delete existing products for this batch
-                            string deleteQuery = "DELETE FROM BatchOrderProducts WHERE BatchOrdersID = @BatchOrderID";
+                            string deleteQuery = "DELETE FROM BatchOrderProducts WHERE BatchOrderID = @BatchOrderID";
                             SqlCommand deleteCmd = new SqlCommand(deleteQuery, conn, transaction);
                             deleteCmd.Parameters.AddWithValue("@BatchOrderID", batchOrderId);
                             deleteCmd.ExecuteNonQuery();
@@ -572,7 +572,7 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
                             // Delete products first
                             try
                             {
-                                string deleteProductsQuery = "DELETE FROM BatchOrderProducts WHERE BatchOrdersID = @BatchOrderID";
+                                string deleteProductsQuery = "DELETE FROM BatchOrderProducts WHERE BatchOrderID = @BatchOrderID";
                                 SqlCommand deleteProductsCmd = new SqlCommand(deleteProductsQuery, conn, transaction);
                                 deleteProductsCmd.Parameters.AddWithValue("@BatchOrderID", batchOrderId);
                                 deleteProductsCmd.ExecuteNonQuery();

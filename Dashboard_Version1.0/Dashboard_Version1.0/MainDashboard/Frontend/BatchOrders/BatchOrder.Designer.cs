@@ -328,7 +328,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(686, 1200);
+            ClientSize = new Size(686, 1064);
             Controls.Add(cuiButton1);
             Controls.Add(Received);
             Controls.Add(CancelBtn);

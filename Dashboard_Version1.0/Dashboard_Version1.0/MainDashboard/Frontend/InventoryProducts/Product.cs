@@ -146,7 +146,7 @@ namespace MainDashboard
             SupplierIDTextbox.Content = product.SupplierID?.Trim() ?? "";
 
             // --- INVENTORY ---
-            QuantityTextbox.Content = product.ProductQuantity.Trim();
+            QuantityTextbox.Content = product.ProductQuantity.ToString("N2");
             ConditionCB.SelectedItem = product.Manufacturer.Trim();
 
             // --- PRICING & DELIVERY ---

@@ -46,10 +46,13 @@ namespace MainDashboard.Backend.Logics.BatchOrders.Updating
             // end of validations
 
             // --- Call update logic ---
-            var updateHandler = new UpdateBatchOrders();
-            bool updateSuccess = updateHandler.UpdateBatchOrderProducts(batchOrderId, selectedProducts);
+            var updateHandler1 = new UpdateBatchOrders();
+            bool updateSuccess1 = updateHandler1.UpdateBatchOrder(batchOrderId, batchOrderName, batchOrderDescription);
 
-            if (updateSuccess)
+            var updateHandler2 = new UpdateBatchOrders();
+            bool updateSuccess2 = updateHandler2.UpdateBatchOrderProducts(batchOrderId, selectedProducts);
+
+            if (updateSuccess1 && updateSuccess2)
             {
                 MessageBox.Show("Batch order updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

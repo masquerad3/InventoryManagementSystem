@@ -364,7 +364,7 @@
             // 
             Edit.Description = "Edit";
             Edit.HeaderText = "Edit";
-            Edit.Image = Properties.Resources.pencil;
+            Edit.Image = Properties.Resources.pencil1;
             Edit.MinimumWidth = 6;
             Edit.Name = "Edit";
             Edit.Resizable = DataGridViewTriState.False;
@@ -373,7 +373,7 @@
             // 
             Delete.Description = "Delete";
             Delete.HeaderText = "Delete";
-            Delete.Image = Properties.Resources.trash_2;
+            Delete.Image = Properties.Resources.trash_21;
             Delete.MinimumWidth = 6;
             Delete.Name = "Delete";
             Delete.Resizable = DataGridViewTriState.False;

@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             BatchOrdersGridView = new DataGridView();
-            BatchOrderName = new DataGridViewTextBoxColumn();
-            ProductName = new DataGridViewTextBoxColumn();
-            BatchOrderStatus = new DataGridViewTextBoxColumn();
-            DateRequested = new DataGridViewTextBoxColumn();
-            DateReceived = new DataGridViewTextBoxColumn();
-            Edit = new DataGridViewImageColumn();
-            Delete = new DataGridViewImageColumn();
             cuiPanel6 = new CuoreUI.Controls.cuiPanel();
             DashboardHeader = new CuoreUI.Controls.cuiLabel();
             SearchBar = new CuoreUI.Controls.cuiTextBox();
@@ -46,6 +39,13 @@
             FilterBtn = new CuoreUI.Controls.cuiButton();
             AddBtn = new CuoreUI.Controls.cuiButton();
             TableSearchBar = new CuoreUI.Controls.cuiTextBox();
+            BatchOrderName = new DataGridViewTextBoxColumn();
+            ProductName = new DataGridViewTextBoxColumn();
+            BatchOrderStatus = new DataGridViewTextBoxColumn();
+            DateRequested = new DataGridViewTextBoxColumn();
+            DateReceived = new DataGridViewTextBoxColumn();
+            Edit = new DataGridViewImageColumn();
+            Delete = new DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)BatchOrdersGridView).BeginInit();
             cuiPanel6.SuspendLayout();
             NotifIconBG.SuspendLayout();
@@ -72,50 +72,6 @@
             BatchOrdersGridView.Size = new Size(1086, 980);
             BatchOrdersGridView.TabIndex = 0;
             BatchOrdersGridView.CellContentClick += BatchOrdersGridView_CellContentClick;
-            // 
-            // BatchOrderName
-            // 
-            BatchOrderName.HeaderText = "Batch Name";
-            BatchOrderName.MinimumWidth = 6;
-            BatchOrderName.Name = "BatchOrderName";
-            // 
-            // ProductName
-            // 
-            ProductName.HeaderText = "Product Name";
-            ProductName.MinimumWidth = 6;
-            ProductName.Name = "ProductName";
-            // 
-            // BatchOrderStatus
-            // 
-            BatchOrderStatus.HeaderText = "Order Status";
-            BatchOrderStatus.MinimumWidth = 6;
-            BatchOrderStatus.Name = "BatchOrderStatus";
-            // 
-            // DateRequested
-            // 
-            DateRequested.HeaderText = "Date Requested";
-            DateRequested.MinimumWidth = 6;
-            DateRequested.Name = "DateRequested";
-            // 
-            // DateReceived
-            // 
-            DateReceived.HeaderText = "Date Received";
-            DateReceived.MinimumWidth = 6;
-            DateReceived.Name = "DateReceived";
-            // 
-            // Edit
-            // 
-            Edit.HeaderText = "Edit";
-            Edit.Image = Properties.Resources.pencil;
-            Edit.MinimumWidth = 6;
-            Edit.Name = "Edit";
-            // 
-            // Delete
-            // 
-            Delete.HeaderText = "Delete";
-            Delete.Image = Properties.Resources.trash_2;
-            Delete.MinimumWidth = 6;
-            Delete.Name = "Delete";
             // 
             // cuiPanel6
             // 
@@ -348,6 +304,50 @@
             TableSearchBar.TabIndex = 13;
             TableSearchBar.TextOffset = new Size(0, 0);
             TableSearchBar.UnderlinedStyle = true;
+            // 
+            // BatchOrderName
+            // 
+            BatchOrderName.HeaderText = "Batch Name";
+            BatchOrderName.MinimumWidth = 6;
+            BatchOrderName.Name = "BatchOrderName";
+            // 
+            // ProductName
+            // 
+            ProductName.HeaderText = "Product Name";
+            ProductName.MinimumWidth = 6;
+            ProductName.Name = "ProductName";
+            // 
+            // BatchOrderStatus
+            // 
+            BatchOrderStatus.HeaderText = "Order Status";
+            BatchOrderStatus.MinimumWidth = 6;
+            BatchOrderStatus.Name = "BatchOrderStatus";
+            // 
+            // DateRequested
+            // 
+            DateRequested.HeaderText = "Date Requested";
+            DateRequested.MinimumWidth = 6;
+            DateRequested.Name = "DateRequested";
+            // 
+            // DateReceived
+            // 
+            DateReceived.HeaderText = "Date Received";
+            DateReceived.MinimumWidth = 6;
+            DateReceived.Name = "DateReceived";
+            // 
+            // Edit
+            // 
+            Edit.HeaderText = "Edit";
+            Edit.Image = Properties.Resources.pencil1;
+            Edit.MinimumWidth = 6;
+            Edit.Name = "Edit";
+            // 
+            // Delete
+            // 
+            Delete.HeaderText = "Delete";
+            Delete.Image = Properties.Resources.trash_21;
+            Delete.MinimumWidth = 6;
+            Delete.Name = "Delete";
             // 
             // Batch
             // 

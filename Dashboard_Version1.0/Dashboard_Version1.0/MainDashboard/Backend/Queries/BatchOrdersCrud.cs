@@ -579,7 +579,7 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
                             }
                             catch (Exception ex)
                             {
-                                MessageBox.Show("Error deleting related products:\n" + ex.Message, "Delete Products Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Error deleting related products:\n" + ex.Message, "Deletion of Order Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 transaction.Rollback();
                                 return false;
                             }

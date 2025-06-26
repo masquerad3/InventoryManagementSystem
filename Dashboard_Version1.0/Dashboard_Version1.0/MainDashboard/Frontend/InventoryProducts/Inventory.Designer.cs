@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            //DataGridView InventoryGridView;
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            InventoryGridView = new DataGridView();
             cuiPanel6 = new CuoreUI.Controls.cuiPanel();
             InventoryHeader = new CuoreUI.Controls.cuiLabel();
             SearchBar = new CuoreUI.Controls.cuiTextBox();
@@ -50,12 +50,34 @@
             View = new DataGridViewImageColumn();
             Edit = new DataGridViewImageColumn();
             Delete = new DataGridViewImageColumn();
-            InventoryGridView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)InventoryGridView).BeginInit();
             cuiPanel6.SuspendLayout();
             NotifIconBG.SuspendLayout();
             cuiPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)InventoryGridView).BeginInit();
             SuspendLayout();
+            // 
+            // InventoryGridView
+            // 
+            InventoryGridView.AllowUserToAddRows = false;
+            InventoryGridView.AllowUserToDeleteRows = false;
+            InventoryGridView.AllowUserToOrderColumns = true;
+            InventoryGridView.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            InventoryGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            InventoryGridView.BackgroundColor = SystemColors.ControlLight;
+            InventoryGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            InventoryGridView.Columns.AddRange(new DataGridViewColumn[] { ProductName, ItemCategory, ItemQuantity, ItemCondition, ItemPrice, View, Edit, Delete });
+            InventoryGridView.EditMode = DataGridViewEditMode.EditProgrammatically;
+            InventoryGridView.Location = new Point(28, 79);
+            InventoryGridView.Margin = new Padding(3, 4, 3, 4);
+            InventoryGridView.Name = "InventoryGridView";
+            InventoryGridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            InventoryGridView.RowHeadersVisible = false;
+            InventoryGridView.RowHeadersWidth = 51;
+            InventoryGridView.RowTemplate.Height = 30;
+            InventoryGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            InventoryGridView.Size = new Size(1086, 980);
+            InventoryGridView.TabIndex = 29;
+            InventoryGridView.CellContentClick += InventoryGridView_CellContentClick;
             // 
             // cuiPanel6
             // 
@@ -274,69 +296,39 @@
             TableSearchBar.TextOffset = new Size(0, 0);
             TableSearchBar.UnderlinedStyle = true;
             // 
-            // InventoryGridView
-            // 
-            InventoryGridView.AllowUserToAddRows = false;
-            InventoryGridView.AllowUserToDeleteRows = false;
-            InventoryGridView.AllowUserToResizeColumns = false;
-            InventoryGridView.AllowUserToResizeRows = false;
-            InventoryGridView.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            InventoryGridView.BackgroundColor = SystemColors.ControlLight;
-            InventoryGridView.ColumnHeadersHeight = 29;
-            InventoryGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            InventoryGridView.Columns.AddRange(new DataGridViewColumn[] { ProductName, ItemCategory, ItemQuantity, ItemCondition, ItemPrice, View, Edit, Delete });
-            InventoryGridView.EditMode = DataGridViewEditMode.EditProgrammatically;
-            InventoryGridView.Location = new Point(28, 79);
-            InventoryGridView.Margin = new Padding(3, 4, 3, 4);
-            InventoryGridView.Name = "InventoryGridView";
-            InventoryGridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            InventoryGridView.RowHeadersVisible = false;
-            InventoryGridView.RowHeadersWidth = 51;
-            InventoryGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            InventoryGridView.RowTemplate.Height = 30;
-            InventoryGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            InventoryGridView.Size = new Size(1086, 980);
-            InventoryGridView.TabIndex = 29;
-            InventoryGridView.CellContentClick += InventoryGridView_CellContentClick;
-            // 
             // ProductName
             // 
             ProductName.HeaderText = "Product Name";
             ProductName.MinimumWidth = 6;
             ProductName.Name = "ProductName";
-            ProductName.Width = 200;
             // 
             // ItemCategory
             // 
             ItemCategory.HeaderText = "Category";
             ItemCategory.MinimumWidth = 6;
             ItemCategory.Name = "ItemCategory";
-            ItemCategory.Width = 200;
             // 
             // ItemQuantity
             // 
             ItemQuantity.HeaderText = "Quantity";
             ItemQuantity.MinimumWidth = 6;
             ItemQuantity.Name = "ItemQuantity";
-            ItemQuantity.Width = 155;
             // 
             // ItemCondition
             // 
             ItemCondition.HeaderText = "Condition";
             ItemCondition.MinimumWidth = 6;
             ItemCondition.Name = "ItemCondition";
-            ItemCondition.Width = 200;
             // 
             // ItemPrice
             // 
             ItemPrice.HeaderText = "Price";
             ItemPrice.MinimumWidth = 6;
             ItemPrice.Name = "ItemPrice";
-            ItemPrice.Width = 155;
             // 
             // View
             // 
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.NullValue = resources.GetObject("dataGridViewCellStyle1.NullValue");
             View.DefaultCellStyle = dataGridViewCellStyle1;
             View.Description = "View";
@@ -345,11 +337,10 @@
             View.MinimumWidth = 6;
             View.Name = "View";
             View.Resizable = DataGridViewTriState.False;
-            View.Width = 140;
             // 
             // Edit
             // 
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.NullValue = resources.GetObject("dataGridViewCellStyle2.NullValue");
             Edit.DefaultCellStyle = dataGridViewCellStyle2;
             Edit.Description = "Edit";
@@ -358,11 +349,10 @@
             Edit.MinimumWidth = 6;
             Edit.Name = "Edit";
             Edit.Resizable = DataGridViewTriState.False;
-            Edit.Width = 136;
             // 
             // Delete
             // 
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.NullValue = resources.GetObject("dataGridViewCellStyle3.NullValue");
             Delete.DefaultCellStyle = dataGridViewCellStyle3;
             Delete.Description = "Delete";
@@ -371,7 +361,6 @@
             Delete.MinimumWidth = 6;
             Delete.Name = "Delete";
             Delete.Resizable = DataGridViewTriState.False;
-            Delete.Width = 135;
             // 
             // Inventory
             // 
@@ -384,10 +373,10 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "Inventory";
             Size = new Size(1211, 1467);
+            ((System.ComponentModel.ISupportInitialize)InventoryGridView).EndInit();
             cuiPanel6.ResumeLayout(false);
             NotifIconBG.ResumeLayout(false);
             cuiPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)InventoryGridView).EndInit();
             ResumeLayout(false);
         }
 

@@ -1,5 +1,7 @@
 ﻿using MainDashboard.Backend.Logics.Inventory.Reload;
 using MainDashboard.Backend.Queries.ProductsCrud;
+using MainDashboard.Frontend;   // calls the deletion window
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,13 +17,14 @@ namespace MainDashboard
     public partial class Inventory : UserControl
     {
         private AddItemForm addItemForm = null!; // Declare the AddItemForm field as null
+        private DeletionTemplate deletionTemplate = null!;
         private FilterInventory filterInventoryForm = null!; // Declare the FilterInventory field as null
 
         public Inventory()
         {
             InitializeComponent();
 
-            editGridViewColumns();
+            //editGridViewColumns();
 
             // load the data to the table
             ReloadProducts.LoadProductsData(InventoryGridView);
@@ -81,7 +84,6 @@ namespace MainDashboard
                     MessageBox.Show("Product not found.");
                 }
 
-
             }
             else if (clickedColumnName == "Edit")
             {
@@ -101,43 +103,18 @@ namespace MainDashboard
             {
                 if (productId != null)
                 {
-                    // Confirmation message box with item ID and name
-                    DialogResult confirmResult = MessageBox.Show(
-                        $"Are you sure you want to delete this item?\n\n   Product ID : {productId}\n   Product Name : {productName}",
-                        "Confirm Deletion",
-                        MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Question
+                    var confirmForm = new DeletionTemplate(
+                        "Product",
+                        productId.Value,
+                        productName,
+                        InventoryGridView
                     );
-
-                    if (confirmResult == DialogResult.Yes)
-                    {
-                        ProductDelete deleteHandler = new ProductDelete();
-                        bool deletingProductSuccess = deleteHandler.DeleteProductByID(productId);
-
-                        if (deletingProductSuccess)
-                        {
-                            MessageBox.Show("Successfully deleted the item.", "Deletion Window", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            // --- Reload DataGridView ---
-                            if (InventoryGridView != null)
-                            {
-                                ReloadProducts.LoadProductsData(InventoryGridView);
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Failed to delete the item. Check Error Logs.", "Deletion Window", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-
+                    confirmForm.ShowDialog();
                 }
                 else
                 {
                     MessageBox.Show("Product not found.");
                 }
-
-                
-
             }
 
         }   //end of data cell rid view cell content click event

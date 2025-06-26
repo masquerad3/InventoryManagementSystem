@@ -16,7 +16,7 @@ namespace MainDashboard.Backend.Logics.EmployeeStaffs.Reload
 
             if (dataGridView == null)
             {
-                MessageBox.Show("Error: GridView is not initialized.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: EmployeeGridView is not initialized.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

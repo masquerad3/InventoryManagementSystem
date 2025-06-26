@@ -104,5 +104,10 @@ namespace MainDashboard
         {
             employee.BringToFront(); // Bring the Employee control to the front
         }
+
+        private void OrdersBtn_Click(object sender, EventArgs e)
+        {
+            batch.BringToFront();
+        }
     }
 }

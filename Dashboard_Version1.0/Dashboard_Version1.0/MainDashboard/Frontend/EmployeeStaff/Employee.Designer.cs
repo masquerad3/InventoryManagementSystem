@@ -58,12 +58,13 @@
             cuiPanel6.Controls.Add(NotifIconBG);
             cuiPanel6.Dock = DockStyle.Top;
             cuiPanel6.Location = new Point(0, 0);
+            cuiPanel6.Margin = new Padding(3, 4, 3, 4);
             cuiPanel6.Name = "cuiPanel6";
             cuiPanel6.OutlineThickness = 1F;
             cuiPanel6.PanelColor = Color.AliceBlue;
             cuiPanel6.PanelOutlineColor = Color.Transparent;
             cuiPanel6.Rounding = new Padding(8);
-            cuiPanel6.Size = new Size(1211, 61);
+            cuiPanel6.Size = new Size(1384, 81);
             cuiPanel6.TabIndex = 9;
             // 
             // DashboardHeader
@@ -72,10 +73,10 @@
             DashboardHeader.Content = "Employee";
             DashboardHeader.Font = new Font("Leelawadee UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             DashboardHeader.HorizontalAlignment = StringAlignment.Near;
-            DashboardHeader.Location = new Point(22, 3);
-            DashboardHeader.Margin = new Padding(4, 3, 4, 3);
+            DashboardHeader.Location = new Point(25, 4);
+            DashboardHeader.Margin = new Padding(5, 4, 5, 4);
             DashboardHeader.Name = "DashboardHeader";
-            DashboardHeader.Size = new Size(245, 54);
+            DashboardHeader.Size = new Size(280, 72);
             DashboardHeader.TabIndex = 1;
             DashboardHeader.VerticalAlignment = StringAlignment.Center;
             // 
@@ -92,18 +93,18 @@
             SearchBar.Image = null;
             SearchBar.ImageExpand = new Point(5, 5);
             SearchBar.ImageOffset = new Point(0, 0);
-            SearchBar.Location = new Point(686, 13);
-            SearchBar.Margin = new Padding(5);
+            SearchBar.Location = new Point(784, 17);
+            SearchBar.Margin = new Padding(6, 7, 6, 7);
             SearchBar.Multiline = false;
             SearchBar.Name = "SearchBar";
             SearchBar.NormalImageTint = Color.Transparent;
             SearchBar.OutlineColor = Color.DarkGray;
-            SearchBar.Padding = new Padding(18, 11, 18, 0);
+            SearchBar.Padding = new Padding(22, 15, 22, 0);
             SearchBar.PasswordChar = false;
             SearchBar.PlaceholderColor = SystemColors.WindowText;
             SearchBar.PlaceholderText = "Search";
             SearchBar.Rounding = new Padding(8);
-            SearchBar.Size = new Size(371, 40);
+            SearchBar.Size = new Size(424, 53);
             SearchBar.TabIndex = 3;
             SearchBar.TextOffset = new Size(0, 0);
             SearchBar.UnderlinedStyle = true;
@@ -112,7 +113,8 @@
             // 
             NotifIconBG.Controls.Add(NotificationIcon);
             NotifIconBG.GradientAngle = 90F;
-            NotifIconBG.Location = new Point(990, 10);
+            NotifIconBG.Location = new Point(1131, 13);
+            NotifIconBG.Margin = new Padding(3, 4, 3, 4);
             NotifIconBG.Name = "NotifIconBG";
             NotifIconBG.OutlineThickness = 1F;
             NotifIconBG.PanelColor1 = Color.White;
@@ -120,7 +122,7 @@
             NotifIconBG.PanelOutlineColor1 = Color.FromArgb(224, 224, 224);
             NotifIconBG.PanelOutlineColor2 = Color.Silver;
             NotifIconBG.Rounding = new Padding(8);
-            NotifIconBG.Size = new Size(35, 35);
+            NotifIconBG.Size = new Size(40, 47);
             NotifIconBG.TabIndex = 12;
             // 
             // NotificationIcon
@@ -130,14 +132,14 @@
             NotificationIcon.BackgroundImageLayout = ImageLayout.Zoom;
             NotificationIcon.Content = null;
             NotificationIcon.ImageTint = Color.White;
-            NotificationIcon.Location = new Point(4, 3);
-            NotificationIcon.Margin = new Padding(4, 3, 4, 3);
+            NotificationIcon.Location = new Point(5, 4);
+            NotificationIcon.Margin = new Padding(5, 4, 5, 4);
             NotificationIcon.Name = "NotificationIcon";
             NotificationIcon.OutlineThickness = 1F;
             NotificationIcon.PanelOutlineColor = Color.Empty;
             NotificationIcon.Rotation = 0;
             NotificationIcon.Rounding = new Padding(8);
-            NotificationIcon.Size = new Size(28, 28);
+            NotificationIcon.Size = new Size(32, 37);
             NotificationIcon.TabIndex = 0;
             // 
             // cuiPanel1
@@ -148,14 +150,14 @@
             cuiPanel1.Controls.Add(FilterBtn);
             cuiPanel1.Controls.Add(TableSearchBar);
             cuiPanel1.Controls.Add(EmployeeStaffGridView);
-            cuiPanel1.Location = new Point(34, 133);
-            cuiPanel1.Margin = new Padding(3, 4, 3, 4);
+            cuiPanel1.Location = new Point(39, 177);
+            cuiPanel1.Margin = new Padding(3, 5, 3, 5);
             cuiPanel1.Name = "cuiPanel1";
             cuiPanel1.OutlineThickness = 1F;
             cuiPanel1.PanelColor = Color.White;
             cuiPanel1.PanelOutlineColor = Color.FromArgb(224, 224, 224);
             cuiPanel1.Rounding = new Padding(8);
-            cuiPanel1.Size = new Size(1000, 900);
+            cuiPanel1.Size = new Size(1143, 1200);
             cuiPanel1.TabIndex = 11;
             // 
             // cuiButton2
@@ -180,7 +182,8 @@
             cuiButton2.ImageAutoCenter = true;
             cuiButton2.ImageExpand = new Point(3, 3);
             cuiButton2.ImageOffset = new Point(-7, 0);
-            cuiButton2.Location = new Point(673, 8);
+            cuiButton2.Location = new Point(769, 11);
+            cuiButton2.Margin = new Padding(3, 4, 3, 4);
             cuiButton2.Name = "cuiButton2";
             cuiButton2.NormalBackground = Color.SteelBlue;
             cuiButton2.NormalForeColor = Color.White;
@@ -192,7 +195,7 @@
             cuiButton2.PressedImageTint = Color.White;
             cuiButton2.PressedOutline = Color.FromArgb(33, 64, 89);
             cuiButton2.Rounding = new Padding(8);
-            cuiButton2.Size = new Size(191, 45);
+            cuiButton2.Size = new Size(218, 60);
             cuiButton2.TabIndex = 18;
             cuiButton2.TextAlignment = StringAlignment.Center;
             cuiButton2.TextOffset = new Point(0, 0);
@@ -218,8 +221,8 @@
             AddBtn.ImageAutoCenter = true;
             AddBtn.ImageExpand = new Point(3, 3);
             AddBtn.ImageOffset = new Point(-7, 0);
-            AddBtn.Location = new Point(495, 8);
-            AddBtn.Margin = new Padding(3, 4, 3, 4);
+            AddBtn.Location = new Point(566, 11);
+            AddBtn.Margin = new Padding(3, 5, 3, 5);
             AddBtn.Name = "AddBtn";
             AddBtn.NormalBackground = Color.SteelBlue;
             AddBtn.NormalForeColor = Color.White;
@@ -231,7 +234,7 @@
             AddBtn.PressedImageTint = Color.White;
             AddBtn.PressedOutline = Color.FromArgb(33, 64, 89);
             AddBtn.Rounding = new Padding(8);
-            AddBtn.Size = new Size(172, 45);
+            AddBtn.Size = new Size(197, 60);
             AddBtn.TabIndex = 17;
             AddBtn.TextAlignment = StringAlignment.Center;
             AddBtn.TextOffset = new Point(0, 0);
@@ -243,10 +246,10 @@
             cuiLabel1.Content = "Showing";
             cuiLabel1.Font = new Font("Leelawadee UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel1.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel1.Location = new Point(37, 836);
-            cuiLabel1.Margin = new Padding(4, 3, 4, 3);
+            cuiLabel1.Location = new Point(42, 1115);
+            cuiLabel1.Margin = new Padding(5, 4, 5, 4);
             cuiLabel1.Name = "cuiLabel1";
-            cuiLabel1.Size = new Size(57, 24);
+            cuiLabel1.Size = new Size(65, 32);
             cuiLabel1.TabIndex = 16;
             cuiLabel1.VerticalAlignment = StringAlignment.Center;
             // 
@@ -272,7 +275,8 @@
             FilterBtn.ImageAutoCenter = true;
             FilterBtn.ImageExpand = new Point(0, 0);
             FilterBtn.ImageOffset = new Point(-5, 0);
-            FilterBtn.Location = new Point(870, 8);
+            FilterBtn.Location = new Point(994, 11);
+            FilterBtn.Margin = new Padding(3, 4, 3, 4);
             FilterBtn.Name = "FilterBtn";
             FilterBtn.NormalBackground = Color.White;
             FilterBtn.NormalForeColor = Color.Black;
@@ -284,7 +288,7 @@
             FilterBtn.PressedImageTint = Color.White;
             FilterBtn.PressedOutline = Color.Black;
             FilterBtn.Rounding = new Padding(8);
-            FilterBtn.Size = new Size(105, 45);
+            FilterBtn.Size = new Size(120, 60);
             FilterBtn.TabIndex = 15;
             FilterBtn.TextAlignment = StringAlignment.Center;
             FilterBtn.TextOffset = new Point(0, 0);
@@ -303,33 +307,38 @@
             TableSearchBar.Image = null;
             TableSearchBar.ImageExpand = new Point(0, 0);
             TableSearchBar.ImageOffset = new Point(0, 0);
-            TableSearchBar.Location = new Point(29, 13);
-            TableSearchBar.Margin = new Padding(5);
+            TableSearchBar.Location = new Point(33, 17);
+            TableSearchBar.Margin = new Padding(6, 7, 6, 7);
             TableSearchBar.Multiline = false;
             TableSearchBar.Name = "TableSearchBar";
             TableSearchBar.NormalImageTint = Color.Transparent;
             TableSearchBar.OutlineColor = Color.Transparent;
-            TableSearchBar.Padding = new Padding(18, 11, 18, 0);
+            TableSearchBar.Padding = new Padding(22, 15, 22, 0);
             TableSearchBar.PasswordChar = false;
             TableSearchBar.PlaceholderColor = SystemColors.WindowText;
             TableSearchBar.PlaceholderText = "Search";
             TableSearchBar.Rounding = new Padding(8);
-            TableSearchBar.Size = new Size(371, 40);
+            TableSearchBar.Size = new Size(424, 53);
             TableSearchBar.TabIndex = 13;
             TableSearchBar.TextOffset = new Size(0, 0);
             TableSearchBar.UnderlinedStyle = true;
             // 
             // EmployeeStaffGridView
             // 
+            EmployeeStaffGridView.AllowUserToAddRows = false;
+            EmployeeStaffGridView.AllowUserToDeleteRows = false;
+            EmployeeStaffGridView.AllowUserToOrderColumns = true;
             EmployeeStaffGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             EmployeeStaffGridView.BackgroundColor = SystemColors.ControlLight;
             EmployeeStaffGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             EmployeeStaffGridView.Columns.AddRange(new DataGridViewColumn[] { EmployeeName, EmployeePosition, Email, Edit, Delete });
-            EmployeeStaffGridView.Location = new Point(29, 80);
-            EmployeeStaffGridView.Margin = new Padding(3, 4, 3, 4);
+            EmployeeStaffGridView.Location = new Point(33, 107);
+            EmployeeStaffGridView.Margin = new Padding(3, 5, 3, 5);
             EmployeeStaffGridView.Name = "EmployeeStaffGridView";
+            EmployeeStaffGridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            EmployeeStaffGridView.RowHeadersVisible = false;
             EmployeeStaffGridView.RowHeadersWidth = 51;
-            EmployeeStaffGridView.Size = new Size(946, 803);
+            EmployeeStaffGridView.Size = new Size(1081, 1071);
             EmployeeStaffGridView.TabIndex = 0;
             EmployeeStaffGridView.CellContentClick += EmployeeStaffGridView_CellContentClick;
             // 
@@ -353,27 +362,32 @@
             // 
             // Edit
             // 
+            Edit.Description = "Edit";
             Edit.HeaderText = "Edit";
             Edit.Image = Properties.Resources.pencil;
             Edit.MinimumWidth = 6;
             Edit.Name = "Edit";
+            Edit.Resizable = DataGridViewTriState.False;
             // 
             // Delete
             // 
+            Delete.Description = "Delete";
             Delete.HeaderText = "Delete";
             Delete.Image = Properties.Resources.trash_2;
             Delete.MinimumWidth = 6;
             Delete.Name = "Delete";
+            Delete.Resizable = DataGridViewTriState.False;
             // 
             // Employee
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             Controls.Add(cuiPanel1);
             Controls.Add(cuiPanel6);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Employee";
-            Size = new Size(1211, 1467);
+            Size = new Size(1384, 1956);
             Load += Employee_Load;
             cuiPanel6.ResumeLayout(false);
             NotifIconBG.ResumeLayout(false);

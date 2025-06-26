@@ -30,7 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             DeleteHeaderLabel = new CuoreUI.Controls.cuiLabel();
-            cuiLabel1 = new CuoreUI.Controls.cuiLabel();
+            DeleteSubHeaderLabel = new CuoreUI.Controls.cuiLabel();
             imageList1 = new ImageList(components);
             VariableIDLabel = new CuoreUI.Controls.cuiLabel();
             VariableNameLabel = new CuoreUI.Controls.cuiLabel();
@@ -48,22 +48,22 @@
             DeleteHeaderLabel.Location = new Point(24, 25);
             DeleteHeaderLabel.Margin = new Padding(5, 4, 5, 4);
             DeleteHeaderLabel.Name = "DeleteHeaderLabel";
-            DeleteHeaderLabel.Size = new Size(349, 44);
+            DeleteHeaderLabel.Size = new Size(517, 44);
             DeleteHeaderLabel.TabIndex = 2;
             DeleteHeaderLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiLabel1
+            // DeleteSubHeaderLabel
             // 
-            cuiLabel1.BackColor = Color.Transparent;
-            cuiLabel1.Content = "Click\\ Confirm\\ to\\ proceed\\ with\\ deletion";
-            cuiLabel1.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiLabel1.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel1.Location = new Point(24, 67);
-            cuiLabel1.Margin = new Padding(5, 4, 5, 4);
-            cuiLabel1.Name = "cuiLabel1";
-            cuiLabel1.Size = new Size(369, 28);
-            cuiLabel1.TabIndex = 45;
-            cuiLabel1.VerticalAlignment = StringAlignment.Center;
+            DeleteSubHeaderLabel.BackColor = Color.Transparent;
+            DeleteSubHeaderLabel.Content = "Click\\ Confirm\\ to\\ proceed\\ with\\ deletion";
+            DeleteSubHeaderLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DeleteSubHeaderLabel.HorizontalAlignment = StringAlignment.Near;
+            DeleteSubHeaderLabel.Location = new Point(24, 67);
+            DeleteSubHeaderLabel.Margin = new Padding(5, 4, 5, 4);
+            DeleteSubHeaderLabel.Name = "DeleteSubHeaderLabel";
+            DeleteSubHeaderLabel.Size = new Size(517, 28);
+            DeleteSubHeaderLabel.TabIndex = 45;
+            DeleteSubHeaderLabel.VerticalAlignment = StringAlignment.Center;
             // 
             // imageList1
             // 
@@ -79,7 +79,7 @@
             VariableIDLabel.Location = new Point(24, 131);
             VariableIDLabel.Margin = new Padding(5, 4, 5, 4);
             VariableIDLabel.Name = "VariableIDLabel";
-            VariableIDLabel.Size = new Size(136, 44);
+            VariableIDLabel.Size = new Size(209, 44);
             VariableIDLabel.TabIndex = 46;
             VariableIDLabel.VerticalAlignment = StringAlignment.Center;
             // 
@@ -91,7 +91,7 @@
             VariableNameLabel.Location = new Point(24, 193);
             VariableNameLabel.Margin = new Padding(5, 4, 5, 4);
             VariableNameLabel.Name = "VariableNameLabel";
-            VariableNameLabel.Size = new Size(136, 44);
+            VariableNameLabel.Size = new Size(209, 44);
             VariableNameLabel.TabIndex = 47;
             VariableNameLabel.VerticalAlignment = StringAlignment.Center;
             // 
@@ -100,10 +100,10 @@
             VariableIDContentHolder.Content = "<VARIABLE\\ ID>";
             VariableIDContentHolder.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             VariableIDContentHolder.HorizontalAlignment = StringAlignment.Near;
-            VariableIDContentHolder.Location = new Point(170, 131);
+            VariableIDContentHolder.Location = new Point(198, 131);
             VariableIDContentHolder.Margin = new Padding(5, 4, 5, 4);
             VariableIDContentHolder.Name = "VariableIDContentHolder";
-            VariableIDContentHolder.Size = new Size(371, 44);
+            VariableIDContentHolder.Size = new Size(343, 44);
             VariableIDContentHolder.TabIndex = 48;
             VariableIDContentHolder.VerticalAlignment = StringAlignment.Center;
             // 
@@ -112,10 +112,10 @@
             VariableNameContentHolder.Content = "<VARIABLE\\ NAME>";
             VariableNameContentHolder.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             VariableNameContentHolder.HorizontalAlignment = StringAlignment.Near;
-            VariableNameContentHolder.Location = new Point(170, 193);
+            VariableNameContentHolder.Location = new Point(198, 193);
             VariableNameContentHolder.Margin = new Padding(5, 4, 5, 4);
             VariableNameContentHolder.Name = "VariableNameContentHolder";
-            VariableNameContentHolder.Size = new Size(371, 44);
+            VariableNameContentHolder.Size = new Size(343, 44);
             VariableNameContentHolder.TabIndex = 49;
             VariableNameContentHolder.VerticalAlignment = StringAlignment.Center;
             // 
@@ -140,7 +140,7 @@
             CancelBtn.ImageAutoCenter = true;
             CancelBtn.ImageExpand = new Point(0, 0);
             CancelBtn.ImageOffset = new Point(-10, 0);
-            CancelBtn.Location = new Point(24, 279);
+            CancelBtn.Location = new Point(58, 279);
             CancelBtn.Margin = new Padding(3, 4, 3, 4);
             CancelBtn.Name = "CancelBtn";
             CancelBtn.NormalBackground = Color.Transparent;
@@ -157,6 +157,7 @@
             CancelBtn.TabIndex = 50;
             CancelBtn.TextAlignment = StringAlignment.Center;
             CancelBtn.TextOffset = new Point(0, 0);
+            CancelBtn.Click += CancelBtn_Click;
             // 
             // ConfirmBtn
             // 
@@ -195,6 +196,7 @@
             ConfirmBtn.TabIndex = 51;
             ConfirmBtn.TextAlignment = StringAlignment.Center;
             ConfirmBtn.TextOffset = new Point(0, 0);
+            ConfirmBtn.Click += ConfirmBtn_Click;
             // 
             // DeletionTemplate
             // 
@@ -208,7 +210,7 @@
             Controls.Add(VariableIDContentHolder);
             Controls.Add(VariableNameLabel);
             Controls.Add(VariableIDLabel);
-            Controls.Add(cuiLabel1);
+            Controls.Add(DeleteSubHeaderLabel);
             Controls.Add(DeleteHeaderLabel);
             Name = "DeletionTemplate";
             Text = "Deletion Window";
@@ -218,7 +220,7 @@
         #endregion
 
         private CuoreUI.Controls.cuiLabel DeleteHeaderLabel;
-        private CuoreUI.Controls.cuiLabel cuiLabel1;
+        private CuoreUI.Controls.cuiLabel DeleteSubHeaderLabel;
         private ImageList imageList1;
         private CuoreUI.Controls.cuiLabel VariableIDLabel;
         private CuoreUI.Controls.cuiLabel VariableNameLabel;

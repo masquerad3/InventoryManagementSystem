@@ -33,13 +33,13 @@
             BONameLabel = new CuoreUI.Controls.cuiLabel();
             BONameTextBox = new CuoreUI.Controls.cuiTextBox();
             ProductListLabel = new CuoreUI.Controls.cuiLabel();
-            checkedListBox1 = new CheckedListBox();
+            ProductCheckList = new CheckedListBox();
             DescriptionLabel = new CuoreUI.Controls.cuiLabel();
-            cuiTextBox1 = new CuoreUI.Controls.cuiTextBox();
+            OrderDescriptionTextBox = new CuoreUI.Controls.cuiTextBox();
             SaveBtn = new CuoreUI.Controls.cuiButton();
             CancelBtn = new CuoreUI.Controls.cuiButton();
-            Received = new CuoreUI.Controls.cuiButton();
-            cuiButton1 = new CuoreUI.Controls.cuiButton();
+            IsReceivedBtn = new CuoreUI.Controls.cuiButton();
+            NotReceivedBtn = new CuoreUI.Controls.cuiButton();
             SuspendLayout();
             // 
             // AddEditBatchOrderLabel
@@ -50,7 +50,7 @@
             AddEditBatchOrderLabel.Location = new Point(26, 25);
             AddEditBatchOrderLabel.Margin = new Padding(5, 4, 5, 4);
             AddEditBatchOrderLabel.Name = "AddEditBatchOrderLabel";
-            AddEditBatchOrderLabel.Size = new Size(349, 44);
+            AddEditBatchOrderLabel.Size = new Size(470, 44);
             AddEditBatchOrderLabel.TabIndex = 1;
             AddEditBatchOrderLabel.VerticalAlignment = StringAlignment.Center;
             // 
@@ -63,7 +63,7 @@
             SubLabel.Location = new Point(26, 67);
             SubLabel.Margin = new Padding(5, 4, 5, 4);
             SubLabel.Name = "SubLabel";
-            SubLabel.Size = new Size(369, 28);
+            SubLabel.Size = new Size(532, 28);
             SubLabel.TabIndex = 34;
             SubLabel.VerticalAlignment = StringAlignment.Center;
             // 
@@ -119,14 +119,14 @@
             ProductListLabel.TabIndex = 40;
             ProductListLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // checkedListBox1
+            // ProductCheckList
             // 
-            checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.Items.AddRange(new object[] { "Lcd Monitor", "Opisina Chair", "Electric Drill", "Wifi Router", "Desk Lamp", "Filing Cabinet", "Software Suite", "Cctv Camera", "External Hdd", "Power Drill", "Wireless Keyboard", "Air Conditioner", "Projector", "Industrial Fan", "Smart Tv", "Printer Scanner", "Safety Helmet", "Network Switch", "Solar Panel", "Voltage Regulator", "Barcode Scanner", "Ups Battery", "Conference Phone", "Welding Machine", "Tablet", "Computer" });
-            checkedListBox1.Location = new Point(26, 282);
-            checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(150, 114);
-            checkedListBox1.TabIndex = 41;
+            ProductCheckList.FormattingEnabled = true;
+            ProductCheckList.Items.AddRange(new object[] { "Lcd Monitor", "Opisina Chair", "Electric Drill", "Wifi Router", "Desk Lamp", "Filing Cabinet", "Software Suite", "Cctv Camera", "External Hdd", "Power Drill", "Wireless Keyboard", "Air Conditioner", "Projector", "Industrial Fan", "Smart Tv", "Printer Scanner", "Safety Helmet", "Network Switch", "Solar Panel", "Voltage Regulator", "Barcode Scanner", "Ups Battery", "Conference Phone", "Welding Machine", "Tablet", "Computer" });
+            ProductCheckList.Location = new Point(26, 282);
+            ProductCheckList.Name = "ProductCheckList";
+            ProductCheckList.Size = new Size(150, 114);
+            ProductCheckList.TabIndex = 41;
             // 
             // DescriptionLabel
             // 
@@ -141,33 +141,33 @@
             DescriptionLabel.TabIndex = 42;
             DescriptionLabel.VerticalAlignment = StringAlignment.Center;
             // 
-            // cuiTextBox1
+            // OrderDescriptionTextBox
             // 
-            cuiTextBox1.BackgroundColor = Color.White;
-            cuiTextBox1.Content = "";
-            cuiTextBox1.FocusBackgroundColor = Color.White;
-            cuiTextBox1.FocusImageTint = Color.White;
-            cuiTextBox1.FocusOutlineColor = Color.FromArgb(64, 64, 64);
-            cuiTextBox1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiTextBox1.ForeColor = Color.Gray;
-            cuiTextBox1.Image = null;
-            cuiTextBox1.ImageExpand = new Point(0, 0);
-            cuiTextBox1.ImageOffset = new Point(0, 0);
-            cuiTextBox1.Location = new Point(26, 494);
-            cuiTextBox1.Margin = new Padding(5);
-            cuiTextBox1.Multiline = false;
-            cuiTextBox1.Name = "cuiTextBox1";
-            cuiTextBox1.NormalImageTint = Color.White;
-            cuiTextBox1.OutlineColor = Color.FromArgb(128, 128, 128, 128);
-            cuiTextBox1.Padding = new Padding(18, 121, 18, 0);
-            cuiTextBox1.PasswordChar = false;
-            cuiTextBox1.PlaceholderColor = SystemColors.WindowText;
-            cuiTextBox1.PlaceholderText = "";
-            cuiTextBox1.Rounding = new Padding(8);
-            cuiTextBox1.Size = new Size(595, 261);
-            cuiTextBox1.TabIndex = 40;
-            cuiTextBox1.TextOffset = new Size(0, 0);
-            cuiTextBox1.UnderlinedStyle = true;
+            OrderDescriptionTextBox.BackgroundColor = Color.White;
+            OrderDescriptionTextBox.Content = "";
+            OrderDescriptionTextBox.FocusBackgroundColor = Color.White;
+            OrderDescriptionTextBox.FocusImageTint = Color.White;
+            OrderDescriptionTextBox.FocusOutlineColor = Color.FromArgb(64, 64, 64);
+            OrderDescriptionTextBox.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            OrderDescriptionTextBox.ForeColor = Color.Gray;
+            OrderDescriptionTextBox.Image = null;
+            OrderDescriptionTextBox.ImageExpand = new Point(0, 0);
+            OrderDescriptionTextBox.ImageOffset = new Point(0, 0);
+            OrderDescriptionTextBox.Location = new Point(26, 494);
+            OrderDescriptionTextBox.Margin = new Padding(5);
+            OrderDescriptionTextBox.Multiline = false;
+            OrderDescriptionTextBox.Name = "OrderDescriptionTextBox";
+            OrderDescriptionTextBox.NormalImageTint = Color.White;
+            OrderDescriptionTextBox.OutlineColor = Color.FromArgb(128, 128, 128, 128);
+            OrderDescriptionTextBox.Padding = new Padding(18, 121, 18, 0);
+            OrderDescriptionTextBox.PasswordChar = false;
+            OrderDescriptionTextBox.PlaceholderColor = SystemColors.WindowText;
+            OrderDescriptionTextBox.PlaceholderText = "";
+            OrderDescriptionTextBox.Rounding = new Padding(8);
+            OrderDescriptionTextBox.Size = new Size(595, 261);
+            OrderDescriptionTextBox.TabIndex = 40;
+            OrderDescriptionTextBox.TextOffset = new Size(0, 0);
+            OrderDescriptionTextBox.UnderlinedStyle = true;
             // 
             // SaveBtn
             // 
@@ -189,7 +189,7 @@
             SaveBtn.ImageAutoCenter = true;
             SaveBtn.ImageExpand = new Point(0, 0);
             SaveBtn.ImageOffset = new Point(-10, 0);
-            SaveBtn.Location = new Point(383, 806);
+            SaveBtn.Location = new Point(353, 806);
             SaveBtn.Margin = new Padding(3, 4, 3, 4);
             SaveBtn.Name = "SaveBtn";
             SaveBtn.NormalBackground = Color.SteelBlue;
@@ -202,10 +202,11 @@
             SaveBtn.PressedImageTint = Color.White;
             SaveBtn.PressedOutline = Color.FromArgb(33, 64, 89);
             SaveBtn.Rounding = new Padding(8);
-            SaveBtn.Size = new Size(175, 60);
+            SaveBtn.Size = new Size(255, 60);
             SaveBtn.TabIndex = 40;
             SaveBtn.TextAlignment = StringAlignment.Center;
             SaveBtn.TextOffset = new Point(0, 0);
+            SaveBtn.Click += SaveBtn_Click;
             // 
             // CancelBtn
             // 
@@ -228,7 +229,7 @@
             CancelBtn.ImageAutoCenter = true;
             CancelBtn.ImageExpand = new Point(0, 0);
             CancelBtn.ImageOffset = new Point(-10, 0);
-            CancelBtn.Location = new Point(106, 806);
+            CancelBtn.Location = new Point(37, 806);
             CancelBtn.Margin = new Padding(3, 4, 3, 4);
             CancelBtn.Name = "CancelBtn";
             CancelBtn.NormalBackground = Color.Transparent;
@@ -241,87 +242,90 @@
             CancelBtn.PressedImageTint = Color.Transparent;
             CancelBtn.PressedOutline = Color.FromArgb(33, 64, 89);
             CancelBtn.Rounding = new Padding(8);
-            CancelBtn.Size = new Size(175, 60);
+            CancelBtn.Size = new Size(269, 60);
             CancelBtn.TabIndex = 40;
             CancelBtn.TextAlignment = StringAlignment.Center;
             CancelBtn.TextOffset = new Point(0, 0);
+            CancelBtn.Click += CancelBtn_Click;
             // 
-            // Received
+            // IsReceivedBtn
             // 
-            Received.CheckButton = false;
-            Received.Checked = false;
-            Received.CheckedBackground = Color.FromArgb(255, 106, 0);
-            Received.CheckedForeColor = Color.White;
-            Received.CheckedImageTint = Color.White;
-            Received.CheckedOutline = Color.FromArgb(255, 106, 0);
-            Received.Content = "Received";
-            Received.DialogResult = DialogResult.None;
-            Received.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Received.ForeColor = Color.White;
-            Received.HoverBackground = Color.FromArgb(49, 93, 130);
-            Received.HoveredImageTint = Color.White;
-            Received.HoverForeColor = Color.WhiteSmoke;
-            Received.HoverOutline = Color.FromArgb(33, 64, 89);
-            Received.Image = Properties.Resources.package_check;
-            Received.ImageAutoCenter = true;
-            Received.ImageExpand = new Point(0, 0);
-            Received.ImageOffset = new Point(-10, 0);
-            Received.Location = new Point(383, 932);
-            Received.Margin = new Padding(3, 4, 3, 4);
-            Received.Name = "Received";
-            Received.NormalBackground = Color.SteelBlue;
-            Received.NormalForeColor = Color.White;
-            Received.NormalImageTint = Color.White;
-            Received.NormalOutline = Color.Transparent;
-            Received.OutlineThickness = 1F;
-            Received.PressedBackground = Color.FromArgb(49, 93, 130);
-            Received.PressedForeColor = Color.White;
-            Received.PressedImageTint = Color.White;
-            Received.PressedOutline = Color.FromArgb(33, 64, 89);
-            Received.Rounding = new Padding(8);
-            Received.Size = new Size(175, 60);
-            Received.TabIndex = 43;
-            Received.TextAlignment = StringAlignment.Center;
-            Received.TextOffset = new Point(0, 0);
+            IsReceivedBtn.CheckButton = false;
+            IsReceivedBtn.Checked = false;
+            IsReceivedBtn.CheckedBackground = Color.FromArgb(255, 106, 0);
+            IsReceivedBtn.CheckedForeColor = Color.White;
+            IsReceivedBtn.CheckedImageTint = Color.White;
+            IsReceivedBtn.CheckedOutline = Color.FromArgb(255, 106, 0);
+            IsReceivedBtn.Content = "Received";
+            IsReceivedBtn.DialogResult = DialogResult.None;
+            IsReceivedBtn.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            IsReceivedBtn.ForeColor = Color.White;
+            IsReceivedBtn.HoverBackground = Color.FromArgb(49, 93, 130);
+            IsReceivedBtn.HoveredImageTint = Color.White;
+            IsReceivedBtn.HoverForeColor = Color.WhiteSmoke;
+            IsReceivedBtn.HoverOutline = Color.FromArgb(33, 64, 89);
+            IsReceivedBtn.Image = Properties.Resources.package_check;
+            IsReceivedBtn.ImageAutoCenter = true;
+            IsReceivedBtn.ImageExpand = new Point(0, 0);
+            IsReceivedBtn.ImageOffset = new Point(-10, 0);
+            IsReceivedBtn.Location = new Point(353, 932);
+            IsReceivedBtn.Margin = new Padding(3, 4, 3, 4);
+            IsReceivedBtn.Name = "IsReceivedBtn";
+            IsReceivedBtn.NormalBackground = Color.SteelBlue;
+            IsReceivedBtn.NormalForeColor = Color.White;
+            IsReceivedBtn.NormalImageTint = Color.White;
+            IsReceivedBtn.NormalOutline = Color.Transparent;
+            IsReceivedBtn.OutlineThickness = 1F;
+            IsReceivedBtn.PressedBackground = Color.FromArgb(49, 93, 130);
+            IsReceivedBtn.PressedForeColor = Color.White;
+            IsReceivedBtn.PressedImageTint = Color.White;
+            IsReceivedBtn.PressedOutline = Color.FromArgb(33, 64, 89);
+            IsReceivedBtn.Rounding = new Padding(8);
+            IsReceivedBtn.Size = new Size(255, 60);
+            IsReceivedBtn.TabIndex = 43;
+            IsReceivedBtn.TextAlignment = StringAlignment.Center;
+            IsReceivedBtn.TextOffset = new Point(0, 0);
+            IsReceivedBtn.Click += IsReceivedBtn_Click;
             // 
-            // cuiButton1
+            // NotReceivedBtn
             // 
-            cuiButton1.BackColor = Color.Transparent;
-            cuiButton1.CheckButton = false;
-            cuiButton1.Checked = false;
-            cuiButton1.CheckedBackground = Color.White;
-            cuiButton1.CheckedForeColor = Color.White;
-            cuiButton1.CheckedImageTint = Color.White;
-            cuiButton1.CheckedOutline = Color.White;
-            cuiButton1.Content = "Not Yet Received";
-            cuiButton1.DialogResult = DialogResult.None;
-            cuiButton1.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiButton1.ForeColor = Color.Black;
-            cuiButton1.HoverBackground = Color.Transparent;
-            cuiButton1.HoveredImageTint = Color.White;
-            cuiButton1.HoverForeColor = Color.SteelBlue;
-            cuiButton1.HoverOutline = Color.SteelBlue;
-            cuiButton1.Image = Properties.Resources.package_x;
-            cuiButton1.ImageAutoCenter = true;
-            cuiButton1.ImageExpand = new Point(0, 0);
-            cuiButton1.ImageOffset = new Point(-10, 0);
-            cuiButton1.Location = new Point(73, 932);
-            cuiButton1.Margin = new Padding(3, 4, 3, 4);
-            cuiButton1.Name = "cuiButton1";
-            cuiButton1.NormalBackground = Color.Transparent;
-            cuiButton1.NormalForeColor = Color.Black;
-            cuiButton1.NormalImageTint = Color.White;
-            cuiButton1.NormalOutline = Color.Black;
-            cuiButton1.OutlineThickness = 2F;
-            cuiButton1.PressedBackground = Color.WhiteSmoke;
-            cuiButton1.PressedForeColor = Color.SteelBlue;
-            cuiButton1.PressedImageTint = Color.Transparent;
-            cuiButton1.PressedOutline = Color.FromArgb(33, 64, 89);
-            cuiButton1.Rounding = new Padding(8);
-            cuiButton1.Size = new Size(269, 60);
-            cuiButton1.TabIndex = 44;
-            cuiButton1.TextAlignment = StringAlignment.Center;
-            cuiButton1.TextOffset = new Point(0, 0);
+            NotReceivedBtn.BackColor = Color.Transparent;
+            NotReceivedBtn.CheckButton = false;
+            NotReceivedBtn.Checked = false;
+            NotReceivedBtn.CheckedBackground = Color.White;
+            NotReceivedBtn.CheckedForeColor = Color.White;
+            NotReceivedBtn.CheckedImageTint = Color.White;
+            NotReceivedBtn.CheckedOutline = Color.White;
+            NotReceivedBtn.Content = "Not Yet Received";
+            NotReceivedBtn.DialogResult = DialogResult.None;
+            NotReceivedBtn.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            NotReceivedBtn.ForeColor = Color.Black;
+            NotReceivedBtn.HoverBackground = Color.Transparent;
+            NotReceivedBtn.HoveredImageTint = Color.White;
+            NotReceivedBtn.HoverForeColor = Color.SteelBlue;
+            NotReceivedBtn.HoverOutline = Color.SteelBlue;
+            NotReceivedBtn.Image = Properties.Resources.package_x;
+            NotReceivedBtn.ImageAutoCenter = true;
+            NotReceivedBtn.ImageExpand = new Point(0, 0);
+            NotReceivedBtn.ImageOffset = new Point(-10, 0);
+            NotReceivedBtn.Location = new Point(37, 932);
+            NotReceivedBtn.Margin = new Padding(3, 4, 3, 4);
+            NotReceivedBtn.Name = "NotReceivedBtn";
+            NotReceivedBtn.NormalBackground = Color.Transparent;
+            NotReceivedBtn.NormalForeColor = Color.Black;
+            NotReceivedBtn.NormalImageTint = Color.White;
+            NotReceivedBtn.NormalOutline = Color.Black;
+            NotReceivedBtn.OutlineThickness = 2F;
+            NotReceivedBtn.PressedBackground = Color.WhiteSmoke;
+            NotReceivedBtn.PressedForeColor = Color.SteelBlue;
+            NotReceivedBtn.PressedImageTint = Color.Transparent;
+            NotReceivedBtn.PressedOutline = Color.FromArgb(33, 64, 89);
+            NotReceivedBtn.Rounding = new Padding(8);
+            NotReceivedBtn.Size = new Size(269, 60);
+            NotReceivedBtn.TabIndex = 44;
+            NotReceivedBtn.TextAlignment = StringAlignment.Center;
+            NotReceivedBtn.TextOffset = new Point(0, 0);
+            NotReceivedBtn.Click += NotReceivedBtn_Click;
             // 
             // BatchOrder
             // 
@@ -329,13 +333,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(686, 1064);
-            Controls.Add(cuiButton1);
-            Controls.Add(Received);
+            Controls.Add(NotReceivedBtn);
+            Controls.Add(IsReceivedBtn);
             Controls.Add(CancelBtn);
             Controls.Add(SaveBtn);
-            Controls.Add(cuiTextBox1);
+            Controls.Add(OrderDescriptionTextBox);
             Controls.Add(DescriptionLabel);
-            Controls.Add(checkedListBox1);
+            Controls.Add(ProductCheckList);
             Controls.Add(ProductListLabel);
             Controls.Add(BONameTextBox);
             Controls.Add(BONameLabel);
@@ -354,12 +358,12 @@
         private CuoreUI.Controls.cuiLabel BONameLabel;
         private CuoreUI.Controls.cuiTextBox BONameTextBox;
         private CuoreUI.Controls.cuiLabel ProductListLabel;
-        private CheckedListBox checkedListBox1;
+        private CheckedListBox ProductCheckList;
         private CuoreUI.Controls.cuiLabel DescriptionLabel;
-        private CuoreUI.Controls.cuiTextBox cuiTextBox1;
+        private CuoreUI.Controls.cuiTextBox OrderDescriptionTextBox;
         private CuoreUI.Controls.cuiButton SaveBtn;
         private CuoreUI.Controls.cuiButton CancelBtn;
-        private CuoreUI.Controls.cuiButton Received;
-        private CuoreUI.Controls.cuiButton cuiButton1;
+        private CuoreUI.Controls.cuiButton IsReceivedBtn;
+        private CuoreUI.Controls.cuiButton NotReceivedBtn;
     }
 }

@@ -81,12 +81,13 @@
             DashboardPanel.Controls.Add(ProfileName);
             DashboardPanel.Dock = DockStyle.Left;
             DashboardPanel.Location = new Point(0, 0);
+            DashboardPanel.Margin = new Padding(3, 4, 3, 4);
             DashboardPanel.Name = "DashboardPanel";
             DashboardPanel.OutlineThickness = 1F;
             DashboardPanel.PanelColor = Color.LightSkyBlue;
             DashboardPanel.PanelOutlineColor = Color.Transparent;
             DashboardPanel.Rounding = new Padding(8, 0, 0, 8);
-            DashboardPanel.Size = new Size(224, 681);
+            DashboardPanel.Size = new Size(256, 908);
             DashboardPanel.TabIndex = 0;
             // 
             // LogoutBtn
@@ -110,7 +111,8 @@
             LogoutBtn.ImageAutoCenter = true;
             LogoutBtn.ImageExpand = new Point(0, 0);
             LogoutBtn.ImageOffset = new Point(-60, 0);
-            LogoutBtn.Location = new Point(0, 636);
+            LogoutBtn.Location = new Point(0, 848);
+            LogoutBtn.Margin = new Padding(3, 4, 3, 4);
             LogoutBtn.Name = "LogoutBtn";
             LogoutBtn.NormalBackground = Color.Transparent;
             LogoutBtn.NormalForeColor = SystemColors.ControlText;
@@ -122,7 +124,7 @@
             LogoutBtn.PressedImageTint = Color.Transparent;
             LogoutBtn.PressedOutline = Color.Transparent;
             LogoutBtn.Rounding = new Padding(8);
-            LogoutBtn.Size = new Size(224, 45);
+            LogoutBtn.Size = new Size(256, 60);
             LogoutBtn.TabIndex = 6;
             LogoutBtn.TextAlignment = StringAlignment.Near;
             LogoutBtn.TextOffset = new Point(35, 0);
@@ -148,7 +150,8 @@
             EmployeeBtn.ImageAutoCenter = true;
             EmployeeBtn.ImageExpand = new Point(0, 0);
             EmployeeBtn.ImageOffset = new Point(-27, 0);
-            EmployeeBtn.Location = new Point(0, 247);
+            EmployeeBtn.Location = new Point(0, 329);
+            EmployeeBtn.Margin = new Padding(3, 4, 3, 4);
             EmployeeBtn.Name = "EmployeeBtn";
             EmployeeBtn.NormalBackground = Color.Transparent;
             EmployeeBtn.NormalForeColor = SystemColors.ControlText;
@@ -160,7 +163,7 @@
             EmployeeBtn.PressedImageTint = Color.Transparent;
             EmployeeBtn.PressedOutline = Color.Transparent;
             EmployeeBtn.Rounding = new Padding(8);
-            EmployeeBtn.Size = new Size(224, 45);
+            EmployeeBtn.Size = new Size(256, 60);
             EmployeeBtn.TabIndex = 4;
             EmployeeBtn.TextAlignment = StringAlignment.Near;
             EmployeeBtn.TextOffset = new Point(50, 0);
@@ -187,7 +190,8 @@
             OrdersBtn.ImageAutoCenter = true;
             OrdersBtn.ImageExpand = new Point(0, 0);
             OrdersBtn.ImageOffset = new Point(-43, 0);
-            OrdersBtn.Location = new Point(0, 196);
+            OrdersBtn.Location = new Point(0, 261);
+            OrdersBtn.Margin = new Padding(3, 4, 3, 4);
             OrdersBtn.Name = "OrdersBtn";
             OrdersBtn.NormalBackground = Color.Transparent;
             OrdersBtn.NormalForeColor = SystemColors.ControlText;
@@ -199,10 +203,11 @@
             OrdersBtn.PressedImageTint = Color.Transparent;
             OrdersBtn.PressedOutline = Color.Transparent;
             OrdersBtn.Rounding = new Padding(8);
-            OrdersBtn.Size = new Size(224, 45);
+            OrdersBtn.Size = new Size(256, 60);
             OrdersBtn.TabIndex = 5;
             OrdersBtn.TextAlignment = StringAlignment.Near;
             OrdersBtn.TextOffset = new Point(50, 0);
+            OrdersBtn.Click += OrdersBtn_Click;
             // 
             // InventoryBtn
             // 
@@ -225,7 +230,8 @@
             InventoryBtn.ImageAutoCenter = true;
             InventoryBtn.ImageExpand = new Point(0, 0);
             InventoryBtn.ImageOffset = new Point(-33, 0);
-            InventoryBtn.Location = new Point(0, 145);
+            InventoryBtn.Location = new Point(0, 193);
+            InventoryBtn.Margin = new Padding(3, 4, 3, 4);
             InventoryBtn.Name = "InventoryBtn";
             InventoryBtn.NormalBackground = Color.Transparent;
             InventoryBtn.NormalForeColor = SystemColors.ControlText;
@@ -237,7 +243,7 @@
             InventoryBtn.PressedImageTint = Color.Transparent;
             InventoryBtn.PressedOutline = Color.Transparent;
             InventoryBtn.Rounding = new Padding(8);
-            InventoryBtn.Size = new Size(224, 45);
+            InventoryBtn.Size = new Size(256, 60);
             InventoryBtn.TabIndex = 3;
             InventoryBtn.TextAlignment = StringAlignment.Near;
             InventoryBtn.TextOffset = new Point(50, 0);
@@ -264,7 +270,8 @@
             DashboardBtn.ImageAutoCenter = true;
             DashboardBtn.ImageExpand = new Point(0, 0);
             DashboardBtn.ImageOffset = new Point(-30, 0);
-            DashboardBtn.Location = new Point(0, 94);
+            DashboardBtn.Location = new Point(0, 125);
+            DashboardBtn.Margin = new Padding(3, 4, 3, 4);
             DashboardBtn.Name = "DashboardBtn";
             DashboardBtn.NormalBackground = Color.Transparent;
             DashboardBtn.NormalForeColor = SystemColors.ControlText;
@@ -276,7 +283,7 @@
             DashboardBtn.PressedImageTint = Color.Transparent;
             DashboardBtn.PressedOutline = Color.Transparent;
             DashboardBtn.Rounding = new Padding(8);
-            DashboardBtn.Size = new Size(224, 45);
+            DashboardBtn.Size = new Size(256, 60);
             DashboardBtn.TabIndex = 3;
             DashboardBtn.TextAlignment = StringAlignment.Near;
             DashboardBtn.TextOffset = new Point(50, 0);
@@ -289,11 +296,11 @@
             ProfileLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ProfileLabel.ForeColor = SystemColors.ControlText;
             ProfileLabel.HorizontalAlignment = StringAlignment.Near;
-            ProfileLabel.Location = new Point(77, 37);
-            ProfileLabel.Margin = new Padding(4, 3, 4, 3);
+            ProfileLabel.Location = new Point(88, 49);
+            ProfileLabel.Margin = new Padding(5, 4, 5, 4);
             ProfileLabel.Name = "ProfileLabel";
             ProfileLabel.RightToLeft = RightToLeft.No;
-            ProfileLabel.Size = new Size(134, 24);
+            ProfileLabel.Size = new Size(153, 32);
             ProfileLabel.TabIndex = 2;
             ProfileLabel.VerticalAlignment = StringAlignment.Near;
             // 
@@ -303,14 +310,14 @@
             ProfilePicture.BackgroundImageLayout = ImageLayout.Stretch;
             ProfilePicture.Content = null;
             ProfilePicture.ImageTint = Color.White;
-            ProfilePicture.Location = new Point(14, 20);
-            ProfilePicture.Margin = new Padding(4, 3, 4, 3);
+            ProfilePicture.Location = new Point(16, 27);
+            ProfilePicture.Margin = new Padding(5, 4, 5, 4);
             ProfilePicture.Name = "ProfilePicture";
             ProfilePicture.OutlineThickness = 1F;
             ProfilePicture.PanelOutlineColor = Color.Empty;
             ProfilePicture.Rotation = 0;
             ProfilePicture.Rounding = new Padding(8);
-            ProfilePicture.Size = new Size(55, 50);
+            ProfilePicture.Size = new Size(63, 67);
             ProfilePicture.TabIndex = 0;
             // 
             // ProfileName
@@ -320,11 +327,11 @@
             ProfileName.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ProfileName.ForeColor = SystemColors.ControlText;
             ProfileName.HorizontalAlignment = StringAlignment.Near;
-            ProfileName.Location = new Point(77, 20);
-            ProfileName.Margin = new Padding(4, 3, 4, 3);
+            ProfileName.Location = new Point(88, 27);
+            ProfileName.Margin = new Padding(5, 4, 5, 4);
             ProfileName.Name = "ProfileName";
             ProfileName.RightToLeft = RightToLeft.No;
-            ProfileName.Size = new Size(134, 24);
+            ProfileName.Size = new Size(153, 32);
             ProfileName.TabIndex = 1;
             ProfileName.VerticalAlignment = StringAlignment.Near;
             // 
@@ -333,9 +340,10 @@
             dashboardContent1.AutoScroll = true;
             dashboardContent1.BackColor = Color.AliceBlue;
             dashboardContent1.Dock = DockStyle.Fill;
-            dashboardContent1.Location = new Point(224, 0);
+            dashboardContent1.Location = new Point(256, 0);
+            dashboardContent1.Margin = new Padding(3, 5, 3, 5);
             dashboardContent1.Name = "dashboardContent1";
-            dashboardContent1.Size = new Size(1060, 681);
+            dashboardContent1.Size = new Size(1211, 908);
             dashboardContent1.TabIndex = 4;
             // 
             // inventory1
@@ -344,8 +352,9 @@
             inventory1.BackColor = Color.AliceBlue;
             inventory1.Dock = DockStyle.Fill;
             inventory1.Location = new Point(0, 0);
+            inventory1.Margin = new Padding(3, 5, 3, 5);
             inventory1.Name = "inventory1";
-            inventory1.Size = new Size(1284, 681);
+            inventory1.Size = new Size(1467, 908);
             inventory1.TabIndex = 5;
             // 
             // productAlert1
@@ -354,8 +363,9 @@
             productAlert1.BackColor = Color.AliceBlue;
             productAlert1.Dock = DockStyle.Fill;
             productAlert1.Location = new Point(0, 0);
+            productAlert1.Margin = new Padding(3, 5, 3, 5);
             productAlert1.Name = "productAlert1";
-            productAlert1.Size = new Size(1284, 681);
+            productAlert1.Size = new Size(1467, 908);
             productAlert1.TabIndex = 6;
             // 
             // batch1
@@ -364,8 +374,9 @@
             batch1.BackColor = Color.AliceBlue;
             batch1.Dock = DockStyle.Fill;
             batch1.Location = new Point(0, 0);
+            batch1.Margin = new Padding(3, 5, 3, 5);
             batch1.Name = "batch1";
-            batch1.Size = new Size(1284, 681);
+            batch1.Size = new Size(1467, 908);
             batch1.TabIndex = 7;
             // 
             // employee1
@@ -373,17 +384,18 @@
             employee1.BackColor = Color.AliceBlue;
             employee1.Dock = DockStyle.Fill;
             employee1.Location = new Point(0, 0);
+            employee1.Margin = new Padding(3, 5, 3, 5);
             employee1.Name = "employee1";
-            employee1.Size = new Size(1284, 681);
+            employee1.Size = new Size(1467, 908);
             employee1.TabIndex = 8;
             // 
             // Dashboard
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.GhostWhite;
-            ClientSize = new Size(1284, 681);
+            ClientSize = new Size(1467, 908);
             Controls.Add(dashboardContent1);
             Controls.Add(DashboardPanel);
             Controls.Add(inventory1);
@@ -392,6 +404,7 @@
             Controls.Add(employee1);
             ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Dashboard";
             Text = "IMS - Dashboard";
             DashboardPanel.ResumeLayout(false);

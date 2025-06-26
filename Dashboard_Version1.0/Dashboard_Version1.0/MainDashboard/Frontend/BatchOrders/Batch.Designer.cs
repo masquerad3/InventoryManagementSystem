@@ -28,6 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            BatchOrdersGridView = new DataGridView();
+            BatchOrderName = new DataGridViewTextBoxColumn();
+            ProductName = new DataGridViewTextBoxColumn();
+            BatchOrderStatus = new DataGridViewTextBoxColumn();
+            DateRequested = new DataGridViewTextBoxColumn();
+            DateReceived = new DataGridViewTextBoxColumn();
+            Edit = new DataGridViewImageColumn();
+            Delete = new DataGridViewImageColumn();
             cuiPanel6 = new CuoreUI.Controls.cuiPanel();
             DashboardHeader = new CuoreUI.Controls.cuiLabel();
             SearchBar = new CuoreUI.Controls.cuiTextBox();
@@ -38,18 +46,76 @@
             FilterBtn = new CuoreUI.Controls.cuiButton();
             AddBtn = new CuoreUI.Controls.cuiButton();
             TableSearchBar = new CuoreUI.Controls.cuiTextBox();
-            BatchOrdersGridView = new DataGridView();
-            BatchOrderID = new DataGridViewTextBoxColumn();
-            BatchOrderName = new DataGridViewTextBoxColumn();
-            ProductName = new DataGridViewTextBoxColumn();
-            BatchOrderStatus = new DataGridViewTextBoxColumn();
-            DateRequested = new DataGridViewTextBoxColumn();
-            DateReceived = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)BatchOrdersGridView).BeginInit();
             cuiPanel6.SuspendLayout();
             NotifIconBG.SuspendLayout();
             cuiPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)BatchOrdersGridView).BeginInit();
             SuspendLayout();
+            // 
+            // BatchOrdersGridView
+            // 
+            BatchOrdersGridView.AllowUserToAddRows = false;
+            BatchOrdersGridView.AllowUserToDeleteRows = false;
+            BatchOrdersGridView.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            BatchOrdersGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            BatchOrdersGridView.BackgroundColor = SystemColors.ControlLight;
+            BatchOrdersGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            BatchOrdersGridView.Columns.AddRange(new DataGridViewColumn[] { BatchOrderName, ProductName, BatchOrderStatus, DateRequested, DateReceived, Edit, Delete });
+            BatchOrdersGridView.EditMode = DataGridViewEditMode.EditProgrammatically;
+            BatchOrdersGridView.Location = new Point(29, 80);
+            BatchOrdersGridView.Margin = new Padding(3, 4, 3, 4);
+            BatchOrdersGridView.Name = "BatchOrdersGridView";
+            BatchOrdersGridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            BatchOrdersGridView.RowHeadersVisible = false;
+            BatchOrdersGridView.RowHeadersWidth = 51;
+            BatchOrdersGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            BatchOrdersGridView.Size = new Size(1086, 980);
+            BatchOrdersGridView.TabIndex = 0;
+            BatchOrdersGridView.CellContentClick += BatchOrdersGridView_CellContentClick;
+            // 
+            // BatchOrderName
+            // 
+            BatchOrderName.HeaderText = "Batch Name";
+            BatchOrderName.MinimumWidth = 6;
+            BatchOrderName.Name = "BatchOrderName";
+            // 
+            // ProductName
+            // 
+            ProductName.HeaderText = "Product Name";
+            ProductName.MinimumWidth = 6;
+            ProductName.Name = "ProductName";
+            // 
+            // BatchOrderStatus
+            // 
+            BatchOrderStatus.HeaderText = "Order Status";
+            BatchOrderStatus.MinimumWidth = 6;
+            BatchOrderStatus.Name = "BatchOrderStatus";
+            // 
+            // DateRequested
+            // 
+            DateRequested.HeaderText = "Date Requested";
+            DateRequested.MinimumWidth = 6;
+            DateRequested.Name = "DateRequested";
+            // 
+            // DateReceived
+            // 
+            DateReceived.HeaderText = "Date Received";
+            DateReceived.MinimumWidth = 6;
+            DateReceived.Name = "DateReceived";
+            // 
+            // Edit
+            // 
+            Edit.HeaderText = "Edit";
+            Edit.Image = Properties.Resources.pencil;
+            Edit.MinimumWidth = 6;
+            Edit.Name = "Edit";
+            // 
+            // Delete
+            // 
+            Delete.HeaderText = "Delete";
+            Delete.Image = Properties.Resources.trash_2;
+            Delete.MinimumWidth = 6;
+            Delete.Name = "Delete";
             // 
             // cuiPanel6
             // 
@@ -283,56 +349,6 @@
             TableSearchBar.TextOffset = new Size(0, 0);
             TableSearchBar.UnderlinedStyle = true;
             // 
-            // BatchOrdersGridView
-            // 
-            BatchOrdersGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            BatchOrdersGridView.BackgroundColor = SystemColors.ControlLight;
-            BatchOrdersGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            BatchOrdersGridView.Columns.AddRange(new DataGridViewColumn[] { BatchOrderID, BatchOrderName, ProductName, BatchOrderStatus, DateRequested, DateReceived });
-            BatchOrdersGridView.Location = new Point(29, 80);
-            BatchOrdersGridView.Margin = new Padding(3, 4, 3, 4);
-            BatchOrdersGridView.Name = "BatchOrdersGridView";
-            BatchOrdersGridView.RowHeadersWidth = 51;
-            BatchOrdersGridView.Size = new Size(1086, 980);
-            BatchOrdersGridView.TabIndex = 0;
-            BatchOrdersGridView.CellContentClick += BatchOrdersGridView_CellContentClick;
-            // 
-            // BatchOrderID
-            // 
-            BatchOrderID.HeaderText = "Batch Order ID";
-            BatchOrderID.MinimumWidth = 6;
-            BatchOrderID.Name = "BatchOrderID";
-            // 
-            // BatchOrderName
-            // 
-            BatchOrderName.HeaderText = "Batch Name";
-            BatchOrderName.MinimumWidth = 6;
-            BatchOrderName.Name = "BatchOrderName";
-            // 
-            // ProductName
-            // 
-            ProductName.HeaderText = "Product Name";
-            ProductName.MinimumWidth = 6;
-            ProductName.Name = "ProductName";
-            // 
-            // BatchOrderStatus
-            // 
-            BatchOrderStatus.HeaderText = "Order Status";
-            BatchOrderStatus.MinimumWidth = 6;
-            BatchOrderStatus.Name = "BatchOrderStatus";
-            // 
-            // DateRequested
-            // 
-            DateRequested.HeaderText = "Date Requested";
-            DateRequested.MinimumWidth = 6;
-            DateRequested.Name = "DateRequested";
-            // 
-            // DateReceived
-            // 
-            DateReceived.HeaderText = "Date Received";
-            DateReceived.MinimumWidth = 6;
-            DateReceived.Name = "DateReceived";
-            // 
             // Batch
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -344,10 +360,10 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "Batch";
             Size = new Size(1211, 1467);
+            ((System.ComponentModel.ISupportInitialize)BatchOrdersGridView).EndInit();
             cuiPanel6.ResumeLayout(false);
             NotifIconBG.ResumeLayout(false);
             cuiPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)BatchOrdersGridView).EndInit();
             ResumeLayout(false);
         }
 
@@ -364,11 +380,12 @@
         private CuoreUI.Controls.cuiButton AddBtn;
         private CuoreUI.Controls.cuiTextBox TableSearchBar;
         private DataGridView BatchOrdersGridView;
-        private DataGridViewTextBoxColumn BatchOrderID;
         private DataGridViewTextBoxColumn BatchOrderName;
         private DataGridViewTextBoxColumn ProductName;
         private DataGridViewTextBoxColumn BatchOrderStatus;
         private DataGridViewTextBoxColumn DateRequested;
         private DataGridViewTextBoxColumn DateReceived;
+        private DataGridViewImageColumn Edit;
+        private DataGridViewImageColumn Delete;
     }
 }

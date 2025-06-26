@@ -7,6 +7,8 @@ using Microsoft.Data.SqlClient;
 
 /*
 
+-- UPDATED PRODUCTS
+
 CREATE TABLE Products (
     -- CORE PRODUCT INFO
     ProductID INT PRIMARY KEY IDENTITY(1,1),
@@ -19,7 +21,7 @@ CREATE TABLE Products (
     SupplierID NVARCHAR(50) NULL,
 
     -- INVENTORY
-    ProductQuantity NVARCHAR(25) NOT NULL,
+    ProductQuantity INT NOT NULL,
     ProductCondition NVARCHAR(25) NOT NULL,  -- ENUM suggestion: New, Sealed, etc.
 
     -- PRICING & DELIVERY
@@ -125,8 +127,8 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
     {
         // Centralized connection string
         // samuels string
-        //protected readonly string connectionString = @"Data Source=LAPTOP-M4LNTBNL\SQLEXPRESS;Initial Catalog=InventoryManagementSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
-        protected readonly string connectionString = @"Data Source=DESKTOP-K3DB62P\SQLEXPRESS01;Initial Catalog=IMS;Integrated Security=True;Trust Server Certificate=True";
+        protected readonly string connectionString = @"Data Source=LAPTOP-M4LNTBNL\SQLEXPRESS;Initial Catalog=InventoryManagementSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
+        //protected readonly string connectionString = @"Data Source=DESKTOP-K3DB62P\SQLEXPRESS01;Initial Catalog=IMS;Integrated Security=True;Trust Server Certificate=True";
         // Shared method to open a new connection
         protected SqlConnection GetConnection()
         {

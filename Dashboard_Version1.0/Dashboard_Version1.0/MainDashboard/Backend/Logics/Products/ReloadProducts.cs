@@ -13,7 +13,7 @@ namespace MainDashboard.Backend.Logics.Inventory.Reload
         {
             if (dataGridView == null)
             {
-                MessageBox.Show("Error: GridView is not initialized.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: ProductsGridView is not initialized.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

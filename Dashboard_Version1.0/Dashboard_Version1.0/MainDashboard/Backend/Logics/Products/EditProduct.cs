@@ -75,7 +75,8 @@ namespace MainDashboard.Backend.Logics.Products.Edit
                 errorMessage += "Price cannot be empty.\n";
                 isValidInput = false;
             }
-
+           
+            /*
             // --- Check for duplicate product name ---
             var reader = new ProductRead();
             var allProducts = reader.ReadAllProducts();
@@ -89,6 +90,7 @@ namespace MainDashboard.Backend.Logics.Products.Edit
                 errorMessage += "A product with the same name already exists.\n";
                 isValidInput = false;
             }
+            */
 
             // --- Decimal parsing ---
             if (!int.TryParse(quantityText, out int parsedQty) || parsedQty <= 0)

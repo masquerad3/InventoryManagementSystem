@@ -201,7 +201,7 @@ namespace MainDashboard
 
                 if (addSuccess)
                 {
-                    this.Close();
+                    this.Hide();
                 }
                 else
                 {
@@ -229,7 +229,7 @@ namespace MainDashboard
 
                 if (editSuccess)
                 {
-                    this.Close();
+                    this.Hide();
                 }
                 else
                 {

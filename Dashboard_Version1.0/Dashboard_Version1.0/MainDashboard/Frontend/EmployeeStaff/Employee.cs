@@ -56,7 +56,7 @@ namespace MainDashboard
             string staffName = selectedRow.Cells["EmployeeName"].Value?.ToString()?.Trim() ?? "";
 
             var staffReader = new StaffCrud();
-            int? staffId = staffReader.GetStaffIDByName("John Doe");
+            int? staffId = staffReader.GetStaffIDByName(staffName);
 
             if (clickedColumnName == "Edit")
             {
@@ -75,10 +75,20 @@ namespace MainDashboard
 
                 if (confirmResult == DialogResult.Yes)
                 {
+
+                    if (staffId == null)
+                    {
+                        MessageBox.Show("Staff ID not found or is invalid.", "Deletion Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    var authDeleteHandler = new AuthDelete();
+                    bool deletingAuthSuccess = authDeleteHandler.DeleteAuthByStaffID(staffId.Value);
+
                     var deleteHandler = new StaffDelete();
                     bool deletingStaffSuccess = deleteHandler.DeleteStaffByID(staffId.Value);
 
-                    if (deletingStaffSuccess)
+                    if (deletingAuthSuccess && deletingStaffSuccess)
                     {
                         MessageBox.Show("Successfully deleted the employee.", "Deletion Window",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);

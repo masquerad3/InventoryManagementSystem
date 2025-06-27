@@ -85,10 +85,13 @@ namespace MainDashboard.Backend.Logics.BatchOrders.Updating
            )
         {
             // --- Call update logic ---
-            var updateHandler = new UpdateBatchOrders();
-            bool isReceivedSuccess = updateHandler.UpdateBatchOrderIsReceived(batchOrderId, batchDateReceived);
+            var updateHandler1 = new UpdateBatchOrders();
+            bool isReceivedSuccess = updateHandler1.UpdateBatchOrderIsReceived(batchOrderId, batchDateReceived);
 
-            if (isReceivedSuccess)
+            var updateHandler2 = new UpdateBatchOrders();
+            bool isMarkedReceived = updateHandler2.MarkBatchOrderAsReceived(batchOrderId);
+
+            if (isReceivedSuccess && isMarkedReceived)
             {
                 MessageBox.Show("Batch order marked as received successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

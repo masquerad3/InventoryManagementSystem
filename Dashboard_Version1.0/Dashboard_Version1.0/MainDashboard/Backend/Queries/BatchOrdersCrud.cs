@@ -15,7 +15,7 @@ using MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem; // Ensure this p
 CREATE TABLE BatchOrders (
     BatchOrderID INT IDENTITY(1,1) PRIMARY KEY,
     BatchName NVARCHAR(25) NOT NULL,
-    BatchOrderStatus VARCHAR(50) DEFAULT 'Pending', --Pending, Approved, Denied
+    BatchOrderStatus VARCHAR(50) DEFAULT 'Pending', --Pending, Received
     BatchDescription NVARCHAR(100) NULL,
     BatchDateRequested DATETIME DEFAULT GETDATE(),
     BatchDateReceived DATETIME NULL
@@ -623,6 +623,35 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
             catch (Exception ex)
             {
                 MessageBox.Show("Error setting BatchDateReceived to NULL:\n" + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        public bool MarkBatchOrderAsReceived(int batchOrderId)
+        {
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    conn.Open();
+                    string query = @"UPDATE BatchOrders
+                             SET BatchOrderStatus = 'Received'
+                             WHERE BatchOrderID = @BatchOrderID";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@BatchOrderID", batchOrderId);
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating BatchOrderStatus:\n" + ex.Message,
+                                "Database Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
                 return false;
             }
         }

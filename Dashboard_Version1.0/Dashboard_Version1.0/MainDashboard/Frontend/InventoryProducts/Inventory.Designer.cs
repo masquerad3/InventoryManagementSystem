@@ -43,15 +43,10 @@
             Delete = new DataGridViewImageColumn();
             cuiPanel6 = new CuoreUI.Controls.cuiPanel();
             InventoryHeader = new CuoreUI.Controls.cuiLabel();
-            SearchBar = new CuoreUI.Controls.cuiTextBox();
-            NotifIconBG = new CuoreUI.Controls.cuiGradientPanel();
-            NotificationIcon = new CuoreUI.Controls.cuiPictureBox();
             cuiPanel1 = new CuoreUI.Controls.cuiPanel();
             AddBtn = new CuoreUI.Controls.cuiButton();
-            TableSearchBar = new CuoreUI.Controls.cuiTextBox();
             ((System.ComponentModel.ISupportInitialize)InventoryGridView).BeginInit();
             cuiPanel6.SuspendLayout();
-            NotifIconBG.SuspendLayout();
             cuiPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -66,7 +61,7 @@
             InventoryGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             InventoryGridView.Columns.AddRange(new DataGridViewColumn[] { ProductName, ItemCategory, ItemQuantity, ItemCondition, ItemPrice, View, Edit, Delete });
             InventoryGridView.EditMode = DataGridViewEditMode.EditProgrammatically;
-            InventoryGridView.Location = new Point(28, 79);
+            InventoryGridView.Location = new Point(28, 24);
             InventoryGridView.Margin = new Padding(3, 4, 3, 4);
             InventoryGridView.Name = "InventoryGridView";
             InventoryGridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -146,9 +141,8 @@
             // 
             // cuiPanel6
             // 
+            cuiPanel6.Controls.Add(AddBtn);
             cuiPanel6.Controls.Add(InventoryHeader);
-            cuiPanel6.Controls.Add(SearchBar);
-            cuiPanel6.Controls.Add(NotifIconBG);
             cuiPanel6.Dock = DockStyle.Top;
             cuiPanel6.Location = new Point(0, 0);
             cuiPanel6.Margin = new Padding(3, 4, 3, 4);
@@ -173,72 +167,8 @@
             InventoryHeader.TabIndex = 1;
             InventoryHeader.VerticalAlignment = StringAlignment.Center;
             // 
-            // SearchBar
-            // 
-            SearchBar.BackColor = Color.Transparent;
-            SearchBar.BackgroundColor = Color.White;
-            SearchBar.Content = "";
-            SearchBar.FocusBackgroundColor = Color.White;
-            SearchBar.FocusImageTint = Color.White;
-            SearchBar.FocusOutlineColor = Color.DarkGray;
-            SearchBar.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            SearchBar.ForeColor = Color.Gray;
-            SearchBar.Image = null;
-            SearchBar.ImageExpand = new Point(5, 5);
-            SearchBar.ImageOffset = new Point(0, 0);
-            SearchBar.Location = new Point(686, 13);
-            SearchBar.Margin = new Padding(5);
-            SearchBar.Multiline = false;
-            SearchBar.Name = "SearchBar";
-            SearchBar.NormalImageTint = Color.Transparent;
-            SearchBar.OutlineColor = Color.DarkGray;
-            SearchBar.Padding = new Padding(22, 15, 22, 0);
-            SearchBar.PasswordChar = false;
-            SearchBar.PlaceholderColor = SystemColors.WindowText;
-            SearchBar.PlaceholderText = "Search";
-            SearchBar.Rounding = new Padding(8);
-            SearchBar.Size = new Size(424, 53);
-            SearchBar.TabIndex = 3;
-            SearchBar.TextOffset = new Size(0, 0);
-            SearchBar.UnderlinedStyle = true;
-            // 
-            // NotifIconBG
-            // 
-            NotifIconBG.Controls.Add(NotificationIcon);
-            NotifIconBG.GradientAngle = 90F;
-            NotifIconBG.Location = new Point(1131, 13);
-            NotifIconBG.Margin = new Padding(3, 4, 3, 4);
-            NotifIconBG.Name = "NotifIconBG";
-            NotifIconBG.OutlineThickness = 1F;
-            NotifIconBG.PanelColor1 = Color.White;
-            NotifIconBG.PanelColor2 = Color.LightGray;
-            NotifIconBG.PanelOutlineColor1 = Color.FromArgb(224, 224, 224);
-            NotifIconBG.PanelOutlineColor2 = Color.Silver;
-            NotifIconBG.Rounding = new Padding(8);
-            NotifIconBG.Size = new Size(40, 47);
-            NotifIconBG.TabIndex = 12;
-            // 
-            // NotificationIcon
-            // 
-            NotificationIcon.BackColor = Color.Transparent;
-            NotificationIcon.BackgroundImage = Properties.Resources.bell;
-            NotificationIcon.BackgroundImageLayout = ImageLayout.Zoom;
-            NotificationIcon.Content = null;
-            NotificationIcon.ImageTint = Color.White;
-            NotificationIcon.Location = new Point(5, 4);
-            NotificationIcon.Margin = new Padding(5, 4, 5, 4);
-            NotificationIcon.Name = "NotificationIcon";
-            NotificationIcon.OutlineThickness = 1F;
-            NotificationIcon.PanelOutlineColor = Color.Empty;
-            NotificationIcon.Rotation = 0;
-            NotificationIcon.Rounding = new Padding(8);
-            NotificationIcon.Size = new Size(32, 37);
-            NotificationIcon.TabIndex = 0;
-            // 
             // cuiPanel1
             // 
-            cuiPanel1.Controls.Add(AddBtn);
-            cuiPanel1.Controls.Add(TableSearchBar);
             cuiPanel1.Controls.Add(InventoryGridView);
             cuiPanel1.Location = new Point(28, 133);
             cuiPanel1.Margin = new Padding(3, 4, 3, 4);
@@ -271,7 +201,7 @@
             AddBtn.ImageAutoCenter = true;
             AddBtn.ImageExpand = new Point(3, 3);
             AddBtn.ImageOffset = new Point(-15, 0);
-            AddBtn.Location = new Point(939, 6);
+            AddBtn.Location = new Point(967, 4);
             AddBtn.Margin = new Padding(3, 4, 3, 4);
             AddBtn.Name = "AddBtn";
             AddBtn.NormalBackground = Color.SteelBlue;
@@ -290,36 +220,6 @@
             AddBtn.TextOffset = new Point(0, 0);
             AddBtn.Click += AddBtn_Click;
             // 
-            // TableSearchBar
-            // 
-            TableSearchBar.BackColor = Color.Transparent;
-            TableSearchBar.BackgroundColor = Color.White;
-            TableSearchBar.BorderStyle = BorderStyle.FixedSingle;
-            TableSearchBar.Content = "";
-            TableSearchBar.FocusBackgroundColor = Color.White;
-            TableSearchBar.FocusImageTint = Color.White;
-            TableSearchBar.FocusOutlineColor = Color.Transparent;
-            TableSearchBar.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TableSearchBar.ForeColor = Color.Gray;
-            TableSearchBar.Image = null;
-            TableSearchBar.ImageExpand = new Point(0, 0);
-            TableSearchBar.ImageOffset = new Point(0, 0);
-            TableSearchBar.Location = new Point(29, 13);
-            TableSearchBar.Margin = new Padding(5);
-            TableSearchBar.Multiline = false;
-            TableSearchBar.Name = "TableSearchBar";
-            TableSearchBar.NormalImageTint = Color.Transparent;
-            TableSearchBar.OutlineColor = Color.Transparent;
-            TableSearchBar.Padding = new Padding(22, 15, 22, 0);
-            TableSearchBar.PasswordChar = false;
-            TableSearchBar.PlaceholderColor = SystemColors.WindowText;
-            TableSearchBar.PlaceholderText = "Search";
-            TableSearchBar.Rounding = new Padding(8);
-            TableSearchBar.Size = new Size(424, 53);
-            TableSearchBar.TabIndex = 13;
-            TableSearchBar.TextOffset = new Size(0, 0);
-            TableSearchBar.UnderlinedStyle = true;
-            // 
             // Inventory
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -333,7 +233,6 @@
             Size = new Size(1211, 1467);
             ((System.ComponentModel.ISupportInitialize)InventoryGridView).EndInit();
             cuiPanel6.ResumeLayout(false);
-            NotifIconBG.ResumeLayout(false);
             cuiPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -342,12 +241,8 @@
 
         private CuoreUI.Controls.cuiPanel cuiPanel6;
         private CuoreUI.Controls.cuiLabel InventoryHeader;
-        private CuoreUI.Controls.cuiTextBox SearchBar;
-        private CuoreUI.Controls.cuiGradientPanel NotifIconBG;
-        private CuoreUI.Controls.cuiPictureBox NotificationIcon;
         private CuoreUI.Controls.cuiPanel cuiPanel1;
         private DataGridView InventoryGridView;
-        private CuoreUI.Controls.cuiTextBox TableSearchBar;
         private CuoreUI.Controls.cuiButton AddBtn;
         private DataGridViewTextBoxColumn ProductName;
         private DataGridViewTextBoxColumn ItemCategory;

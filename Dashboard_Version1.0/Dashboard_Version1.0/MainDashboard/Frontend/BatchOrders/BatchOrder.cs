@@ -214,7 +214,7 @@ namespace MainDashboard.Frontend.BatchOrders
 
                 if (createSuccess)
                 {
-                    this.Close();
+                    this.Hide();
                 }
                 else
                 {
@@ -234,14 +234,17 @@ namespace MainDashboard.Frontend.BatchOrders
 
                 if (updatingSuccess)
                 {
-                    this.Close();
+                    this.Hide();
                 }
                 else
                 {
                     MessageBox.Show("Cannot Update Order: Unknown Error.", "Edit Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
+                this.Hide();
+
             }
+            this.Hide();
 
         }
 
@@ -264,7 +267,7 @@ namespace MainDashboard.Frontend.BatchOrders
 
             if (isReceivedSuccess)
             {
-                this.Close();
+                this.Hide();
             }
             else
             {
@@ -298,7 +301,7 @@ namespace MainDashboard.Frontend.BatchOrders
                         MessageBox.Show("Order has been successfully marked as not yet received.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         ReloadBatchOrders.LoadBatchOrdersData(_targetDataGridView);
-                        this.Close();
+                        this.Hide();
                     }
                     else
                     {

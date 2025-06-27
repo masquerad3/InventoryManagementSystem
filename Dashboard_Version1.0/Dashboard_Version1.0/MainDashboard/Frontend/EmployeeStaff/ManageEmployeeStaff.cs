@@ -145,7 +145,7 @@ namespace MainDashboard.Frontend.EmployeeStaff
                 if (addSuccess)
                 {
                     ReloadEmployeeStaffs.LoadEmployeeStaffData(_targetDataGridView);
-                    this.Close();
+                    this.Hide();
                 }
                 else
                 {
@@ -173,7 +173,7 @@ namespace MainDashboard.Frontend.EmployeeStaff
                 if (editSuccess)
                 {
                     ReloadEmployeeStaffs.LoadEmployeeStaffData(_targetDataGridView);
-                    this.Close();
+                    this.Hide();
                 }
                 else
                 {

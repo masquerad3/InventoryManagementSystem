@@ -1,4 +1,5 @@
-﻿using MainDashboard.Backend.Queries.StaffCrud;
+﻿using MainDashboard.Backend.Queries.AuthCrud;
+using MainDashboard.Backend.Queries.StaffCrud;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -90,6 +91,10 @@ namespace MainDashboard.Backend.Logics.EmployeeStaffs.Add
             // If all validations passed, proceed to update the staff record
             try
             {
+                // Create auth record with hashed password
+                var authCrud = new AuthCrud();
+                bool authSuccess = authCrud.Register(staffId, empPassword);
+
                 // Create staff object with updated information
                 Staff updatedStaff = new Staff(
                     staffName: empName,
@@ -103,7 +108,7 @@ namespace MainDashboard.Backend.Logics.EmployeeStaffs.Add
                 // Update staff record using the passed staffId parameter
                 bool updateSuccess = staffCrud.UpdateStaff(staffId, updatedStaff);
 
-                if (updateSuccess)
+                if (authSuccess = updateSuccess)
                 {
                     MessageBox.Show("Employee information updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return true;

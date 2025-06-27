@@ -12,12 +12,20 @@ CREATE TABLE Staff (
     StaffName NVARCHAR(100) NOT NULL,
     --removed staff position/roles
     --add admin edit, employee view
-    StaffPosition NVARCHAR(50) NOT NULL DEFAULT "Regular",
+    StaffPosition NVARCHAR(50) NOT NULL DEFAULT 'Regular',
     StaffEmail NVARCHAR(50) NOT NULL,
     --removed password
     StaffDateOfBirth DATE NULL,
     StaffAddress NVARCHAR(200) NULL
 );
+
+CREATE TABLE Auth (
+    AuthID INT IDENTITY(1,1) PRIMARY KEY,
+    StaffID INT NOT NULL,  -- FK to Staff table
+    PasswordHash NVARCHAR(255) NOT NULL, -- store hashed passwords, not plain text
+    FOREIGN KEY (StaffID) REFERENCES Staff(StaffID)
+);
+
 
 */
 
@@ -55,6 +63,7 @@ namespace MainDashboard.Backend.Queries.StaffCrud
             StaffID = staffID;
         }
     }
+
     public class StaffCrud : DatabaseConnection
     {
         public int? GetStaffIDByName(string staffName)

@@ -1,18 +1,26 @@
 ﻿
-using MainDashboard.Backend.Logics.BatchOrders.Reload;
+using CuoreUI;
 using MainDashboard.Backend.Logics.BatchOrders.Create;
+using MainDashboard.Backend.Logics.BatchOrders.Reload;
 using MainDashboard.Backend.Logics.BatchOrders.Updating;
 using MainDashboard.Backend.Queries.BatchOrdersCrud;
-
+using Microsoft.VisualBasic.Devices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
+using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
+using System.Reflection.PortableExecutable;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static CuoreUI.DeviceInfo;
+using static CuoreUI.Drawing.EasingFunctions;
 
 namespace MainDashboard.Frontend.BatchOrders
 {
@@ -21,6 +29,12 @@ namespace MainDashboard.Frontend.BatchOrders
         private string value;
         private DataGridView _targetDataGridView;
         private int? batchOrderId;
+
+        
+
+        // A list to hold the data that will be bound to the DataGridView
+        // Using BindingList for automatic UI updates when items are added/removed
+        private BindingList<GridItem> _gridData;
 
         //CONSTRUCTOR FOR ADD * ADDING/CREATING NEW ORDER BATCHES OF PRODUCTS
         public BatchOrder(string value, DataGridView dgv)

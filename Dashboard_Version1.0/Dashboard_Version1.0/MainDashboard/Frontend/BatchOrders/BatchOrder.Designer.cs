@@ -40,6 +40,11 @@
             CancelBtn = new CuoreUI.Controls.cuiButton();
             IsReceivedBtn = new CuoreUI.Controls.cuiButton();
             NotReceivedBtn = new CuoreUI.Controls.cuiButton();
+            ProductQuantityLabel = new CuoreUI.Controls.cuiLabel();
+            ProductQuantityGridview = new DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)ProductQuantityGridview).BeginInit();
             SuspendLayout();
             // 
             // AddEditBatchOrderLabel
@@ -57,13 +62,13 @@
             // SubLabel
             // 
             SubLabel.BackColor = Color.Transparent;
-            SubLabel.Content = "Check\\ the\\ lists\\ of\\ products\\ you'd\\ like\\ to\\ order";
+            SubLabel.Content = "Check\\ the\\ lists\\ of\\ products\\ you'd\\ like\\ to\\ order\\ and\\ update\\ their\\ quantity";
             SubLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             SubLabel.HorizontalAlignment = StringAlignment.Near;
             SubLabel.Location = new Point(26, 67);
             SubLabel.Margin = new Padding(5, 4, 5, 4);
             SubLabel.Name = "SubLabel";
-            SubLabel.Size = new Size(532, 28);
+            SubLabel.Size = new Size(608, 28);
             SubLabel.TabIndex = 34;
             SubLabel.VerticalAlignment = StringAlignment.Center;
             // 
@@ -72,7 +77,7 @@
             BONameLabel.Content = "Batch\\ Order\\ Name\\ :";
             BONameLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BONameLabel.HorizontalAlignment = StringAlignment.Near;
-            BONameLabel.Location = new Point(26, 114);
+            BONameLabel.Location = new Point(39, 103);
             BONameLabel.Margin = new Padding(5, 4, 5, 4);
             BONameLabel.Name = "BONameLabel";
             BONameLabel.Size = new Size(280, 44);
@@ -91,7 +96,7 @@
             BONameTextBox.Image = null;
             BONameTextBox.ImageExpand = new Point(0, 0);
             BONameTextBox.ImageOffset = new Point(0, 0);
-            BONameTextBox.Location = new Point(26, 151);
+            BONameTextBox.Location = new Point(39, 141);
             BONameTextBox.Margin = new Padding(5);
             BONameTextBox.Multiline = false;
             BONameTextBox.Name = "BONameTextBox";
@@ -112,18 +117,17 @@
             ProductListLabel.Content = "List\\ of\\ Products\\ :";
             ProductListLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ProductListLabel.HorizontalAlignment = StringAlignment.Near;
-            ProductListLabel.Location = new Point(26, 231);
+            ProductListLabel.Location = new Point(39, 216);
             ProductListLabel.Margin = new Padding(5, 4, 5, 4);
             ProductListLabel.Name = "ProductListLabel";
-            ProductListLabel.Size = new Size(280, 44);
+            ProductListLabel.Size = new Size(150, 44);
             ProductListLabel.TabIndex = 40;
             ProductListLabel.VerticalAlignment = StringAlignment.Center;
             // 
             // ProductCheckList
             // 
             ProductCheckList.FormattingEnabled = true;
-            ProductCheckList.Items.AddRange(new object[] { "Lcd Monitor", "Opisina Chair", "Electric Drill", "Wifi Router", "Desk Lamp", "Filing Cabinet", "Software Suite", "Cctv Camera", "External Hdd", "Power Drill", "Wireless Keyboard", "Air Conditioner", "Projector", "Industrial Fan", "Smart Tv", "Printer Scanner", "Safety Helmet", "Network Switch", "Solar Panel", "Voltage Regulator", "Barcode Scanner", "Ups Battery", "Conference Phone", "Welding Machine", "Tablet", "Computer" });
-            ProductCheckList.Location = new Point(26, 282);
+            ProductCheckList.Location = new Point(39, 257);
             ProductCheckList.Name = "ProductCheckList";
             ProductCheckList.Size = new Size(150, 114);
             ProductCheckList.TabIndex = 41;
@@ -134,7 +138,7 @@
             DescriptionLabel.Content = "Description";
             DescriptionLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             DescriptionLabel.HorizontalAlignment = StringAlignment.Near;
-            DescriptionLabel.Location = new Point(26, 432);
+            DescriptionLabel.Location = new Point(39, 501);
             DescriptionLabel.Margin = new Padding(5, 4, 5, 4);
             DescriptionLabel.Name = "DescriptionLabel";
             DescriptionLabel.Size = new Size(280, 44);
@@ -153,7 +157,7 @@
             OrderDescriptionTextBox.Image = null;
             OrderDescriptionTextBox.ImageExpand = new Point(0, 0);
             OrderDescriptionTextBox.ImageOffset = new Point(0, 0);
-            OrderDescriptionTextBox.Location = new Point(26, 494);
+            OrderDescriptionTextBox.Location = new Point(39, 545);
             OrderDescriptionTextBox.Margin = new Padding(5);
             OrderDescriptionTextBox.Multiline = false;
             OrderDescriptionTextBox.Name = "OrderDescriptionTextBox";
@@ -189,7 +193,7 @@
             SaveBtn.ImageAutoCenter = true;
             SaveBtn.ImageExpand = new Point(0, 0);
             SaveBtn.ImageOffset = new Point(-10, 0);
-            SaveBtn.Location = new Point(353, 806);
+            SaveBtn.Location = new Point(366, 839);
             SaveBtn.Margin = new Padding(3, 4, 3, 4);
             SaveBtn.Name = "SaveBtn";
             SaveBtn.NormalBackground = Color.SteelBlue;
@@ -229,7 +233,7 @@
             CancelBtn.ImageAutoCenter = true;
             CancelBtn.ImageExpand = new Point(0, 0);
             CancelBtn.ImageOffset = new Point(-10, 0);
-            CancelBtn.Location = new Point(37, 806);
+            CancelBtn.Location = new Point(50, 839);
             CancelBtn.Margin = new Padding(3, 4, 3, 4);
             CancelBtn.Name = "CancelBtn";
             CancelBtn.NormalBackground = Color.Transparent;
@@ -268,7 +272,7 @@
             IsReceivedBtn.ImageAutoCenter = true;
             IsReceivedBtn.ImageExpand = new Point(0, 0);
             IsReceivedBtn.ImageOffset = new Point(-10, 0);
-            IsReceivedBtn.Location = new Point(353, 932);
+            IsReceivedBtn.Location = new Point(366, 931);
             IsReceivedBtn.Margin = new Padding(3, 4, 3, 4);
             IsReceivedBtn.Name = "IsReceivedBtn";
             IsReceivedBtn.NormalBackground = Color.SteelBlue;
@@ -308,7 +312,7 @@
             NotReceivedBtn.ImageAutoCenter = true;
             NotReceivedBtn.ImageExpand = new Point(0, 0);
             NotReceivedBtn.ImageOffset = new Point(-10, 0);
-            NotReceivedBtn.Location = new Point(37, 932);
+            NotReceivedBtn.Location = new Point(50, 931);
             NotReceivedBtn.Margin = new Padding(3, 4, 3, 4);
             NotReceivedBtn.Name = "NotReceivedBtn";
             NotReceivedBtn.NormalBackground = Color.Transparent;
@@ -327,12 +331,58 @@
             NotReceivedBtn.TextOffset = new Point(0, 0);
             NotReceivedBtn.Click += NotReceivedBtn_Click;
             // 
+            // ProductQuantityLabel
+            // 
+            ProductQuantityLabel.Content = "Input\\ Product\\ Quantity\\ :";
+            ProductQuantityLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ProductQuantityLabel.HorizontalAlignment = StringAlignment.Near;
+            ProductQuantityLabel.Location = new Point(212, 216);
+            ProductQuantityLabel.Margin = new Padding(5, 4, 5, 4);
+            ProductQuantityLabel.Name = "ProductQuantityLabel";
+            ProductQuantityLabel.Size = new Size(284, 44);
+            ProductQuantityLabel.TabIndex = 46;
+            ProductQuantityLabel.VerticalAlignment = StringAlignment.Center;
+            // 
+            // ProductQuantityGridview
+            // 
+            ProductQuantityGridview.AllowUserToAddRows = false;
+            ProductQuantityGridview.AllowUserToDeleteRows = false;
+            ProductQuantityGridview.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            ProductQuantityGridview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            ProductQuantityGridview.BackgroundColor = Color.White;
+            ProductQuantityGridview.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
+            ProductQuantityGridview.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ProductQuantityGridview.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2 });
+            ProductQuantityGridview.ImeMode = ImeMode.Off;
+            ProductQuantityGridview.Location = new Point(212, 257);
+            ProductQuantityGridview.Name = "ProductQuantityGridview";
+            ProductQuantityGridview.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            ProductQuantityGridview.RowHeadersVisible = false;
+            ProductQuantityGridview.RowHeadersWidth = 51;
+            ProductQuantityGridview.Size = new Size(422, 231);
+            ProductQuantityGridview.TabIndex = 47;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.HeaderText = "Product";
+            dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Resizable = DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.HeaderText = "Quantity";
+            dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
             // BatchOrder
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(686, 1064);
+            ClientSize = new Size(686, 1041);
+            Controls.Add(ProductQuantityGridview);
+            Controls.Add(ProductQuantityLabel);
             Controls.Add(NotReceivedBtn);
             Controls.Add(IsReceivedBtn);
             Controls.Add(CancelBtn);
@@ -348,6 +398,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "BatchOrder";
             Text = "Batch Orders";
+            ((System.ComponentModel.ISupportInitialize)ProductQuantityGridview).EndInit();
             ResumeLayout(false);
         }
 
@@ -365,5 +416,9 @@
         private CuoreUI.Controls.cuiButton CancelBtn;
         private CuoreUI.Controls.cuiButton IsReceivedBtn;
         private CuoreUI.Controls.cuiButton NotReceivedBtn;
+        private CuoreUI.Controls.cuiLabel ProductQuantityLabel;
+        private DataGridView ProductQuantityGridview;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }

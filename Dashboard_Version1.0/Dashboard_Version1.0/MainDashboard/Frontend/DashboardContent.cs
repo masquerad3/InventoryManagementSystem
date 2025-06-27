@@ -65,7 +65,7 @@ namespace MainDashboard
             int TotalOutOfStocks = readoutOfStockProducts.GetOutOfStockProductCount();
 
             //
-            WNumber.Content = TotalNoneExpiredWarranties.ToString(); // non expired warranty
+            ValidWarrantyNumber.Content = TotalNoneExpiredWarranties.ToString(); // non expired warranty
             OOSNumber.Content = TotalOutOfStocks.ToString(); // out of stock products
         }
 

@@ -70,10 +70,9 @@
             TBNumber1 = new CuoreUI.Controls.cuiLabel();
             TBIcon1 = new CuoreUI.Controls.cuiPictureBox();
             cuiLabel21 = new CuoreUI.Controls.cuiLabel();
-            WarrantyPanel = new CuoreUI.Controls.cuiPanel();
             WGB = new CuoreUI.Controls.cuiGroupBox();
-            WLabel = new CuoreUI.Controls.cuiLabel();
-            WNumber = new CuoreUI.Controls.cuiLabel();
+            ValidWarrantyLabel = new CuoreUI.Controls.cuiLabel();
+            ValidWarrantyNumber = new CuoreUI.Controls.cuiLabel();
             WIcon = new CuoreUI.Controls.cuiPictureBox();
             OutOfStockPanel = new CuoreUI.Controls.cuiPanel();
             OOSGB = new CuoreUI.Controls.cuiGroupBox();
@@ -85,10 +84,13 @@
             SearchBar = new CuoreUI.Controls.cuiTextBox();
             NotifIconBG = new CuoreUI.Controls.cuiGradientPanel();
             NotificationIcon = new CuoreUI.Controls.cuiPictureBox();
-            cuiPanel8 = new CuoreUI.Controls.cuiPanel();
-            dataGridView2 = new DataGridView();
-            dataGridView1 = new DataGridView();
-            cuiPanel7 = new CuoreUI.Controls.cuiPanel();
+            WarrantySummaryPanel = new CuoreUI.Controls.cuiPanel();
+            WarrantySummaryLabel = new CuoreUI.Controls.cuiLabel();
+            cuiGroupBox2 = new CuoreUI.Controls.cuiGroupBox();
+            ExpiredWarrantyLabel = new CuoreUI.Controls.cuiLabel();
+            ExpiredWarrantyNumber = new CuoreUI.Controls.cuiLabel();
+            cuiPictureBox4 = new CuoreUI.Controls.cuiPictureBox();
+            cuiLabel3 = new CuoreUI.Controls.cuiLabel();
             ItemSummaryPanel.SuspendLayout();
             ISGB2.SuspendLayout();
             ISGB1.SuspendLayout();
@@ -101,16 +103,13 @@
             TotalBatchesPanel.SuspendLayout();
             TBGB2.SuspendLayout();
             TBGB1.SuspendLayout();
-            WarrantyPanel.SuspendLayout();
             WGB.SuspendLayout();
             OutOfStockPanel.SuspendLayout();
             OOSGB.SuspendLayout();
             cuiPanel6.SuspendLayout();
             NotifIconBG.SuspendLayout();
-            cuiPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            cuiPanel7.SuspendLayout();
+            WarrantySummaryPanel.SuspendLayout();
+            cuiGroupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // ItemSummaryPanel
@@ -685,59 +684,46 @@
             cuiLabel21.TabIndex = 0;
             cuiLabel21.VerticalAlignment = StringAlignment.Near;
             // 
-            // WarrantyPanel
-            // 
-            WarrantyPanel.Controls.Add(WGB);
-            WarrantyPanel.Location = new Point(615, 797);
-            WarrantyPanel.Margin = new Padding(3, 4, 3, 4);
-            WarrantyPanel.Name = "WarrantyPanel";
-            WarrantyPanel.OutlineThickness = 1F;
-            WarrantyPanel.PanelColor = Color.White;
-            WarrantyPanel.PanelOutlineColor = Color.Black;
-            WarrantyPanel.Rounding = new Padding(8);
-            WarrantyPanel.Size = new Size(248, 200);
-            WarrantyPanel.TabIndex = 5;
-            // 
             // WGB
             // 
             WGB.BackColor = Color.Transparent;
             WGB.BorderColor = Color.DarkGray;
             WGB.Content = "";
-            WGB.Controls.Add(WLabel);
-            WGB.Controls.Add(WNumber);
+            WGB.Controls.Add(ValidWarrantyLabel);
+            WGB.Controls.Add(ValidWarrantyNumber);
             WGB.Controls.Add(WIcon);
-            WGB.Location = new Point(16, 13);
+            WGB.Location = new Point(31, 72);
             WGB.Margin = new Padding(3, 4, 3, 4);
             WGB.Name = "WGB";
             WGB.Padding = new Padding(8, 26, 8, 8);
             WGB.Rounding = new Padding(8);
-            WGB.Size = new Size(217, 169);
+            WGB.Size = new Size(252, 169);
             WGB.TabIndex = 3;
             // 
-            // WLabel
+            // ValidWarrantyLabel
             // 
-            WLabel.BackColor = Color.Transparent;
-            WLabel.Content = "Warranty";
-            WLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            WLabel.HorizontalAlignment = StringAlignment.Near;
-            WLabel.Location = new Point(102, 107);
-            WLabel.Margin = new Padding(5, 4, 5, 4);
-            WLabel.Name = "WLabel";
-            WLabel.Size = new Size(97, 25);
-            WLabel.TabIndex = 2;
-            WLabel.VerticalAlignment = StringAlignment.Far;
+            ValidWarrantyLabel.BackColor = Color.Transparent;
+            ValidWarrantyLabel.Content = "Valid\\ Warranty";
+            ValidWarrantyLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ValidWarrantyLabel.HorizontalAlignment = StringAlignment.Near;
+            ValidWarrantyLabel.Location = new Point(102, 107);
+            ValidWarrantyLabel.Margin = new Padding(5, 4, 5, 4);
+            ValidWarrantyLabel.Name = "ValidWarrantyLabel";
+            ValidWarrantyLabel.Size = new Size(137, 25);
+            ValidWarrantyLabel.TabIndex = 2;
+            ValidWarrantyLabel.VerticalAlignment = StringAlignment.Far;
             // 
-            // WNumber
+            // ValidWarrantyNumber
             // 
-            WNumber.Content = "123";
-            WNumber.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            WNumber.HorizontalAlignment = StringAlignment.Near;
-            WNumber.Location = new Point(98, 53);
-            WNumber.Margin = new Padding(5, 4, 5, 4);
-            WNumber.Name = "WNumber";
-            WNumber.Size = new Size(105, 45);
-            WNumber.TabIndex = 1;
-            WNumber.VerticalAlignment = StringAlignment.Far;
+            ValidWarrantyNumber.Content = "123";
+            ValidWarrantyNumber.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ValidWarrantyNumber.HorizontalAlignment = StringAlignment.Near;
+            ValidWarrantyNumber.Location = new Point(98, 53);
+            ValidWarrantyNumber.Margin = new Padding(5, 4, 5, 4);
+            ValidWarrantyNumber.Name = "ValidWarrantyNumber";
+            ValidWarrantyNumber.Size = new Size(105, 45);
+            ValidWarrantyNumber.TabIndex = 1;
+            ValidWarrantyNumber.VerticalAlignment = StringAlignment.Far;
             // 
             // WIcon
             // 
@@ -758,15 +744,16 @@
             // OutOfStockPanel
             // 
             OutOfStockPanel.BackColor = Color.Transparent;
+            OutOfStockPanel.Controls.Add(cuiLabel3);
             OutOfStockPanel.Controls.Add(OOSGB);
-            OutOfStockPanel.Location = new Point(879, 797);
+            OutOfStockPanel.Location = new Point(731, 797);
             OutOfStockPanel.Margin = new Padding(3, 4, 3, 4);
             OutOfStockPanel.Name = "OutOfStockPanel";
             OutOfStockPanel.OutlineThickness = 1F;
             OutOfStockPanel.PanelColor = Color.White;
             OutOfStockPanel.PanelOutlineColor = Color.Black;
             OutOfStockPanel.Rounding = new Padding(8);
-            OutOfStockPanel.Size = new Size(248, 200);
+            OutOfStockPanel.Size = new Size(396, 277);
             OutOfStockPanel.TabIndex = 6;
             // 
             // OOSGB
@@ -777,12 +764,12 @@
             OOSGB.Controls.Add(OOSLabel);
             OOSGB.Controls.Add(OOSNumber);
             OOSGB.Controls.Add(OOSIcon);
-            OOSGB.Location = new Point(16, 13);
+            OOSGB.Location = new Point(39, 72);
             OOSGB.Margin = new Padding(3, 4, 3, 4);
             OOSGB.Name = "OOSGB";
             OOSGB.Padding = new Padding(8, 26, 8, 8);
             OOSGB.Rounding = new Padding(8);
-            OOSGB.Size = new Size(217, 169);
+            OOSGB.Size = new Size(322, 169);
             OOSGB.TabIndex = 3;
             // 
             // OOSLabel
@@ -794,7 +781,7 @@
             OOSLabel.Location = new Point(102, 107);
             OOSLabel.Margin = new Padding(5, 4, 5, 4);
             OOSLabel.Name = "OOSLabel";
-            OOSLabel.Size = new Size(97, 25);
+            OOSLabel.Size = new Size(186, 25);
             OOSLabel.TabIndex = 2;
             OOSLabel.VerticalAlignment = StringAlignment.Far;
             // 
@@ -869,7 +856,7 @@
             SearchBar.ImageExpand = new Point(5, 5);
             SearchBar.ImageOffset = new Point(0, 0);
             SearchBar.Location = new Point(686, 13);
-            SearchBar.Margin = new Padding(5, 5, 5, 5);
+            SearchBar.Margin = new Padding(5);
             SearchBar.Multiline = false;
             SearchBar.Name = "SearchBar";
             SearchBar.NormalImageTint = Color.Transparent;
@@ -917,55 +904,103 @@
             NotificationIcon.Size = new Size(32, 37);
             NotificationIcon.TabIndex = 0;
             // 
-            // cuiPanel8
+            // WarrantySummaryPanel
             // 
-            cuiPanel8.BackColor = Color.Transparent;
-            cuiPanel8.Controls.Add(dataGridView2);
-            cuiPanel8.Location = new Point(615, 1024);
-            cuiPanel8.Margin = new Padding(3, 4, 3, 4);
-            cuiPanel8.Name = "cuiPanel8";
-            cuiPanel8.OutlineThickness = 1F;
-            cuiPanel8.PanelColor = Color.White;
-            cuiPanel8.PanelOutlineColor = Color.Black;
-            cuiPanel8.Rounding = new Padding(8);
-            cuiPanel8.Size = new Size(512, 381);
-            cuiPanel8.TabIndex = 11;
+            WarrantySummaryPanel.Controls.Add(cuiGroupBox2);
+            WarrantySummaryPanel.Controls.Add(WGB);
+            WarrantySummaryPanel.Controls.Add(WarrantySummaryLabel);
+            WarrantySummaryPanel.Location = new Point(70, 797);
+            WarrantySummaryPanel.Margin = new Padding(3, 4, 3, 4);
+            WarrantySummaryPanel.Name = "WarrantySummaryPanel";
+            WarrantySummaryPanel.OutlineThickness = 1F;
+            WarrantySummaryPanel.PanelColor = Color.White;
+            WarrantySummaryPanel.PanelOutlineColor = Color.Black;
+            WarrantySummaryPanel.Rounding = new Padding(10);
+            WarrantySummaryPanel.Size = new Size(622, 277);
+            WarrantySummaryPanel.TabIndex = 12;
             // 
-            // dataGridView2
+            // WarrantySummaryLabel
             // 
-            dataGridView2.BackgroundColor = Color.WhiteSmoke;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(16, 63);
-            dataGridView2.Margin = new Padding(3, 4, 3, 4);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(479, 319);
-            dataGridView2.TabIndex = 10;
+            WarrantySummaryLabel.BackColor = Color.Transparent;
+            WarrantySummaryLabel.Content = "Warranty\\ Summary";
+            WarrantySummaryLabel.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            WarrantySummaryLabel.HorizontalAlignment = StringAlignment.Near;
+            WarrantySummaryLabel.Location = new Point(13, 12);
+            WarrantySummaryLabel.Margin = new Padding(5, 4, 5, 4);
+            WarrantySummaryLabel.Name = "WarrantySummaryLabel";
+            WarrantySummaryLabel.Size = new Size(311, 37);
+            WarrantySummaryLabel.TabIndex = 0;
+            WarrantySummaryLabel.VerticalAlignment = StringAlignment.Near;
             // 
-            // dataGridView1
+            // cuiGroupBox2
             // 
-            dataGridView1.BackgroundColor = Color.WhiteSmoke;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(26, 120);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(462, 488);
-            dataGridView1.TabIndex = 10;
+            cuiGroupBox2.BackColor = Color.Transparent;
+            cuiGroupBox2.BorderColor = Color.DarkGray;
+            cuiGroupBox2.Content = "";
+            cuiGroupBox2.Controls.Add(ExpiredWarrantyLabel);
+            cuiGroupBox2.Controls.Add(ExpiredWarrantyNumber);
+            cuiGroupBox2.Controls.Add(cuiPictureBox4);
+            cuiGroupBox2.Location = new Point(320, 72);
+            cuiGroupBox2.Margin = new Padding(3, 4, 3, 4);
+            cuiGroupBox2.Name = "cuiGroupBox2";
+            cuiGroupBox2.Padding = new Padding(8, 26, 8, 8);
+            cuiGroupBox2.Rounding = new Padding(8);
+            cuiGroupBox2.Size = new Size(267, 169);
+            cuiGroupBox2.TabIndex = 4;
             // 
-            // cuiPanel7
+            // ExpiredWarrantyLabel
             // 
-            cuiPanel7.BackColor = Color.Transparent;
-            cuiPanel7.Controls.Add(dataGridView1);
-            cuiPanel7.Location = new Point(70, 797);
-            cuiPanel7.Margin = new Padding(3, 4, 3, 4);
-            cuiPanel7.Name = "cuiPanel7";
-            cuiPanel7.OutlineThickness = 1F;
-            cuiPanel7.PanelColor = Color.White;
-            cuiPanel7.PanelOutlineColor = Color.Black;
-            cuiPanel7.Rounding = new Padding(8);
-            cuiPanel7.Size = new Size(512, 608);
-            cuiPanel7.TabIndex = 9;
+            ExpiredWarrantyLabel.BackColor = Color.Transparent;
+            ExpiredWarrantyLabel.Content = "Expired\\ Warranty";
+            ExpiredWarrantyLabel.Font = new Font("Leelawadee UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ExpiredWarrantyLabel.HorizontalAlignment = StringAlignment.Near;
+            ExpiredWarrantyLabel.Location = new Point(102, 107);
+            ExpiredWarrantyLabel.Margin = new Padding(5, 4, 5, 4);
+            ExpiredWarrantyLabel.Name = "ExpiredWarrantyLabel";
+            ExpiredWarrantyLabel.Size = new Size(150, 25);
+            ExpiredWarrantyLabel.TabIndex = 2;
+            ExpiredWarrantyLabel.VerticalAlignment = StringAlignment.Far;
+            // 
+            // ExpiredWarrantyNumber
+            // 
+            ExpiredWarrantyNumber.Content = "123";
+            ExpiredWarrantyNumber.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ExpiredWarrantyNumber.HorizontalAlignment = StringAlignment.Near;
+            ExpiredWarrantyNumber.Location = new Point(98, 53);
+            ExpiredWarrantyNumber.Margin = new Padding(5, 4, 5, 4);
+            ExpiredWarrantyNumber.Name = "ExpiredWarrantyNumber";
+            ExpiredWarrantyNumber.Size = new Size(105, 45);
+            ExpiredWarrantyNumber.TabIndex = 1;
+            ExpiredWarrantyNumber.VerticalAlignment = StringAlignment.Far;
+            // 
+            // cuiPictureBox4
+            // 
+            cuiPictureBox4.BackgroundImage = Properties.Resources.package_x;
+            cuiPictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
+            cuiPictureBox4.Content = null;
+            cuiPictureBox4.ImageTint = Color.White;
+            cuiPictureBox4.Location = new Point(29, 53);
+            cuiPictureBox4.Margin = new Padding(5, 4, 5, 4);
+            cuiPictureBox4.Name = "cuiPictureBox4";
+            cuiPictureBox4.OutlineThickness = 1F;
+            cuiPictureBox4.PanelOutlineColor = Color.Empty;
+            cuiPictureBox4.Rotation = 0;
+            cuiPictureBox4.Rounding = new Padding(8);
+            cuiPictureBox4.Size = new Size(61, 59);
+            cuiPictureBox4.TabIndex = 0;
+            // 
+            // cuiLabel3
+            // 
+            cuiLabel3.BackColor = Color.Transparent;
+            cuiLabel3.Content = "Out\\ of\\ Stock\\ Summary";
+            cuiLabel3.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiLabel3.HorizontalAlignment = StringAlignment.Near;
+            cuiLabel3.Location = new Point(16, 12);
+            cuiLabel3.Margin = new Padding(5, 4, 5, 4);
+            cuiLabel3.Name = "cuiLabel3";
+            cuiLabel3.Size = new Size(311, 37);
+            cuiLabel3.TabIndex = 5;
+            cuiLabel3.VerticalAlignment = StringAlignment.Near;
             // 
             // DashboardContent
             // 
@@ -973,11 +1008,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.AliceBlue;
-            Controls.Add(cuiPanel8);
-            Controls.Add(cuiPanel7);
+            Controls.Add(WarrantySummaryPanel);
             Controls.Add(cuiPanel6);
             Controls.Add(OutOfStockPanel);
-            Controls.Add(WarrantyPanel);
             Controls.Add(TotalBatchesPanel);
             Controls.Add(TotalItemsPanel);
             Controls.Add(ProductSummaryPanel);
@@ -998,16 +1031,13 @@
             TotalBatchesPanel.ResumeLayout(false);
             TBGB2.ResumeLayout(false);
             TBGB1.ResumeLayout(false);
-            WarrantyPanel.ResumeLayout(false);
             WGB.ResumeLayout(false);
             OutOfStockPanel.ResumeLayout(false);
             OOSGB.ResumeLayout(false);
             cuiPanel6.ResumeLayout(false);
             NotifIconBG.ResumeLayout(false);
-            cuiPanel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            cuiPanel7.ResumeLayout(false);
+            WarrantySummaryPanel.ResumeLayout(false);
+            cuiGroupBox2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -1052,10 +1082,9 @@
         private CuoreUI.Controls.cuiLabel TBNumber1;
         private CuoreUI.Controls.cuiPictureBox TBIcon1;
         private CuoreUI.Controls.cuiLabel cuiLabel21;
-        private CuoreUI.Controls.cuiPanel WarrantyPanel;
         private CuoreUI.Controls.cuiGroupBox WGB;
-        private CuoreUI.Controls.cuiLabel WLabel;
-        private CuoreUI.Controls.cuiLabel WNumber;
+        private CuoreUI.Controls.cuiLabel ValidWarrantyLabel;
+        private CuoreUI.Controls.cuiLabel ValidWarrantyNumber;
         private CuoreUI.Controls.cuiPictureBox WIcon;
         private CuoreUI.Controls.cuiPanel OutOfStockPanel;
         private CuoreUI.Controls.cuiGroupBox OOSGB;
@@ -1068,10 +1097,13 @@
         private CuoreUI.Controls.cuiTextBox SearchBar;
         private CuoreUI.Controls.cuiPictureBox ISIcon2;
         private CuoreUI.Controls.cuiPictureBox TBIcon2;
-        private CuoreUI.Controls.cuiPanel cuiPanel8;
-        private DataGridView dataGridView2;
         private CuoreUI.Controls.cuiGradientPanel NotifIconBG;
-        private DataGridView dataGridView1;
-        private CuoreUI.Controls.cuiPanel cuiPanel7;
+        private CuoreUI.Controls.cuiPanel WarrantySummaryPanel;
+        private CuoreUI.Controls.cuiLabel WarrantySummaryLabel;
+        private CuoreUI.Controls.cuiLabel cuiLabel3;
+        private CuoreUI.Controls.cuiGroupBox cuiGroupBox2;
+        private CuoreUI.Controls.cuiLabel ExpiredWarrantyLabel;
+        private CuoreUI.Controls.cuiLabel ExpiredWarrantyNumber;
+        private CuoreUI.Controls.cuiPictureBox cuiPictureBox4;
     }
 }

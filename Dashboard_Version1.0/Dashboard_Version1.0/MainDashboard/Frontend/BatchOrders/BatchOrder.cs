@@ -154,47 +154,43 @@ namespace MainDashboard.Frontend.BatchOrders
             BONameTextBox.Content = order.Value.BatchName;
             OrderDescriptionTextBox.Content = order.Value.BatchDescription;
 
-            // Get selected products from DB
-            var selectedProducts = new ReadBatchOrders().GetProductsByBatchOrderId(batchOrderId.Value);
+            // --- UPDATED LOGIC FOR LOADING PRODUCTS AND QUANTITIES ---
 
-            // Temporarily store existing checklist items
-            var allItems = new List<string>();
-            foreach (var item in ProductCheckList.Items)
-            {
-                allItems.Add(item.ToString());
-            }
+            // Get products with quantities from DB using the appropriate method
+            // This method should return List<BatchOrderProduct>
+            var productsWithQuantitiesFromDb = reader.GetProductsWithQuantitiesByBatchOrderId(batchOrderId.Value);
 
-            // Clear the checklist
+            // --- Populate ProductCheckList ---
+            // 1. Clear the checklist's current items
             ProductCheckList.Items.Clear();
 
-            // Step 1: Add selected products first (checked)
-            foreach (var product in selectedProducts)
+            // 2. Re-populate checklist with all hardcoded items, initially unchecked
+            foreach (string item in _hardcodedChecklistItems)
             {
-                ProductCheckList.Items.Add(product, true);
+                ProductCheckList.Items.Add(item, false);
             }
 
-            // Step 2: Add remaining products (unchecked), skipping already added
-            foreach (var product in allItems)
+            // --- Populate _gridData AND check items in ProductCheckList ---
+            _gridData.Clear(); // Clear existing data in the DataGridView's source
+
+            foreach (var dbProduct in productsWithQuantitiesFromDb) // Iterate through BatchOrderProduct objects
             {
-                if (!selectedProducts.Contains(product))
+                // Add to _gridData (for DataGridView)
+                // Create a new GridItem from the BatchOrderProduct data
+                _gridData.Add(new MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem
                 {
-                    ProductCheckList.Items.Add(product, false);
+                    ItemName = dbProduct.ProductName,
+                    Quantity = dbProduct.ProductQuantity
+                });
+
+                // Find the item in the ProductCheckList and check it
+                int index = ProductCheckList.Items.IndexOf(dbProduct.ProductName);
+                if (index != -1)
+                {
+                    ProductCheckList.SetItemChecked(index, true);
                 }
             }
-            // Populate _gridData from the selected products (for the DataGridView)
-            _gridData.Clear(); // Clear existing data first
-            foreach (var product in selectedProducts)
-            {
-                // Assuming GetProductsByBatchOrderId returns product names,
-                // you might need to fetch quantities or pass them back from the DB method.
-                // For now, setting a default quantity or retrieving it if available.
-                // You'll need to adapt this part based on how GetProductsByBatchOrderId provides quantities.
-                // If your GetProductsByBatchOrderId returns List<GridItem> then this is much simpler.
-                // Assuming it returns List<string> for now, so setting default quantity 1.
-                // If it returns a structure with quantity, adjust this:
-                // _gridData.Add(new MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem { ItemName = product.ItemName, Quantity = product.Quantity });
-                _gridData.Add(new MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem { ItemName = product, Quantity = 1 }); // Assuming product is just the name. Adjust if it's a complex type.
-            }
+            // --- END OF UPDATED LOGIC ---
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)

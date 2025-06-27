@@ -1,4 +1,5 @@
 ﻿using MainDashboard.Backend.Logics.EmployeeStaffs.Add;
+using MainDashboard.Backend.Logics.EmployeeStaffs.Reload;
 using MainDashboard.Backend.Logics.Products.Add;
 using MainDashboard.Backend.Logics.Products.Edit;
 using MainDashboard.Backend.Queries.CategoryCrud;
@@ -143,6 +144,7 @@ namespace MainDashboard.Frontend.EmployeeStaff
 
                 if (addSuccess)
                 {
+                    ReloadEmployeeStaffs.LoadEmployeeStaffData(_targetDataGridView);
                     this.Close();
                 }
                 else
@@ -165,6 +167,7 @@ namespace MainDashboard.Frontend.EmployeeStaff
 
                 if (editSuccess)
                 {
+                    ReloadEmployeeStaffs.LoadEmployeeStaffData(_targetDataGridView);
                     this.Close();
                 }
                 else

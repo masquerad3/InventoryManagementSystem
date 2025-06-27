@@ -75,6 +75,7 @@
             ValidWarrantyNumber = new CuoreUI.Controls.cuiLabel();
             WIcon = new CuoreUI.Controls.cuiPictureBox();
             OutOfStockPanel = new CuoreUI.Controls.cuiPanel();
+            cuiLabel3 = new CuoreUI.Controls.cuiLabel();
             OOSGB = new CuoreUI.Controls.cuiGroupBox();
             OOSLabel = new CuoreUI.Controls.cuiLabel();
             OOSNumber = new CuoreUI.Controls.cuiLabel();
@@ -85,12 +86,11 @@
             NotifIconBG = new CuoreUI.Controls.cuiGradientPanel();
             NotificationIcon = new CuoreUI.Controls.cuiPictureBox();
             WarrantySummaryPanel = new CuoreUI.Controls.cuiPanel();
-            WarrantySummaryLabel = new CuoreUI.Controls.cuiLabel();
             cuiGroupBox2 = new CuoreUI.Controls.cuiGroupBox();
             ExpiredWarrantyLabel = new CuoreUI.Controls.cuiLabel();
             ExpiredWarrantyNumber = new CuoreUI.Controls.cuiLabel();
             cuiPictureBox4 = new CuoreUI.Controls.cuiPictureBox();
-            cuiLabel3 = new CuoreUI.Controls.cuiLabel();
+            WarrantySummaryLabel = new CuoreUI.Controls.cuiLabel();
             ItemSummaryPanel.SuspendLayout();
             ISGB2.SuspendLayout();
             ISGB1.SuspendLayout();
@@ -117,7 +117,7 @@
             ItemSummaryPanel.Controls.Add(ISGB2);
             ItemSummaryPanel.Controls.Add(ISGB1);
             ItemSummaryPanel.Controls.Add(cuiLabel2);
-            ItemSummaryPanel.Location = new Point(70, 191);
+            ItemSummaryPanel.Location = new Point(70, 192);
             ItemSummaryPanel.Margin = new Padding(3, 4, 3, 4);
             ItemSummaryPanel.Name = "ItemSummaryPanel";
             ItemSummaryPanel.OutlineThickness = 1F;
@@ -756,6 +756,19 @@
             OutOfStockPanel.Size = new Size(396, 277);
             OutOfStockPanel.TabIndex = 6;
             // 
+            // cuiLabel3
+            // 
+            cuiLabel3.BackColor = Color.Transparent;
+            cuiLabel3.Content = "Out\\ of\\ Stock\\ Summary";
+            cuiLabel3.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiLabel3.HorizontalAlignment = StringAlignment.Near;
+            cuiLabel3.Location = new Point(16, 12);
+            cuiLabel3.Margin = new Padding(5, 4, 5, 4);
+            cuiLabel3.Name = "cuiLabel3";
+            cuiLabel3.Size = new Size(311, 37);
+            cuiLabel3.TabIndex = 5;
+            cuiLabel3.VerticalAlignment = StringAlignment.Near;
+            // 
             // OOSGB
             // 
             OOSGB.BackColor = Color.Transparent;
@@ -919,19 +932,6 @@
             WarrantySummaryPanel.Size = new Size(622, 277);
             WarrantySummaryPanel.TabIndex = 12;
             // 
-            // WarrantySummaryLabel
-            // 
-            WarrantySummaryLabel.BackColor = Color.Transparent;
-            WarrantySummaryLabel.Content = "Warranty\\ Summary";
-            WarrantySummaryLabel.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            WarrantySummaryLabel.HorizontalAlignment = StringAlignment.Near;
-            WarrantySummaryLabel.Location = new Point(13, 12);
-            WarrantySummaryLabel.Margin = new Padding(5, 4, 5, 4);
-            WarrantySummaryLabel.Name = "WarrantySummaryLabel";
-            WarrantySummaryLabel.Size = new Size(311, 37);
-            WarrantySummaryLabel.TabIndex = 0;
-            WarrantySummaryLabel.VerticalAlignment = StringAlignment.Near;
-            // 
             // cuiGroupBox2
             // 
             cuiGroupBox2.BackColor = Color.Transparent;
@@ -989,18 +989,18 @@
             cuiPictureBox4.Size = new Size(61, 59);
             cuiPictureBox4.TabIndex = 0;
             // 
-            // cuiLabel3
+            // WarrantySummaryLabel
             // 
-            cuiLabel3.BackColor = Color.Transparent;
-            cuiLabel3.Content = "Out\\ of\\ Stock\\ Summary";
-            cuiLabel3.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cuiLabel3.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel3.Location = new Point(16, 12);
-            cuiLabel3.Margin = new Padding(5, 4, 5, 4);
-            cuiLabel3.Name = "cuiLabel3";
-            cuiLabel3.Size = new Size(311, 37);
-            cuiLabel3.TabIndex = 5;
-            cuiLabel3.VerticalAlignment = StringAlignment.Near;
+            WarrantySummaryLabel.BackColor = Color.Transparent;
+            WarrantySummaryLabel.Content = "Warranty\\ Summary";
+            WarrantySummaryLabel.Font = new Font("Leelawadee UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            WarrantySummaryLabel.HorizontalAlignment = StringAlignment.Near;
+            WarrantySummaryLabel.Location = new Point(13, 12);
+            WarrantySummaryLabel.Margin = new Padding(5, 4, 5, 4);
+            WarrantySummaryLabel.Name = "WarrantySummaryLabel";
+            WarrantySummaryLabel.Size = new Size(311, 37);
+            WarrantySummaryLabel.TabIndex = 0;
+            WarrantySummaryLabel.VerticalAlignment = StringAlignment.Near;
             // 
             // DashboardContent
             // 

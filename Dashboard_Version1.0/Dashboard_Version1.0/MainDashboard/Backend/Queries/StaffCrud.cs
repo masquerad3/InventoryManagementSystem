@@ -57,6 +57,32 @@ namespace MainDashboard.Backend.Queries.StaffCrud
     }
     public class StaffCrud : DatabaseConnection
     {
+        public int? GetStaffIDByName(string staffName)
+        {
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    conn.Open();
+
+                    string query = "SELECT StaffID FROM Staff WHERE StaffName = @StaffName";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@StaffName", staffName);
+
+                        object result = cmd.ExecuteScalar();
+                        return result != null ? Convert.ToInt32(result) : (int?)null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error fetching StaffID:\n" + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
         // Add a new staff member and return the new StaffID
         public int AddStaff(Staff staff)
         {

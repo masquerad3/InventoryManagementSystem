@@ -61,7 +61,7 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
         public DateTime? DateDelivered { get; set; } // NULLable
 
         // WARRANTY
-        public string ProductWarranty { get; set; }
+        public DateTime ProductWarranty { get; set; }
 
         // OPTIONAL INFO
         public decimal? PackageWeight { get; set; }
@@ -79,7 +79,7 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
             string productCondition,
             decimal productPrice,
             DateTime? dateDelivered,
-            string productWarranty,
+            DateTime productWarranty,
             decimal? packageWeight = null,
             string? productDescription = null)
         {
@@ -179,7 +179,7 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
                                 productCondition: reader.GetString(7),
                                 productPrice: reader.GetDecimal(8),
                                 dateDelivered: reader.IsDBNull(9) ? null : reader.GetDateTime(9),
-                                productWarranty: reader.GetString(10),
+                                productWarranty: reader.GetDateTime(10),
                                 packageWeight: reader.IsDBNull(11) ? null : reader.GetDecimal(11),
                                 productDescription: reader.IsDBNull(12) ? null : reader.GetString(12)
                             );
@@ -276,7 +276,7 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
                                 productCondition: reader.GetString(7),
                                 productPrice: reader.GetDecimal(8),
                                 dateDelivered: reader.IsDBNull(9) ? null : reader.GetDateTime(9),
-                                productWarranty: reader.GetString(10),
+                                productWarranty: reader.GetDateTime(10),
                                 packageWeight: reader.IsDBNull(11) ? null : reader.GetDecimal(11),
                                 productDescription: reader.IsDBNull(12) ? null : reader.GetString(12)
                             );
@@ -332,7 +332,7 @@ namespace MainDashboard.Backend.Queries.ProductsCrud
                                 productCondition: reader.GetString(7),
                                 productPrice: reader.GetDecimal(8),
                                 dateDelivered: reader.IsDBNull(9) ? null : reader.GetDateTime(9),
-                                productWarranty: reader.GetString(10),
+                                productWarranty: reader.GetDateTime(10),
                                 packageWeight: reader.IsDBNull(11) ? null : reader.GetDecimal(11),
                                 productDescription: reader.IsDBNull(12) ? null : reader.GetString(12)
                             );

@@ -152,9 +152,7 @@ namespace MainDashboard
             // --- PRICING & DELIVERY ---
             PriceTextbox.Content = product.ProductPrice.ToString("N2");
             DateDeliveredCDP.Value = product.DateDelivered ?? DateTime.Now;
-            WarrantyDatePicker.Value = DateTime.TryParse(product.ProductWarranty, out DateTime parsedWarranty)
-                ? parsedWarranty
-                : DateTime.Now;
+            WarrantyDatePicker.Value = product.ProductWarranty; 
 
             // --- OPTIONAL INFO ---
             WeightTextbox.Content = product.PackageWeight?.ToString("N2") ?? "";

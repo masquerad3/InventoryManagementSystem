@@ -28,8 +28,11 @@ namespace MainDashboard
             Read productQtyReader = new Read();
             int TotalProductQuantity = productQtyReader.GetTotalProductQuantity();
 
-            ISNumber.Content = TotalProductQuantity.ToString();     // total quantity
-            ISNumber2.Content = "TBA";
+            Read productQtyToBeDeliveredReader = new Read();
+            int TotalProductQuantityToBeDelivered = productQtyToBeDeliveredReader.GetTotalBatchOrderProductQuantity();
+
+            ISNumber.Content = TotalProductQuantity.ToString();
+            ISNumber2.Content = TotalProductQuantityToBeDelivered.ToString();
             //ISNumber2.Content = TotalProductQuantity.ToString();
 
             // product summary
@@ -41,8 +44,11 @@ namespace MainDashboard
             Read productCountReader = new Read();
             int TotalProductCount = productCountReader.GetTotalProductCount();
 
+            Read uniqueProductCountToBeDelivered = new Read();
+            int TotalProductCountToBeDelivered = uniqueProductCountToBeDelivered.GetTotalBatchOrderProductName();
+
             TInumber1.Content = TotalProductCount.ToString();   // total items
-            TINumber2.Content = "10";   // to be received
+            TINumber2.Content = TotalProductCountToBeDelivered.ToString();   // to be received
 
             // total batches
             Read readTotalOrder = new Read();
@@ -64,7 +70,7 @@ namespace MainDashboard
             Read readoutOfStockProducts = new Read();
             int TotalOutOfStocks = readoutOfStockProducts.GetOutOfStockProductCount();
 
-            //
+            ExpiredWarrantyNumber.Content = TotalExpiredWarranties.ToString();
             ValidWarrantyNumber.Content = TotalNoneExpiredWarranties.ToString(); // non expired warranty
             OOSNumber.Content = TotalOutOfStocks.ToString(); // out of stock products
         }

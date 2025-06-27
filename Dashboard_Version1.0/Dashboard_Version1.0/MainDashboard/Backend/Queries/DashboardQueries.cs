@@ -50,6 +50,34 @@ namespace MainDashboard.Backend.Queries.Dashboard
         }
         // end of ^^^
 
+        // for Item Summary : Total Quantity to be delivered
+        public int GetTotalBatchOrderProductQuantity()
+        {
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    conn.Open();
+
+                    string query = "SELECT SUM(ProductQuantity) FROM BatchOrderProducts";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        object result = cmd.ExecuteScalar();
+                        return result != DBNull.Value ? Convert.ToInt32(result) : 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error getting total quantity from BatchOrderProducts:\n" + ex.Message,
+                    "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+        }
+        // end of ^^^
+        // end of Item Summary
+
         // for total items : total product/item in hand
         public int GetTotalProductCount()
         {
@@ -74,6 +102,34 @@ namespace MainDashboard.Backend.Queries.Dashboard
             }
         }
         // end of ^^^
+
+        // for total items : total product/item to be delivered
+        public int GetTotalBatchOrderProductName()
+        {
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    conn.Open();
+
+                    string query = "SELECT SUM(ProductQuantity) FROM BatchOrderProducts";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        object result = cmd.ExecuteScalar();
+                        return result != DBNull.Value ? Convert.ToInt32(result) : 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error getting total quantity from BatchOrderProducts:\n" + ex.Message,
+                    "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+        }
+        // end of ^^^
+        // end of total items
 
         // for total batches : total requested batch orders
         public int CountTotalBatchOrders()

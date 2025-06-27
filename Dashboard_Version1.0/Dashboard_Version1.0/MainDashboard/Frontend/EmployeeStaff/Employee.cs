@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace MainDashboard
 {
@@ -52,8 +53,10 @@ namespace MainDashboard
             DataGridViewRow selectedRow = EmployeeStaffGridView.Rows[e.RowIndex];
 
             // Get staff ID and name from the selected row
-            int staffId = Convert.ToInt32(selectedRow.Cells["StaffID"].Value);
             string staffName = selectedRow.Cells["EmployeeName"].Value?.ToString()?.Trim() ?? "";
+
+            var staffReader = new StaffCrud();
+            int? staffId = staffReader.GetStaffIDByName("John Doe");
 
             if (clickedColumnName == "Edit")
             {
@@ -73,7 +76,7 @@ namespace MainDashboard
                 if (confirmResult == DialogResult.Yes)
                 {
                     var deleteHandler = new StaffDelete();
-                    bool deletingStaffSuccess = deleteHandler.DeleteStaffByID(staffId);
+                    bool deletingStaffSuccess = deleteHandler.DeleteStaffByID(staffId.Value);
 
                     if (deletingStaffSuccess)
                     {

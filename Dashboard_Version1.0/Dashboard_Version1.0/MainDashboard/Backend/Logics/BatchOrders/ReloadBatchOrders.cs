@@ -41,7 +41,6 @@ namespace MainDashboard.Backend.Logics.BatchOrders.Reload
                         formatted.AppendLine();  // insert newline after every 2 items
                 }
 
-
                 // Add row with multiline product names
                 dataGridView.Rows.Add(
                     b.BatchName,

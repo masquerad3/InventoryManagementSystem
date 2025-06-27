@@ -14,11 +14,10 @@ namespace MainDashboard.Backend.Logics.BatchOrders.Create
 {
     public class CreateBatchOrder
     {
-
         public static bool HandleBatchOrderCreation(
                 string batchOrderName,
                 string batchOrderDescription,
-                List<string> selectedProducts,
+                List<MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem> selectedProductsWithQuantities,
                 DataGridView targetDataGridView
             )
         {
@@ -36,9 +35,16 @@ namespace MainDashboard.Backend.Logics.BatchOrders.Create
             // You can leave this out if null/empty is acceptable.
 
             // --- Selected Products validation ---
-            if (selectedProducts == null || selectedProducts.Count == 0)
+            // UPDATED: Check for null or empty list of GridItem
+            if (selectedProductsWithQuantities == null || selectedProductsWithQuantities.Count == 0)
             {
-                errorMessage += "Please select at least one product for to proceed with the order.\n";
+                errorMessage += "Please select at least one product to proceed with the order.\n";
+                isValidInput = false;
+            }
+            // Add validation for quantities if needed (e.g., ensure no zero or negative quantities are passed)
+            else if (selectedProductsWithQuantities.Any(item => item.Quantity <= 0))
+            {
+                errorMessage += "All selected product quantities must be greater than zero.\n";
                 isValidInput = false;
             }
 
@@ -70,7 +76,9 @@ namespace MainDashboard.Backend.Logics.BatchOrders.Create
                 if (batchOrderId != -1)
                 {
                     // 3. Insert the related products into BatchOrderProducts
-                    insertSuccess = createHandler.AddProductsToBatchOrder(batchOrderId, selectedProducts);
+                    // UPDATED: Now passing the list of GridItem, your AddProductsToBatchOrder
+                    // method in CreateBatchOrders.cs will need to be updated to accept List<GridItem>.
+                    insertSuccess = createHandler.AddProductsToBatchOrder(batchOrderId, selectedProductsWithQuantities);
                 }
                 else
                 {
@@ -102,5 +110,6 @@ namespace MainDashboard.Backend.Logics.BatchOrders.Create
             }
 
         }
+
     }
 }

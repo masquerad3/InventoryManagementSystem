@@ -42,8 +42,6 @@
             NotReceivedBtn = new CuoreUI.Controls.cuiButton();
             ProductQuantityLabel = new CuoreUI.Controls.cuiLabel();
             ProductQuantityGridview = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)ProductQuantityGridview).BeginInit();
             SuspendLayout();
             // 
@@ -352,7 +350,6 @@
             ProductQuantityGridview.BackgroundColor = Color.White;
             ProductQuantityGridview.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
             ProductQuantityGridview.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ProductQuantityGridview.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2 });
             ProductQuantityGridview.ImeMode = ImeMode.Off;
             ProductQuantityGridview.Location = new Point(212, 257);
             ProductQuantityGridview.Name = "ProductQuantityGridview";
@@ -361,19 +358,6 @@
             ProductQuantityGridview.RowHeadersWidth = 51;
             ProductQuantityGridview.Size = new Size(422, 231);
             ProductQuantityGridview.TabIndex = 47;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.HeaderText = "Product";
-            dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.Resizable = DataGridViewTriState.True;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.HeaderText = "Quantity";
-            dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // BatchOrder
             // 
@@ -418,7 +402,5 @@
         private CuoreUI.Controls.cuiButton NotReceivedBtn;
         private CuoreUI.Controls.cuiLabel ProductQuantityLabel;
         private DataGridView ProductQuantityGridview;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }

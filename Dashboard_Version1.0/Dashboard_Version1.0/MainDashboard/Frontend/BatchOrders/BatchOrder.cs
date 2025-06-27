@@ -1,26 +1,30 @@
-﻿
-using CuoreUI;
+﻿using CuoreUI;
 using MainDashboard.Backend.Logics.BatchOrders.Create;
 using MainDashboard.Backend.Logics.BatchOrders.Reload;
 using MainDashboard.Backend.Logics.BatchOrders.Updating;
 using MainDashboard.Backend.Queries.BatchOrdersCrud;
-using Microsoft.VisualBasic.Devices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Diagnostics.Metrics;
-using System.Drawing;
 using System.Linq;
-using System.Reflection;
-using System.Reflection.PortableExecutable;
-using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static CuoreUI.DeviceInfo;
-using static CuoreUI.Drawing.EasingFunctions;
+// Removed unused usings for a cleaner file
+// using Microsoft.VisualBasic.Devices;
+// using System.Data;
+// using System.Diagnostics;
+// using System.Diagnostics.Metrics;
+// using System.Drawing;
+// using System.Reflection;
+// using System.Reflection.PortableExecutable;
+// using System.Security.Claims;
+// using System.Text;
+// using System.Threading.Tasks;
+// using static CuoreUI.DeviceInfo;
+// using static CuoreUI.Drawing.EasingFunctions;
+
+// Importantly, add this using statement for your custom GridItem model
+using MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem;
+
 
 namespace MainDashboard.Frontend.BatchOrders
 {
@@ -30,16 +34,51 @@ namespace MainDashboard.Frontend.BatchOrders
         private DataGridView _targetDataGridView;
         private int? batchOrderId;
 
-        
+        // REMOVED THE INNER CLASS DEFINITION for GridItem here.
+        // It should be defined only in MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem
 
         // A list to hold the data that will be bound to the DataGridView
         // Using BindingList for automatic UI updates when items are added/removed
-        private BindingList<GridItem> _gridData;
+        // Explicitly use the fully qualified name for GridItem to avoid ambiguity
+        private BindingList<MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem> _gridData;
+        private List<MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem> selectedProductsWithQuantities;
+
+        // Hardcoded items for the CheckedListBox
+        private List<string> _hardcodedChecklistItems = new List<string>
+        {
+            "Lcd Monitor",
+            "Opisina Chair",
+            "Electric Drill",
+            "Wifi Router",
+            "Desk Lamp",
+            "Filing Cabinet",
+            "Software Suite",
+            "Cctv Camera",
+            "External Hdd",
+            "Power Drill",
+            "Wireless Keyboard",
+            "Air Conditioner",
+            "Projector",
+            "Industrial Fan",
+            "Smart Tv",
+            "Printer Scanner",
+            "Safety Helmet",
+            "Network Switch",
+            "Solar Panel",
+            "Voltage Regulator",
+            "Barcode Scanner",
+            "Ups Battery",
+            "Conference Phone",
+            "Welding Machine",
+            "Tablet",
+            "Computer"
+        };
 
         //CONSTRUCTOR FOR ADD * ADDING/CREATING NEW ORDER BATCHES OF PRODUCTS
         public BatchOrder(string value, DataGridView dgv)
         {
             InitializeComponent();
+            InitializeChecklistAndGridView();
 
             this.value = value;
             // Store the passed DataGridView instance
@@ -69,6 +108,7 @@ namespace MainDashboard.Frontend.BatchOrders
         public BatchOrder(string value, DataGridView dgv, int batchOrderId)
         {
             InitializeComponent();
+            InitializeChecklistAndGridView();
 
             this.value = value;
             // Store the passed DataGridView instance
@@ -141,7 +181,20 @@ namespace MainDashboard.Frontend.BatchOrders
                     ProductCheckList.Items.Add(product, false);
                 }
             }
-
+            // Populate _gridData from the selected products (for the DataGridView)
+            _gridData.Clear(); // Clear existing data first
+            foreach (var product in selectedProducts)
+            {
+                // Assuming GetProductsByBatchOrderId returns product names,
+                // you might need to fetch quantities or pass them back from the DB method.
+                // For now, setting a default quantity or retrieving it if available.
+                // You'll need to adapt this part based on how GetProductsByBatchOrderId provides quantities.
+                // If your GetProductsByBatchOrderId returns List<GridItem> then this is much simpler.
+                // Assuming it returns List<string> for now, so setting default quantity 1.
+                // If it returns a structure with quantity, adjust this:
+                // _gridData.Add(new MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem { ItemName = product.ItemName, Quantity = product.Quantity });
+                _gridData.Add(new MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem { ItemName = product, Quantity = 1 }); // Assuming product is just the name. Adjust if it's a complex type.
+            }
         }
 
         private void SaveBtn_Click(object sender, EventArgs e)
@@ -149,23 +202,17 @@ namespace MainDashboard.Frontend.BatchOrders
             string batchOrderName = BONameTextBox.Content.Trim();
             string batchOrderDescription = OrderDescriptionTextBox.Content.Trim();
 
-            // Get selected items as list of strings
-            List<string> selectedProducts = new List<string>();
-
-            foreach (var item in ProductCheckList.CheckedItems)
-            {
-                if (item != null)
-                {
-                    selectedProducts.Add(item!.ToString().Trim());
-                }
-            }
+            // Get the product and quantity data directly from the DataGridView's bound source
+            // _gridData already contains the GridItem objects (ItemName and Quantity)
+            // This line is correct as selectedProductsWithQuantities is correctly typed above
+            selectedProductsWithQuantities = _gridData.ToList();
 
             if (this.value == "Add")
             {
                 bool createSuccess = CreateBatchOrder.HandleBatchOrderCreation(
                     batchOrderName,
                     batchOrderDescription,
-                    selectedProducts,
+                    selectedProductsWithQuantities, // This is now correctly typed
                     _targetDataGridView
                 );
 
@@ -185,7 +232,7 @@ namespace MainDashboard.Frontend.BatchOrders
                     batchOrderId.Value,
                     batchOrderName,
                     batchOrderDescription,
-                    selectedProducts,
+                    selectedProductsWithQuantities, // This is now correctly typed
                     _targetDataGridView
                 );
 
@@ -214,10 +261,10 @@ namespace MainDashboard.Frontend.BatchOrders
 
             //update query
             bool isReceivedSuccess = UpdateBatchOrder.HandleBatchOrderUpdatingIsReceived(
-                    batchOrderId.Value,
-                    batchDateReceived,
-                    _targetDataGridView
-                );
+                        batchOrderId.Value,
+                        batchDateReceived,
+                        _targetDataGridView
+                    );
 
             if (isReceivedSuccess)
             {
@@ -242,7 +289,7 @@ namespace MainDashboard.Frontend.BatchOrders
                      "Order Confirmation",
                      MessageBoxButtons.YesNo,
                      MessageBoxIcon.Warning
-                 );
+                   );
 
                 if (confirmResult == DialogResult.Yes)
                 {
@@ -278,5 +325,119 @@ namespace MainDashboard.Frontend.BatchOrders
                 MessageBox.Show("Cannot Update that order is not yet received: Unknown Error.", "Updating Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        // stuffs for checklist and gridview
+        private void InitializeChecklistAndGridView()
+        {
+            // --- ProductCheckList Setup ---
+            // Populate ProductCheckList
+            foreach (string item in _hardcodedChecklistItems)
+            {
+                ProductCheckList.Items.Add(item);
+            }
+            // Attach event handler for ProductCheckList item checking
+            ProductCheckList.ItemCheck += ProductCheckList_ItemCheck;
+
+            // --- ProductQuantityGridview Setup ---
+            ProductQuantityGridview.AutoGenerateColumns = false; // We'll define columns manually
+
+            // Column 0: Item Name
+            DataGridViewTextBoxColumn itemNameColumn = new DataGridViewTextBoxColumn();
+            itemNameColumn.DataPropertyName = "ItemName"; // Matches property name in GridItem
+            itemNameColumn.HeaderText = "Product";
+            itemNameColumn.ReadOnly = true; // User cant change the item name directly 
+            itemNameColumn.Width = 150;
+            ProductQuantityGridview.Columns.Add(itemNameColumn);
+
+            // Column 1: Quantity
+            DataGridViewTextBoxColumn quantityColumn = new DataGridViewTextBoxColumn();
+            quantityColumn.DataPropertyName = "Quantity"; // Matches property name in GridItem
+            quantityColumn.HeaderText = "Quantity";
+            quantityColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; // Align numbers to the right
+            quantityColumn.Width = 80;
+            ProductQuantityGridview.Columns.Add(quantityColumn);
+
+            // Initialize the BindingList and bind it to the DataGridView
+            // Explicitly use the fully qualified name for GridItem
+            _gridData = new BindingList<MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem>();
+            ProductQuantityGridview.DataSource = _gridData;
+
+            // Attach event handler for DataGridView cell validation
+            ProductQuantityGridview.CellValidating += ProductQuantityGridview_CellValidating;
+            ProductQuantityGridview.CellEndEdit += ProductQuantityGridview_CellEndEdit; // To clear error text after successful edit
+        }
+
+        private void ProductCheckList_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            string itemName = ProductCheckList.Items[e.Index].ToString();
+
+            if (e.NewValue == CheckState.Checked)
+            {
+                // Item was checked, add it to the DataGridView's data source
+                // Only add if not already present (prevents duplicates on rapid clicks)
+                if (!_gridData.Any(item => item.ItemName == itemName))
+                {
+                    // Explicitly use the fully qualified name for GridItem
+                    _gridData.Add(new MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem { ItemName = itemName, Quantity = 1 }); // Default quantity is 1
+                }
+            }
+            else if (e.NewValue == CheckState.Unchecked)
+            {
+                // Item was unchecked, remove it from the DataGridView's data source
+                var itemToRemove = _gridData.FirstOrDefault(item => item.ItemName == itemName);
+                if (itemToRemove != null)
+                {
+                    _gridData.Remove(itemToRemove);
+                }
+            }
+        }
+
+        private void ProductQuantityGridview_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            // Ensure we are validating the "Quantity" column (index 1 or by DataPropertyName)
+            if (ProductQuantityGridview.Columns[e.ColumnIndex].DataPropertyName == "Quantity")
+            {
+                int newQuantity;
+                // Try to parse the new value as an integer and check if it's non-negative
+                if (!int.TryParse(e.FormattedValue.ToString(), out newQuantity) || newQuantity < 0)
+                {
+                    e.Cancel = true; // Prevent the cell from losing focus
+                    ProductQuantityGridview.Rows[e.RowIndex].ErrorText = "Please enter a valid non-negative integer for quantity.";
+                }
+                else
+                {
+                    // Value is valid, clear any existing error text
+                    ProductQuantityGridview.Rows[e.RowIndex].ErrorText = string.Empty;
+                }
+            }
+        }
+
+        private void ProductQuantityGridview_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            // Clear any error text when editing ends (e.g., after successful validation)
+            ProductQuantityGridview.Rows[e.RowIndex].ErrorText = string.Empty;
+        }
+
+        // Example: Get final selected items and quantities (you might call this from a "Submit" button)
+        private void btnProcessSelection_Click(object sender, EventArgs e) // Assuming you have a button named btnProcessSelection
+        {
+            // Explicitly use the fully qualified name for GridItem
+            List<MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem> selectedItemsWithQuantities = _gridData.ToList();
+
+            if (selectedItemsWithQuantities.Any())
+            {
+                string result = "Selected Items and Quantities:\n";
+                foreach (var item in selectedItemsWithQuantities)
+                {
+                    result += $"{item.ItemName}: {item.Quantity}\n";
+                }
+                MessageBox.Show(result);
+            }
+            else
+            {
+                MessageBox.Show("No items selected in the grid.");
+            }
+        }
+
     }
 }

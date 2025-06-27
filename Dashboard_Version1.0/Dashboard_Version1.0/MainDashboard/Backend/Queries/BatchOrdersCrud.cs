@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Linq; // Added for .Select() and .Any()
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Data.SqlClient;
+using Microsoft.Data.SqlClient; // Ensure this is the correct namespace for SqlConnection
+
+using MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem; // Ensure this points to your single GridItem definition
 
 /*
 
@@ -19,9 +21,11 @@ CREATE TABLE BatchOrders (
     BatchDateReceived DATETIME NULL
 );
 
+--added product quantity
 CREATE TABLE BatchOrderProducts (
     BatchOrderID INT NOT NULL,
     ProductName NVARCHAR(75) NOT NULL,
+    ProductQuantity INT NOT NULL, -- Confirmed this is the column name
     PRIMARY KEY (BatchOrderID, ProductName),
     FOREIGN KEY (BatchOrderID) REFERENCES BatchOrders(BatchOrderID)
 );
@@ -65,38 +69,47 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
         public int BatchOrdersID { get; set; }
         public string BatchName { get; set; }
         public string BatchOrderStatus { get; set; }
+        public string BatchDescription { get; set; } // Added BatchDescription property
         public DateTime BatchDateRequested { get; set; }
         public DateTime? BatchDateReceived { get; set; }
 
-        // NEW: store list of product names
-        public List<string> ProductNamesList { get; set; } = new List<string>();
+        // NEW: List of product + quantity
+        public List<BatchOrderProduct> Products { get; set; } = new List<BatchOrderProduct>();
 
-        // Automatically joins the list into a multiline string
-        public string ProductNames => string.Join(Environment.NewLine, ProductNamesList);
+        public BatchOrderSummary() { }
 
-        // Optional: keep the constructor, or remove it if not needed
+        // UPDATED: Constructor signature to match properties and remove redundant productQuality
         public BatchOrderSummary(
             int batchOrdersID,
             string batchName,
-            string productNames,  // Can be removed if you're using the list only
             string batchOrderStatus,
+            string batchDescription, // UPDATED: Added BatchDescription
             DateTime batchDateRequested,
-            DateTime? batchDateReceived)
+            DateTime? batchDateReceived,
+            List<BatchOrderProduct> products) // UPDATED: Corrected parameter for products
         {
             BatchOrdersID = batchOrdersID;
             BatchName = batchName;
             BatchOrderStatus = batchOrderStatus;
+            BatchDescription = batchDescription; // UPDATED: Assigned BatchDescription
             BatchDateRequested = batchDateRequested;
             BatchDateReceived = batchDateReceived;
-
-            // Split string if needed
-            ProductNamesList = productNames.Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+            Products = products;
         }
-
-        public BatchOrderSummary() { } // For list initialization
     }
 
+    public class BatchOrderProduct
+    {
+        public string ProductName { get; set; }
+        public int ProductQuantity { get; set; }
 
+        public BatchOrderProduct(string productName, int productQuantity)
+        {
+            ProductName = productName;
+            ProductQuantity = productQuantity;
+        }
+
+    }
 
     public abstract class DatabaseConnection
     {
@@ -126,8 +139,9 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
                 using (SqlConnection conn = GetConnection())
                 {
                     conn.Open();
-                    string query = @"SELECT BatchOrderID, BatchName, BatchOrderStatus, BatchDateRequested, BatchDateReceived 
-                             FROM BatchOrders";
+                    // UPDATED: Added BatchDescription to the SELECT query
+                    string query = @"SELECT BatchOrderID, BatchName, BatchOrderStatus, BatchDescription, BatchDateRequested, BatchDateReceived
+                                     FROM BatchOrders";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -137,21 +151,22 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
                             int batchId = reader.GetInt32(0);
                             string batchName = reader.GetString(1);
                             string status = reader.GetString(2);
-                            DateTime dateRequested = reader.GetDateTime(3);
-                            DateTime? dateReceived = reader.IsDBNull(4) ? (DateTime?)null : reader.GetDateTime(4);
+                            string batchDescription = reader.IsDBNull(3) ? string.Empty : reader.GetString(3); // UPDATED: Read BatchDescription
+                            DateTime dateRequested = reader.GetDateTime(4); // UPDATED: Index changed
+                            DateTime? dateReceived = reader.IsDBNull(5) ? (DateTime?)null : reader.GetDateTime(5); // UPDATED: Index changed
 
-                            // Get products for this batch order
-                            List<string> productList = GetProductNamesByBatchOrderId(batchId);
-                            string productNames = string.Join("\n", productList);  // Multiline format
+                            // UPDATED: Get products with quantities for this batch order
+                            List<BatchOrderProduct> products = GetProductsWithQuantitiesByBatchOrderId(batchId);
 
-                            // Use constructor correctly
+                            // UPDATED: Use constructor correctly with all parameters
                             results.Add(new BatchOrderSummary(
                                 batchId,
                                 batchName,
-                                productNames,
                                 status,
+                                batchDescription, // UPDATED: Pass BatchDescription
                                 dateRequested,
-                                dateReceived
+                                dateReceived,
+                                products // UPDATED: Pass List<BatchOrderProduct>
                             ));
                         }
                     }
@@ -167,14 +182,63 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
 
         public List<string> GetProductNamesByBatchOrderId(int batchOrderId)
         {
-            var products = new List<string>();
+            List<string> productNames = new List<string>();
+
+            try
+            {
+                using (SqlConnection connection = GetConnection()) // Uses the GetConnection() method
+                {
+                    // SIMPLIFIED QUERY: Directly selecting ProductName from BatchOrderProducts
+                    // This assumes BatchOrderProducts table has a ProductName column.
+                    string query = @"
+                        SELECT ProductName
+                        FROM BatchOrderProducts
+                        WHERE BatchOrderID = @BatchOrderID;";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@BatchOrderID", batchOrderId);
+
+                        connection.Open(); // Open the connection
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                // Assuming ProductName is a string column in BatchOrderProducts
+                                if (reader["ProductName"] != DBNull.Value)
+                                {
+                                    productNames.Add(reader["ProductName"].ToString());
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"SQL Error in GetProductNamesByBatchOrderId: {ex.Message}");
+                MessageBox.Show($"A database error occurred while retrieving product names: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"General Error in GetProductNamesByBatchOrderId: {ex.Message}");
+                MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return productNames;
+        }
+
+        // UPDATED: Renamed method and changed return type to List<BatchOrderProduct>
+        public List<BatchOrderProduct> GetProductsWithQuantitiesByBatchOrderId(int batchOrderId)
+        {
+            var products = new List<BatchOrderProduct>();
 
             try
             {
                 using (SqlConnection conn = GetConnection())
                 {
                     conn.Open();
-                    string query = @"SELECT ProductName FROM BatchOrderProducts WHERE BatchOrderID = @BatchOrderID";
+                    // UPDATED: Select ProductName AND ProductQuantity
+                    string query = @"SELECT ProductName, ProductQuantity FROM BatchOrderProducts WHERE BatchOrderID = @BatchOrderID";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -184,7 +248,9 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
                         {
                             while (reader.Read())
                             {
-                                products.Add(reader.GetString(0));
+                                string productName = reader.GetString(0);
+                                int productQuantity = reader.GetInt32(1); // UPDATED: Read ProductQuantity
+                                products.Add(new BatchOrderProduct(productName, productQuantity)); // UPDATED: Create BatchOrderProduct object
                             }
                         }
                     }
@@ -192,7 +258,7 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading product names:\n" + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error loading product names and quantities:\n" + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return products;
@@ -231,6 +297,7 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
         }
 
         // Returns a list of selected product names for a given BatchOrderID
+        // NOTE: This method now only gets product names. If you need quantities, use GetProductsWithQuantitiesByBatchOrderId.
         public List<string> GetProductsByBatchOrderId(int batchOrderId)
         {
             var selectedProducts = new List<string>();
@@ -241,9 +308,11 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
                 {
                     conn.Open();
                     string query = "SELECT ProductName FROM BatchOrderProducts WHERE BatchOrderID = @BatchOrderID";
+
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@BatchOrderID", batchOrderId);
+
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
@@ -297,9 +366,9 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
                     conn.Open();
 
                     string query = @"
-                        SELECT CASE 
-                            WHEN BatchDateReceived IS NULL THEN 1 
-                            ELSE 0 
+                        SELECT CASE
+                            WHEN BatchDateReceived IS NULL THEN 1
+                            ELSE 0
                         END
                         FROM BatchOrders
                         WHERE BatchOrderID = @BatchOrderID";
@@ -357,8 +426,7 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
             }
         }
 
-
-        public bool AddProductsToBatchOrder(int batchOrderId, List<string> selectedProducts)
+        public bool AddProductsToBatchOrder(int batchOrderId, List<MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem> productsWithQuantities)
         {
             try
             {
@@ -369,15 +437,17 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
                     {
                         try
                         {
+                            // UPDATED: Corrected column name to ProductQuantity in INSERT statement
                             string insertProductQuery = @"
-                            INSERT INTO BatchOrderProducts (BatchOrderID, ProductName)
-                            VALUES (@BatchOrderID, @ProductName);";
+                            INSERT INTO BatchOrderProducts (BatchOrderID, ProductName, ProductQuantity)
+                            VALUES (@BatchOrderID, @ProductName, @ProductQuantity);";
 
-                            foreach (string product in selectedProducts)
+                            foreach (MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem product in productsWithQuantities) // Ensure fully qualified name or using statement
                             {
                                 SqlCommand cmd = new SqlCommand(insertProductQuery, conn, transaction);
                                 cmd.Parameters.AddWithValue("@BatchOrderID", batchOrderId);
-                                cmd.Parameters.AddWithValue("@ProductName", product);
+                                cmd.Parameters.AddWithValue("@ProductName", product.ItemName);
+                                cmd.Parameters.AddWithValue("@ProductQuantity", product.Quantity); // Parameter name matches @ProductQuantity
                                 cmd.ExecuteNonQuery();
                             }
 
@@ -388,6 +458,7 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
                         {
                             transaction.Rollback();
                             MessageBox.Show("Error inserting batch products:\n" + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            // Log the exception details here if you have a logging mechanism
                             return false;
                         }
                     }
@@ -396,6 +467,7 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
             catch (Exception ex)
             {
                 MessageBox.Show("Error connecting to database:\n" + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Log the exception details here if you have a logging mechanism
                 return false;
             }
         }
@@ -443,7 +515,7 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
             }
         }
 
-        public bool UpdateBatchOrderProducts(int batchOrderId, List<string> selectedProducts)
+        public bool UpdateBatchOrderProducts(int batchOrderId, List<MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem> productsWithQuantities) // Parameter type already updated
         {
             try
             {
@@ -454,22 +526,24 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
                     {
                         try
                         {
-                            // 1. Delete existing products for this batch
-                            string deleteQuery = "DELETE FROM BatchOrderProducts WHERE BatchOrderID = @BatchOrderID";
+                            // 1. Delete all existing products for this BatchOrderID
+                            string deleteQuery = "DELETE FROM BatchOrderProducts WHERE BatchOrderID = @BatchOrderID;";
                             SqlCommand deleteCmd = new SqlCommand(deleteQuery, conn, transaction);
                             deleteCmd.Parameters.AddWithValue("@BatchOrderID", batchOrderId);
                             deleteCmd.ExecuteNonQuery();
 
-                            // 2. Insert new selected products
+                            // 2. Insert the new/updated list of products with their quantities
+                            // UPDATED: Confirmed column name is ProductQuantity
                             string insertQuery = @"
-                                INSERT INTO BatchOrderProducts (BatchOrderID, ProductName)
-                                VALUES (@BatchOrderID, @ProductName);";
+                            INSERT INTO BatchOrderProducts (BatchOrderID, ProductName, ProductQuantity)
+                            VALUES (@BatchOrderID, @ProductName, @ProductQuantity);";
 
-                            foreach (string product in selectedProducts)
+                            foreach (MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem product in productsWithQuantities) // Ensure fully qualified name or using statement
                             {
                                 SqlCommand insertCmd = new SqlCommand(insertQuery, conn, transaction);
                                 insertCmd.Parameters.AddWithValue("@BatchOrderID", batchOrderId);
-                                insertCmd.Parameters.AddWithValue("@ProductName", product);
+                                insertCmd.Parameters.AddWithValue("@ProductName", product.ItemName);
+                                insertCmd.Parameters.AddWithValue("@ProductQuantity", product.Quantity); // Parameter name matches @ProductQuantity
                                 insertCmd.ExecuteNonQuery();
                             }
 
@@ -480,6 +554,7 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
                         {
                             transaction.Rollback();
                             MessageBox.Show("Error updating batch products:\n" + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            // Log the exception details here if you have a logging mechanism
                             return false;
                         }
                     }
@@ -488,6 +563,7 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
             catch (Exception ex)
             {
                 MessageBox.Show("Error connecting to database:\n" + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Log the exception details here if you have a logging mechanism
                 return false;
             }
         }
@@ -501,9 +577,9 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
                     conn.Open();
 
                     string query = @"
-                UPDATE BatchOrders
-                SET BatchDateReceived = @BatchDateReceived
-                WHERE BatchOrderID = @BatchOrderID;";
+                        UPDATE BatchOrders
+                        SET BatchDateReceived = @BatchDateReceived
+                        WHERE BatchOrderID = @BatchOrderID;";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -532,9 +608,9 @@ namespace MainDashboard.Backend.Queries.BatchOrdersCrud
                     conn.Open();
 
                     string query = @"
-                UPDATE BatchOrders 
-                SET BatchDateReceived = NULL 
-                WHERE BatchOrderID = @BatchOrderID";
+                        UPDATE BatchOrders
+                        SET BatchDateReceived = NULL
+                        WHERE BatchOrderID = @BatchOrderID";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {

@@ -18,7 +18,7 @@ namespace MainDashboard.Backend.Logics.BatchOrders.Updating
                 int batchOrderId,
                 string batchOrderName,
                 string batchOrderDescription,
-                List<string> selectedProducts,
+                List<MainDashboard.Backend.Logics.BatchOrders.ModelOfGridItem.GridItem> selectedProductsWithQuantities,
                 DataGridView targetDataGridView
             )
         {
@@ -32,9 +32,16 @@ namespace MainDashboard.Backend.Logics.BatchOrders.Updating
                 isValidInput = false;
             }
 
-            if (selectedProducts == null || selectedProducts.Count == 0)
+            // UPDATED: Validation for selectedProductsWithQuantities
+            if (selectedProductsWithQuantities == null || selectedProductsWithQuantities.Count == 0)
             {
-                errorMessage += "Please select at least one product.\n";
+                errorMessage += "Please select at least one product for the order.\n";
+                isValidInput = false;
+            }
+            // Optional: Add validation to ensure all quantities are positive
+            else if (selectedProductsWithQuantities.Any(item => item.Quantity <= 0))
+            {
+                errorMessage += "All selected product quantities must be greater than zero.\n";
                 isValidInput = false;
             }
 
@@ -50,7 +57,8 @@ namespace MainDashboard.Backend.Logics.BatchOrders.Updating
             bool updateSuccess1 = updateHandler1.UpdateBatchOrder(batchOrderId, batchOrderName, batchOrderDescription);
 
             var updateHandler2 = new UpdateBatchOrders();
-            bool updateSuccess2 = updateHandler2.UpdateBatchOrderProducts(batchOrderId, selectedProducts);
+            // UPDATED: Now passing the List<GridItem> to UpdateBatchOrderProducts
+            bool updateSuccess2 = updateHandler2.UpdateBatchOrderProducts(batchOrderId, selectedProductsWithQuantities);
 
             if (updateSuccess1 && updateSuccess2)
             {

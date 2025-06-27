@@ -125,6 +125,59 @@ namespace MainDashboard.Backend.Queries.Dashboard
         }
         // end of ^^^
 
+        // fifth container
+        public int GetTotalNonExpiredProducts()
+        {
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    conn.Open();
+
+                    string query = @"
+                        SELECT COUNT(*) 
+                        FROM Products 
+                        WHERE CAST(ProductWarranty AS DATE) >= CAST(GETDATE() AS DATE)";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        object result = cmd.ExecuteScalar();
+                        return result != DBNull.Value ? Convert.ToInt32(result) : 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error getting non-expired product count:\n" + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+        }
+        // end of ^^^
+
+        public int GetOutOfStockProductCount()
+        {
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM Products WHERE ProductQuantity <= 0";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        object result = cmd.ExecuteScalar();
+                        return result != DBNull.Value ? Convert.ToInt32(result) : 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error getting out-of-stock product count:\n" + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+        }
+        // end of ^^^
 
     }
+
 }

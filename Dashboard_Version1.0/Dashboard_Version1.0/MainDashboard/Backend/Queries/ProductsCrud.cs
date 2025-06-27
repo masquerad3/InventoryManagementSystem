@@ -27,7 +27,7 @@ CREATE TABLE Products (
     -- PRICING & DELIVERY
     ProductPrice DECIMAL(10, 2) NOT NULL,
     DateDelivered DATETIME NULL DEFAULT GETDATE(),
-    ProductWarranty NVARCHAR(50) NOT NULL,
+    ProductWarranty DATETIME NOT NULL,
 
     -- OPTIONAL INFO
     PackageWeight DECIMAL(10, 2) NULL,

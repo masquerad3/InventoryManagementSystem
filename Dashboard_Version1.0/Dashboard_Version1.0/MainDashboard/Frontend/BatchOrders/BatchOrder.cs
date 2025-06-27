@@ -100,14 +100,32 @@ namespace MainDashboard.Frontend.BatchOrders
             BONameTextBox.Content = order.Value.BatchName;
             OrderDescriptionTextBox.Content = order.Value.BatchDescription;
 
-            // Clear and populate checklist
-            ProductCheckList.Items.Clear();
-
+            // Get selected products from DB
             var selectedProducts = new ReadBatchOrders().GetProductsByBatchOrderId(batchOrderId.Value);
 
+            // Temporarily store existing checklist items
+            var allItems = new List<string>();
+            foreach (var item in ProductCheckList.Items)
+            {
+                allItems.Add(item.ToString());
+            }
+
+            // Clear the checklist
+            ProductCheckList.Items.Clear();
+
+            // Step 1: Add selected products first (checked)
             foreach (var product in selectedProducts)
             {
-                ProductCheckList.Items.Add(product, true); // Add and mark as checked
+                ProductCheckList.Items.Add(product, true);
+            }
+
+            // Step 2: Add remaining products (unchecked), skipping already added
+            foreach (var product in allItems)
+            {
+                if (!selectedProducts.Contains(product))
+                {
+                    ProductCheckList.Items.Add(product, false);
+                }
             }
 
         }

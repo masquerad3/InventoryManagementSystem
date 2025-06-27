@@ -92,6 +92,7 @@ namespace MainDashboard
 
         private void DashboardBtn_Click(object sender, EventArgs e)
         {
+            dashboardContent.LoadDashboardContents(); // Force refresh
             dashboardContent.BringToFront();
         }
 

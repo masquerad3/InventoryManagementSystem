@@ -22,7 +22,7 @@ namespace MainDashboard
             LoadDashboardContents();
         }
 
-        private void LoadDashboardContents()
+        public void LoadDashboardContents()
         {
             // item summary
             Read productQtyReader = new Read();
@@ -53,7 +53,16 @@ namespace MainDashboard
 
             TBNumber1.Content = TotalBatchOrders.ToString();   // total orders ?
             TBNumber2.Content = ToBeReceivedOrders.ToString();   // to be received
-            
+
+            // fifth container
+            Read nonExpiredWarranties = new Read();
+            int TotalNoneExpiredWarranties = nonExpiredWarranties.GetTotalNonExpiredProducts();
+
+            Read readoutOfStockProducts = new Read();
+            int TotalOutOfStocks = readoutOfStockProducts.GetOutOfStockProductCount();
+
+            WNumber.Content = TotalNoneExpiredWarranties.ToString(); // non expired warranty
+            OOSNumber.Content = TotalOutOfStocks.ToString(); // out of stock products
         }
 
     }

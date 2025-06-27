@@ -58,9 +58,13 @@ namespace MainDashboard
             Read nonExpiredWarranties = new Read();
             int TotalNoneExpiredWarranties = nonExpiredWarranties.GetTotalNonExpiredProducts();
 
+            Read expiredWarranties = new Read();
+            int TotalExpiredWarranties = expiredWarranties.GetTotalExpiredProducts();
+
             Read readoutOfStockProducts = new Read();
             int TotalOutOfStocks = readoutOfStockProducts.GetOutOfStockProductCount();
 
+            //
             WNumber.Content = TotalNoneExpiredWarranties.ToString(); // non expired warranty
             OOSNumber.Content = TotalOutOfStocks.ToString(); // out of stock products
         }

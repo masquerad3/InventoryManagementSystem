@@ -126,6 +126,32 @@ namespace MainDashboard.Backend.Queries.Dashboard
         // end of ^^^
 
         // fifth container
+        public int GetTotalExpiredProducts()
+        {
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    conn.Open();
+                    string query = @"SELECT COUNT(*) FROM Products
+                             WHERE ProductWarranty < CAST(GETDATE() AS DATE);";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        object result = cmd.ExecuteScalar();
+                        return result != DBNull.Value ? Convert.ToInt32(result) : 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error getting expired products:\n" + ex.Message,
+                                "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+        }
+        // end of ^^^
+
         public int GetTotalNonExpiredProducts()
         {
             try
@@ -154,6 +180,7 @@ namespace MainDashboard.Backend.Queries.Dashboard
         }
         // end of ^^^
 
+        // sixth container
         public int GetOutOfStockProductCount()
         {
             try

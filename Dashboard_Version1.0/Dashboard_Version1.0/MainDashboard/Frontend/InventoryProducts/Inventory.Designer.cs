@@ -33,15 +33,6 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             InventoryGridView = new DataGridView();
-            cuiPanel6 = new CuoreUI.Controls.cuiPanel();
-            InventoryHeader = new CuoreUI.Controls.cuiLabel();
-            SearchBar = new CuoreUI.Controls.cuiTextBox();
-            NotifIconBG = new CuoreUI.Controls.cuiGradientPanel();
-            NotificationIcon = new CuoreUI.Controls.cuiPictureBox();
-            cuiPanel1 = new CuoreUI.Controls.cuiPanel();
-            FilterBtn = new CuoreUI.Controls.cuiButton();
-            AddBtn = new CuoreUI.Controls.cuiButton();
-            TableSearchBar = new CuoreUI.Controls.cuiTextBox();
             ProductName = new DataGridViewTextBoxColumn();
             ItemCategory = new DataGridViewTextBoxColumn();
             ItemQuantity = new DataGridViewTextBoxColumn();
@@ -50,6 +41,14 @@
             View = new DataGridViewImageColumn();
             Edit = new DataGridViewImageColumn();
             Delete = new DataGridViewImageColumn();
+            cuiPanel6 = new CuoreUI.Controls.cuiPanel();
+            InventoryHeader = new CuoreUI.Controls.cuiLabel();
+            SearchBar = new CuoreUI.Controls.cuiTextBox();
+            NotifIconBG = new CuoreUI.Controls.cuiGradientPanel();
+            NotificationIcon = new CuoreUI.Controls.cuiPictureBox();
+            cuiPanel1 = new CuoreUI.Controls.cuiPanel();
+            AddBtn = new CuoreUI.Controls.cuiButton();
+            TableSearchBar = new CuoreUI.Controls.cuiTextBox();
             ((System.ComponentModel.ISupportInitialize)InventoryGridView).BeginInit();
             cuiPanel6.SuspendLayout();
             NotifIconBG.SuspendLayout();
@@ -78,6 +77,72 @@
             InventoryGridView.Size = new Size(1086, 980);
             InventoryGridView.TabIndex = 29;
             InventoryGridView.CellContentClick += InventoryGridView_CellContentClick;
+            // 
+            // ProductName
+            // 
+            ProductName.HeaderText = "Product Name";
+            ProductName.MinimumWidth = 6;
+            ProductName.Name = "ProductName";
+            // 
+            // ItemCategory
+            // 
+            ItemCategory.HeaderText = "Category";
+            ItemCategory.MinimumWidth = 6;
+            ItemCategory.Name = "ItemCategory";
+            // 
+            // ItemQuantity
+            // 
+            ItemQuantity.HeaderText = "Quantity";
+            ItemQuantity.MinimumWidth = 6;
+            ItemQuantity.Name = "ItemQuantity";
+            // 
+            // ItemCondition
+            // 
+            ItemCondition.HeaderText = "Condition";
+            ItemCondition.MinimumWidth = 6;
+            ItemCondition.Name = "ItemCondition";
+            // 
+            // ItemPrice
+            // 
+            ItemPrice.HeaderText = "Price";
+            ItemPrice.MinimumWidth = 6;
+            ItemPrice.Name = "ItemPrice";
+            // 
+            // View
+            // 
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = resources.GetObject("dataGridViewCellStyle1.NullValue");
+            View.DefaultCellStyle = dataGridViewCellStyle1;
+            View.Description = "View";
+            View.HeaderText = "View";
+            View.Image = Properties.Resources.eye1;
+            View.MinimumWidth = 6;
+            View.Name = "View";
+            View.Resizable = DataGridViewTriState.False;
+            // 
+            // Edit
+            // 
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.NullValue = resources.GetObject("dataGridViewCellStyle2.NullValue");
+            Edit.DefaultCellStyle = dataGridViewCellStyle2;
+            Edit.Description = "Edit";
+            Edit.HeaderText = "Edit";
+            Edit.Image = Properties.Resources.pencil1;
+            Edit.MinimumWidth = 6;
+            Edit.Name = "Edit";
+            Edit.Resizable = DataGridViewTriState.False;
+            // 
+            // Delete
+            // 
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.NullValue = resources.GetObject("dataGridViewCellStyle3.NullValue");
+            Delete.DefaultCellStyle = dataGridViewCellStyle3;
+            Delete.Description = "Delete";
+            Delete.HeaderText = "Delete";
+            Delete.Image = Properties.Resources.trash_21;
+            Delete.MinimumWidth = 6;
+            Delete.Name = "Delete";
+            Delete.Resizable = DataGridViewTriState.False;
             // 
             // cuiPanel6
             // 
@@ -172,7 +237,6 @@
             // 
             // cuiPanel1
             // 
-            cuiPanel1.Controls.Add(FilterBtn);
             cuiPanel1.Controls.Add(AddBtn);
             cuiPanel1.Controls.Add(TableSearchBar);
             cuiPanel1.Controls.Add(InventoryGridView);
@@ -185,46 +249,6 @@
             cuiPanel1.Rounding = new Padding(8);
             cuiPanel1.Size = new Size(1143, 1200);
             cuiPanel1.TabIndex = 10;
-            // 
-            // FilterBtn
-            // 
-            FilterBtn.AutoScroll = true;
-            FilterBtn.BackColor = Color.Transparent;
-            FilterBtn.CheckButton = false;
-            FilterBtn.Checked = false;
-            FilterBtn.CheckedBackground = Color.FromArgb(255, 106, 0);
-            FilterBtn.CheckedForeColor = Color.White;
-            FilterBtn.CheckedImageTint = Color.White;
-            FilterBtn.CheckedOutline = Color.FromArgb(255, 106, 0);
-            FilterBtn.Content = "Filter";
-            FilterBtn.DialogResult = DialogResult.None;
-            FilterBtn.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FilterBtn.ForeColor = Color.Black;
-            FilterBtn.HoverBackground = Color.White;
-            FilterBtn.HoveredImageTint = Color.White;
-            FilterBtn.HoverForeColor = Color.Black;
-            FilterBtn.HoverOutline = Color.Black;
-            FilterBtn.Image = Properties.Resources.sliders_horizontal;
-            FilterBtn.ImageAutoCenter = true;
-            FilterBtn.ImageExpand = new Point(0, 0);
-            FilterBtn.ImageOffset = new Point(-5, 0);
-            FilterBtn.Location = new Point(994, 11);
-            FilterBtn.Margin = new Padding(3, 4, 3, 4);
-            FilterBtn.Name = "FilterBtn";
-            FilterBtn.NormalBackground = Color.White;
-            FilterBtn.NormalForeColor = Color.Black;
-            FilterBtn.NormalImageTint = Color.White;
-            FilterBtn.NormalOutline = Color.Black;
-            FilterBtn.OutlineThickness = 1F;
-            FilterBtn.PressedBackground = Color.WhiteSmoke;
-            FilterBtn.PressedForeColor = Color.Black;
-            FilterBtn.PressedImageTint = Color.White;
-            FilterBtn.PressedOutline = Color.Black;
-            FilterBtn.Rounding = new Padding(8);
-            FilterBtn.Size = new Size(120, 60);
-            FilterBtn.TabIndex = 15;
-            FilterBtn.TextAlignment = StringAlignment.Center;
-            FilterBtn.TextOffset = new Point(0, 0);
             // 
             // AddBtn
             // 
@@ -247,7 +271,7 @@
             AddBtn.ImageAutoCenter = true;
             AddBtn.ImageExpand = new Point(3, 3);
             AddBtn.ImageOffset = new Point(-15, 0);
-            AddBtn.Location = new Point(813, 11);
+            AddBtn.Location = new Point(939, 6);
             AddBtn.Margin = new Padding(3, 4, 3, 4);
             AddBtn.Name = "AddBtn";
             AddBtn.NormalBackground = Color.SteelBlue;
@@ -296,72 +320,6 @@
             TableSearchBar.TextOffset = new Size(0, 0);
             TableSearchBar.UnderlinedStyle = true;
             // 
-            // ProductName
-            // 
-            ProductName.HeaderText = "Product Name";
-            ProductName.MinimumWidth = 6;
-            ProductName.Name = "ProductName";
-            // 
-            // ItemCategory
-            // 
-            ItemCategory.HeaderText = "Category";
-            ItemCategory.MinimumWidth = 6;
-            ItemCategory.Name = "ItemCategory";
-            // 
-            // ItemQuantity
-            // 
-            ItemQuantity.HeaderText = "Quantity";
-            ItemQuantity.MinimumWidth = 6;
-            ItemQuantity.Name = "ItemQuantity";
-            // 
-            // ItemCondition
-            // 
-            ItemCondition.HeaderText = "Condition";
-            ItemCondition.MinimumWidth = 6;
-            ItemCondition.Name = "ItemCondition";
-            // 
-            // ItemPrice
-            // 
-            ItemPrice.HeaderText = "Price";
-            ItemPrice.MinimumWidth = 6;
-            ItemPrice.Name = "ItemPrice";
-            // 
-            // View
-            // 
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = resources.GetObject("dataGridViewCellStyle1.NullValue");
-            View.DefaultCellStyle = dataGridViewCellStyle1;
-            View.Description = "View";
-            View.HeaderText = "View";
-            View.Image = Properties.Resources.eye1;
-            View.MinimumWidth = 6;
-            View.Name = "View";
-            View.Resizable = DataGridViewTriState.False;
-            // 
-            // Edit
-            // 
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.NullValue = resources.GetObject("dataGridViewCellStyle2.NullValue");
-            Edit.DefaultCellStyle = dataGridViewCellStyle2;
-            Edit.Description = "Edit";
-            Edit.HeaderText = "Edit";
-            Edit.Image = Properties.Resources.pencil1;
-            Edit.MinimumWidth = 6;
-            Edit.Name = "Edit";
-            Edit.Resizable = DataGridViewTriState.False;
-            // 
-            // Delete
-            // 
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.NullValue = resources.GetObject("dataGridViewCellStyle3.NullValue");
-            Delete.DefaultCellStyle = dataGridViewCellStyle3;
-            Delete.Description = "Delete";
-            Delete.HeaderText = "Delete";
-            Delete.Image = Properties.Resources.trash_21;
-            Delete.MinimumWidth = 6;
-            Delete.Name = "Delete";
-            Delete.Resizable = DataGridViewTriState.False;
-            // 
             // Inventory
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -390,7 +348,6 @@
         private CuoreUI.Controls.cuiPanel cuiPanel1;
         private DataGridView InventoryGridView;
         private CuoreUI.Controls.cuiTextBox TableSearchBar;
-        private CuoreUI.Controls.cuiButton FilterBtn;
         private CuoreUI.Controls.cuiButton AddBtn;
         private DataGridViewTextBoxColumn ProductName;
         private DataGridViewTextBoxColumn ItemCategory;

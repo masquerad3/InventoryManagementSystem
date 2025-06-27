@@ -562,7 +562,7 @@
             SubLabel.Location = new Point(28, 68);
             SubLabel.Margin = new Padding(5, 4, 5, 4);
             SubLabel.Name = "SubLabel";
-            SubLabel.Size = new Size(280, 28);
+            SubLabel.Size = new Size(463, 28);
             SubLabel.TabIndex = 33;
             SubLabel.VerticalAlignment = StringAlignment.Center;
             // 

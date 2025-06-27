@@ -29,16 +29,6 @@
         private void InitializeComponent()
         {
             BatchOrdersGridView = new DataGridView();
-            cuiPanel6 = new CuoreUI.Controls.cuiPanel();
-            DashboardHeader = new CuoreUI.Controls.cuiLabel();
-            SearchBar = new CuoreUI.Controls.cuiTextBox();
-            NotifIconBG = new CuoreUI.Controls.cuiGradientPanel();
-            NotificationIcon = new CuoreUI.Controls.cuiPictureBox();
-            cuiPanel1 = new CuoreUI.Controls.cuiPanel();
-            cuiLabel1 = new CuoreUI.Controls.cuiLabel();
-            FilterBtn = new CuoreUI.Controls.cuiButton();
-            AddBtn = new CuoreUI.Controls.cuiButton();
-            TableSearchBar = new CuoreUI.Controls.cuiTextBox();
             BatchOrderName = new DataGridViewTextBoxColumn();
             ProductName = new DataGridViewTextBoxColumn();
             BatchOrderStatus = new DataGridViewTextBoxColumn();
@@ -46,6 +36,15 @@
             DateReceived = new DataGridViewTextBoxColumn();
             Edit = new DataGridViewImageColumn();
             Delete = new DataGridViewImageColumn();
+            cuiPanel6 = new CuoreUI.Controls.cuiPanel();
+            DashboardHeader = new CuoreUI.Controls.cuiLabel();
+            SearchBar = new CuoreUI.Controls.cuiTextBox();
+            NotifIconBG = new CuoreUI.Controls.cuiGradientPanel();
+            NotificationIcon = new CuoreUI.Controls.cuiPictureBox();
+            cuiPanel1 = new CuoreUI.Controls.cuiPanel();
+            cuiLabel1 = new CuoreUI.Controls.cuiLabel();
+            AddBtn = new CuoreUI.Controls.cuiButton();
+            TableSearchBar = new CuoreUI.Controls.cuiTextBox();
             ((System.ComponentModel.ISupportInitialize)BatchOrdersGridView).BeginInit();
             cuiPanel6.SuspendLayout();
             NotifIconBG.SuspendLayout();
@@ -72,6 +71,50 @@
             BatchOrdersGridView.Size = new Size(1086, 980);
             BatchOrdersGridView.TabIndex = 0;
             BatchOrdersGridView.CellContentClick += BatchOrdersGridView_CellContentClick;
+            // 
+            // BatchOrderName
+            // 
+            BatchOrderName.HeaderText = "Batch Name";
+            BatchOrderName.MinimumWidth = 6;
+            BatchOrderName.Name = "BatchOrderName";
+            // 
+            // ProductName
+            // 
+            ProductName.HeaderText = "Product Name";
+            ProductName.MinimumWidth = 6;
+            ProductName.Name = "ProductName";
+            // 
+            // BatchOrderStatus
+            // 
+            BatchOrderStatus.HeaderText = "Order Status";
+            BatchOrderStatus.MinimumWidth = 6;
+            BatchOrderStatus.Name = "BatchOrderStatus";
+            // 
+            // DateRequested
+            // 
+            DateRequested.HeaderText = "Date Requested";
+            DateRequested.MinimumWidth = 6;
+            DateRequested.Name = "DateRequested";
+            // 
+            // DateReceived
+            // 
+            DateReceived.HeaderText = "Date Received";
+            DateReceived.MinimumWidth = 6;
+            DateReceived.Name = "DateReceived";
+            // 
+            // Edit
+            // 
+            Edit.HeaderText = "Edit";
+            Edit.Image = Properties.Resources.pencil1;
+            Edit.MinimumWidth = 6;
+            Edit.Name = "Edit";
+            // 
+            // Delete
+            // 
+            Delete.HeaderText = "Delete";
+            Delete.Image = Properties.Resources.trash_21;
+            Delete.MinimumWidth = 6;
+            Delete.Name = "Delete";
             // 
             // cuiPanel6
             // 
@@ -167,7 +210,6 @@
             // cuiPanel1
             // 
             cuiPanel1.Controls.Add(cuiLabel1);
-            cuiPanel1.Controls.Add(FilterBtn);
             cuiPanel1.Controls.Add(AddBtn);
             cuiPanel1.Controls.Add(TableSearchBar);
             cuiPanel1.Controls.Add(BatchOrdersGridView);
@@ -194,46 +236,6 @@
             cuiLabel1.TabIndex = 16;
             cuiLabel1.VerticalAlignment = StringAlignment.Center;
             // 
-            // FilterBtn
-            // 
-            FilterBtn.AutoScroll = true;
-            FilterBtn.BackColor = Color.Transparent;
-            FilterBtn.CheckButton = false;
-            FilterBtn.Checked = false;
-            FilterBtn.CheckedBackground = Color.FromArgb(255, 106, 0);
-            FilterBtn.CheckedForeColor = Color.White;
-            FilterBtn.CheckedImageTint = Color.White;
-            FilterBtn.CheckedOutline = Color.FromArgb(255, 106, 0);
-            FilterBtn.Content = "Filter";
-            FilterBtn.DialogResult = DialogResult.None;
-            FilterBtn.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FilterBtn.ForeColor = Color.Black;
-            FilterBtn.HoverBackground = Color.White;
-            FilterBtn.HoveredImageTint = Color.White;
-            FilterBtn.HoverForeColor = Color.Black;
-            FilterBtn.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            FilterBtn.Image = Properties.Resources.sliders_horizontal;
-            FilterBtn.ImageAutoCenter = true;
-            FilterBtn.ImageExpand = new Point(0, 0);
-            FilterBtn.ImageOffset = new Point(-5, 0);
-            FilterBtn.Location = new Point(994, 11);
-            FilterBtn.Margin = new Padding(3, 4, 3, 4);
-            FilterBtn.Name = "FilterBtn";
-            FilterBtn.NormalBackground = Color.White;
-            FilterBtn.NormalForeColor = Color.Black;
-            FilterBtn.NormalImageTint = Color.White;
-            FilterBtn.NormalOutline = Color.Black;
-            FilterBtn.OutlineThickness = 1F;
-            FilterBtn.PressedBackground = Color.WhiteSmoke;
-            FilterBtn.PressedForeColor = Color.Black;
-            FilterBtn.PressedImageTint = Color.White;
-            FilterBtn.PressedOutline = Color.Black;
-            FilterBtn.Rounding = new Padding(8);
-            FilterBtn.Size = new Size(120, 60);
-            FilterBtn.TabIndex = 15;
-            FilterBtn.TextAlignment = StringAlignment.Center;
-            FilterBtn.TextOffset = new Point(0, 0);
-            // 
             // AddBtn
             // 
             AddBtn.AutoScroll = true;
@@ -256,7 +258,7 @@
             AddBtn.ImageAutoCenter = true;
             AddBtn.ImageExpand = new Point(3, 3);
             AddBtn.ImageOffset = new Point(-12, 0);
-            AddBtn.Location = new Point(813, 11);
+            AddBtn.Location = new Point(940, 6);
             AddBtn.Margin = new Padding(3, 4, 3, 4);
             AddBtn.Name = "AddBtn";
             AddBtn.NormalBackground = Color.SteelBlue;
@@ -305,50 +307,6 @@
             TableSearchBar.TextOffset = new Size(0, 0);
             TableSearchBar.UnderlinedStyle = true;
             // 
-            // BatchOrderName
-            // 
-            BatchOrderName.HeaderText = "Batch Name";
-            BatchOrderName.MinimumWidth = 6;
-            BatchOrderName.Name = "BatchOrderName";
-            // 
-            // ProductName
-            // 
-            ProductName.HeaderText = "Product Name";
-            ProductName.MinimumWidth = 6;
-            ProductName.Name = "ProductName";
-            // 
-            // BatchOrderStatus
-            // 
-            BatchOrderStatus.HeaderText = "Order Status";
-            BatchOrderStatus.MinimumWidth = 6;
-            BatchOrderStatus.Name = "BatchOrderStatus";
-            // 
-            // DateRequested
-            // 
-            DateRequested.HeaderText = "Date Requested";
-            DateRequested.MinimumWidth = 6;
-            DateRequested.Name = "DateRequested";
-            // 
-            // DateReceived
-            // 
-            DateReceived.HeaderText = "Date Received";
-            DateReceived.MinimumWidth = 6;
-            DateReceived.Name = "DateReceived";
-            // 
-            // Edit
-            // 
-            Edit.HeaderText = "Edit";
-            Edit.Image = Properties.Resources.pencil1;
-            Edit.MinimumWidth = 6;
-            Edit.Name = "Edit";
-            // 
-            // Delete
-            // 
-            Delete.HeaderText = "Delete";
-            Delete.Image = Properties.Resources.trash_21;
-            Delete.MinimumWidth = 6;
-            Delete.Name = "Delete";
-            // 
             // Batch
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -376,7 +334,6 @@
         private CuoreUI.Controls.cuiPictureBox NotificationIcon;
         private CuoreUI.Controls.cuiPanel cuiPanel1;
         private CuoreUI.Controls.cuiLabel cuiLabel1;
-        private CuoreUI.Controls.cuiButton FilterBtn;
         private CuoreUI.Controls.cuiButton AddBtn;
         private CuoreUI.Controls.cuiTextBox TableSearchBar;
         private DataGridView BatchOrdersGridView;

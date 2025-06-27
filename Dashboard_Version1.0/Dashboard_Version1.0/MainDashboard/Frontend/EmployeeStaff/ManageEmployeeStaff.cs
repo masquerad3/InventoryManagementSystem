@@ -154,6 +154,11 @@ namespace MainDashboard.Frontend.EmployeeStaff
             }
             else if (SaveBtn.Content == "Update")  // Changed from "Edit Product" to "Update"
             {
+                if (empId == null)
+                { 
+                    return;
+                }
+
                 bool editSuccess = EditEmployeeStaff.HandleEditEmployeeStaff(
                     empId.Value,        // Pass the staffId
                     empName,

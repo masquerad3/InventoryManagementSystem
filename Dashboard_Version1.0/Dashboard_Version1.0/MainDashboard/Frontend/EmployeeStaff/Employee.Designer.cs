@@ -34,10 +34,8 @@
             NotifIconBG = new CuoreUI.Controls.cuiGradientPanel();
             NotificationIcon = new CuoreUI.Controls.cuiPictureBox();
             cuiPanel1 = new CuoreUI.Controls.cuiPanel();
-            cuiButton2 = new CuoreUI.Controls.cuiButton();
             AddBtn = new CuoreUI.Controls.cuiButton();
             cuiLabel1 = new CuoreUI.Controls.cuiLabel();
-            FilterBtn = new CuoreUI.Controls.cuiButton();
             TableSearchBar = new CuoreUI.Controls.cuiTextBox();
             EmployeeStaffGridView = new DataGridView();
             EmployeeName = new DataGridViewTextBoxColumn();
@@ -144,10 +142,8 @@
             // 
             // cuiPanel1
             // 
-            cuiPanel1.Controls.Add(cuiButton2);
             cuiPanel1.Controls.Add(AddBtn);
             cuiPanel1.Controls.Add(cuiLabel1);
-            cuiPanel1.Controls.Add(FilterBtn);
             cuiPanel1.Controls.Add(TableSearchBar);
             cuiPanel1.Controls.Add(EmployeeStaffGridView);
             cuiPanel1.Location = new Point(39, 177);
@@ -159,46 +155,6 @@
             cuiPanel1.Rounding = new Padding(8);
             cuiPanel1.Size = new Size(1143, 1200);
             cuiPanel1.TabIndex = 11;
-            // 
-            // cuiButton2
-            // 
-            cuiButton2.AutoScroll = true;
-            cuiButton2.BackColor = Color.Transparent;
-            cuiButton2.CheckButton = false;
-            cuiButton2.Checked = false;
-            cuiButton2.CheckedBackground = Color.FromArgb(255, 106, 0);
-            cuiButton2.CheckedForeColor = Color.White;
-            cuiButton2.CheckedImageTint = Color.White;
-            cuiButton2.CheckedOutline = Color.FromArgb(255, 106, 0);
-            cuiButton2.Content = "Assign Employee";
-            cuiButton2.DialogResult = DialogResult.None;
-            cuiButton2.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiButton2.ForeColor = Color.White;
-            cuiButton2.HoverBackground = Color.SteelBlue;
-            cuiButton2.HoveredImageTint = Color.White;
-            cuiButton2.HoverForeColor = Color.White;
-            cuiButton2.HoverOutline = Color.SteelBlue;
-            cuiButton2.Image = Properties.Resources.user_cog;
-            cuiButton2.ImageAutoCenter = true;
-            cuiButton2.ImageExpand = new Point(3, 3);
-            cuiButton2.ImageOffset = new Point(-7, 0);
-            cuiButton2.Location = new Point(769, 11);
-            cuiButton2.Margin = new Padding(3, 4, 3, 4);
-            cuiButton2.Name = "cuiButton2";
-            cuiButton2.NormalBackground = Color.SteelBlue;
-            cuiButton2.NormalForeColor = Color.White;
-            cuiButton2.NormalImageTint = Color.White;
-            cuiButton2.NormalOutline = Color.Transparent;
-            cuiButton2.OutlineThickness = 1F;
-            cuiButton2.PressedBackground = Color.FromArgb(49, 93, 130);
-            cuiButton2.PressedForeColor = Color.White;
-            cuiButton2.PressedImageTint = Color.White;
-            cuiButton2.PressedOutline = Color.FromArgb(33, 64, 89);
-            cuiButton2.Rounding = new Padding(8);
-            cuiButton2.Size = new Size(218, 60);
-            cuiButton2.TabIndex = 18;
-            cuiButton2.TextAlignment = StringAlignment.Center;
-            cuiButton2.TextOffset = new Point(0, 0);
             // 
             // AddBtn
             // 
@@ -221,7 +177,7 @@
             AddBtn.ImageAutoCenter = true;
             AddBtn.ImageExpand = new Point(3, 3);
             AddBtn.ImageOffset = new Point(-7, 0);
-            AddBtn.Location = new Point(566, 11);
+            AddBtn.Location = new Point(917, 17);
             AddBtn.Margin = new Padding(3, 5, 3, 5);
             AddBtn.Name = "AddBtn";
             AddBtn.NormalBackground = Color.SteelBlue;
@@ -252,46 +208,6 @@
             cuiLabel1.Size = new Size(65, 32);
             cuiLabel1.TabIndex = 16;
             cuiLabel1.VerticalAlignment = StringAlignment.Center;
-            // 
-            // FilterBtn
-            // 
-            FilterBtn.AutoScroll = true;
-            FilterBtn.BackColor = Color.Transparent;
-            FilterBtn.CheckButton = false;
-            FilterBtn.Checked = false;
-            FilterBtn.CheckedBackground = Color.FromArgb(255, 106, 0);
-            FilterBtn.CheckedForeColor = Color.White;
-            FilterBtn.CheckedImageTint = Color.White;
-            FilterBtn.CheckedOutline = Color.FromArgb(255, 106, 0);
-            FilterBtn.Content = "Filter";
-            FilterBtn.DialogResult = DialogResult.None;
-            FilterBtn.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FilterBtn.ForeColor = Color.Black;
-            FilterBtn.HoverBackground = Color.White;
-            FilterBtn.HoveredImageTint = Color.White;
-            FilterBtn.HoverForeColor = Color.Black;
-            FilterBtn.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            FilterBtn.Image = Properties.Resources.sliders_horizontal;
-            FilterBtn.ImageAutoCenter = true;
-            FilterBtn.ImageExpand = new Point(0, 0);
-            FilterBtn.ImageOffset = new Point(-5, 0);
-            FilterBtn.Location = new Point(994, 11);
-            FilterBtn.Margin = new Padding(3, 4, 3, 4);
-            FilterBtn.Name = "FilterBtn";
-            FilterBtn.NormalBackground = Color.White;
-            FilterBtn.NormalForeColor = Color.Black;
-            FilterBtn.NormalImageTint = Color.White;
-            FilterBtn.NormalOutline = Color.Black;
-            FilterBtn.OutlineThickness = 1F;
-            FilterBtn.PressedBackground = Color.WhiteSmoke;
-            FilterBtn.PressedForeColor = Color.Black;
-            FilterBtn.PressedImageTint = Color.White;
-            FilterBtn.PressedOutline = Color.Black;
-            FilterBtn.Rounding = new Padding(8);
-            FilterBtn.Size = new Size(120, 60);
-            FilterBtn.TabIndex = 15;
-            FilterBtn.TextAlignment = StringAlignment.Center;
-            FilterBtn.TextOffset = new Point(0, 0);
             // 
             // TableSearchBar
             // 
@@ -405,11 +321,9 @@
         private CuoreUI.Controls.cuiPictureBox NotificationIcon;
         private CuoreUI.Controls.cuiPanel cuiPanel1;
         private CuoreUI.Controls.cuiLabel cuiLabel1;
-        private CuoreUI.Controls.cuiButton FilterBtn;
         private CuoreUI.Controls.cuiTextBox TableSearchBar;
         private DataGridView dataGridView1;
         private CuoreUI.Controls.cuiButton cuiButton1;
-        private CuoreUI.Controls.cuiButton cuiButton2;
         private DataGridView EmployeeStaffGridView;
         private CuoreUI.Controls.cuiButton AddBtn;
         private DataGridViewTextBoxColumn EmployeeName;
